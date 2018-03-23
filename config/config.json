@@ -11,11 +11,11 @@
     },
     {
       "gitname": "a.md",
-      "type": 3,
-      "title": "Hello World 文章测试01",
-      "tags": ["个人日志"],
+      "type": 2,
+      "title": "Ghost Blade 鬼刀",
+      "tags": ["个人作品", "canvas"],
       "pic": "http://isluo.com:8080/files/work/gd1.jpg",
-      "info": "发一篇测试文章试一试",
+      "info": "Ghost Blade 鬼刀 主题宣传站。素材均来自wlop大佬",
       "date": "2018/03/10"
     },
     {

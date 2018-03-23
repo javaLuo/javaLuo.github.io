@@ -1,5 +1,10 @@
-## Hello World!
-### 测试
-```
-var a = 'hello world';
-```
+### 上线地址：<a href="http://gd.isluo.com" target="_blank">鬼刀 主题宣传站</a>
+
+![GitHub set up](http://isluo.com:8080/files/work/gd1.jpg)
+
+![GitHub set up](http://isluo.com:8080/files/work/gd2.jpg)
+
+> 给漫画《鬼刀》做的一个宣传展示的页面
+> 因为比较喜欢这个漫画
+> 上线地址：<a href="http://gd.isluo.com" target="_blank">鬼刀 主题宣传站</a>
+> 相关推荐：<a href="http://www.u17.com/comic/68471.html" target="_blank">有妖气《鬼刀》绘本漫画</a>
