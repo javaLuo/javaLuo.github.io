@@ -62,6 +62,15 @@
       "pic": null,
       "info": "重新把框架配置的流程梳理了一遍，目前最新的技术栈",
       "date": "2018/03/28"
+    },
+    {
+      "gitname": "flex.md",
+      "type": 1,
+      "title": "flex各属性笔记",
+      "tags": ["flex", "css"],
+      "pic": null,
+      "info": "整理了一下，方便查阅",
+      "date": "2018/03/28"
     }
   ]
 }
