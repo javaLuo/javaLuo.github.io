@@ -53,6 +53,15 @@
       "pic": "http://isluo.com/imgs/blog-violet1.jpg",
       "info": "近期在看的动漫，闲暇时间做了这个网站，轻微剧透，为了高清，加载速度可能有点慢",
       "date": "2018/03/27"
+    },
+    {
+      "gitname": "react0.md",
+      "type": 1,
+      "title": "从0开始React最新技术栈框架配置（非服务端渲染）",
+      "tags": ["React", "Redux"],
+      "pic": null,
+      "info": "重新把框架配置的流程梳理了一遍，目前最新的技术栈",
+      "date": "2018/03/28"
     }
   ]
 }
