@@ -71,6 +71,33 @@
       "pic": null,
       "info": "整理了一下，方便查阅",
       "date": "2018/03/28"
+    },
+    {
+      "gitname": "dll.md",
+      "type": 1,
+      "title": "webpack.DllPlugin和webpack.DllReferencePlugin静态资源预编译插件",
+      "tags": ["JS", "webpack插件"],
+      "pic": null,
+      "info": "现在因为有HMR局部热更新，所以dllPlugin这两个插件用得少了，不过还是记录一下配置方法，可能以后会再次使用",
+      "date": "2018/04/02"
+    },
+    {
+      "gitname": "datediff.md",
+      "type": 1,
+      "title": "真正准确的“两个日期相差多少天”函数",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "第一天最后1秒到第2天第1秒，也是过了一天!",
+      "date": "2018/04/02"
+    },
+    {
+      "gitname": "brcity.md",
+      "type": 3,
+      "title": "边城",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "小男孩杰克一个人生活在这座城市。天空黑云滚滚，雨永不停息。城市被腐蚀得锈迹斑斑。",
+      "date": "2018/04/02"
     }
   ]
 }
