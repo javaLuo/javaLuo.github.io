@@ -18,4 +18,4 @@
   
   &emsp;&emsp;现在，那个叫做“你”的家伙有两个选择，他要么回去，快点的话，还能看最后一眼五彩的真实世界。或踏入雨之城，获得永恒的生命，继续并永远的向未知驶去。
   
-  &emsp;&emsp;生命在一点点流逝，Now，what your chose?
+  &emsp;&emsp;生命在一点点流逝，Now，what's your chose?
