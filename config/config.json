@@ -107,6 +107,24 @@
       "pic": null,
       "info": "有用的网址们，记录在此以免忘了",
       "date": "2018/04/12"
+    },
+    {
+      "gitname": "css.md",
+      "type": 1,
+      "title": "所有的CSS属性学习和收录",
+      "tags": ["CSS"],
+      "pic": null,
+      "info": "一个都不能漏",
+      "date": "2018/04/12"
+    },
+    {
+      "gitname": "isluo.md",
+      "type": 1,
+      "title": "isluo.com 我的个人网站 主站",
+      "tags": ["JS"],
+      "pic": "http://isluo.com/imgs/blog-isluo.jpg",
+      "info": "嘿，稳定运行了好几年了，最近重构为了Node.js版本，其实老早就重构好了，只不过最近才升级了服务器",
+      "date": "2018/04/27"
     }
   ]
 }
