@@ -134,6 +134,15 @@
       "pic": "http://isluo.com/imgs/blog-isluo.jpg",
       "info": "嘿，稳定运行了好几年了，最近重构为了Node.js版本，其实老早就重构好了，只不过最近才升级了服务器",
       "date": "2018/04/27"
+    },
+    {
+      "gitname": "svg.md",
+      "type": 1,
+      "title": "SVG学习笔记",
+      "tags": ["HTML", "CSS"],
+      "pic": null,
+      "info": "为了SVG动画，某些小动画用SVG比canvas方便",
+      "date": "2018/05/06"
     }
   ]
 }
