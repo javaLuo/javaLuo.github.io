@@ -22,7 +22,7 @@ standalong - 是否是独立的，即下面的代码中是否没有引用外部�
 
 > 第2行包含了外部SVG DTD文件。是W3C标准，定义了所有合法的SVG元素
 
-> 第3行是正式的svg代码，svg代码由<svg>标签包裹
+> 第3行是正式的svg代码，svg代码由```<svg>```标签包裹
 width/height设置宽高、version设置使用的svg版本、xmlns设置可定义svg的命名空间
 
 #页面中如何引用.svg文件
@@ -162,15 +162,29 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
 创建复杂图形会比较困难，建议使用svg编辑器
 
 #SVG滤镜
-1. feBlend 混合
+1. feBlend 混合 跟PS中的一样
+    * mode:<br/>
+        normal 正常<br/>
+        multiply<br/>
+        screen<br/>
+        darken<br/>
+        lighten<br/>
+    * in2: BackgroundImage
 2. feColorMatrix 颜色矩阵
+    * type:<br/>
+        matrix<br/>
+        saturate<br/>
+        hueRotate<br/>
+        luminanceToAlpha<br/>
+    * values
+        
 3. feComponentTransfer
 4. feComposite
 5. feConvolveMatrix
 6. feDiffuseLighting
 7. feDisplacementMap
 8. feFlood
-9. feGaussianBlur
+9. feGaussianBlur 高斯模糊 in:SourceGraphic全局应用, stdDeviation:3模糊层度
 10. feImage
 11. feMerge
 12. feMorphology
@@ -203,7 +217,35 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
 /> 
 </svg>
 ```
+#SVG线性渐变
+渐变也必须在```<defs>```中定义
+```
+<defs>
+    <linearGradient id="id", x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#000;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#fff;stop-opacity:1" />
+    </linearGradient>
+</defs>
 
+<rect fill="url(#id)" width="100" height="100"/>
+```
+```<linearGradient>```定义线性渐变。x1/y1渐变开始的位置，x2/y2渐变结束的位置<br/>
+```<stop>```定义渐变的关键帧，offset位置<br/>
+定义好了后就可以通过id引用
+
+#SVG放射性渐变
+```
+<defs>
+    <radialGradient id="id" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" style="stop-color:#000" />
+        <stop offset="100%" style="stop-color:#fff" />
+    </radialGradient>
+    <rect fill="url(#id)" width="100" height="100"/>
+</defs>
+```
+```<radialGradient>```定义放射性渐变
+cx/cy/r定义渐变的外圈（圆心及半径），渐变只会在这个圆内部发生，超出范围的被裁剪
+fx/fy定义内圆心，及渐变开始的点，渐变将以这个点为起始点像四周扩散
 
 
 
