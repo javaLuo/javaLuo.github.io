@@ -152,6 +152,24 @@
       "pic": null,
       "info": "哲学所要解决的基本问题是思想和存在的关系问题。意识的本质是对客观存在的主管映像。要坚持辩证的唯物主义，客观的、实事求是的认知世界、正确的发挥主观能动性",
       "date": "2018/05/14"
+    },
+    {
+      "gitname": "b_night_snow.md",
+      "type": 3,
+      "title": "夜雪",
+      "tags": ["散文"],
+      "pic": null,
+      "info": "青春岁月留下的痕迹",
+      "date": "2008/04/04"
+    },
+    {
+      "gitname": "seven_years.md",
+      "type": 3,
+      "title": "七年后",
+      "tags": ["散文", "日记"],
+      "pic": "https://isluo.com/imgs/blog-seven-years.png",
+      "info": "岁月留下的痕迹",
+      "date": "2017/10/22"
     }
   ]
 }
