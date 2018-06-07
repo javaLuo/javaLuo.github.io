@@ -170,6 +170,15 @@
       "pic": "https://isluo.com/imgs/blog-seven-years.png",
       "info": "岁月留下的痕迹",
       "date": "2017/10/22"
+    },
+    {
+      "gitname": "grid.md",
+      "type": 1,
+      "title": "Grid所有属性笔记",
+      "tags": ["CSS"],
+      "pic": null,
+      "info": "grid布局相关属性笔记，方便查阅",
+      "date": "2018/06/07"
     }
   ]
 }
