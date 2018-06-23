@@ -22,7 +22,7 @@
       "gitname": "earth.md",
       "type": 2,
       "title": "Earth 3D TNC - 大自然保护协会",
-      "tags": ["个人作品", "WebGL", "Three.js"],
+      "tags": [ "webgl", "Three.js"],
       "pic": "http://isluo.com:8080/files/work/earth.jpg",
       "info": "学习Three.js时做的东西，要保护地球，Three.js的教程太少，着色器语言有好多需要学习",
       "date": "2018/03/14"
@@ -67,7 +67,7 @@
       "gitname": "flex.md",
       "type": 1,
       "title": "flex各属性笔记",
-      "tags": ["flex", "css"],
+      "tags": ["CSS"],
       "pic": null,
       "info": "整理了一下，方便查阅",
       "date": "2018/03/28"
@@ -94,7 +94,7 @@
       "gitname": "brcity.md",
       "type": 3,
       "title": "边城",
-      "tags": ["故事", "短小说"],
+      "tags": ["日志", "短小说"],
       "pic": null,
       "info": "小男孩杰克一个人生活在这座城市。天空黑云滚滚，雨永不停息。城市被腐蚀得锈迹斑斑。",
       "date": "2018/04/02"
@@ -103,7 +103,7 @@
       "gitname": "urls.md",
       "type": 1,
       "title": "有用的网址",
-      "tags": ["JS"],
+      "tags": ["HTML"],
       "pic": null,
       "info": "有用的网址们，记录在此以免忘了",
       "date": "2018/04/12"
@@ -130,7 +130,7 @@
       "gitname": "isluo.md",
       "type": 1,
       "title": "isluo.com 我的个人网站 主站",
-      "tags": ["JS"],
+      "tags": ["HTML"],
       "pic": "http://isluo.com/imgs/blog-isluo.jpg",
       "info": "嘿，稳定运行了好几年了，最近重构为了Node.js版本，其实老早就重构好了，只不过最近才升级了服务器",
       "date": "2018/04/27"
@@ -168,7 +168,7 @@
       "title": "七年后",
       "tags": ["散文", "日记"],
       "pic": "https://isluo.com/imgs/blog-seven-years.png",
-      "info": "岁月留下的痕迹",
+      "info": "岁月留下的痕迹,愚蠢的自己",
       "date": "2017/10/22"
     },
     {
@@ -179,6 +179,15 @@
       "pic": null,
       "info": "grid布局相关属性笔记，方便查阅",
       "date": "2018/06/07"
+    },
+    {
+      "gitname": "water.md",
+      "type": 1,
+      "title": "Waterdrop 3D",
+      "tags": ["THREE.JS","webgl"],
+      "pic": "https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/book.jpg",
+      "info": "三体·水滴计划。消灭人类暴政，世界属于三体",
+      "date": "2018/06/23"
     }
   ]
 }
