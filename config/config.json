@@ -182,7 +182,7 @@
     },
     {
       "gitname": "water.md",
-      "type": 1,
+      "type": 2,
       "title": "Waterdrop 3D",
       "tags": ["THREE.JS","webgl"],
       "pic": "https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/book.jpg",
