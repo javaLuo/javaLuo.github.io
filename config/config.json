@@ -111,10 +111,10 @@
     {
       "gitname": "css.md",
       "type": 1,
-      "title": "所有的CSS属性学习和收录",
+      "title": "所有的CSS属性学习和收录（进行中）",
       "tags": ["CSS"],
       "pic": null,
-      "info": "一个都不能漏",
+      "info": "一个都不能漏，参阅firefox.org",
       "date": "2018/04/12"
     },
     {
@@ -128,7 +128,7 @@
     },
     {
       "gitname": "isluo.md",
-      "type": 1,
+      "type": 2,
       "title": "isluo.com 我的个人网站 主站",
       "tags": ["HTML"],
       "pic": "http://isluo.com/imgs/blog-isluo.jpg",
@@ -188,6 +188,15 @@
       "pic": "https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/book.jpg",
       "info": "三体·水滴计划。消灭人类暴政，世界属于三体",
       "date": "2018/06/23"
+    },
+    {
+      "gitname": "facebook.md",
+      "type": 1,
+      "title": "FaceBook Share 功能 JS SDK 自定义图片和文字的方法",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "facebook的分享设置及注意的地方",
+      "date": "2018/07/02"
     }
   ]
 }
