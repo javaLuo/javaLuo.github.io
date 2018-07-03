@@ -197,6 +197,15 @@
       "pic": null,
       "info": "facebook的分享设置及注意的地方",
       "date": "2018/07/02"
-    }
+    },
+    {
+      "gitname": "algorithm.md",
+      "type": 1,
+      "title": "基础算法",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "基础算法记录 上学时写得都很溜，现在全忘了",
+      "date": "2018/06/02"
+    },
   ]
 }
