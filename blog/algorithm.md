@@ -119,3 +119,27 @@ function clone(obj){
 
 // 简单深拷贝，没处理原型链，没处理循环引用
 ```
+
+## 手动实现parseInt
+```
+function _parseInt(str){
+		const arr = str.split("");
+		const temp = [];
+		for(let i=0;i<arr.length;i++){
+			const char = arr[i].charCodeAt();
+			console.log(char);
+			if(char <=57 && char >= 48){
+				temp.push(arr[i]);
+			} else{
+				break;
+			}
+		}
+		console.log("temp:", temp);
+		let res = 0;
+		for(let i=0; i<temp.length;i++){
+			res += temp[i] * Math.pow(10, temp.length - 1 - i);
+		}
+		return res || NaN;
+	}
+// 只实现了一个十进制版本的
+```
