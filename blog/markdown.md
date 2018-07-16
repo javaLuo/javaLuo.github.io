@@ -134,8 +134,8 @@ email <example@example.com>
 
 
 Email 连接： <example@example.com>
-[连接标题Github网站](http://github.com)
-自动生成连接像： <http://www.github.com/> 这样
+[连接标题Github网站](https://github.com)
+自动生成连接像： <https://www.github.com/> 这样
 
 ## 区块引用
 
