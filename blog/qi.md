@@ -19,3 +19,14 @@ function exec (command) {
 
 exec('calc.exe');
 ```
+
+##2. https网站用iframe嵌入http的网页
+* 处于安全考虑IOS下 https不能用iframe加载http的网站
+* 参考：阮一峰 <a href="http://www.ruanyifeng.com/blog/2016/09/csp.html" target="_blank">http://www.ruanyifeng.com/blog/2016/09/csp.html</a>
+
+```
+// 头部加入：
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+// 这行代码会提升所有资源为https，所以会影响其他引入的资源，比如图片/文件如果是http引入的，现在均视为https引入
+```
