@@ -27,6 +27,8 @@ exec('calc.exe');
 ```
 // 头部加入：
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-// 这行代码会提升所有资源为https，所以会影响其他引入的资源，比如图片/文件如果是http引入的，现在均视为https引入
 ```
+
+* 这行代码的意思是，把那些http引入的资源，都自动把URL换成https。
+* 所以其实这句代码没有卵用，因为除非原http地址也支持https，否则仍然无法访问。
+* 如果原地址支持https，那直接用https的url不就完了吗
