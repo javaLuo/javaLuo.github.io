@@ -32,3 +32,39 @@ exec('calc.exe');
 * 这行代码的意思是，把那些http引入的资源，都自动把URL换成https。
 * 所以其实这句代码没有卵用，因为除非原http地址也支持https，否则仍然无法访问。
 * 如果原地址支持https，那直接用https的url不就完了吗
+
+
+##3. CSS改变input光标的颜色
+
+```
+// 第1种方法
+input{
+  caret-color: #f00; // 原生属性设置光标颜色
+}
+
+// 第2种方法
+input{
+  color: #f00; // 把颜色设置为红色
+}
+input::first-line{
+  color: #00f; // 又通过伪类把第1行颜色设置为蓝色，这样就只有光标保留了红色
+}
+```
+
+##4. 数字千分位分割
+
+```
+(123456789).toLocaleString('en-US'); // "123,456,789"
+```
+
+##5. 镂空图片背景的文字
+
+```
+.imgText{
+	-webkit-background-clip: text; // 按文字边缘裁剪
+	-webkit-text-fill-color: transparent; // 文本区域填充色
+	background-image: url(...);	// 指定一张背景图片
+}
+
+<div class="imgText">Hello World</div>
+```
