@@ -120,6 +120,11 @@ function clone(obj){
 // 简单深拷贝，没处理原型链，没处理循环引用
 ```
 
+## 暴力深拷贝
+```
+JSON.parse(JSON.stringify(obj));
+```
+
 ## 手动实现parseInt
 ```
 function _parseInt(str){
@@ -142,4 +147,82 @@ function _parseInt(str){
 		return res || NaN;
 	}
 // 只实现了一个十进制版本的
+```
+
+## 判断字符串是否是回文（前后对称）
+```
+function isPalindrome1(str){
+	return str === str.split("").reverse().join("");
+}
+```
+
+## 阶乘(循环)
+```
+function factorial(num){
+	// 先自动转数字、转整数。再判断数字的正负，负数无阶乘、 0的阶乘=1
+	let res = Number(num<<0) >= 0 ? 1 : NaN;
+	for(let i=num;i>1;i--){
+		res *= i;
+	}
+	return res;
+}
+
+factorial(4.123); // 24
+factorial(0); // 1
+factorial(-1); // NaN
+```
+
+## 阶乘（递归）
+```
+function factorial(num, res=1){
+	const n = Number(num<<0);
+	if(Object.is(n, NaN) || n<0){
+		return NaN;
+	}
+	if(n<=1){
+		return res;
+	}
+	return factorial(n - 1, n * res);
+}
+
+factorial(4.123); // 24
+factorial(0); // 1
+factorial(-1); // NaN
+```
+
+## 字符串中出现最多的字符
+```
+function maxNum(str){
+	const obj = str.split("").reduce((res, item)=>{
+		res[item] = res.hasOwnProperty(item) ? ++res[item] : 1;
+		return res;
+	}, {});
+	return Object.entries(obj).sort((a,b)=>b[1]-a[1])[0];
+}
+
+maxNum("abbcccdddd"); // ["d", 4]
+```
+
+## 数组扁平化（暴力方式）
+```
+var arr = [1,[2,3],[4,[5,6]]];
+arr.toString().split(",");
+// 但会把所有数组元素变成字符串
+```
+
+## 数组扁平化
+```
+function flatten(k) {
+	let t = [];
+	if(k instanceof Array){
+		k.forEach((item)=>{
+			t = [...t, ...flatten(item)];
+		})
+	} else {
+		t = [k];
+	}
+	return t;
+}
+
+flatten([1,[2,3],[4,[5,6,[7]]]]); // [1,2,3,4,5,6,7];
 ```
