@@ -55,6 +55,12 @@ div.scrollIntoView();
 // 如果div的父级有滚动条，就让滚动条滚动到这个div所在的位置（效果类似锚点）
 ```
 
+## scrollIntoViewIfNeeded();
+```
+div.scrollIntoViewIfNeeded();
+// 与scrollIntoView类似，但如果div已经在视野内，就不会发生滚动
+```
+
 ### IntersectionObserver API 元素交叉监听
 
 ```

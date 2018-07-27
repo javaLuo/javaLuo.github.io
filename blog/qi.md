@@ -55,10 +55,12 @@ input::first-line{
 
 ```
 (123456789.123).toLocaleString('en-US'); // "123,456,789.123"
+new Intl.NumberFormat().format(123456789.123); // 这个效率高，效果相同
 
 ```
 * 这种方式只能保留15位有效数字，且小数点后最多保留3位
 * 基本够用了，因为JS中的数字精度也就只有这么大，科学计数法能保留到18位有效数字
+* Intl文档： https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl
 
 ##5. 镂空图片背景的文字
 
@@ -71,3 +73,38 @@ input::first-line{
 
 <div class="imgText">Hello World</div>
 ```
+
+## console.log不输出行号
+```
+setTimeout(console.log.bind(console, "你不知道我在代码中的位置"));
+```
+
+## 检测用户是否打开了devTool (F12)
+
+```
+var f = function(){}
+f.toString = function () {
+    alert("打开了F12")
+}
+
+console.log("%c", f);
+```
+* 这个原理是，devTool每次启动时都会自动调用正则对象、函数、日期对象的toString方法
+
+## 原生API解析URL后面的参数
+* 浏览器提供了原生API来处理：URLSearchParams
+```
+ var p = window.location.pathname.split("?"); // name=lilei&age=18
+ var s = new URLSearchParams(p);
+
+ s.get("name"); // lilei
+ s.append("name", "hanmeimei"); // 添加一个
+ s.getAll("name"); // ["lilei", "hanmeimei"] 如果有多个name，这个方法会返回所有name
+ s.set("name", "heihei"); // 设置某个字段的值
+ s.delete("name"); // 删除某个字段
+ s.toString(); // 返回原始字符串
+ s.keys(); // 类似Object.keys(obj)
+ s.values(); // 类似Object.values(obj)
+ s.entries(); // 类似Object.entries(obj)
+```
+* IE全系列不支持
