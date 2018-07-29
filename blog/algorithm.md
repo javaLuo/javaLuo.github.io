@@ -49,37 +49,38 @@ const arr2 = sort(arr1); // [1,2,3,4,5];
 
 ### 快速排序 不创建临时数组版
 ```
-function quickSort(arr, start, end) {
-	    if (start > end) {
-	        return;
-	    }
-	    let i = start,
-	        j = end,
-	        pivot = arr[start]; //存放基准数
-	    while (i !== j) {
-	        // 从右边开始，找第一个小于基准的位置
-	        while (arr[j] >= pivot && i < j) {
-	            j--;
-	        }
-	        // 从左边开始，找第一个大于基准的位置
-	        while (arr[i] <= pivot && i < j) {
-	            i++
-	        }
-	        // 交换两个数
-	        if (i < j) {
-	            let tmp = arr[i];
-	            arr[i] = arr[j];
-	            arr[j] = tmp;
-	        }
-	    }
-	    // 最后把基准数归位
-	    arr[start] = arr[i];
-	    arr[i] = pivot;
-	    // 递归处理左边
-	    quickSort(arr, start, i - 1);
-	    // 递归处理右边
-	    quickSort(arr, i + 1, end);
-	}
+function quickSort(arr, start = 0, end = arr.length - 1) {
+    let i = start;
+    let j = end;
+    let key = arr[i]; //存放基准数
+    while(i<j){
+        while(j>i){
+            if(arr[j]<key){
+                arr[j] = arr[j]^arr[i];
+                arr[i] = arr[j]^arr[i];
+                arr[j] = arr[j]^arr[i];
+                break;
+            } else{
+                j--;
+            }
+        }
+        
+        while(i<j){
+            if(arr[i]>key){
+                arr[j] = arr[j]^arr[i];
+                arr[i] = arr[j]^arr[i];
+                arr[j] = arr[j]^arr[i];
+                break;
+            } else{
+                i++;
+            }
+        }
+    }
+    // 递归处理左边
+    quickSort(arr, start, i - 1);
+    // 递归处理右边
+    quickSort(arr, i + 1, end);
+}
 
 const arr1 = [4,3,2,1,5];
 quickSort(arr1); // [1,2,3,4,5]
@@ -87,7 +88,11 @@ quickSort(arr1); // [1,2,3,4,5]
 
 ### 二分法查找
 ```
-function find(arr, res, start, end){
+/**
+ * @param arr 数组
+ * @param res 要查找的数
+**/
+function find(arr, res, start = 0, end = arr.length - 1){
 	const centerKey = Math.floor((end + start)/2);
 	const centerValue = arr[centerKey];
 	if(res<centerValue && start < centerKey){
@@ -101,7 +106,7 @@ function find(arr, res, start, end){
 	}
 }
 const arr = [1,2,3,4,5,6,7,8,9,10];
-find(arr, 4, 0 ,arr.length - 1); // 下标为3
+find(arr, 4); // 下标为3
 ```
 
 ## 深拷贝
