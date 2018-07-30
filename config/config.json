@@ -240,6 +240,14 @@
       "pic": null,
       "info": "常用的DOM对象各种高度和位置设置的API",
       "date": "2018/07/17"
+    },{
+      "gitname": "blueair.md",
+      "type": 1,
+      "title": "微信硬件蓝牙开发各种坑不完全开发指南",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "常用的DOM对象各种高度和位置设置的API",
+      "date": "2016/04/15"
     }
   ]
 }
