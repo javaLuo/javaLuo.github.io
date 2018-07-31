@@ -71,12 +71,24 @@ div.scrollIntoViewIfNeeded();
 **/
 const observer = new IntersectionObserver((entries, obs)=>{
 		// 这里是定义事件的回调函数
-		// entries包含了触发该事件的子元素的各种信息
-		// obs就是当前这个observer实例
+		/**
+			entries:是一个数组，包含当前所有触发了事件的IntersectionObserverEntry对象信息
+				boundingClientRect: 目标元素与父级scroll元素的位置信息
+				intersectionRatio: 目标元素的可见比例(0~1)
+				intersectionRect: 目标元素与父级scroll元素相交的区域的位置信息
+				isIntersection: 是否存在相交区域
+				rootBounds: 父级scroll元素的位置信息
+				target: 目标元素DOM的信息
+				time: 当前时间戳，从网页加载到当前的毫秒数
+			obs: 这个对象就是返回的设置的参数
+				root: 所监听的滚动元素
+				rootMargin: 检测点的偏移
+				threshold: 设置触发的时机
+		**/
 	}, {
 		root: document.getElementById("ul"), // 监听哪个元素的滚动条（指定父元素）
 		rootMargin: "0px 0px 0px 0px", // 检测元素重叠的偏移值
-		threshold: 0.5, // 0~1，0:元素完全重叠时才会触发回调。1:元素只要有1像素交叉就会触发
+		threshold: 0.5, // 0~1，0:元素刚一进入和完全退出时触发。1:元素完全进入和刚一退出时触发；也可以是一个数组：[0,0.25,0.5,1],即在交叉0%、25%、50%、100%时，都会触发一次
 	});
 
 // 添加需要被监听的子元素
