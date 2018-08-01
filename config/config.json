@@ -248,6 +248,14 @@
       "pic": null,
       "info": "常用的DOM对象各种高度和位置设置的API",
       "date": "2016/04/15"
+    },{
+      "gitname": "smooth1.md",
+      "type": 1,
+      "title": "IntersectionObserverAPI实现的列表滑动效果",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "以前用jquery写过，现在这种方式我认为更好一点。CSS变量的话貌似做不到",
+      "date": "2018/08/01"
     }
   ]
 }
