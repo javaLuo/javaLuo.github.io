@@ -52,6 +52,6 @@ Array.from(p).forEach((item)=>{
 
 ### 效果图：
 
-![效果图](https://github.com/javaLuo/javaLuo.github.io/blob/master/assets/smooth_img1.gif)
+![效果图](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/smooth_img1.gif)
 
 * 想过用CSS变量来控制，但好像不行。CSS变量貌似不适合控制这种动态添加的长列表
