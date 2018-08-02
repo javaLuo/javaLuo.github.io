@@ -51,3 +51,6 @@
   You’re not EARLY.<br/>
   在命运为你安排的属于自己的时区里，一切都准时。<br/>
   You are very much ON TIME, and in your TIME ZONE Destiny set up for you.
+
+<br/>
+> 首先你得承认世界上有全面超过你的人，而后你才干确定自己努力的结果。
