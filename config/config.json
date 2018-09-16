@@ -256,6 +256,14 @@
       "pic": null,
       "info": "以前用jquery写过，现在这种方式我认为更好一点。CSS变量的话貌似做不到",
       "date": "2018/08/01"
+    },{
+      "gitname": "tradingview.md",
+      "type": 1,
+      "title": "小罗的Tradingview图表插件教程",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "主要说明一下Tradingview不好理解的地方",
+      "date": "2018/09/16"
     }
   ]
 }
