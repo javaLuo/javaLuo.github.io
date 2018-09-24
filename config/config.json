@@ -259,11 +259,19 @@
     },{
       "gitname": "tradingview.md",
       "type": 1,
-      "title": "小罗的Tradingview图表插件教程",
+      "title": "小罗的Tradingview图表插件教程 还没写完",
       "tags": ["JS"],
       "pic": null,
       "info": "主要说明一下Tradingview不好理解的地方",
       "date": "2018/09/16"
+    },{
+      "gitname": "orbitcontrols.md",
+      "type": 1,
+      "title": "OrbitControls.js 镜头控制器所有属性",
+      "tags": ["Three.js"],
+      "pic": null,
+      "info": "方便查阅",
+      "date": "2018/09/24"
     }
   ]
 }
