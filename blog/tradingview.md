@@ -22,7 +22,6 @@
 <script>
     TradingView.onready(function() {
     var widget = window.tvWidget = new TradingView.widget({
-        /** 所有参数见下表 **/
         symbol: 'BTCUSD', // 默认的交易对名称
         interval: '5', // 默认的时间间隔 即一个K柱代表的是多少时间内的数据
         timeframe: '6M', // 默认的时间范围 整个x轴的范围
@@ -112,13 +111,45 @@
 
 ### 图表初始化时可配置的所有属性（不包含交易终端）
 
-| 属性名       | 可能的值                                                            | 说明                                               |
-| ------------ | ------------------------------------------------------------------- | -------------------------------------------------- |
-| symbol       | 'BTCUSD'                                                            | 默认的交易对名称                                   |
-| interval     | '5'                                                                 | 默认的时间间隔 即一个 K 柱代表的是多少时间内的数据 |
-| timeframe    | '6M'                                                                | 默认的时间范围 整个 x 轴的范围                     |
-| container_id | "tv_chart_container"                                                | DOM 容器元素的 ID                                  |
-| datafeed     | new this.datafeed.UDFCompatibleDatafeed('https://api.rightbtc.com') | JS API 配置                                        |
-| timezone     | 'Asia/Dubai'                                                        | 时区                                               |
-| debug        | false                                                               | 是否开启调试模式，会输出各种调试信息               |
-| library_path | '/charting_library/'                                                | 图表源文件的相对路径，图表会去这个路径加载样式     |
+| 属性名                      | 可能的值                                                            | 说明                                                                         |
+| --------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| symbol                      | 'BTCUSD'                                                            | 默认的交易对名称                                                             |
+| interval                    | '5'                                                                 | 默认的时间间隔 即一个 K 柱代表的是多少时间内的数据                           |
+| timeframe                   | '6M'                                                                | 默认的时间范围 整个 x 轴的范围                                               |
+| container_id                | "tv_chart_container"                                                | DOM 容器元素的 ID                                                            |
+| datafeed                    | new this.datafeed.UDFCompatibleDatafeed('https://api.rightbtc.com') | JS API 配置                                                                  |
+| timezone                    | 'Asia/Dubai'                                                        | 时区                                                                         |
+| debug                       | false                                                               | 是否开启调试模式，会输出各种调试信息                                         |
+| library_path                | '/charting_library/'                                                | 图表源文件的相对路径，图表会去这个路径加载样式                               |
+| width                       | 500                                                                 | 手动限制图表的宽度                                                           |
+| height                      | 300                                                                 | 手动限制图表的高度                                                           |
+| fullscreen                  | false                                                               | 是否全屏，会超出容器占据所有空间                                             |
+| autosize                    | true                                                                | 是否根据容器大小自动调整图表大小                                             |
+| symbol_search_request_delay | 500                                                                 | 用户搜索框输入后延迟多少毫秒调用搜索接口                                     |
+| auto_save_delay             | 2                                                                   | 当需要自动保存时，延迟多少秒执行 onAutoSaveNeeded 接口调用                   |
+| toolbar_bg                  | '#ffffff'                                                           | 工具栏的背景色                                                               |
+| study_count_limit           | 2                                                                   | 多图布局时，最多显示多少个指标                                               |
+| studies_access              | {type: 'black/white',tools:[{name:'工具名', grayed:true/false}]     | 指定哪些工具需要禁用或只启用指定的工具,black 禁用，white 启用                |
+| drawings_access             |                                                                     | 与上面 studies_access 类似，这个是用于设置图表内容区那些图形东西的启用或禁用 |
+| locale                      | 'en'                                                                | 语言                                                                         |
+| saved_data                  | null                                                                | 已存储的数据，如果设置了这个，图表初始化时会先用这些数据构建图形             |
+| numeric_formatting          | { decimal_sign: ',' }                                               | 所有数字的格式化，目前只能设置千分位的分隔符                                 |
+| customFormatters            | {}                                                                  | 日期和时间的格式化                                                           |
+| overrides                   | {}                                                                  | 定制所有的 UI 表现，颜色啊什么的                                             |
+| disabled_features           | [...]                                                               | 需要禁用的功能                                                               |
+| enabled_features            | [...]                                                               | 需要启用的功能                                                               |
+| snapshot_url                | 'https:/xxx.com'                                                    | 当用户按快照按钮，图表会自动截图上传到此地址供用户下载                       |
+| indicators_file_name        | null                                                                | 可以设置一个 js 文件的路径，该 js 文件应该包含自定义指标的各种设置           |
+| preset                      | "mobile"                                                            | 预设，只能指定为“mobile”或留空，会适配一下移动端的样式                       |
+| studies_overrides           | {}                                                                  | 覆盖指标的样式                                                               |
+| time_frames                 | []                                                                  | 设置底部可选的时间区间                                                       |
+| charts_storage_url          | 'http://saveload.tradingview.com'                                   | 用于在服务端保存用户的数据，如果要使用高级图表保存等功能就需要设置           |
+| client_id                   | 'https://xxx.com'                                                   | 您的网站网址或其他任意内容（用于在服务端保存该用户的数据，高级图表功能）     |
+| charts_storage_api_version  | '1.1'                                                               | 所使用等 API 版本，目前有 1.0 和 1.1                                         |
+| load_last_chart             | false                                                               | 设为 true 则加载用户保存的最后一张图表                                       |
+| theme                       | 'Light/Dark'                                                        | 主题：亮色或暗色                                                             |
+| custom_css_url              | null                                                                | 指定义 CSS 文件的路径                                                        |
+| loading_screen              | {backgroundColor: '#ffffff', foregroundColor: '#00ff00'}            | 设置加载时的样式                                                             |
+| favorites                   | {}                                                                  | 设置上方图表收藏夹要展示的内容                                               |
+| save_load_adapter           | {}                                                                  | 保存/加载 图表 高级功能，略                                                  |
+| settings_adapter            | {}                                                                  | 设置/删除 高级功能 略                                                        |
