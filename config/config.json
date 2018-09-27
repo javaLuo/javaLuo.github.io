@@ -22,7 +22,7 @@
       "gitname": "earth.md",
       "type": 2,
       "title": "Earth 3D TNC - 大自然保护协会",
-      "tags": [ "webgl", "Three.js"],
+      "tags": ["webgl", "Three.js"],
       "pic": "http://isluo.com:8080/files/work/earth.jpg",
       "info": "学习Three.js时做的东西，要保护地球，Three.js的教程太少，着色器语言有好多需要学习",
       "date": "2018/03/14"
@@ -184,7 +184,7 @@
       "gitname": "water.md",
       "type": 2,
       "title": "Waterdrop 3D",
-      "tags": ["THREE.JS","webgl"],
+      "tags": ["THREE.JS", "webgl"],
       "pic": "https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/book.jpg",
       "info": "三体·水滴计划。消灭人类暴政，世界属于三体",
       "date": "2018/06/23"
@@ -211,7 +211,7 @@
       "gitname": "wxstudy.md",
       "type": 3,
       "title": "周末撸了一个小程序",
-      "tags": ["JS","wechat"],
+      "tags": ["JS", "wechat"],
       "pic": null,
       "info": "记录了政治、英语和数学的学习资料，地铁的时候可以看",
       "date": "2018/07/09"
@@ -220,19 +220,21 @@
       "gitname": "words.md",
       "type": 3,
       "title": "感受过的佳句",
-      "tags": ["文学","文字的力量"],
+      "tags": ["文学", "文字的力量"],
       "pic": null,
       "info": "心中激起涟漪和触动的句子",
       "date": "2018/06/16"
-    },{
+    },
+    {
       "gitname": "qi.md",
       "type": 1,
       "title": "一些冷门的奇技淫巧",
-      "tags": ["HTML","JS","CSS"],
+      "tags": ["HTML", "JS", "CSS"],
       "pic": null,
       "info": "持续更新",
       "date": "2018/07/11"
-    },{
+    },
+    {
       "gitname": "offset.md",
       "type": 1,
       "title": "各种取高度位置关系及相关API",
@@ -240,7 +242,8 @@
       "pic": null,
       "info": "常用的DOM对象各种高度和位置设置的API",
       "date": "2018/07/17"
-    },{
+    },
+    {
       "gitname": "blueair.md",
       "type": 1,
       "title": "微信硬件蓝牙开发各种坑不完全开发指南",
@@ -248,7 +251,8 @@
       "pic": null,
       "info": "常用的DOM对象各种高度和位置设置的API",
       "date": "2016/04/15"
-    },{
+    },
+    {
       "gitname": "smooth1.md",
       "type": 1,
       "title": "IntersectionObserverAPI实现的列表滑动效果",
@@ -256,7 +260,8 @@
       "pic": null,
       "info": "以前用jquery写过，现在这种方式我认为更好一点。CSS变量的话貌似做不到",
       "date": "2018/08/01"
-    },{
+    },
+    {
       "gitname": "tradingview.md",
       "type": 1,
       "title": "小罗的Tradingview图表插件教程 还没写完",
@@ -264,7 +269,8 @@
       "pic": null,
       "info": "主要说明一下Tradingview不好理解的地方",
       "date": "2018/09/16"
-    },{
+    },
+    {
       "gitname": "orbitcontrols.md",
       "type": 1,
       "title": "OrbitControls.js 镜头控制器所有属性",
