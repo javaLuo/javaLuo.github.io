@@ -169,8 +169,8 @@ TradingView.onready(function() {
             * @param callback 回调函数，获取到数据后调用此函数把数据传给图表
             * 后端应该返回这样的数据：
             {
-                // 交易对，用于搜索框将出现的选项，表明后端程序员能提供这些交易对的数据
-                exchanges: [{name:'All',value:'',desc:''},{name:'USDBTC',value:'USDBTC',desc:'美元对比特币'},...],
+                // 所有的证券交易所代码，用于搜索框将出现的选项，表明后端程序员能提供这些交易所的数据
+                exchanges: [{name:'All',value:'',desc:''},{name:'NYSE',value:'NYSE',desc:'纽约交易所'},...],
                 // 时间间隔，表明后端能提供这些不同时间间隔的数据，比如按每5分钟频率记录的数据
                 supported_resolutions:["1", "5", "15", "30", "60", "D", "W"],
                 // 后端是否实现了用户在图表上做标记的接口（高级功能）
@@ -196,7 +196,7 @@ TradingView.onready(function() {
             /**
             * 用户进行搜索时，图表会自动调用该函数
             * @param userInput 用户在搜索框输入的字符串
-            * @param exchange 用户选择的交易对，即onReady中后端返回的那些
+            * @param exchange 用户选择的交易所，即onReady中后端返回的那些
             * @param symbolType 用户选择的交易对类型 即onReady中后端返回的那些
             * @param onResultReadyCallback 回调函数
             * 后端应该返回这样对数据：
@@ -205,7 +205,7 @@ TradingView.onready(function() {
                     "symbol": "USDBTC", // 交易对名字
                     "full_name": "BTCE:USDBTC", // 完整名字
                     "description": "描述",
-                    "exchange": "USDBTC", // 所属对exchange中配置的名字
+                    "exchange": "NYSE", // 交易所名字
                     "ticker": "USDBTC", // 一个唯一的名字，跟symbol一样即可
                     "type": "stock" // 类型
                 },

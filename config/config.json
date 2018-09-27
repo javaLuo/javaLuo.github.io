@@ -264,7 +264,7 @@
     {
       "gitname": "tradingview.md",
       "type": 1,
-      "title": "小罗的Tradingview图表插件教程 还没写完",
+      "title": "TradingView笔记 配置和JS API",
       "tags": ["JS"],
       "pic": null,
       "info": "主要说明一下Tradingview不好理解的地方",
@@ -278,6 +278,15 @@
       "pic": null,
       "info": "方便查阅",
       "date": "2018/09/24"
+    },
+    {
+      "gitname": "datafeed.md",
+      "type": 1,
+      "title": "TradingView DataFeed笔记",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "学习记录",
+      "date": "2018/09/27"
     }
   ]
 }
