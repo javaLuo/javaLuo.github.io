@@ -265,21 +265,21 @@ TradingView.onready(function() {
             * @param onHistoryCallback 成功时的回调
             * @param onErrorCallback 失败时的回调
             * @param firstDataRequest true/false 图表是否是第1次获取数据（即获取）
-            onHistoryCallback接收这样的数据：
-            {
-                bar:{
-                    time: [1537595100,1537595400,...], // 每个时刻
-                    close: [6720,6730,...], // 每个时刻的收盘价
-                    open:[6720,6730,...], // 每个时刻的开盘价
-                    hight:[6720,6730,...], // 每个时刻的最高价
-                    low:[6720,6730,...], // 每个时刻的最低价
-                    volume:[10.5,20.1,...], // 每个时刻的总成交量
-                },
-                meta:{
-                    noData: false, // 没数据的话需要设置为true,此时bar可以为空
-                    nextTime: 时间戳, // 没数据的话需要设置再次获取数据的时间
+            onHistoryCallback接收两个参数：
+                第1个应该是数组:[
+                    {
+                    time: 1537595100, // 每个时刻
+                    close: 6720,6730, // 每个时刻的收盘价
+                    open:6720,6730, // 每个时刻的开盘价
+                    high:6720,6730, // 每个时刻的最高价
+                    low:6720,6730, // 每个时刻的最低价
+                    volume:10.5, // 每个时刻的总成交量
+                    },...
+                ]
+                第2个是个对象:{
+                    noData: false, // 没数据的话需要设置为true,此时第1个参数可以传null
+                    nextTime: 时间戳, // 没数据的话可以设置再次获取数据的时间
                 }
-            }
             **/
             getBars(symbolInfo,resolution,from,to,onHistoryCallback,onErrorCallback,firstDataRequest){},
             /**
