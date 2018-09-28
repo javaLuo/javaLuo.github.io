@@ -193,6 +193,8 @@ TradingView.onready(function() {
                     success: res => callback(res)
                 })
             },
+
+
             /**
             * 用户进行搜索时，图表会自动调用该函数
             * @param userInput 用户在搜索框输入的字符串
@@ -215,6 +217,8 @@ TradingView.onready(function() {
             ]
             **/
             searchSymbols: function(userInput,exchange,symbolType,onResultReadyCallback){},
+
+
             /**
             * 根据交易对名字获取交易对详细信息
             * @param symbolName 交易对名字
@@ -255,6 +259,8 @@ TradingView.onready(function() {
                 }
             **/
             resolveSymbol:function(symbolName,onSymbolResolvedCallback,onResolveErrorCallback){},
+
+
             /**
             * 获取指定时间段内段所有数据
             * 图表会自动调用，比如用户查看的是每5分钟的数据，则图表在需要获数据时，自动调用此函数
@@ -278,10 +284,12 @@ TradingView.onready(function() {
                 ]
                 第2个是个对象:{
                     noData: false, // 没数据的话需要设置为true,此时第1个参数可以传null
-                    nextTime: 时间戳, // 没数据的话可以设置再次获取数据的时间
+                    nextTime: 时间戳, // 没数据的话可以设置再次获取数据的时间，到时间会再次请求getBars
                 }
             **/
             getBars(symbolInfo,resolution,from,to,onHistoryCallback,onErrorCallback,firstDataRequest){},
+
+
             /**
             * 为当前交易对建立一个监听者
             * 由图表自动调用，用户每选择一个不同的交易对或每选择一个不同的时间间隔，就会触发一次该函数
@@ -294,6 +302,8 @@ TradingView.onready(function() {
             * @param onResetCacheNeededCallback 刷新缓存的数据？
             **/
             subscribeBars: function(symbolInfo,resolution,onRealtimeCallback,subscriberUID,onResetCacheNeededCallback){},
+
+
             /**
             * 销毁指定的监听者
             * 这个也是图表自动调用的，目前还不清楚具体什么情况会被调用
@@ -301,6 +311,8 @@ TradingView.onready(function() {
             * @param subscriberUID 监听者的ID
             **/
             unsubscribeBars(subscriberUID){},
+
+
             /**
             * 可选的
             * 图表库在需要某些历史数据来覆盖K柱时会自动调用
@@ -314,6 +326,8 @@ TradingView.onready(function() {
             }
             **/
             calculateHistoryDepth: function(resolution, resolutionBack, intervalBack){},
+
+
             /**
             * 获取某时间段内当前用户所做的所有标记,每个K柱最多做10个标记
             * @param symbolInfo 当前交易对的详情
@@ -335,11 +349,15 @@ TradingView.onready(function() {
             ]
             **/
             getMarks: function(symbolInfo,from,to,onDataCallback,resolution){},
+
+
             /**
             * 获取时间轴上的标记
             * 同getMarks
             **/
             getTimescaleMarks: function(symbolInfo,from,to,onDataCallback,resolution){},
+
+
             /**
             * 获取服务器时间
             * @param callback 回调
