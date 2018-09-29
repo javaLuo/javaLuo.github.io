@@ -287,6 +287,15 @@
       "pic": null,
       "info": "学习记录",
       "date": "2018/09/27"
+    },
+    {
+      "gitname": "featuresets.md",
+      "type": 1,
+      "title": "TradingView Featuresets部分官方文档补全",
+      "tags": ["JS"],
+      "pic": null,
+      "info": "学习记录",
+      "date": "2018/09/29"
     }
   ]
 }
