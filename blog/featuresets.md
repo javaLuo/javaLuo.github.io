@@ -89,10 +89,10 @@
 | uppercase\_instrument\_names                 | on       | 1.12 | 把用户的输入全部转换为大写字母                                                           |
 
 ### 重要特征
-| 字段名               | 默认状态 | 版本           | 描述                     |
-| -------------------- | -------- | -------------- | ------------------------ |
-| study_templates      | off      | 没看出什么效果 |
-| datasource_copypaste | on       | 允许复制图纸   |
-| seconds_resolution   | off      | 1.4            | 允许“秒”级别的时间间隔 |
+| 字段名               | 默认状态 | 版本 | 描述                     |
+| -------------------- | -------- | ---- | ------------------------ |
+| study_templates      | off      |      | 没看出什么效果           |
+| datasource_copypaste | on       |      | 允许复制图纸             |
+| seconds_resolution   | off      | 1.4  | 允许“秒”级别的时间间隔 |
 
 ### 交易终端 略
