@@ -6,7 +6,7 @@
 | 字段名                               | 默认状态 | 适用版本 | 描述                                         |
 | ------------------------------------ | -------- | -------- | -------------------------------------------- |
 | header_widget                        | on       |          | 整个头部区域                                 |
-| -header\\_widget`_`dom`\_`node       | on       |          | 头部的标题区域,没发现什么效果                |
+| -header/\_widget/\_dom/\_node        | on       |          | 头部的标题区域,没发现什么效果                |
 | -header_symbol_search                | on       |          | 头部的搜索框                                 |
 | -symbol_search_hot_key               | on       | 1.9      | 键盘按任意键激活搜索区                       |
 | -header_resolutions                  | on       |          | 头部所有时间间隔相关按钮                     |
