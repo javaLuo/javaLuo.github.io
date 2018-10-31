@@ -51,7 +51,7 @@
 | countdown                                 | on       | 1.4      | 在价格标尺上显示倒计时标签,没看出什么效果                              |
 | caption\_buttons\_text\_if\_possible      | on       | 1.4      | 按钮中尽可能图标和文字都显示，而不是只显示图标(官方是off，我觉得是on ) |
 | dont\_show\_boolean\_study\_arguments     | off      | 1.4      | 隐藏真/假研究论点，没看出什么效果                                      |
-| hide\_last\_na\_study\_output             | off      | 1.4      | 隐藏最后一个研究输出数据,没看出什么效果                                |
+| hide\_last\_na\_study\_output             | off      | 1.4      | 隐藏指标信息最后一个数据显示,即volumn最后的n/a                         |
 | symbol_info                               | on       | 1.5      | 右键菜单中的“品种信息”                                               |
 | timezone_menu                             | on       | 1.5      | 底部工具栏点日期弹出的“时区选择框”                                   |
 | snapshot\_trading\_drawings               | off      | 1.6      | 屏幕拍照中的相关东西                                                   |
