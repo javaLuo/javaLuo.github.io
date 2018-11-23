@@ -296,6 +296,15 @@
       "pic": null,
       "info": "学习记录",
       "date": "2018/09/29"
+    },
+    {
+      "gitname": "three_1.md",
+      "type": 1,
+      "title": "Three.js 泛光外发光例子",
+      "tags": ["Three.js"],
+      "pic": null,
+      "info": "Three.js官方示例学习笔记",
+      "date": "2018/11/23"
     }
   ]
 }
