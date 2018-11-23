@@ -1,7 +1,7 @@
 <iframe 
     height=300 
     width=500 
-    src="http://htmlpreview.github.io/?https://github.com/javaLuo/three_road/blob/master/src/unreal_bloom.html" 
+    src="https://htmlpreview.github.io/?https://github.com/javaLuo/three_road/blob/master/src/unreal_bloom.html" 
     frameborder=0 
     allowfullscreen>
 </iframe>
@@ -113,4 +113,4 @@
 
 ### 源码地址：
 
-https://github.com/javaLuo/three_road/blob/master/src/unreal_bloom.html
+<a href="https://github.com/javaLuo/three_road/blob/master/src/unreal_bloom.html" target="_blank">https://github.com/javaLuo/three_road/blob/master/src/unreal_bloom.html</a>
