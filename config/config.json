@@ -305,6 +305,15 @@
       "pic": null,
       "info": "Three.js官方示例学习笔记",
       "date": "2018/11/23"
+    },
+    {
+      "gitname": "graphql.md",
+      "type": 1,
+      "title": "GraphQL express教程",
+      "tags": ["js"],
+      "pic": null,
+      "info": "最近学习了一下GraphQL，我觉得这是一种更合理的前后端交互方式",
+      "date": "2018/12/08"
     }
   ]
 }
