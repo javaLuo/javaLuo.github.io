@@ -154,7 +154,7 @@ const Query = new GraphQLObjectType({
         pageNow: { type: GraphQLInt },// 当前页码
         pageSize: { type: GraphQLInt }// 每页多少条数据
       },
-      resolve: async (_, { pageNow }) => {  // 真正的逻辑处理
+      resolve: async (_, { pageNow, pageSize }) => {  // 真正的逻辑处理
         const res = await jdbc.getMovieList(pageNow,pageSize); // 去调用SQL取数据库数据
         if (res && res.status === '0') {
           return res.rows;
@@ -174,8 +174,8 @@ const Query = new GraphQLObjectType({
 页面里面写 ajax 或 fetch
 
 ```
-  var query = `query func($pageNow: Int!, $pageSize: Int!){
-    movie(pageNow: $pageNow, pageSize:$pageSize){
+  const query = `query func($pageNow: Int!, $pageSize: Int!){
+    movie(pageNow: $pageNow, pageSize: $pageSize){
       id
       title
       imgpath
@@ -211,7 +211,7 @@ const Query = new GraphQLObjectType({
 后台人员仍然需要写 SQL 获取数据库的原始数据，然后加工成 GraphQL 规范的 schema,我更想称其为“物料”。<br/>
 就好比一个水果店，后台需要从农民手中获得原始水果，经过清洗包装，上架到商店中。<br/>
 前端想要苹果就拿苹果，想要香蕉就拿香蕉<br/>
-也可以同时买苹果和香蕉，这在以前必定要写好几个接口。而现在全局只需要 1 个接口就行了。
+也可以同时买苹果和香蕉，这在以前可能要写好几个接口。而现在全局只需要 1 个接口就行了。
 
 小项目用起来挺麻烦的，更适用与大型复杂项目。
 
