@@ -1,7 +1,7 @@
 <iframe 
     height=300 
     width=500 
-    src="https://htmlpreview.github.io/?https://github.com/javaLuo/three_road/blob/master/src/unreal_bloom.html" 
+    src="https://htmlpreview.github.io/?https://github.com/javaLuo/three_road/blob/master/src/webgl_postprocessing_unreal_bloom.html" 
     frameborder=0 
     allowfullscreen>
 </iframe>
