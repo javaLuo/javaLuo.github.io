@@ -64,3 +64,7 @@
 "为什么要给畜牲自由？"<br/>
 Their heritage from generation to generation is the belled yoke and the lash.<br/>
 "它们一代代的命运就是套上枷锁，接受鞭挞。"<br/>----《Live Not By Lies》（[俄]亚历山大·索尔仁尼琴）
+
+<br/>
+> 你最需要的东西之一，是对人生打击的弹性。无论怎样受伤，你都需要很快就复原。无论被击倒在地上多少次，都需要很快站起来。
+<br/>----《摔倒七次，站起来八次》
