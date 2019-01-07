@@ -1,6 +1,6 @@
 ## JS 启动 windows 计算器
 
-> 仅 IE 支持 ActiveXObject 对象
+> 仅 IE 支持 ActiveXObject 对象<br/>
 > 原理就是调用 windows 的批处理命令来启动对应的程序
 
 ```
@@ -24,7 +24,7 @@ exec('calc.exe');
 
 ## https 网站用 iframe 嵌入 http 的网页
 
-> 处于安全考虑 IOS 下 https 不能用 iframe 加载 http 的网站
+> 处于安全考虑 IOS 下 https 不能用 iframe 加载 http 的网站<br/>
 > 参考：阮一峰 <a href="http://www.ruanyifeng.com/blog/2016/09/csp.html" target="_blank">http://www.ruanyifeng.com/blog/2016/09/csp.html</a>
 
 ```
@@ -32,9 +32,9 @@ exec('calc.exe');
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 ```
 
-> 这行代码的意思是，把那些 http 引入的资源，都自动把 URL 换成 https。
-> 所以其实这句代码没有卵用，因为除非原 http 地址也支持 https，否则仍然无法访问。
-> 如果原地址支持 https，那直接用 https 的 url 不就完了吗
+> 这行代码的意思是，把那些 http 引入的资源，都自动把 URL 换成 https。<br/>
+> 所以其实这句代码没有卵用，因为除非原 http 地址也支持 https，否则仍然无法访问。<br/>
+> 如果原地址支持 https，那直接用 https 的 url 不就完了吗<br/>
 
 ## CSS 改变 input 光标的颜色
 
@@ -61,8 +61,8 @@ new Intl.NumberFormat().format(123456789.123); // 这个效率高，效果相同
 
 ```
 
-> 这种方式只能保留 15 位有效数字，且小数点后最多保留 3 位
-> 基本够用了，因为 JS 中的数字精度也就只有这么大，科学计数法能保留到 18 位有效数字
+> 这种方式只能保留 15 位有效数字，且小数点后最多保留 3 位<br/>
+> 基本够用了，因为 JS 中的数字精度也就只有这么大，科学计数法能保留到 18 位有效数字<br/>
 > Intl 文档： https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl
 
 ## 镂空图片背景的文字
