@@ -7,7 +7,7 @@
  yarn add AssemblyScript/assemblyscript -D
 ```
 
-> assemblyscript 是一个能把 TypeScript 文件编译为 wasm 二进制文件的编译器
+> assemblyscript 是一个能把 TypeScript 文件编译为 wasm 二进制文件的编译器<br/>
 > 它本身也是 TypeScript 的子集
 
 <br/>
@@ -17,31 +17,32 @@
   npx asinit .
 ```
 
-> 表示把当前目录构建成一个最基本的 AssemblyScript 项目
-
-最后目录结构看起来像这样：
+> 表示把当前目录构建成一个最基本的 AssemblyScript 项目<br/>
+> 最后目录结构看起来像这样：
 
 ![wasm1](https://raw.githubusercontent.com/javaLuo/javaimluo/master/blog-wasm/wasm1.png)
 
-只需要关心 index.ts 就可以了，这就是最终要编译为 wasm 的东西
+> 只需要关心 index.ts 就可以了，这就是最终要编译为 wasm 的东西
 
 <br/>
 **然后运行 build 指令构建**
-   ```
-    yarn asbuild
-   ```
-   会在 build 文件下生成最终文件
 
 ```
-  optimized.wasm // 进一步压缩过的wasm
-  optimized.wasm.map // 对应的map文件，调试用
-  optimized.wat // 文本格式的文件，可以看到里面最终生成的文本格式代码
-  untouched.wasm // 未压缩过的wasm
-  untouched.wasm.map // 调试用
-  untouched.wat // 文本格式代码
+ yarn asbuild
 ```
 
-最终只需要用到 optimized.wasm 或 untouched.wasm
+> 会在 build 文件下生成最终文件
+
+```
+  optimized.wasm      // 进一步压缩过的wasm
+  optimized.wasm.map  // 对应的map文件，调试用
+  optimized.wat       // 文本格式的文件，可以看到里面最终生成的文本格式代码
+  untouched.wasm      // 未压缩过的wasm
+  untouched.wasm.map  // 调试用
+  untouched.wat       // 文本格式代码
+```
+
+> 最终只需要用到 optimized.wasm 或 untouched.wasm
 
 <br/>
 **在 js 中加载 wasm**
@@ -57,14 +58,16 @@
 ```
 
 - 以上是浏览器原生 WebAssembly API 加载 wasm 的方式
-- 需要异步加载，fetch 或 ajax 都  行
-- 官方提供了好几个 API，但大致功能都差不多，参见：https://developer.mozilla.org/zh-CN/docs/WebAssembly
+- 需要异步加载，fetch 或 ajax 都行
+- 我上面分成来好几步，全部写在一步里也可以
+- 官方提供了好几个 API，但大致功能都差不多
+- 参见：<a href="https://developer.mozilla.org/zh-CN/docs/WebAssembly" target="_blank">https://developer.mozilla.org/zh-CN/docs/WebAssembly</a>
 
 <br/>
 **使用 webpack 加载 wasm**
-   webpack 原生支持加载 wasm 文件
 
-webpack.config.js 中加一个配置：
+> webpack 原生支持加载 wasm 文件<br/>
+> webpack.config.js 中加一个配置：
 
 ```
   module:{
@@ -77,7 +80,7 @@ webpack.config.js 中加一个配置：
   }
 ```
 
-js 代码中像普通 model 一样引入：
+> js 代码中像普通 model 一样引入：
 
 ```
 import * as wasm from "./optimized.wasm";
@@ -85,7 +88,7 @@ import * as wasm from "./optimized.wasm";
 wasm.add(1, 2); // 3
 ```
 
-**注意：** 在 webpack4.x 可以像上面那样直接引入，但 webpack3.x 只能异步引入：
+> **注意：** 在 webpack4.x 可以像上面那样直接引入，但 webpack3.x 只能异步引入：
 
 ```
 import("./optimized.wasm").then(wasm => {
@@ -97,7 +100,8 @@ import("./optimized.wasm").then(wasm => {
 
 -  把一些复杂计算的东西封装成函数，编译为 wasm，运行起来更快
 - AssemblyScript 是 TypeScript 的子集，用得最多的类型如 i32,i64,f32,f64,bool，所以与传统 JS 有很多不同的地方
-- 需要学习 assemblyscript 的一些东西，参见：https://github.com/AssemblyScript/assemblyscript/wiki
+- 需要学习 assemblyscript 的一些东西
+- 参见：<a href="https://github.com/AssemblyScript/assemblyscript/wiki" target="_blank">https://github.com/AssemblyScript/assemblyscript/wiki</a>
 
 ## 嘿嘿嘿
 
