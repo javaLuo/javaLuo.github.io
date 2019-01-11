@@ -25,24 +25,24 @@
 > 只需要关心 index.ts 就可以了，这就是最终要编译为 wasm 的东西
 
 <br/>
-**然后运行 build 指令构建**
+**然后运行 build 指令**
 
 ```
  yarn asbuild
 ```
 
-> 会在 build 文件下生成最终文件
+> 会在 build 文件夹下生成最终文件
 
 ```
-  optimized.wasm      // 进一步压缩过的wasm
+  optimized.wasm      // 最终wasm
   optimized.wasm.map  // 对应的map文件，调试用
-  optimized.wat       // 文本格式的文件，可以看到里面最终生成的文本格式代码
-  untouched.wasm      // 未压缩过的wasm
+  optimized.wat       // 文本格式的文件，可以看到里面生成的文本格式代码
+  untouched.wasm      // 未压缩过的wasm，也能用
   untouched.wasm.map  // 调试用
   untouched.wat       // 文本格式代码
 ```
 
-> 最终只需要用到 optimized.wasm 或 untouched.wasm
+> 最终只需要用到 optimized.wasm
 
 <br/>
 **在 js 中加载 wasm**
@@ -59,8 +59,8 @@
 
 - 以上是浏览器原生 WebAssembly API 加载 wasm 的方式
 - 需要异步加载，fetch 或 ajax 都行
-- 我上面分成来好几步，全部写在一步里也可以
-- 官方提供了好几个 API，但大致功能都差不多
+- 我上面分成了好几步，全部写在一步里也可以
+- 官方提供了好几个 API，但大致功能差不多
 - 参见：<a href="https://developer.mozilla.org/zh-CN/docs/WebAssembly" target="_blank">https://developer.mozilla.org/zh-CN/docs/WebAssembly</a>
 
 <br/>
@@ -96,6 +96,9 @@ import("./optimized.wasm").then(wasm => {
 });
 ```
 
+- 搞定了！
+
+<br/>
 ## WebAssembly 能用来做什么
 
 -  把一些复杂计算的东西封装成函数，编译为 wasm，运行起来更快
@@ -106,5 +109,5 @@ import("./optimized.wasm").then(wasm => {
 ## 嘿嘿嘿
 
 - wasm 是二进制文件，里面写了什么内容只有程序员自己知道
-- 我做了一下实验 0.1+0.2 在 JS 中会得到 0.0000...004, 用 wasm 来计算...更不准了，所以不能用于精准计算
--  不过目前我实在没找到有什么特别复杂的计算需要用 wasm 来显著提高性能的。除非是大型网页游戏或 3D 网页应用
+- 我做了一下实验 0.1+0.2 在普通 JS 中会得到 0.3000...004, 但用 wasm 来计算就... 更不准了！（0.3000...15xxxx），所以不能用于精准计算
+-  目前我实在没找到有什么特别复杂的计算需要用 wasm 来显著提高性能的。除非是大型网页游戏或 3D 网页应用
