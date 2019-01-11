@@ -1,7 +1,7 @@
 ## 别 BB，赶紧说怎么用
 
 <br/>
-1. 搞个 package.json， 然后安装：
+**搞个 package.json， 然后安装：**
 
 ```
  yarn add AssemblyScript/assemblyscript -D
@@ -11,7 +11,7 @@
 > 它本身也是 TypeScript 的子集
 
 <br/>
-2. 然后运行初始化npx指令
+**然后运行初始化npx指令**
 
 ```
   npx asinit .
@@ -26,7 +26,7 @@
 只需要关心 index.ts 就可以了，这就是最终要编译为 wasm 的东西
 
 <br/>
-3. 然后运行 build 指令构建
+**然后运行 build 指令构建**
    ```
     yarn asbuild
    ```
@@ -44,7 +44,7 @@
 最终只需要用到 optimized.wasm 或 untouched.wasm
 
 <br/>
-4. 在 js 中加载 wasm
+**在 js 中加载 wasm**
 
 ```
   fetch('./optimized.wasm').then(res => {
@@ -61,7 +61,7 @@
 - 官方提供了好几个 API，但大致功能都差不多，参见：https://developer.mozilla.org/zh-CN/docs/WebAssembly
 
 <br/>
-5. 使用 webpack 加载 wasm
+**使用 webpack 加载 wasm**
    webpack 原生支持加载 wasm 文件
 
 webpack.config.js 中加一个配置：
