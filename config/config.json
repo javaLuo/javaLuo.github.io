@@ -316,6 +316,15 @@
       "date": "2018/12/08"
     },
     {
+      "gitname": "wasm.md",
+      "type": 1,
+      "title": "装逼课程：WebAssembly用webpack加载的正确姿势",
+      "tags": ["js"],
+      "pic": null,
+      "info": "WebAssembly本身的API并不难，需要关心的是wasm的限制和在实际应用中的使用",
+      "date": "2019/01/11"
+    },
+    {
       "gitname": "2019.md",
       "type": 3,
       "title": "2019记录",

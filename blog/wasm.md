@@ -1,0 +1,106 @@
+## 别 BB，赶紧说怎么用
+
+<br/>
+1. 搞个 package.json， 然后安装：
+
+```
+ yarn add AssemblyScript/assemblyscript -D
+```
+
+> assemblyscript 是一个能把 TypeScript 文件编译为 wasm 二进制文件的编译器
+> 它本身也是 TypeScript 的子集
+
+<br/>
+2. 然后运行初始化npx指令
+
+```
+  npx asinit .
+```
+
+> 表示把当前目录构建成一个最基本的 AssemblyScript 项目
+
+最后目录结构看起来像这样：
+
+![wasm1](https://raw.githubusercontent.com/javaLuo/javaimluo/master/blog-wasm/wasm1.png)
+
+只需要关心 index.ts 就可以了，这就是最终要编译为 wasm 的东西
+
+<br/>
+3. 然后运行 build 指令构建
+   ```
+    yarn asbuild
+   ```
+   会在 build 文件下生成最终文件
+
+```
+  optimized.wasm // 进一步压缩过的wasm
+  optimized.wasm.map // 对应的map文件，调试用
+  optimized.wat // 文本格式的文件，可以看到里面最终生成的文本格式代码
+  untouched.wasm // 未压缩过的wasm
+  untouched.wasm.map // 调试用
+  untouched.wat // 文本格式代码
+```
+
+最终只需要用到 optimized.wasm 或 untouched.wasm
+
+<br/>
+4. 在 js 中加载 wasm
+
+```
+  fetch('./optimized.wasm').then(res => {
+    return res.arrayBuffer();
+  }).then(res => {
+    return WebAssembly.instantiate(res);
+  }).then(res => {
+    console.log(res.instance.exports.add(1,2)); // 3
+  })
+```
+
+- 以上是浏览器原生 WebAssembly API 加载 wasm 的方式
+- 需要异步加载，fetch 或 ajax 都  行
+- 官方提供了好几个 API，但大致功能都差不多，参见：https://developer.mozilla.org/zh-CN/docs/WebAssembly
+
+<br/>
+5. 使用 webpack 加载 wasm
+   webpack 原生支持加载 wasm 文件
+
+webpack.config.js 中加一个配置：
+
+```
+  module:{
+    rules: [
+      {
+      test: /\.wasm$/,
+      type: "webassembly/experimental"
+    },
+    ]
+  }
+```
+
+js 代码中像普通 model 一样引入：
+
+```
+import * as wasm from "./optimized.wasm";
+
+wasm.add(1, 2); // 3
+```
+
+**注意：** 在 webpack4.x 可以像上面那样直接引入，但 webpack3.x 只能异步引入：
+
+```
+import("./optimized.wasm").then(wasm => {
+  wasm.add(1,2); // 3
+});
+```
+
+## WebAssembly 能用来做什么
+
+-  把一些复杂计算的东西封装成函数，编译为 wasm，运行起来更快
+- AssemblyScript 是 TypeScript 的子集，用得最多的类型如 i32,i64,f32,f64,bool，所以与传统 JS 有很多不同的地方
+- 需要学习 assemblyscript 的一些东西，参见：https://github.com/AssemblyScript/assemblyscript/wiki
+
+## 嘿嘿嘿
+
+- wasm 是二进制文件，里面写了什么内容只有程序员自己知道
+- 我做了一下实验 0.1+0.2 在 JS 中会得到 0.0000...004, 用 wasm 来计算...更不准了，所以不能用于精准计算
+-  不过目前我实在没找到有什么特别复杂的计算需要用 wasm 来显著提高性能的。除非是大型网页游戏或 3D 网页应用
