@@ -3,7 +3,7 @@
 <br/>
 **搞个 package.json， 然后安装：**
 
-```
+```javascript
  yarn add AssemblyScript/assemblyscript -D
 ```
 
@@ -13,7 +13,7 @@
 <br/>
 **然后运行初始化npx指令**
 
-```
+```javascript
   npx asinit .
 ```
 
@@ -27,19 +27,19 @@
 <br/>
 **然后运行 build 指令**
 
-```
+```javascript
  yarn asbuild
 ```
 
 > 会在 build 文件夹下生成最终文件
 
-```
-  optimized.wasm      // 最终wasm
-  optimized.wasm.map  // 对应的map文件，调试用
-  optimized.wat       // 文本格式的文件，可以看到里面生成的文本格式代码
-  untouched.wasm      // 未压缩过的wasm，也能用
-  untouched.wasm.map  // 调试用
-  untouched.wat       // 文本格式代码
+```javascript
+optimized.wasm; // 最终wasm
+optimized.wasm.map; // 对应的map文件，调试用
+optimized.wat; // 文本格式的文件，可以看到里面生成的文本格式代码
+untouched.wasm; // 未压缩过的wasm，也能用
+untouched.wasm.map; // 调试用
+untouched.wat; // 文本格式代码
 ```
 
 > 最终只需要用到 optimized.wasm
@@ -47,14 +47,17 @@
 <br/>
 **在 js 中加载 wasm**
 
-```
-  fetch('./optimized.wasm').then(res => {
+```javascript
+fetch('./optimized.wasm')
+  .then(res => {
     return res.arrayBuffer();
-  }).then(res => {
-    return WebAssembly.instantiate(res);
-  }).then(res => {
-    console.log(res.instance.exports.add(1,2)); // 3
   })
+  .then(res => {
+    return WebAssembly.instantiate(res);
+  })
+  .then(res => {
+    console.log(res.instance.exports.add(1, 2)); // 3
+  });
 ```
 
 - 以上是浏览器原生 WebAssembly API 加载 wasm 的方式
@@ -69,30 +72,30 @@
 > webpack 原生支持加载 wasm 文件<br/>
 > webpack.config.js 中加一个配置：
 
-```
-  module:{
-    rules: [
-      {
+```javascript
+module: {
+  rules: [
+    {
       test: /\.wasm$/,
-      type: "webassembly/experimental"
+      type: 'webassembly/experimental',
     },
-    ]
-  }
+  ];
+}
 ```
 
 > js 代码中像普通 model 一样引入：
 
-```
-import * as wasm from "./optimized.wasm";
+```javascript
+import * as wasm from './optimized.wasm';
 
 wasm.add(1, 2); // 3
 ```
 
 > **注意：** 在 webpack4.x 可以像上面那样直接引入，但 webpack3.x 只能异步引入：
 
-```
-import("./optimized.wasm").then(wasm => {
-  wasm.add(1,2); // 3
+```javascript
+import('./optimized.wasm').then(wasm => {
+  wasm.add(1, 2); // 3
 });
 ```
 
