@@ -104,7 +104,7 @@ import('./optimized.wasm').then(wasm => {
 <br/>
 ## WebAssembly 能用来做什么
 
--  把一些复杂计算的东西封装成函数，编译为 wasm，运行起来更快
+- 把一些复杂计算的东西封装成函数，编译为 wasm，运行起来更快
 - AssemblyScript 是 TypeScript 的子集，用得最多的类型如 i32,i64,f32,f64,bool，所以与传统 JS 有很多不同的地方
 - 需要学习 assemblyscript 的一些东西
 - 参见：<a href="https://github.com/AssemblyScript/assemblyscript/wiki" target="_blank">https://github.com/AssemblyScript/assemblyscript/wiki</a>
@@ -112,5 +112,5 @@ import('./optimized.wasm').then(wasm => {
 ## 嘿嘿嘿
 
 - wasm 是二进制文件，里面写了什么内容只有程序员自己知道
-- 我做了一下实验 0.1+0.2 在普通 JS 中会得到 0.3000...004, 但用 wasm 来计算就... 更不准了！（0.3000...15xxxx），所以不能用于精准计算
--  目前我实在没找到有什么特别复杂的计算需要用 wasm 来显著提高性能的。除非是大型网页游戏或 3D 网页应用
+- 但它本质还是通过浏览器来解释，比如V8引擎
+- 目前我实在没找到有什么特别复杂的计算需要用 wasm 来显著提高性能的。除非是大型网页游戏或 3D 网页应用
