@@ -332,6 +332,15 @@
       "pic": null,
       "info": "日记",
       "date": "1970/01/01"
+    },
+    {
+      "gitname": "three_fire.md",
+      "type": 1,
+      "title": "THREE.js 火焰特效",
+      "tags": ["Three.js"],
+      "pic": null,
+      "info": "Three.js官方火焰示例分析",
+      "date": "2019/01/17"
     }
   ]
 }
