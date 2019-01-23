@@ -14,7 +14,7 @@
       "type": 2,
       "title": "Ghost Blade 鬼刀",
       "tags": ["个人作品", "Canvas"],
-      "pic": "http://isluo.com:8080/files/work/gd1.jpg",
+      "pic": "https://isluo.com/files/work/gd1.jpg",
       "info": "Ghost Blade 鬼刀 主题宣传站。素材均来自wlop大佬",
       "date": "2018/03/10"
     },
@@ -23,7 +23,7 @@
       "type": 2,
       "title": "Earth 3D TNC - 大自然保护协会",
       "tags": ["webgl", "Three.js"],
-      "pic": "http://isluo.com:8080/files/work/earth.jpg",
+      "pic": "https://isluo.com/files/work/earth.jpg",
       "info": "学习Three.js时做的东西，要保护地球，Three.js的教程太少，着色器语言有好多需要学习",
       "date": "2018/03/14"
     },
@@ -32,7 +32,7 @@
       "type": 2,
       "title": "泡沫 - 邓紫棋 2014年作",
       "tags": ["HTML", "CSS"],
-      "pic": "http://isluo.com:8080/files/work/pm1.jpg",
+      "pic": "https://isluo.com/files/work/pm1.jpg",
       "info": "早期作品，哈哈哈哈",
       "date": "2018/03/26"
     },
@@ -41,7 +41,7 @@
       "type": 2,
       "title": "玫瑰花的葬礼 3D",
       "tags": ["个人作品", "Three.js"],
-      "pic": "http://isluo.com:8080/files/work/rose1.jpg",
+      "pic": "https://isluo.com/files/work/rose1.jpg",
       "info": "一个使用Three.js制作的网站，Three.js练手。即使到现在，也没有一个好的标准化的教程",
       "date": "2018/03/26"
     },
@@ -50,7 +50,7 @@
       "type": 2,
       "title": "紫罗兰永恒花园 主题网站",
       "tags": ["个人作品", "Canvas"],
-      "pic": "http://isluo.com/imgs/blog-violet1.jpg",
+      "pic": "https://isluo.com/imgs/blog-violet1.jpg",
       "info": "近期在看的动漫，闲暇时间做了这个网站，轻微剧透，为了高清，加载速度可能有点慢",
       "date": "2018/03/27"
     },
@@ -113,7 +113,7 @@
       "type": 2,
       "title": "isluo.com 我的个人网站 主站",
       "tags": ["HTML"],
-      "pic": "http://isluo.com/imgs/blog-isluo.jpg",
+      "pic": "https://isluo.com/imgs/blog-isluo.jpg",
       "info": "嘿，稳定运行了好几年了，最近重构为了Node.js版本，其实老早就重构好了，只不过最近才升级了服务器",
       "date": "2018/04/27"
     },
