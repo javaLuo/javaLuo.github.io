@@ -359,6 +359,15 @@
       "pic": null,
       "info": "我坐了多少种交通工具呢",
       "date": "2019/02/10"
+    },
+    {
+      "gitname": "hooks.md",
+      "type": 3,
+      "title": "React16.8所有内置Hooks功能一览",
+      "tags": ["React","js"],
+      "pic": null,
+      "info": "我自己总结的，更多得在实际项目中用用看才好",
+      "date": "2019/02/10"
     }
   ]
 }
