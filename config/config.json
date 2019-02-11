@@ -362,7 +362,7 @@
     },
     {
       "gitname": "hooks.md",
-      "type": 3,
+      "type": 1,
       "title": "React16.8所有内置Hooks功能一览",
       "tags": ["React","js"],
       "pic": null,
