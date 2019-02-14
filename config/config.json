@@ -371,7 +371,7 @@
     },
     {
       "gitname": "flip.md",
-      "type": 3,
+      "type": 1,
       "title": "FLIP反转动画的实现",
       "tags": ["React", "js"],
       "pic": null,
