@@ -364,10 +364,20 @@
       "gitname": "hooks.md",
       "type": 1,
       "title": "React16.8所有内置Hooks功能一览",
-      "tags": ["React","js"],
+      "tags": ["React", "js"],
       "pic": null,
       "info": "我自己总结的，更多得在实际项目中用用看才好",
       "date": "2019/02/10"
+    },
+    ,
+    {
+      "gitname": "flip.md",
+      "type": 3,
+      "title": "FLIP反转动画的实现",
+      "tags": ["React", "js"],
+      "pic": null,
+      "info": "First-Last-Invert-Play动画，太骚了，大佬的气息如泉涌般袭来",
+      "date": "2019/02/14"
     }
   ]
 }
