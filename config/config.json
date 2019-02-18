@@ -378,5 +378,14 @@
       "info": "First-Last-Invert-Play动画，太骚了，大佬的气息如泉涌般袭来",
       "date": "2019/02/14"
     }
+    {
+      "gitname": "document.md",
+      "type": 1,
+      "title": "浏览器的Document对象和Node对象",
+      "tags": ["js"],
+      "pic": null,
+      "info": "以前总结的document和node对象常用属性及方法",
+      "date": "2019/02/18"
+    }
   ]
 }
