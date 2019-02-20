@@ -386,6 +386,15 @@
       "pic": null,
       "info": "以前总结的document和node对象常用属性及方法",
       "date": "2019/02/18"
+    },
+    {
+      "gitname": "regexp.md",
+      "type": 1,
+      "title": "正则表达式：正向断言和反向断言",
+      "tags": ["js"],
+      "pic": null,
+      "info": "易混淆的，易忘的，常用的正则知识",
+      "date": "2019/02/20"
     }
   ]
 }
