@@ -20,7 +20,7 @@ MDN 文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Gu
 ```javascript
 const reg = /(hi)(U)\1\2/;
 ```
-\1\2表示取前面的子表达式，(hi)就是第1个，(baby)是第2个，上面的表达式等价于：
+\1\2表示取前面的子表达式，(hi)就是第1个，(U)是第2个，上面的表达式等价于：
 ```javascript
 const reg = /hiUhiU/;
 ```
