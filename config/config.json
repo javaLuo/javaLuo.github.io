@@ -395,6 +395,15 @@
       "pic": null,
       "info": "易混淆的，易忘的，常用的正则知识",
       "date": "2019/02/20"
+    },
+    {
+      "gitname": "abouttime.md",
+      "type": 1,
+      "title": "这一次，彻底搞清楚Date对象在Chrome和Safari中的坑",
+      "tags": ["js"],
+      "pic": null,
+      "info": "什么GMT、UTC、夏令时，受够了",
+      "date": "2019/02/22"
     }
   ]
 }
