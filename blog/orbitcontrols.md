@@ -21,7 +21,8 @@ const c = new THREE.OrbitControls(camera, dom);
 | domElement         | #document                                 | 只读 构造函数第 2 个参数传递的 dom          |
 | enabled            | true                                      | 是否启用控件                                |
 | enableDamping      | false                                     | 是否启用阻尼惯性                            |
-| enableKeys         | true                                      | 是否启用平移（鼠标右键）                    |
+| enableKeys         | true                                      | 是否允许键盘操作                            |
+| enablePan          | true                                      | 是否启用平移（鼠标右键）                    |
 | enableRotate       | true                                      | 是否启用镜头沿轨道旋转                      |
 | enableZoom         | true                                      | 是否启用缩放（鼠标滚轮）                    |
 | keyPanSpeed        | 7                                         | 键盘控制的移动速度                          |
