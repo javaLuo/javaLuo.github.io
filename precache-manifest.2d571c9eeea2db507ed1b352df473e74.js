@@ -12,16 +12,16 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "180ce0233f7d7e1573f2",
-    "url": "/js/app.2d323935.js"
+    "revision": "231ea6275118a6769222",
+    "url": "/js/app.b24c864f.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
     "url": "/highlight/highlight.pack.js"
   },
   {
-    "revision": "c484c0093068bb0b23b9",
-    "url": "/js/article.4fef0f8e.js"
+    "revision": "3e8fe5a9bbf837c6db87",
+    "url": "/js/article.1107a476.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -36,16 +36,16 @@ self.__precacheManifest = [
     "url": "/highlight/styles/zenburn.css"
   },
   {
-    "revision": "10ecc1c59315189e2c57",
-    "url": "/js/detail.6445c5f2.js"
+    "revision": "0137583e91c6a25c8153",
+    "url": "/js/detail.36519701.js"
   },
   {
     "revision": "4a4c814919b0109dd837458276cf3307",
     "url": "/highlight/styles/xt256.css"
   },
   {
-    "revision": "fecce8d5c76206109799",
-    "url": "/js/live.43a5d0a2.js"
+    "revision": "506d3e82041e282a3bea",
+    "url": "/js/live.2578bfec.js"
   },
   {
     "revision": "994ccc71a8d23d56a3bb90766b4e2784",
@@ -60,16 +60,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/vs2015.css"
   },
   {
-    "revision": "a4ebc9657dc40b5cf08e",
-    "url": "/js/works.3f588231.js"
-  },
-  {
-    "revision": "16693ba77ee7403d1a75594dc134235f",
-    "url": "/highlight/styles/vs.css"
-  },
-  {
-    "revision": "8662c2c36baa70886e0dc5bedecabadd",
-    "url": "/highlight/styles/tomorrow.css"
+    "revision": "537a0035324d99727cc9",
+    "url": "/js/works.47f2bfb6.js"
   },
   {
     "revision": "9f387f6f174cf338606c5628c913cc8f",
@@ -78,6 +70,14 @@ self.__precacheManifest = [
   {
     "revision": "8697c521da32e39b6f0824e9dd7d42c4",
     "url": "/img/menu_mobile.8697c521.jpg"
+  },
+  {
+    "revision": "16693ba77ee7403d1a75594dc134235f",
+    "url": "/highlight/styles/vs.css"
+  },
+  {
+    "revision": "8662c2c36baa70886e0dc5bedecabadd",
+    "url": "/highlight/styles/tomorrow.css"
   },
   {
     "revision": "9598862d8864349724a808edab4af9d8",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "f7f2f4fc5927dca35c16a439ce7516b6",
+    "revision": "d7f02aea9f3bb51fdf6a46fc8b6fa040",
     "url": "/index.html"
   },
   {
@@ -192,12 +192,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-lakeside-dark.css"
   },
   {
-    "revision": "41b8800ab750ac31e518662a65d50f5f",
-    "url": "/highlight/styles/atelier-lakeside-light.css"
-  },
-  {
     "revision": "a19508e88383a760eb6b24d10397942c",
     "url": "/highlight/styles/atelier-plateau-dark.css"
+  },
+  {
+    "revision": "41b8800ab750ac31e518662a65d50f5f",
+    "url": "/highlight/styles/atelier-lakeside-light.css"
   },
   {
     "revision": "2dc4b0714cbfa90a6fc7961969e0d497",
@@ -436,32 +436,32 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.2fad952a.woff"
   },
   {
-    "revision": "a4ebc9657dc40b5cf08e",
-    "url": "/css/works.74fdf173.css"
+    "revision": "537a0035324d99727cc9",
+    "url": "/css/works.9a6f5979.css"
   },
   {
     "revision": "fb31dc8020bcaddd436e",
     "url": "/css/tags.ee7875a4.css"
   },
   {
-    "revision": "fecce8d5c76206109799",
-    "url": "/css/live.b3b66464.css"
+    "revision": "506d3e82041e282a3bea",
+    "url": "/css/live.4d1324ee.css"
   },
   {
-    "revision": "10ecc1c59315189e2c57",
-    "url": "/css/detail.bed56618.css"
+    "revision": "0137583e91c6a25c8153",
+    "url": "/css/detail.9b7dc65a.css"
   },
   {
     "revision": "b432e17d7acdf9cdecf4",
     "url": "/css/chunk-vendors.aab82ed7.css"
   },
   {
-    "revision": "c484c0093068bb0b23b9",
-    "url": "/css/article.7f4d7052.css"
+    "revision": "3e8fe5a9bbf837c6db87",
+    "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "180ce0233f7d7e1573f2",
-    "url": "/css/app.15d8b22b.css"
+    "revision": "231ea6275118a6769222",
+    "url": "/css/app.7bb76492.css"
   },
   {
     "revision": "3e8905ab8d9c38f32c9a",
