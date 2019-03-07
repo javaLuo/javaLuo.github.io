@@ -1,67 +1,67 @@
 self.__precacheManifest = [
   {
-    "revision": "e04d3287a76f861ed154658b42210d11",
-    "url": "/highlight/styles/atom-one-dark.css"
+    "revision": "bed6547f425e1e107f48ea32ec5997f1",
+    "url": "/highlight/styles/atelier-sulphurpool-light.css"
   },
   {
     "revision": "687e52aeba76d1c129eb58ff6237fc26",
     "url": "/highlight/CHANGES.md"
   },
   {
-    "revision": "cc0e2140c71f1010cc3220bee80eb130",
-    "url": "/highlight/highlight.pack.js"
-  },
-  {
-    "revision": "7ec9f71b90b710ecdb8b",
-    "url": "/js/app.e86ded4b.js"
-  },
-  {
     "revision": "82cd9f5d6e9f0e3f3de24eaab6671d88",
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "3e8fe5a9bbf837c6db87",
-    "url": "/js/article.1107a476.js"
+    "revision": "8d6d6d5bc74419b391c3",
+    "url": "/js/app.916d4ff7.js"
+  },
+  {
+    "revision": "cc0e2140c71f1010cc3220bee80eb130",
+    "url": "/highlight/highlight.pack.js"
+  },
+  {
+    "revision": "384aa228158156b1f54d",
+    "url": "/js/article.5a4b1e35.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/robots.txt"
   },
   {
-    "revision": "d8c187cdfb133a33e858",
-    "url": "/js/chunk-vendors.53d13b72.js"
+    "revision": "79cddabf82b3fb554e14",
+    "url": "/js/chunk-vendors.ceb733b1.js"
   },
   {
     "revision": "28d5b9497037a12cb5a15644fea2f1c3",
     "url": "/highlight/styles/zenburn.css"
   },
   {
-    "revision": "0137583e91c6a25c8153",
-    "url": "/js/detail.36519701.js"
-  },
-  {
-    "revision": "994ccc71a8d23d56a3bb90766b4e2784",
-    "url": "/highlight/styles/xcode.css"
-  },
-  {
-    "revision": "506d3e82041e282a3bea",
-    "url": "/js/live.2578bfec.js"
+    "revision": "a2812e3da695c2481061",
+    "url": "/js/detail.2b7e7a74.js"
   },
   {
     "revision": "4a4c814919b0109dd837458276cf3307",
     "url": "/highlight/styles/xt256.css"
   },
   {
-    "revision": "fb31dc8020bcaddd436e",
-    "url": "/js/tags.f59a77b1.js"
+    "revision": "a0a3d2f30ca2b1d9b46c",
+    "url": "/js/live.fe244d5a.js"
+  },
+  {
+    "revision": "994ccc71a8d23d56a3bb90766b4e2784",
+    "url": "/highlight/styles/xcode.css"
+  },
+  {
+    "revision": "65cc0989453478a9e551",
+    "url": "/js/tags.c9166ede.js"
   },
   {
     "revision": "163911e35ea1c131dc4ce4ffd0388e35",
     "url": "/highlight/styles/vs2015.css"
   },
   {
-    "revision": "537a0035324d99727cc9",
-    "url": "/js/works.47f2bfb6.js"
+    "revision": "cb55f8636ea74c54db0e",
+    "url": "/js/works.a1809af7.js"
   },
   {
     "revision": "d75b1019c5da82a7289062148b5f4a1f",
@@ -76,8 +76,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/vs.css"
   },
   {
-    "revision": "d372a77090f6a07251dfce573d121ee2",
-    "url": "/highlight/styles/tomorrow-night.css"
+    "revision": "8662c2c36baa70886e0dc5bedecabadd",
+    "url": "/highlight/styles/tomorrow.css"
   },
   {
     "revision": "9598862d8864349724a808edab4af9d8",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "url": "/img/logo-github.c054d83e.png"
   },
   {
-    "revision": "4e5386c74b62a8544711026ad327ebf4",
+    "revision": "8024aaccb4779b3863145f7b57d87cbb",
     "url": "/index.html"
   },
   {
@@ -144,12 +144,12 @@ self.__precacheManifest = [
     "url": "/highlight/README.md"
   },
   {
-    "revision": "7f28a9ef3dcc7caccff7db1a970c4146",
-    "url": "/highlight/styles/agate.css"
-  },
-  {
     "revision": "9db2bc6279995a063924409b7ce613b9",
     "url": "/highlight/README.ru.md"
+  },
+  {
+    "revision": "7f28a9ef3dcc7caccff7db1a970c4146",
+    "url": "/highlight/styles/agate.css"
   },
   {
     "revision": "fb012626bafd286510d32da815dae448",
@@ -168,12 +168,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/ascetic.css"
   },
   {
-    "revision": "9256fbbdfaff0072230520af192aad3f",
-    "url": "/highlight/styles/atelier-cave-light.css"
-  },
-  {
     "revision": "f1dae0dbba7560c12248875443c74371",
     "url": "/highlight/styles/atelier-cave-dark.css"
+  },
+  {
+    "revision": "9256fbbdfaff0072230520af192aad3f",
+    "url": "/highlight/styles/atelier-cave-light.css"
   },
   {
     "revision": "391a079f58af65849adcfd9633977b73",
@@ -188,12 +188,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-estuary-dark.css"
   },
   {
-    "revision": "16d819beb6b738e4d25e11a7a597e39d",
-    "url": "/highlight/styles/atelier-forest-dark.css"
-  },
-  {
     "revision": "102a02c63ee6e7a167fd4649fdea5520",
     "url": "/highlight/styles/atelier-estuary-light.css"
+  },
+  {
+    "revision": "16d819beb6b738e4d25e11a7a597e39d",
+    "url": "/highlight/styles/atelier-forest-dark.css"
   },
   {
     "revision": "b13acbe66b59f8e8359fd5a71972047e",
@@ -216,12 +216,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-lakeside-light.css"
   },
   {
-    "revision": "2dc4b0714cbfa90a6fc7961969e0d497",
-    "url": "/highlight/styles/atelier-plateau-light.css"
-  },
-  {
     "revision": "a19508e88383a760eb6b24d10397942c",
     "url": "/highlight/styles/atelier-plateau-dark.css"
+  },
+  {
+    "revision": "2dc4b0714cbfa90a6fc7961969e0d497",
+    "url": "/highlight/styles/atelier-plateau-light.css"
   },
   {
     "revision": "330e555af80e73b85f274a1d863b3f8b",
@@ -232,24 +232,24 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-savanna-light.css"
   },
   {
-    "revision": "63b489d3b2eb3b47e05afdeb16c10d22",
-    "url": "/highlight/styles/atelier-seaside-light.css"
-  },
-  {
     "revision": "c16263748102028fb7255965bb6b41eb",
     "url": "/highlight/styles/atelier-seaside-dark.css"
+  },
+  {
+    "revision": "63b489d3b2eb3b47e05afdeb16c10d22",
+    "url": "/highlight/styles/atelier-seaside-light.css"
   },
   {
     "revision": "99e131428f8d3b64e544c95adf233362",
     "url": "/highlight/styles/atelier-sulphurpool-dark.css"
   },
   {
-    "revision": "3e8905ab8d9c38f32c9a",
-    "url": "/js/about.583a743a.js"
+    "revision": "fb1e1327f7f629d80498",
+    "url": "/js/about.10a08ba2.js"
   },
   {
-    "revision": "bed6547f425e1e107f48ea32ec5997f1",
-    "url": "/highlight/styles/atelier-sulphurpool-light.css"
+    "revision": "e04d3287a76f861ed154658b42210d11",
+    "url": "/highlight/styles/atom-one-dark.css"
   },
   {
     "revision": "3f9c7dcab0b31d9be9a2a2f3b83b8012",
@@ -260,20 +260,20 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-paper.css"
   },
   {
-    "revision": "0d7683a0a7a61c4b6a9ab6cdd16d52c4",
-    "url": "/highlight/styles/color-brewer.css"
-  },
-  {
     "revision": "b94ddd27ed9b5ee64cd7d2cf69971d9a",
     "url": "/highlight/styles/codepen-embed.css"
   },
   {
-    "revision": "b3ac3eb7d91ebc25946f13897cd54e5e",
-    "url": "/highlight/styles/dark.css"
+    "revision": "0d7683a0a7a61c4b6a9ab6cdd16d52c4",
+    "url": "/highlight/styles/color-brewer.css"
   },
   {
     "revision": "f9623bae84c777825530f258b5cc3db9",
     "url": "/highlight/styles/darcula.css"
+  },
+  {
+    "revision": "b3ac3eb7d91ebc25946f13897cd54e5e",
+    "url": "/highlight/styles/dark.css"
   },
   {
     "revision": "64ee4b42047005efd6b45fa9ef2ba08a",
@@ -308,12 +308,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/github.css"
   },
   {
-    "revision": "6421024db18cc169592c8c3572da6a6a",
-    "url": "/highlight/styles/grayscale.css"
-  },
-  {
     "revision": "a6c3e3d282eff14600ac0e1b8e495419",
     "url": "/highlight/styles/googlecode.css"
+  },
+  {
+    "revision": "6421024db18cc169592c8c3572da6a6a",
+    "url": "/highlight/styles/grayscale.css"
   },
   {
     "revision": "0b9af0515eaadb6f3495e71e97afb775",
@@ -396,28 +396,28 @@ self.__precacheManifest = [
     "url": "/highlight/styles/qtcreator_dark.css"
   },
   {
-    "revision": "b4f8ae4bf950f9f9b496d997b63cb0d5",
-    "url": "/highlight/styles/railscasts.css"
-  },
-  {
     "revision": "04c1d5880d03d4a21b9998286e6fbeeb",
     "url": "/highlight/styles/qtcreator_light.css"
   },
   {
-    "revision": "d1a10ddf5d50d6fbb54c14bdb5c8b6c2",
-    "url": "/highlight/styles/routeros.css"
+    "revision": "b4f8ae4bf950f9f9b496d997b63cb0d5",
+    "url": "/highlight/styles/railscasts.css"
   },
   {
     "revision": "c89d491aca4854e11d180be0e6db0108",
     "url": "/highlight/styles/rainbow.css"
   },
   {
-    "revision": "069f91d8694b98ca01fb750760f1563d",
-    "url": "/highlight/styles/school-book.png"
+    "revision": "d1a10ddf5d50d6fbb54c14bdb5c8b6c2",
+    "url": "/highlight/styles/routeros.css"
   },
   {
     "revision": "b1c0e6ad217403971d33eefb4478aad7",
     "url": "/highlight/styles/school-book.css"
+  },
+  {
+    "revision": "069f91d8694b98ca01fb750760f1563d",
+    "url": "/highlight/styles/school-book.png"
   },
   {
     "revision": "82ff075b2124d9b007ac4caf40f8d3a9",
@@ -428,12 +428,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/solarized-light.css"
   },
   {
-    "revision": "e9b96cc5dfe48bfcf9e25f6ce6058d20",
-    "url": "/highlight/styles/tomorrow-night-blue.css"
-  },
-  {
     "revision": "8080a738bd7872fa6057be63c871b564",
     "url": "/highlight/styles/sunburst.css"
+  },
+  {
+    "revision": "e9b96cc5dfe48bfcf9e25f6ce6058d20",
+    "url": "/highlight/styles/tomorrow-night-blue.css"
   },
   {
     "revision": "b08807e46c95ad4737cfc54974327557",
@@ -444,8 +444,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/tomorrow-night-eighties.css"
   },
   {
-    "revision": "8662c2c36baa70886e0dc5bedecabadd",
-    "url": "/highlight/styles/tomorrow.css"
+    "revision": "d372a77090f6a07251dfce573d121ee2",
+    "url": "/highlight/styles/tomorrow-night.css"
   },
   {
     "revision": "6f0a76321d30f3c8120915e57f7bd77e",
@@ -456,35 +456,35 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.2fad952a.woff"
   },
   {
-    "revision": "537a0035324d99727cc9",
+    "revision": "cb55f8636ea74c54db0e",
     "url": "/css/works.9a6f5979.css"
   },
   {
-    "revision": "fb31dc8020bcaddd436e",
-    "url": "/css/tags.ee7875a4.css"
+    "revision": "65cc0989453478a9e551",
+    "url": "/css/tags.80bdc546.css"
   },
   {
-    "revision": "506d3e82041e282a3bea",
+    "revision": "a0a3d2f30ca2b1d9b46c",
     "url": "/css/live.4d1324ee.css"
   },
   {
-    "revision": "0137583e91c6a25c8153",
+    "revision": "a2812e3da695c2481061",
     "url": "/css/detail.9b7dc65a.css"
   },
   {
-    "revision": "d8c187cdfb133a33e858",
-    "url": "/css/chunk-vendors.e2474233.css"
+    "revision": "79cddabf82b3fb554e14",
+    "url": "/css/chunk-vendors.936abf8c.css"
   },
   {
-    "revision": "3e8fe5a9bbf837c6db87",
+    "revision": "384aa228158156b1f54d",
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "7ec9f71b90b710ecdb8b",
+    "revision": "8d6d6d5bc74419b391c3",
     "url": "/css/app.a7c5658f.css"
   },
   {
-    "revision": "3e8905ab8d9c38f32c9a",
+    "revision": "fb1e1327f7f629d80498",
     "url": "/css/about.465e618e.css"
   }
 ];
