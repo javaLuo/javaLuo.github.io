@@ -1,6 +1,6 @@
 新版本 Chrome 浏览器默认的`<audio>`标签长这样：
 
-![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow5.jpg)
+![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow/shadow5.jpg)
 
 这体积实在太大，且颜色常常与 UI 设计不符。
 
@@ -14,11 +14,11 @@
 
 打开 Chrome 开发者工具（F12），右上角三个点的那个按钮中有个“Setting”，里面有个“Show user agent shadow DOM”, 勾上
 
-![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow4.jpg)
+![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow/shadow4.jpg)
 
 再来看页面中的`<audio>`会发现是这样的：
 
-![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow3.jpg)
+![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow/shadow3.jpg)
 
 其内部有个#shadow-root，这便是`<audio>`的影子 DOM 结构了。显然`<audio>`也是用一堆`<div>`做出来的控件，这些内部的`<div>`上都有"pseudo"属性，这都是伪元素，所以想要改变内部样式只需要这么做：
 
@@ -26,7 +26,7 @@
 
 原生`<audio>`就变成了这样：
 
-![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow1.jpg)
+![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow/shadow1.jpg)
 
 清爽多了，如果想要改变字体颜色或图标，只需要找到对应的伪元素，覆盖其 CSS 即可。
 
@@ -55,7 +55,7 @@ shadow.appendChild(p);
 
 最终渲染的结果是：
 
-![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow0.jpg)
+![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow/shadow0.jpg)
 
 由于这样的特性我们可以做出丰富的自定义标签，这种技术也可以用于局部 CSS 处理和反爬虫（爬虫爬不到影子中的内容）
 
@@ -103,7 +103,7 @@ shadowRoot.innerHTML; // 影子中的内容
 
 目前只有 Chrome 浏览器支持，其他浏览器正在跟进。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/4Bh8jlOicVAOKVibpSXfJHYhuwowiajevYlz0MFEGOhHsToDONP1w4Kc3EADSud2qUI3sl5QZt3TKGB7Iwx6qmE0Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow/shadow6.jpg)
 
 ## 欢迎关注我的公众号: 雨世界
 
