@@ -22,7 +22,7 @@
 
 其内部有个#shadow-root，这便是`<audio>`的影子 DOM 结构了。显然`<audio>`也是用一堆`<div>`做出来的控件，这些内部的`<div>`上都有"pseudo"属性，这都是伪元素，所以想要改变内部样式只需要这么做：
 
-![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow2.jpg)
+![](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/shadow/shadow2.jpg)
 
 原生`<audio>`就变成了这样：
 
