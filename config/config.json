@@ -404,6 +404,15 @@
       "pic": null,
       "info": "什么GMT、UTC、夏令时，受够了",
       "date": "2019/02/22"
+    },
+    {
+      "gitname": "shadow.md",
+      "type": 1,
+      "title": "shadow DOM 影中世界",
+      "tags": ["js", "css"],
+      "pic": null,
+      "info": "潜伏在HTML表面之下的代码",
+      "date": "2019/03/25"
     }
   ]
 }
