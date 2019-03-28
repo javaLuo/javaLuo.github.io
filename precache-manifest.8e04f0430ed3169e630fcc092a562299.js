@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "407ef9af93daa424de4c",
-    "url": "/js/app.6985ec02.js"
+    "revision": "13a838a2437229b6e409",
+    "url": "/js/app.6517f296.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/zenburn.css"
   },
   {
-    "revision": "25517d90e466787a19c8",
-    "url": "/js/detail.f65d12be.js"
+    "revision": "c137969a93695cb4d39c",
+    "url": "/js/detail.248d3260.js"
   },
   {
     "revision": "4a4c814919b0109dd837458276cf3307",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/xcode.css"
   },
   {
-    "revision": "9cc730fd01d60cfaa356",
-    "url": "/js/photo.58fe6ff2.js"
+    "revision": "0dcc044ae042e308ebef",
+    "url": "/js/photo.bf89b3dc.js"
   },
   {
     "revision": "163911e35ea1c131dc4ce4ffd0388e35",
@@ -76,10 +76,6 @@ self.__precacheManifest = [
     "url": "/img/email.d75b1019.png"
   },
   {
-    "revision": "c054d83e1cbd0289bff5715c96a5d8ac",
-    "url": "/img/logo-github.c054d83e.png"
-  },
-  {
     "revision": "f5ec21b16ee1898345a329a410abd45b",
     "url": "/img/share_wechart.f5ec21b1.png"
   },
@@ -90,6 +86,10 @@ self.__precacheManifest = [
   {
     "revision": "d372a77090f6a07251dfce573d121ee2",
     "url": "/highlight/styles/tomorrow-night.css"
+  },
+  {
+    "revision": "c054d83e1cbd0289bff5715c96a5d8ac",
+    "url": "/img/logo-github.c054d83e.png"
   },
   {
     "revision": "9598862d8864349724a808edab4af9d8",
@@ -120,6 +120,14 @@ self.__precacheManifest = [
     "url": "/img/loading.14a0936b.gif"
   },
   {
+    "revision": "9f387f6f174cf338606c5628c913cc8f",
+    "url": "/img/menu.9f387f6f.jpg"
+  },
+  {
+    "revision": "1f953bddbe3c880e41ae14e4d0521664",
+    "url": "/img/menu_mobile.1f953bdd.jpg"
+  },
+  {
     "revision": "7841adaf79a3109e5d405f95b6f47500",
     "url": "/img/share_twitter.7841adaf.png"
   },
@@ -132,15 +140,7 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "9f387f6f174cf338606c5628c913cc8f",
-    "url": "/img/menu.9f387f6f.jpg"
-  },
-  {
-    "revision": "1f953bddbe3c880e41ae14e4d0521664",
-    "url": "/img/menu_mobile.1f953bdd.jpg"
-  },
-  {
-    "revision": "2fa9db9c84eddf0e6c49e0998df6af38",
+    "revision": "166ad9e7ebae3a290bd2ccdc4ab86693",
     "url": "/index.html"
   },
   {
@@ -472,11 +472,11 @@ self.__precacheManifest = [
     "url": "/css/tags.80bdc546.css"
   },
   {
-    "revision": "9cc730fd01d60cfaa356",
+    "revision": "0dcc044ae042e308ebef",
     "url": "/css/photo.953607a3.css"
   },
   {
-    "revision": "25517d90e466787a19c8",
+    "revision": "c137969a93695cb4d39c",
     "url": "/css/detail.bcc5723c.css"
   },
   {
@@ -488,8 +488,8 @@ self.__precacheManifest = [
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "407ef9af93daa424de4c",
-    "url": "/css/app.eae3c991.css"
+    "revision": "13a838a2437229b6e409",
+    "url": "/css/app.f665e436.css"
   },
   {
     "revision": "8f4833a7da6bdf877ee4",
