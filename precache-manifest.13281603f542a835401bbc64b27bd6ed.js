@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "13a838a2437229b6e409",
-    "url": "/js/app.6517f296.js"
+    "revision": "53501b96c4d6202865b3",
+    "url": "/js/app.985f9296.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "166ad9e7ebae3a290bd2ccdc4ab86693",
+    "revision": "73803b3fe127266ecacdeeaa4e68a094",
     "url": "/index.html"
   },
   {
@@ -488,7 +488,7 @@ self.__precacheManifest = [
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "13a838a2437229b6e409",
+    "revision": "53501b96c4d6202865b3",
     "url": "/css/app.f665e436.css"
   },
   {
