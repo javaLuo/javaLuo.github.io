@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "239f70dfda05b08ef177",
-    "url": "/js/app.20872c85.js"
+    "revision": "7bb13ca55bbea01c05c6",
+    "url": "/js/app.98e38d49.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -92,12 +92,12 @@ self.__precacheManifest = [
     "url": "/img/menu_mobile.8697c521.jpg"
   },
   {
-    "revision": "8662c2c36baa70886e0dc5bedecabadd",
-    "url": "/highlight/styles/tomorrow.css"
-  },
-  {
     "revision": "d372a77090f6a07251dfce573d121ee2",
     "url": "/highlight/styles/tomorrow-night.css"
+  },
+  {
+    "revision": "8662c2c36baa70886e0dc5bedecabadd",
+    "url": "/highlight/styles/tomorrow.css"
   },
   {
     "revision": "9598862d8864349724a808edab4af9d8",
@@ -140,20 +140,20 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "e15cee15951d2dba194599bb6404a397",
+    "revision": "0586b320b4d19439918bb72aacd2d05c",
     "url": "/index.html"
   },
   {
-    "revision": "ec39d75cbc4de8171c2f6656a26816a3",
-    "url": "/highlight/LICENSE"
+    "revision": "9db2bc6279995a063924409b7ce613b9",
+    "url": "/highlight/README.ru.md"
   },
   {
     "revision": "111895ee09ed19f9dcc5051efefc2b57",
     "url": "/highlight/README.md"
   },
   {
-    "revision": "9db2bc6279995a063924409b7ce613b9",
-    "url": "/highlight/README.ru.md"
+    "revision": "ec39d75cbc4de8171c2f6656a26816a3",
+    "url": "/highlight/LICENSE"
   },
   {
     "revision": "7f28a9ef3dcc7caccff7db1a970c4146",
@@ -172,10 +172,6 @@ self.__precacheManifest = [
     "url": "/highlight/styles/arta.css"
   },
   {
-    "revision": "8261c76b2ccc05b5c30c8819dc00d0bc",
-    "url": "/highlight/styles/ascetic.css"
-  },
-  {
     "revision": "f1dae0dbba7560c12248875443c74371",
     "url": "/highlight/styles/atelier-cave-dark.css"
   },
@@ -186,6 +182,10 @@ self.__precacheManifest = [
   {
     "revision": "391a079f58af65849adcfd9633977b73",
     "url": "/highlight/styles/atelier-dune-dark.css"
+  },
+  {
+    "revision": "8261c76b2ccc05b5c30c8819dc00d0bc",
+    "url": "/highlight/styles/ascetic.css"
   },
   {
     "revision": "55742192acd0c1251d51501639d973d9",
@@ -488,8 +488,8 @@ self.__precacheManifest = [
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "239f70dfda05b08ef177",
-    "url": "/css/app.5a21d960.css"
+    "revision": "7bb13ca55bbea01c05c6",
+    "url": "/css/app.a1277f39.css"
   },
   {
     "revision": "8f4833a7da6bdf877ee4",
