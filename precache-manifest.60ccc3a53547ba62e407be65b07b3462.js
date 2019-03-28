@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "53501b96c4d6202865b3",
-    "url": "/js/app.985f9296.js"
+    "revision": "4b07fc00c887f19b7526",
+    "url": "/js/app.90d8ff21.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/xcode.css"
   },
   {
-    "revision": "0dcc044ae042e308ebef",
-    "url": "/js/photo.bf89b3dc.js"
+    "revision": "c7c7bc215e65740dd713",
+    "url": "/js/photo.24b3e238.js"
   },
   {
     "revision": "163911e35ea1c131dc4ce4ffd0388e35",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "73803b3fe127266ecacdeeaa4e68a094",
+    "revision": "c2f190caa8f6f62f40c1432ef3534881",
     "url": "/index.html"
   },
   {
@@ -288,12 +288,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/darkula.css"
   },
   {
-    "revision": "db8ce58adfb1b685bd575fb9395d5ddb",
-    "url": "/highlight/styles/default.css"
-  },
-  {
     "revision": "732506eba1c4a6752b7847358aaa2070",
     "url": "/highlight/styles/docco.css"
+  },
+  {
+    "revision": "db8ce58adfb1b685bd575fb9395d5ddb",
+    "url": "/highlight/styles/default.css"
   },
   {
     "revision": "9612f9a1a214540e0e006d6231f11e2b",
@@ -472,8 +472,8 @@ self.__precacheManifest = [
     "url": "/css/tags.80bdc546.css"
   },
   {
-    "revision": "0dcc044ae042e308ebef",
-    "url": "/css/photo.953607a3.css"
+    "revision": "c7c7bc215e65740dd713",
+    "url": "/css/photo.b7e2b78b.css"
   },
   {
     "revision": "c137969a93695cb4d39c",
@@ -488,8 +488,8 @@ self.__precacheManifest = [
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "53501b96c4d6202865b3",
-    "url": "/css/app.f665e436.css"
+    "revision": "4b07fc00c887f19b7526",
+    "url": "/css/app.157645cc.css"
   },
   {
     "revision": "8f4833a7da6bdf877ee4",
