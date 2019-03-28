@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "6fad7fdddb611df3efc7",
-    "url": "/js/app.5fb858e6.js"
+    "revision": "239f70dfda05b08ef177",
+    "url": "/js/app.20872c85.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
-    "revision": "9c6f13bce3da8ec7a845",
-    "url": "/js/chunk-vendors.457b52f0.js"
+    "revision": "2ff1df24611d816e2750",
+    "url": "/js/chunk-vendors.b0226963.js"
   },
   {
     "revision": "28d5b9497037a12cb5a15644fea2f1c3",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "9e69efed1599aa348b171ef7a0fb4565",
+    "revision": "e15cee15951d2dba194599bb6404a397",
     "url": "/index.html"
   },
   {
@@ -344,12 +344,16 @@ self.__precacheManifest = [
     "url": "/highlight/styles/idea.css"
   },
   {
-    "revision": "a3ce8b7a8dc2c830ca5cf6beec6c305a",
-    "url": "/highlight/styles/kimbie.light.css"
+    "revision": "69136cd05c4071f33526fbbef6a065fb",
+    "url": "/highlight/styles/ir-black.css"
   },
   {
     "revision": "f4a1c8c40077e5b549cfb6e093c79607",
     "url": "/highlight/styles/kimbie.dark.css"
+  },
+  {
+    "revision": "a3ce8b7a8dc2c830ca5cf6beec6c305a",
+    "url": "/highlight/styles/kimbie.light.css"
   },
   {
     "revision": "6a66369d1ba8339c89d9346584a5cfca",
@@ -370,10 +374,6 @@ self.__precacheManifest = [
   {
     "revision": "a153d314a30c1bf56a667f64891bf044",
     "url": "/highlight/styles/obsidian.css"
-  },
-  {
-    "revision": "69136cd05c4071f33526fbbef6a065fb",
-    "url": "/highlight/styles/ir-black.css"
   },
   {
     "revision": "801c05eb37c92c65a173298c376adff2",
@@ -480,16 +480,16 @@ self.__precacheManifest = [
     "url": "/css/detail.bcc5723c.css"
   },
   {
-    "revision": "9c6f13bce3da8ec7a845",
-    "url": "/css/chunk-vendors.4bbf56f4.css"
+    "revision": "2ff1df24611d816e2750",
+    "url": "/css/chunk-vendors.1f4ef0f7.css"
   },
   {
     "revision": "c835673a681b11220ba9",
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "6fad7fdddb611df3efc7",
-    "url": "/css/app.58c99b15.css"
+    "revision": "239f70dfda05b08ef177",
+    "url": "/css/app.5a21d960.css"
   },
   {
     "revision": "8f4833a7da6bdf877ee4",
