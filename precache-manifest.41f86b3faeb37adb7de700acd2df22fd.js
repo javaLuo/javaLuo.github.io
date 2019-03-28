@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "38b0d3123679b3ac1e74",
-    "url": "/js/app.23423b81.js"
+    "revision": "3d10b838d5c42def974f",
+    "url": "/js/app.d5ceedcc.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "/js/chunk-vendors.b0226963.js"
   },
   {
-    "revision": "4a4c814919b0109dd837458276cf3307",
-    "url": "/highlight/styles/xt256.css"
+    "revision": "28d5b9497037a12cb5a15644fea2f1c3",
+    "url": "/highlight/styles/zenburn.css"
   },
   {
     "revision": "6cb2c47c925b9ccc2265",
     "url": "/js/detail.7f71a69b.js"
   },
   {
-    "revision": "28d5b9497037a12cb5a15644fea2f1c3",
-    "url": "/highlight/styles/zenburn.css"
+    "revision": "4a4c814919b0109dd837458276cf3307",
+    "url": "/highlight/styles/xt256.css"
   },
   {
     "revision": "d33b0b4bf5ec0cd6397f",
@@ -84,20 +84,12 @@ self.__precacheManifest = [
     "url": "/img/share_wechart.f5ec21b1.png"
   },
   {
-    "revision": "9f387f6f174cf338606c5628c913cc8f",
-    "url": "/img/menu.9f387f6f.jpg"
-  },
-  {
-    "revision": "8697c521da32e39b6f0824e9dd7d42c4",
-    "url": "/img/menu_mobile.8697c521.jpg"
-  },
-  {
     "revision": "8662c2c36baa70886e0dc5bedecabadd",
     "url": "/highlight/styles/tomorrow.css"
   },
   {
-    "revision": "feb9048a966c65eb3b0bfee2cce720fd",
-    "url": "/highlight/styles/tomorrow-night-eighties.css"
+    "revision": "d372a77090f6a07251dfce573d121ee2",
+    "url": "/highlight/styles/tomorrow-night.css"
   },
   {
     "revision": "9598862d8864349724a808edab4af9d8",
@@ -140,7 +132,15 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "58a52e43fa32cd294bf5560af9ce73f5",
+    "revision": "9f387f6f174cf338606c5628c913cc8f",
+    "url": "/img/menu.9f387f6f.jpg"
+  },
+  {
+    "revision": "8697c521da32e39b6f0824e9dd7d42c4",
+    "url": "/img/menu_mobile.8697c521.jpg"
+  },
+  {
+    "revision": "2e48599d0b3be20c3deddb4019d187c7",
     "url": "/index.html"
   },
   {
@@ -260,12 +260,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atom-one-dark.css"
   },
   {
-    "revision": "a930babb854f14289e9478057d02b9ea",
-    "url": "/highlight/styles/brown-paper.css"
-  },
-  {
     "revision": "3f9c7dcab0b31d9be9a2a2f3b83b8012",
     "url": "/highlight/styles/atom-one-light.css"
+  },
+  {
+    "revision": "a930babb854f14289e9478057d02b9ea",
+    "url": "/highlight/styles/brown-paper.css"
   },
   {
     "revision": "b94ddd27ed9b5ee64cd7d2cf69971d9a",
@@ -292,24 +292,24 @@ self.__precacheManifest = [
     "url": "/highlight/styles/default.css"
   },
   {
-    "revision": "9612f9a1a214540e0e006d6231f11e2b",
-    "url": "/highlight/styles/dracula.css"
-  },
-  {
     "revision": "732506eba1c4a6752b7847358aaa2070",
     "url": "/highlight/styles/docco.css"
+  },
+  {
+    "revision": "9612f9a1a214540e0e006d6231f11e2b",
+    "url": "/highlight/styles/dracula.css"
   },
   {
     "revision": "0e2fb50b6cc56c032ccc6bd482568068",
     "url": "/highlight/styles/far.css"
   },
   {
-    "revision": "c026a94dab146076149d9ef29595aeee",
-    "url": "/highlight/styles/github-gist.css"
-  },
-  {
     "revision": "71dac932272c550cf0e10faf2140876f",
     "url": "/highlight/styles/foundation.css"
+  },
+  {
+    "revision": "c026a94dab146076149d9ef29595aeee",
+    "url": "/highlight/styles/github-gist.css"
   },
   {
     "revision": "bf6c14925e66edb1526b6c9489b3c042",
@@ -376,12 +376,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/obsidian.css"
   },
   {
-    "revision": "23225068974ac9c4975f3a7dee4bd0dc",
-    "url": "/highlight/styles/paraiso-dark.css"
-  },
-  {
     "revision": "801c05eb37c92c65a173298c376adff2",
     "url": "/highlight/styles/ocean.css"
+  },
+  {
+    "revision": "23225068974ac9c4975f3a7dee4bd0dc",
+    "url": "/highlight/styles/paraiso-dark.css"
   },
   {
     "revision": "cef05b6b5b147da65ed777d544b46a26",
@@ -448,8 +448,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/tomorrow-night-bright.css"
   },
   {
-    "revision": "d372a77090f6a07251dfce573d121ee2",
-    "url": "/highlight/styles/tomorrow-night.css"
+    "revision": "feb9048a966c65eb3b0bfee2cce720fd",
+    "url": "/highlight/styles/tomorrow-night-eighties.css"
   },
   {
     "revision": "d33b0b4bf5ec0cd6397f",
@@ -488,8 +488,8 @@ self.__precacheManifest = [
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "38b0d3123679b3ac1e74",
-    "url": "/css/app.e1a8cc5e.css"
+    "revision": "3d10b838d5c42def974f",
+    "url": "/css/app.c881cd08.css"
   },
   {
     "revision": "8f4833a7da6bdf877ee4",
