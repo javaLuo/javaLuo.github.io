@@ -346,7 +346,7 @@
       "gitname": "along.md",
       "type": 3,
       "title": "独行者",
-      "tags": ["日志"],
+      "tags": ["日志", "我的故事"],
       "pic": null,
       "info": "那些泛黄的代码仿佛都要融入指尖",
       "date": "2012/10/17"
@@ -413,6 +413,15 @@
       "pic": null,
       "info": "潜伏在HTML表面之下的代码",
       "date": "2019/03/25"
+    },
+    {
+      "gitname": "snow_mountain.md",
+      "type": 3,
+      "title": "雪山",
+      "tags": ["日志", "我的故事"],
+      "pic": null,
+      "info": "这具身体不是他，他只是在控制着这骨骼和血肉筑成的躯干。",
+      "date": "2012/10/17"
     }
   ]
 }
