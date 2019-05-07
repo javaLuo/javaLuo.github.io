@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "4b07fc00c887f19b7526",
-    "url": "/js/app.90d8ff21.js"
+    "revision": "f02e7ce9964ce4924c44",
+    "url": "/js/app.6cbc2f27.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/zenburn.css"
   },
   {
-    "revision": "c137969a93695cb4d39c",
-    "url": "/js/detail.248d3260.js"
+    "revision": "b419b03840ae48d7d159",
+    "url": "/js/detail.454ecb79.js"
   },
   {
     "revision": "4a4c814919b0109dd837458276cf3307",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/xcode.css"
   },
   {
-    "revision": "c7c7bc215e65740dd713",
-    "url": "/js/photo.24b3e238.js"
+    "revision": "3d6f657c965fdb111cf3",
+    "url": "/js/photo.9ee784dd.js"
   },
   {
     "revision": "163911e35ea1c131dc4ce4ffd0388e35",
@@ -76,6 +76,10 @@ self.__precacheManifest = [
     "url": "/img/email.d75b1019.png"
   },
   {
+    "revision": "c054d83e1cbd0289bff5715c96a5d8ac",
+    "url": "/img/logo-github.c054d83e.png"
+  },
+  {
     "revision": "f5ec21b16ee1898345a329a410abd45b",
     "url": "/img/share_wechart.f5ec21b1.png"
   },
@@ -86,10 +90,6 @@ self.__precacheManifest = [
   {
     "revision": "d372a77090f6a07251dfce573d121ee2",
     "url": "/highlight/styles/tomorrow-night.css"
-  },
-  {
-    "revision": "c054d83e1cbd0289bff5715c96a5d8ac",
-    "url": "/img/logo-github.c054d83e.png"
   },
   {
     "revision": "9598862d8864349724a808edab4af9d8",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "c2f190caa8f6f62f40c1432ef3534881",
+    "revision": "b70d0e2597b20e4c0afe21fe2f34960f",
     "url": "/index.html"
   },
   {
@@ -188,12 +188,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-dune-dark.css"
   },
   {
-    "revision": "55742192acd0c1251d51501639d973d9",
-    "url": "/highlight/styles/atelier-dune-light.css"
-  },
-  {
     "revision": "91b58915eaf5e3963d33e025d611339b",
     "url": "/highlight/styles/atelier-estuary-dark.css"
+  },
+  {
+    "revision": "55742192acd0c1251d51501639d973d9",
+    "url": "/highlight/styles/atelier-dune-light.css"
   },
   {
     "revision": "102a02c63ee6e7a167fd4649fdea5520",
@@ -312,20 +312,20 @@ self.__precacheManifest = [
     "url": "/highlight/styles/github-gist.css"
   },
   {
-    "revision": "bf6c14925e66edb1526b6c9489b3c042",
-    "url": "/highlight/styles/github.css"
-  },
-  {
     "revision": "a6c3e3d282eff14600ac0e1b8e495419",
     "url": "/highlight/styles/googlecode.css"
   },
   {
-    "revision": "6421024db18cc169592c8c3572da6a6a",
-    "url": "/highlight/styles/grayscale.css"
+    "revision": "bf6c14925e66edb1526b6c9489b3c042",
+    "url": "/highlight/styles/github.css"
   },
   {
     "revision": "0b9af0515eaadb6f3495e71e97afb775",
     "url": "/highlight/styles/gruvbox-dark.css"
+  },
+  {
+    "revision": "6421024db18cc169592c8c3572da6a6a",
+    "url": "/highlight/styles/grayscale.css"
   },
   {
     "revision": "26be44ab273eb7e58a64a7e251a57160",
@@ -392,20 +392,16 @@ self.__precacheManifest = [
     "url": "/highlight/styles/pojoaque.css"
   },
   {
-    "revision": "8c391d520d67f644c146dcfaee1eb25f",
-    "url": "/highlight/styles/pojoaque.jpg"
-  },
-  {
     "revision": "2d5d3ab76c6c3a2b308ca0bc71009cec",
     "url": "/highlight/styles/purebasic.css"
   },
   {
-    "revision": "36e7bda0ef39f396cd88fb319016b1b8",
-    "url": "/highlight/styles/qtcreator_dark.css"
-  },
-  {
     "revision": "04c1d5880d03d4a21b9998286e6fbeeb",
     "url": "/highlight/styles/qtcreator_light.css"
+  },
+  {
+    "revision": "36e7bda0ef39f396cd88fb319016b1b8",
+    "url": "/highlight/styles/qtcreator_dark.css"
   },
   {
     "revision": "b4f8ae4bf950f9f9b496d997b63cb0d5",
@@ -422,6 +418,10 @@ self.__precacheManifest = [
   {
     "revision": "b1c0e6ad217403971d33eefb4478aad7",
     "url": "/highlight/styles/school-book.css"
+  },
+  {
+    "revision": "8c391d520d67f644c146dcfaee1eb25f",
+    "url": "/highlight/styles/pojoaque.jpg"
   },
   {
     "revision": "069f91d8694b98ca01fb750760f1563d",
@@ -472,11 +472,11 @@ self.__precacheManifest = [
     "url": "/css/tags.80bdc546.css"
   },
   {
-    "revision": "c7c7bc215e65740dd713",
+    "revision": "3d6f657c965fdb111cf3",
     "url": "/css/photo.b7e2b78b.css"
   },
   {
-    "revision": "c137969a93695cb4d39c",
+    "revision": "b419b03840ae48d7d159",
     "url": "/css/detail.bcc5723c.css"
   },
   {
@@ -488,8 +488,8 @@ self.__precacheManifest = [
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "4b07fc00c887f19b7526",
-    "url": "/css/app.157645cc.css"
+    "revision": "f02e7ce9964ce4924c44",
+    "url": "/css/app.d58dabe2.css"
   },
   {
     "revision": "8f4833a7da6bdf877ee4",
