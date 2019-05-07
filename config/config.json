@@ -425,7 +425,7 @@
     },
     {
       "gitname": "download.md",
-      "type": 3,
+      "type": 1,
       "title": "纯前端弹出下载框的方式下载img或pdf等资源",
       "tags": ["js"],
       "pic": null,
