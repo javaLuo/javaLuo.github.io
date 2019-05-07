@@ -35,7 +35,7 @@
     link.style.display = 'none';
 
     // 将文件二进制数据转换为blob数据，赋值给<a>标签的href
-    const blob = new Blob([res.data]);
+    const blob = new Blob([data]);
     link.href = URL.createObjectURL(blob);
 
     // 触发<a>标签的click事件
