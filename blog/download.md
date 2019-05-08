@@ -6,7 +6,7 @@
 
 ### js
 
-- 以 `awios` 为例
+- 以 `axios` 为例
 
 ```js
   /** 异步请求文件数据 **/
@@ -29,7 +29,7 @@
     * @param data 文件二进制数据
     * @param filename 保存的文件名
   **/
-  download(data, filename){
+  download(data, fileName){
     const link = document.createElement('a');
     link.download = fileName;
     link.style.display = 'none';
