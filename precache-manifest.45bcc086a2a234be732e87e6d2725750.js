@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "748a613a2a9bcca3a382",
-    "url": "/js/app.886c63fc.js"
+    "revision": "2b8101b3b79d144290b4",
+    "url": "/js/app.406aff96.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
@@ -28,16 +28,16 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
-    "revision": "4162d12aca6859a47344",
-    "url": "/js/chunk-vendors.bbc1f9eb.js"
+    "revision": "2ff1df24611d816e2750",
+    "url": "/js/chunk-vendors.b0226963.js"
   },
   {
     "revision": "28d5b9497037a12cb5a15644fea2f1c3",
     "url": "/highlight/styles/zenburn.css"
   },
   {
-    "revision": "4eb9a140c88f7f74dc50",
-    "url": "/js/detail.fb2ec14b.js"
+    "revision": "5d65660c34d11b93ffee",
+    "url": "/js/detail.e0e7f798.js"
   },
   {
     "revision": "4a4c814919b0109dd837458276cf3307",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/img/logo-vue.56141cac.png"
   },
   {
-    "revision": "6e3a6d6aa0c5f8a3b7a297e23588f748",
+    "revision": "af902598224e49b8605c0fe1c122e5a2",
     "url": "/index.html"
   },
   {
@@ -476,20 +476,20 @@ self.__precacheManifest = [
     "url": "/css/photo.b7e2b78b.css"
   },
   {
-    "revision": "4eb9a140c88f7f74dc50",
+    "revision": "5d65660c34d11b93ffee",
     "url": "/css/detail.bcc5723c.css"
   },
   {
-    "revision": "4162d12aca6859a47344",
-    "url": "/css/chunk-vendors.4e488e3b.css"
+    "revision": "2ff1df24611d816e2750",
+    "url": "/css/chunk-vendors.1f4ef0f7.css"
   },
   {
     "revision": "c835673a681b11220ba9",
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "748a613a2a9bcca3a382",
-    "url": "/css/app.945e6851.css"
+    "revision": "2b8101b3b79d144290b4",
+    "url": "/css/app.d58dabe2.css"
   },
   {
     "revision": "8f4833a7da6bdf877ee4",
