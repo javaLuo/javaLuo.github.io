@@ -41,6 +41,8 @@
     // 触发<a>标签的click事件
     document.body.appendChild(link);
     link.click();
+    // 释放blob资源
+    URL.revokeObjectURL(link.href);
     document.body.removeChild(link);
   }
 ```
