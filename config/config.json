@@ -431,6 +431,15 @@
       "pic": null,
       "info": "a标签download属性，弹出下载框的方式下载内容，而不是让浏览器解析",
       "date": "2019/05/07"
+    },
+    {
+      "gitname": "http.md",
+      "type": 1,
+      "title": "彻底搞清楚http请求，服了",
+      "tags": ["js"],
+      "pic": null,
+      "info": "所有参数，所有类型",
+      "date": "2019/05/28"
     }
   ]
 }
