@@ -30,20 +30,23 @@
     * @param filename 保存的文件名
   **/
   download(data, fileName){
-    const link = document.createElement('a');
-    link.download = fileName;
-    link.style.display = 'none';
-
-    // 将文件二进制数据转换为blob数据，赋值给<a>标签的href
+    // 将文件二进制数据转换为blob数据
     const blob = new Blob([data]);
-    link.href = URL.createObjectURL(blob);
+    const link = document.createElement('a');
 
-    // 触发<a>标签的click事件
-    document.body.appendChild(link);
-    link.click();
-    // 释放blob资源
-    URL.revokeObjectURL(link.href);
-    document.body.removeChild(link);
+    if('download' in link){ // 非IE浏览器直接利用download属性下载
+      link.download = fileName;
+      link.style.display = 'none';
+      link.href = URL.createObjectURL(blob);
+      // 触发<a>标签的click事件
+      document.body.appendChild(link);
+      link.click();
+      // 释放blob资源
+      URL.revokeObjectURL(link.href);
+      document.body.removeChild(link);
+    } else { // IE10+浏览器，利用IE独有方法下载
+      navigator.msSaveBlob(blob, fileName);
+    }
   }
 ```
 
@@ -57,5 +60,4 @@
 ### 注意
 
 - 注意跨域，get 请求显然存在跨域问题
-- IE 全系列不支持，IE 会询问用户要如何解析 blob，服了
-- Edge 没问题
+- 支持IE10+，Edge 没问题
