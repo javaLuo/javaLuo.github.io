@@ -6,7 +6,7 @@
 
 ### js
 
-- 以 `axios` 为例
+以 `axios` 为例
 
 ```js
   /** 异步请求文件数据 **/
@@ -41,9 +41,14 @@
       // 触发<a>标签的click事件
       document.body.appendChild(link);
       link.click();
-      // 释放blob资源
-      URL.revokeObjectURL(link.href);
-      document.body.removeChild(link);
+      /**
+        * 释放blob资源并删除创建的<a>标签
+        * 使用setTimeout是因为Edge浏览器需要一点时间解析blob，直接释放会读取不到
+        * */
+      setTimeout(function(){
+        URL.revokeObjectURL(link.href);
+        document.body.removeChild(link);
+      },200);
     } else { // IE10+浏览器，利用IE独有方法下载
       navigator.msSaveBlob(blob, fileName);
     }
@@ -52,10 +57,10 @@
 
 ### 原理
 
-- 普通的文件，`<a>` 标签的 download 属性，浏览器会直接打开文件
-- 所以用 get 请求直接请求这个文件的二进制数据
-- 转换为 blob 数据，赋给 `<a>` 标签，再下载
-- 这时候就可以弹出下载框了
+ 普通的文件，`<a>` 标签的 download 属性，浏览器会直接打开文件<br/>
+ 所以用 get 请求直接请求这个文件的二进制数据<br/>
+ 转换为 blob 数据，赋给 `<a>` 标签，再下载<br/>
+ 这时候就可以弹出下载框了
 
 ### 注意
 
