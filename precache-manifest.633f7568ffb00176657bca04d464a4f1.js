@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "99e131428f8d3b64e544c95adf233362",
-    "url": "/highlight/styles/atelier-sulphurpool-dark.css"
+    "revision": "63b489d3b2eb3b47e05afdeb16c10d22",
+    "url": "/highlight/styles/atelier-seaside-light.css"
   },
   {
     "revision": "687e52aeba76d1c129eb58ff6237fc26",
@@ -12,64 +12,64 @@ self.__precacheManifest = [
     "url": "/highlight/styles/brown-papersq.png"
   },
   {
-    "revision": "d04346432520e17dece1",
-    "url": "/js/app.82069d31.js"
+    "revision": "0a6457379033cd056c23",
+    "url": "/js/app.14b336e4.js"
   },
   {
     "revision": "cc0e2140c71f1010cc3220bee80eb130",
     "url": "/highlight/highlight.pack.js"
   },
   {
-    "revision": "c01b808b2eef4071828b",
-    "url": "/js/article.06f39a58.js"
+    "revision": "37b42aac2cddc56a46db",
+    "url": "/js/article.f703654c.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/robots.txt"
   },
   {
-    "revision": "c0268f6f1f5c28a513c1",
-    "url": "/js/chunk-vendors.be6bfa35.js"
-  },
-  {
-    "revision": "28d5b9497037a12cb5a15644fea2f1c3",
-    "url": "/highlight/styles/zenburn.css"
-  },
-  {
-    "revision": "04ce328c464e249f5539",
-    "url": "/js/detail.fae5807c.js"
+    "revision": "264754e6802620e2ddfe",
+    "url": "/js/chunk-vendors.a75b9666.js"
   },
   {
     "revision": "4a4c814919b0109dd837458276cf3307",
     "url": "/highlight/styles/xt256.css"
   },
   {
-    "revision": "499af82f9006f7aa7f88",
-    "url": "/js/live.3f418fc6.js"
+    "revision": "fdb97482e402a5f31966",
+    "url": "/js/detail.ae4aae08.js"
+  },
+  {
+    "revision": "28d5b9497037a12cb5a15644fea2f1c3",
+    "url": "/highlight/styles/zenburn.css"
+  },
+  {
+    "revision": "e392cafb4ee0ccd96a9b",
+    "url": "/js/live.2cfa2751.js"
   },
   {
     "revision": "994ccc71a8d23d56a3bb90766b4e2784",
     "url": "/highlight/styles/xcode.css"
   },
   {
-    "revision": "0f33767264aca379a394",
-    "url": "/js/photo.dc046e7b.js"
+    "revision": "a082585fc42578fffe4f",
+    "url": "/js/photo.4f14dd7c.js"
   },
   {
     "revision": "163911e35ea1c131dc4ce4ffd0388e35",
     "url": "/highlight/styles/vs2015.css"
   },
   {
-    "revision": "4aeca5da6c15565b8c13",
-    "url": "/js/tags.9609760d.js"
+    "revision": "26ccdb8255160218e4ac",
+    "url": "/js/tags.ca7b1277.js"
   },
   {
     "revision": "16693ba77ee7403d1a75594dc134235f",
     "url": "/highlight/styles/vs.css"
   },
   {
-    "revision": "71cc19abde517b7de999",
-    "url": "/js/works.acaceefa.js"
+    "revision": "7fd855c9193f3e6fe51d",
+    "url": "/js/works.cdc468f5.js"
   },
   {
     "revision": "d75b1019c5da82a7289062148b5f4a1f",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/img/logo-github.c054d83e.png"
   },
   {
-    "revision": "cb4b525cf25a731d4a1adfdbdb8a7001",
+    "revision": "5d688ea29d5579fa0f9d3757909e3838",
     "url": "/index.html"
   },
   {
@@ -152,12 +152,12 @@ self.__precacheManifest = [
     "url": "/highlight/README.md"
   },
   {
-    "revision": "7f28a9ef3dcc7caccff7db1a970c4146",
-    "url": "/highlight/styles/agate.css"
-  },
-  {
     "revision": "9db2bc6279995a063924409b7ce613b9",
     "url": "/highlight/README.ru.md"
+  },
+  {
+    "revision": "7f28a9ef3dcc7caccff7db1a970c4146",
+    "url": "/highlight/styles/agate.css"
   },
   {
     "revision": "fb012626bafd286510d32da815dae448",
@@ -176,6 +176,10 @@ self.__precacheManifest = [
     "url": "/highlight/styles/ascetic.css"
   },
   {
+    "revision": "f1dae0dbba7560c12248875443c74371",
+    "url": "/highlight/styles/atelier-cave-dark.css"
+  },
+  {
     "revision": "9256fbbdfaff0072230520af192aad3f",
     "url": "/highlight/styles/atelier-cave-light.css"
   },
@@ -184,16 +188,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-dune-dark.css"
   },
   {
-    "revision": "f1dae0dbba7560c12248875443c74371",
-    "url": "/highlight/styles/atelier-cave-dark.css"
+    "revision": "55742192acd0c1251d51501639d973d9",
+    "url": "/highlight/styles/atelier-dune-light.css"
   },
   {
     "revision": "91b58915eaf5e3963d33e025d611339b",
     "url": "/highlight/styles/atelier-estuary-dark.css"
-  },
-  {
-    "revision": "55742192acd0c1251d51501639d973d9",
-    "url": "/highlight/styles/atelier-dune-light.css"
   },
   {
     "revision": "102a02c63ee6e7a167fd4649fdea5520",
@@ -212,24 +212,24 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-heath-dark.css"
   },
   {
-    "revision": "f29d5cacd0d706554b4ad76a28e264a9",
-    "url": "/highlight/styles/atelier-heath-light.css"
-  },
-  {
     "revision": "f0f1440ca9806a40e30313e22020ba89",
     "url": "/highlight/styles/atelier-lakeside-dark.css"
+  },
+  {
+    "revision": "f29d5cacd0d706554b4ad76a28e264a9",
+    "url": "/highlight/styles/atelier-heath-light.css"
   },
   {
     "revision": "41b8800ab750ac31e518662a65d50f5f",
     "url": "/highlight/styles/atelier-lakeside-light.css"
   },
   {
-    "revision": "a19508e88383a760eb6b24d10397942c",
-    "url": "/highlight/styles/atelier-plateau-dark.css"
-  },
-  {
     "revision": "2dc4b0714cbfa90a6fc7961969e0d497",
     "url": "/highlight/styles/atelier-plateau-light.css"
+  },
+  {
+    "revision": "a19508e88383a760eb6b24d10397942c",
+    "url": "/highlight/styles/atelier-plateau-dark.css"
   },
   {
     "revision": "330e555af80e73b85f274a1d863b3f8b",
@@ -244,12 +244,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/atelier-seaside-dark.css"
   },
   {
-    "revision": "63b489d3b2eb3b47e05afdeb16c10d22",
-    "url": "/highlight/styles/atelier-seaside-light.css"
+    "revision": "99e131428f8d3b64e544c95adf233362",
+    "url": "/highlight/styles/atelier-sulphurpool-dark.css"
   },
   {
-    "revision": "e7a90d325a4399836691",
-    "url": "/js/about.a5b64dd3.js"
+    "revision": "3a76b18b88f30827b4ba",
+    "url": "/js/about.09910cbe.js"
   },
   {
     "revision": "bed6547f425e1e107f48ea32ec5997f1",
@@ -324,12 +324,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/grayscale.css"
   },
   {
-    "revision": "26be44ab273eb7e58a64a7e251a57160",
-    "url": "/highlight/styles/gruvbox-light.css"
-  },
-  {
     "revision": "0b9af0515eaadb6f3495e71e97afb775",
     "url": "/highlight/styles/gruvbox-dark.css"
+  },
+  {
+    "revision": "26be44ab273eb7e58a64a7e251a57160",
+    "url": "/highlight/styles/gruvbox-light.css"
   },
   {
     "revision": "23d32658b74128ba7ce9eb3cee79e889",
@@ -340,12 +340,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/hybrid.css"
   },
   {
-    "revision": "69136cd05c4071f33526fbbef6a065fb",
-    "url": "/highlight/styles/ir-black.css"
-  },
-  {
     "revision": "74e2ebedfeee50ee3c8f9de23d271d1c",
     "url": "/highlight/styles/idea.css"
+  },
+  {
+    "revision": "69136cd05c4071f33526fbbef6a065fb",
+    "url": "/highlight/styles/ir-black.css"
   },
   {
     "revision": "f4a1c8c40077e5b549cfb6e093c79607",
@@ -408,12 +408,12 @@ self.__precacheManifest = [
     "url": "/highlight/styles/qtcreator_light.css"
   },
   {
-    "revision": "b4f8ae4bf950f9f9b496d997b63cb0d5",
-    "url": "/highlight/styles/railscasts.css"
-  },
-  {
     "revision": "c89d491aca4854e11d180be0e6db0108",
     "url": "/highlight/styles/rainbow.css"
+  },
+  {
+    "revision": "b4f8ae4bf950f9f9b496d997b63cb0d5",
+    "url": "/highlight/styles/railscasts.css"
   },
   {
     "revision": "d1a10ddf5d50d6fbb54c14bdb5c8b6c2",
@@ -452,7 +452,7 @@ self.__precacheManifest = [
     "url": "/highlight/styles/tomorrow-night-eighties.css"
   },
   {
-    "revision": "499af82f9006f7aa7f88",
+    "revision": "e392cafb4ee0ccd96a9b",
     "url": "/css/live.4d1324ee.css"
   },
   {
@@ -464,35 +464,35 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.535877f5.woff"
   },
   {
-    "revision": "71cc19abde517b7de999",
+    "revision": "7fd855c9193f3e6fe51d",
     "url": "/css/works.9a6f5979.css"
   },
   {
-    "revision": "4aeca5da6c15565b8c13",
+    "revision": "26ccdb8255160218e4ac",
     "url": "/css/tags.80bdc546.css"
   },
   {
-    "revision": "0f33767264aca379a394",
+    "revision": "a082585fc42578fffe4f",
     "url": "/css/photo.b7e2b78b.css"
   },
   {
-    "revision": "04ce328c464e249f5539",
+    "revision": "fdb97482e402a5f31966",
     "url": "/css/detail.bcc5723c.css"
   },
   {
-    "revision": "c0268f6f1f5c28a513c1",
-    "url": "/css/chunk-vendors.fe85377e.css"
+    "revision": "264754e6802620e2ddfe",
+    "url": "/css/chunk-vendors.a7bfae12.css"
   },
   {
-    "revision": "c01b808b2eef4071828b",
+    "revision": "37b42aac2cddc56a46db",
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "d04346432520e17dece1",
-    "url": "/css/app.aa1f7fde.css"
+    "revision": "0a6457379033cd056c23",
+    "url": "/css/app.2b6025b3.css"
   },
   {
-    "revision": "e7a90d325a4399836691",
+    "revision": "3a76b18b88f30827b4ba",
     "url": "/css/about.465e618e.css"
   }
 ];
