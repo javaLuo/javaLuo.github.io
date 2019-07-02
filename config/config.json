@@ -440,6 +440,15 @@
       "pic": null,
       "info": "所有参数，所有类型",
       "date": "2019/05/28"
+    },
+    {
+      "gitname": "everything.md",
+      "type": 1,
+      "title": "随时想到的",
+      "tags": ["笔记"],
+      "pic": null,
+      "info": "随时的念头",
+      "date": "1970/01/01"
     }
   ]
 }
