@@ -449,6 +449,15 @@
       "pic": null,
       "info": "随时的念头",
       "date": "1970/01/01"
+    },
+    {
+      "gitname": "picture.md",
+      "type": 1,
+      "title": "HTML5 响应式图片picture标签使用方法",
+      "tags": ["HTML"],
+      "pic": null,
+      "info": "sizes中是基础规格值，与dpi相乘得到最终规格值，拿着最终规格值去srcset里找符合的图片资源加载",
+      "date": "2019/08/19"
     }
   ]
 }
