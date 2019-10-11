@@ -458,6 +458,15 @@
       "pic": null,
       "info": "sizes中是基础规格值，与dpi相乘得到最终规格值，拿着最终规格值去srcset里找符合的图片资源加载",
       "date": "2019/08/19"
+    },
+    {
+      "gitname": "pre.md",
+      "type": 1,
+      "title": "所有预加载标签一览",
+      "tags": ["HTML"],
+      "pic": null,
+      "info": "目前有5个：preload、prefetch、preconnect、dns-prefetch、prerender",
+      "date": "2019/10/11"
     }
   ]
 }
