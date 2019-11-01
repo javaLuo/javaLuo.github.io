@@ -467,6 +467,15 @@
       "pic": null,
       "info": "目前有5个：preload、prefetch、preconnect、dns-prefetch、prerender",
       "date": "2019/10/11"
+    },
+    {
+      "gitname": "pit.md",
+      "type": 1,
+      "title": "遇到的各种奇葩坑，持续记录吧",
+      "tags": ["HTML", "JS"],
+      "pic": null,
+      "info": "真实遇到的一些兼容问题，一般没太大问题，但确实在某些情况下让我踩了坑",
+      "date": "2019/11/01"
     }
   ]
 }
