@@ -22,3 +22,7 @@
 
 canvas 绘制阴影，mac 和 windows 下表现不一样，我忘记了，太久了。<br/>
 鼠标滚轮事件返回的滚动值，mac 和 windows 下不一样，一个快一个慢
+
+### 4. IE flex:1 问题
+
+IE11 中 flex:1 没高度的，需要用 flex:auto;

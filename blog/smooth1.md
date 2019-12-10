@@ -1,7 +1,8 @@
-* 这一次用的IntersectionObserver API实现的进入和离开动画
-* 以前做过类似的，用的遍历，监听滚动条滚动位置，遍历所有子元素当前应有的状态，若子元素过多，难免会卡顿。
+- 这一次用的 IntersectionObserver API 实现的进入和离开动画
+- 以前做过类似的，用的遍历，监听滚动条滚动位置，遍历所有子元素当前应有的状态，若子元素过多，难免会卡顿。
 
 html:
+
 ```
 <div id="scroll-box" class="scroll-box">
 	<p>1</p>
@@ -10,6 +11,7 @@ html:
 ```
 
 css:
+
 ```
 .scroll-box{
 	height: 300px;
@@ -28,6 +30,7 @@ css:
 ```
 
 JS:
+
 ```
 const p = document.querySelectorAll("#scroll-box>p");
 
@@ -52,6 +55,6 @@ Array.from(p).forEach((item)=>{
 
 ### 效果图：
 
-![效果图](https://raw.githubusercontent.com/javaLuo/javaLuo.github.io/master/assets/smooth_img1.gif)
+![效果图](https://javaLuo.github.io/master/assets/smooth_img1.gif)
 
-* 想过用CSS变量来控制，但好像不行。CSS变量貌似不适合控制这种动态添加的长列表
+- 想过用 CSS 变量来控制，但好像不行。CSS 变量貌似不适合控制这种动态添加的长列表
