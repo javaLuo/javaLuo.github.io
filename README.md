@@ -1,7 +1,24 @@
-# javaLuo.github.io
-个人博客
-https://blog.isluo.com
+# my-new-blog
 
-> vue-cli/github api
+## Project setup
+```
+yarn install
+```
 
-想着重新更新一版来着，但估计自己懒得不行
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
