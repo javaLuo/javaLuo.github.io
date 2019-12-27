@@ -3,6 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./assets/css/normalize.css";
+
+import { Slider } from "ant-design-vue";
+
+Vue.use(Slider);
 Vue.config.productionTip = false;
 
 new Vue({

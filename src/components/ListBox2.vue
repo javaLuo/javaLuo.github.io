@@ -3,21 +3,30 @@
        class="list-box"
        @mousedown="onBoxMouseDown($event)"
        @mousewheel="onBoxMouseWheel($event)">
-    <ul ref="ulDom"
-        :class="{'smooth': isSmooth}"
-        :style="`transform: translate(-60%, -50%) rotateY(-30deg) translateZ(${offsetUl}px)`">
+    <ul tag="ul"
+        ref="ulDom"
+        :class="{ smooth: isSmooth }"
+        :style="`transform: translate(${leftOffset}, -50%) rotateY(-30deg) translateZ(${offsetUl}px)`">
       <li v-for="item in listData"
-          :key="item.indexTrue"
+          :key="item.title"
+          :class="{ isNow: item.offsetZ + offsetUl === 0, isHide: item.isHide }"
           :style="`transform:translateZ(${item.offsetZ}px);${makeOpacity(item.offsetZ)}`">
-        <div>{{item.indexTrue}}</div>
-        <div>{{item.date}}</div>
+        <div>{{ item.indexTrue }}:{{ item.title }}</div>
+        <div>{{ item.date }}</div>
         <div>
-          <div>{{item.info}}</div>
+          <div>{{ item.info }}</div>
         </div>
         <figure class="pic"
                 :style="`background-image:url(${item.pic})`" />
       </li>
     </ul>
+    <div class="control-box">
+      <a-slider :defaultValue="1"
+                :min="1"
+                :max="canUseData.length" />
+      <input :value="searchInput"
+             @input="onSearchInput" />
+    </div>
   </div>
 </template>
 <script>
@@ -34,9 +43,8 @@ let pageOffsetXEnd = 0;
 let direction = 0; // 用于阻尼惯性: 表示最近移动的方向，>0向右，<0向左
 let startTime = 0; // 用于阻尼惯性: 表示记录速度的起始时间
 let startX = 0; // 用于阻尼惯性: 记录速度的起始坐标x
-let isMoving = false;
+let hideZZ = 0;
 import dayjs from "dayjs";
-import { CLIENT_RENEG_LIMIT } from "tls";
 export default {
   name: "listbox-com",
   data() {
@@ -45,7 +53,10 @@ export default {
       startIndex: 0,
       endIndex: 10,
       offsetUl: 0, // ul的偏移
-      isSmooth: false // ul是否带transition
+      isSmooth: false, // ul是否带transition
+      leftOffset: "-60%", // 根据窗口大小对左边偏移的大小
+      searchInput: "",
+      hideZ: 0 // 搜索隐藏了几个，endIndex就向后补偿几个
     };
   },
   props: {
@@ -53,7 +64,28 @@ export default {
   },
   computed: {
     canUseData() {
-      return this.sourceData.map((item, index) => {
+      let data = this.sourceData;
+      if (this.searchInput) {
+        let hideZ = 0;
+        const res = data.map((item, index) => {
+          if (item.title.includes(this.searchInput)) {
+            return {
+              ...item,
+              indexTrue: index,
+              offsetZ: -index * oneOffset + hideZ
+            };
+          }
+          hideZ += oneOffset;
+          return {
+            isHide: true,
+            ...item,
+            indexTrue: index,
+            offsetZ: -index * oneOffset
+          };
+        });
+        return res;
+      }
+      return data.map((item, index) => {
         return {
           ...item,
           indexTrue: index,
@@ -61,8 +93,14 @@ export default {
         };
       });
     },
+    hideZIndex() {
+      return this.canUseData.filter(item => item.isHide).length;
+    },
     listData() {
-      return this.canUseData.slice(this.startIndex, this.endIndex);
+      return this.canUseData.slice(
+        this.startIndex,
+        this.endIndex + this.hideZIndex
+      );
     },
     // ul能移动的范围
     offsetMax() {
@@ -83,10 +121,12 @@ export default {
     this.ulDom = this.$refs.ulDom;
     document.addEventListener("mousemove", this.onBoxMouseMove, true);
     document.addEventListener("mouseup", this.onBoxMouseUp, true);
+    window.addEventListener("resize", this.onWindowResize, false);
   },
   beforeDestroy() {
     document.removeEventListener("mousemove", this.onBoxMouseMove, true);
     document.removeEventListener("mouseup", this.onBoxMouseUp, true);
+    window.removeEventListener("resize", this.onWindowResize, false);
   },
   watch: {
     offsetUl: {
@@ -102,10 +142,16 @@ export default {
     }
   },
   methods: {
+    onWindowResize(e) {
+      this.leftOffset = window.innerWidth > 1640 ? "-60%" : "-40%";
+    },
+    onSearchInput(e) {
+      this.searchInput = e.target.value;
+      this.offsetUl = 0;
+    },
     onBoxMouseDown(e) {
       cancelAnimationFrame(inertiaTimer);
       isDown = true;
-      isMoving = false;
       pageX = e.pageX;
       direction = 0; // 表示最近移动的方向，>0向右，<0向左
       startTime = 0; // 表示记录速度的起始时间，用于阻尼惯性
@@ -121,7 +167,6 @@ export default {
     },
     onBoxMouseMove(e) {
       if (isDown) {
-        isMoving = true;
         e.preventDefault();
         // 用户向左移动，direction < 0, 向右移动direction > 0
         const move = e.pageX - oldPageX;
@@ -220,8 +265,14 @@ export default {
       left: 0;
       box-shadow: 0 0 20px #aaa;
       background-color: rgba(255, 255, 255, 0.85);
-      transition: top 256ms, left 256ms;
+      transition: transform 256ms, clip-path 256ms;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       cursor: pointer;
+      &.isHide {
+        // opacity: 0;
+        pointer-events: none;
+        clip-path: polygon(-10% 50%, 90% 50%, 90% 50%, -10% 50%);
+      }
       .pic {
         position: absolute;
         z-index: -1;
@@ -268,7 +319,7 @@ export default {
           }
         }
       }
-      &:hover {
+      &.isNow:hover {
         & > div {
           &:nth-child(1) {
             color: #00d5ff;
@@ -305,6 +356,12 @@ export default {
         box-shadow: 0 0 45px #000;
       }
     }
+  }
+  .control-box {
+    position: absolute;
+    left: 20%;
+    top: calc(50% + 350px);
+    width: 300px;
   }
 }
 </style>
