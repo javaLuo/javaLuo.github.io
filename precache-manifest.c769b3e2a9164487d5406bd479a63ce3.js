@@ -1,38 +1,38 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a026649dbb6536022b75",
+    "revision": "5b84914485fcbfef4bda",
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "bd7cace6f0800ef88ed3",
+    "revision": "e72cff58f22f8227df3b",
     "url": "/css/app.a36e4d78.css"
   },
   {
-    "revision": "9228eb99a4e2d13e3bba",
+    "revision": "5aea552755658327fa5d",
     "url": "/css/article.7c1c5126.css"
   },
   {
-    "revision": "6f58a0de49a5eda7d293",
-    "url": "/css/chunk-vendors.591cd125.css"
+    "revision": "271ea04e519facd5118b",
+    "url": "/css/chunk-vendors.f5ab61ea.css"
   },
   {
-    "revision": "3abc78236d638d8a79b8",
+    "revision": "fcf48afe975864473c5e",
     "url": "/css/detail.bcc5723c.css"
   },
   {
-    "revision": "07ff11808618e4e25a40",
+    "revision": "42fb6df6da414566a018",
     "url": "/css/live.4d1324ee.css"
   },
   {
-    "revision": "e4afd5451eed16efebb6",
+    "revision": "7d270e88e863f9ca91d0",
     "url": "/css/photo.b7e2b78b.css"
   },
   {
-    "revision": "158487e858d74858a440",
+    "revision": "c8aca215b44961055ffc",
     "url": "/css/tags.80bdc546.css"
   },
   {
-    "revision": "2f5a143a75271e1102bb",
+    "revision": "96f0aa12b96a8ab29e02",
     "url": "/css/works.9a6f5979.css"
   },
   {
@@ -452,44 +452,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "a11bab0f41ea1dace56ca3e4bf9d5969",
+    "revision": "0396b59f017684b3944bd43a3d4d28ef",
     "url": "/index.html"
   },
   {
-    "revision": "a026649dbb6536022b75",
-    "url": "/js/about.7e19fc60.js"
+    "revision": "5b84914485fcbfef4bda",
+    "url": "/js/about.125040fd.js"
   },
   {
-    "revision": "bd7cace6f0800ef88ed3",
-    "url": "/js/app.4b82092e.js"
+    "revision": "e72cff58f22f8227df3b",
+    "url": "/js/app.55eea645.js"
   },
   {
-    "revision": "9228eb99a4e2d13e3bba",
-    "url": "/js/article.1c29dfa4.js"
+    "revision": "5aea552755658327fa5d",
+    "url": "/js/article.ac45384d.js"
   },
   {
-    "revision": "6f58a0de49a5eda7d293",
-    "url": "/js/chunk-vendors.151a548c.js"
+    "revision": "271ea04e519facd5118b",
+    "url": "/js/chunk-vendors.03809a98.js"
   },
   {
-    "revision": "3abc78236d638d8a79b8",
-    "url": "/js/detail.fb651939.js"
+    "revision": "fcf48afe975864473c5e",
+    "url": "/js/detail.e72f35e0.js"
   },
   {
-    "revision": "07ff11808618e4e25a40",
-    "url": "/js/live.c6270b9c.js"
+    "revision": "42fb6df6da414566a018",
+    "url": "/js/live.185aed39.js"
   },
   {
-    "revision": "e4afd5451eed16efebb6",
-    "url": "/js/photo.45a9f98e.js"
+    "revision": "7d270e88e863f9ca91d0",
+    "url": "/js/photo.be067bfe.js"
   },
   {
-    "revision": "158487e858d74858a440",
-    "url": "/js/tags.17e9a18e.js"
+    "revision": "c8aca215b44961055ffc",
+    "url": "/js/tags.ba10b772.js"
   },
   {
-    "revision": "2f5a143a75271e1102bb",
-    "url": "/js/works.1e48d4e9.js"
+    "revision": "96f0aa12b96a8ab29e02",
+    "url": "/js/works.84d9188b.js"
   },
   {
     "revision": "2f94dd14e4fc3ea6540c633fd568f036",
