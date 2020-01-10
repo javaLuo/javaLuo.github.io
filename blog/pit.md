@@ -26,3 +26,21 @@ canvas 绘制阴影，mac 和 windows 下表现不一样，我忘记了，太久
 ### 4. IE flex:1 问题
 
 IE11 中 flex:1 没高度的，需要用 flex:auto;
+
+### 5. Vue 2.x
+
+在计算属性中调用别等计算属性，调用次数越多越卡，尤其是在循环中
+
+
+```javascript
+// 错误的做法：
+for(let i=0;i<1000;i++){
+  let a = this.B; // B是另一个计算属性
+}
+
+// 正确的做法
+const b = this.B;
+for(let i=0;i<1000;i++){
+  let a = b; // 这样就避免了循环中每次都去访问this.B
+}
+```
