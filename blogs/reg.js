@@ -2,7 +2,7 @@
   if (!window.blogs) {
     window.blogs = {};
   }
-  window.blogs.regexp = `
+  window.blogs.reg = `
 MDN 文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions</a>
 
 ### JS中涉及到正则的方法有这些：
@@ -23,9 +23,9 @@ MDN 文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Gu
 
 **用法1:**
 @@@javascript
-const reg = /(hi)(U)\1\2/;
+const reg = /(hi)(U)\\1\\2/;
 @@@
-\1\2表示取前面的子表达式，(hi)就是第1个，(U)是第2个，上面的表达式等价于：
+\\1\\2表示取前面的子表达式，(hi)就是第1个，(U)是第2个，上面的表达式等价于：
 @@@javascript
 const reg = /hiUhiU/;
 @@@
@@ -41,7 +41,7 @@ str.replace(reg, "逼王$1，有何贵干"); // "Hi,I'am 逼王坂本，有何�
 
 2. 非捕获括号 (?:)
 @@@javascript
-const reg = /(?:hi)(U)\1/;
+const reg = /(?:hi)(U)\\1/;
 @@@
 (?:hi)不进行编号，就是说(U)才是第1个。上面的表达式等价于：
 @@@javascript
@@ -85,7 +85,7 @@ str.search(reg); // 3, 返回下标3，说明匹配到的是Java7中的第2个�
 
 @@@
 const str = "@1,@23,@456"; // 现在想提取字符串中的数字
-const reg = /(?<=@)\d+/g;
+const reg = /(?<=@)\\d+/g;
 str.match(reg); // ["1","23","456"];
 @@@
 
