@@ -5,7 +5,7 @@ on:
       - source
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
