@@ -1260,6 +1260,17 @@
 .page-detail .the-body img {
   border-radius: 4px;
 }
+.page-detail .markdown-body pre {
+  font-size: 100% !important;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.page-detail .markdown-body pre code {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
 .page-detail .info {
   letter-spacing: 1px;
   border-bottom: solid 1px #e0e0e0;

@@ -901,7 +901,7 @@ th {
   width: 100%;
   height: 100vh;
   min-height: 300px;
-  background-color: #f0f0f0;
+  background-color: #fcfcfc;
 }
 .home .scroller .scroll-wrapper .scroll-page.foot-page[data-v-fae5bece] {
   height: 300px;
@@ -986,10 +986,13 @@ th {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   text-align: center;
-  color: #888;
+  color: #ccc;
+}
+.my-loading .nodata-icon[data-v-5a9371f0] {
+  font-size: 32px;
 }
 .my-loading div[data-v-5a9371f0] {
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
 .list-enter-active[data-v-32cce5d7] {
