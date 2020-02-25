@@ -22,7 +22,7 @@ jobs:
           yarn install
           yarn run build
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3.1.5
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.access_token_key }}
           BRANCH: master
