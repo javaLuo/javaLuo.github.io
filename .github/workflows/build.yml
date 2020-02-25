@@ -12,11 +12,13 @@ jobs:
         with:
           ref: source
           persist-credentials: false
-
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
           ACCESS_TOKEN: ${{ secrets.access_token_public_key }}
           BRANCH: master
           FOLDER: dist
-          BUILD_SCRIPT: npm install && npm run build
