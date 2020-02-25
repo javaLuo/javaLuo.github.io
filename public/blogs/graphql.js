@@ -7,16 +7,16 @@
 
 #### 1. 服务端需要安装两个包
 
-@@@
+\`\`\`
 npm install graphql --save
 npm install express-graphql --save
-@@@
+\`\`\`
 
 > graphql 提供了各种语言的 SDK，我用的 NODE.js，所以使用 express-graphql
 
 #### 2. 配置你的服务端 server.js(express 服务)
 
-@@@
+\`\`\`
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 
@@ -30,7 +30,7 @@ app.use(
     }),
 );
 app.listen(8080);
-@@@
+\`\`\`
 
 搞定。 最重要的是 schema（模式）, 稍后详解。其他 express 路由啊中间件啊就正常配置。<br/>
 这样一来，只要访问http://localhost:8080/graphql 就是在请求 graphql 服务<br/>
@@ -46,7 +46,7 @@ app.listen(8080);
 创建一个 schema.js<br/>
 这个文件的作用就是所谓的“面向对象编程”，
 
-@@@
+\`\`\`
 /** 后端都是强类型的，graphql提供了各种基本类型的抽象类，按需引入 **/
 const {
     GraphQLObjectType,    // 对象
@@ -86,7 +86,7 @@ const schema = new GraphQLSchema({
 
 module.exports = schema;
 
-@@@
+\`\`\`
 
 #### 4.下面是具体示例
 
@@ -102,7 +102,7 @@ https://isluo.com/main/getMovieList?pageNow=0&pageSize=10<br/>
 
 完善上面创建的 schema.js:
 
-@@@
+\`\`\`
 /** 后端都是强类型的，graphql提供了各种基本类型的抽象类，按需引入 **/
 const {
     GraphQLObjectType,    // 对象
@@ -172,20 +172,20 @@ const Query = new GraphQLObjectType({
     },
     }),
 });
-@@@
+\`\`\`
 
 **前端**
 
 页面里面写 ajax 或 fetch
 
-@@@
-    const query = @query func($pageNow: Int!, $pageSize: Int!){
+\`\`\`
+    const query = \`query func($pageNow: Int!, $pageSize: Int!){
     movie(pageNow: $pageNow, pageSize: $pageSize){
         id
         title
         imgpath
     }
-    }@;
+    }\`;
 
     fetch('/graphql',{
     method: 'POST',
@@ -199,7 +199,7 @@ const Query = new GraphQLObjectType({
     })
     }).then(r => r.json())
     .then(data => console.log(data));
-@@@
+\`\`\`
 
 执行上面方法就能获取到数据了，并且指定了只获取 id/title/imgpath
 

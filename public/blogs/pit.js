@@ -5,9 +5,9 @@
   window.blogs.pit = `
 ### 1. Array.sort 在 Firefox 中
 
-@@@javascript
+\`\`\`javascript
 [1,2,3].sort((a,b)=>{...});
-@@@
+\`\`\`
 
 在其他浏览器中，a 是后面一个元素，b 是前面一个元素，是反着来的<br/>
 比如上面第一次排序时，a 是 2，b 是 1, 是反着传的<br/>
@@ -16,7 +16,7 @@
 
 ### 2. window.location.replace
 
-从 A 页面正常跳转到 B，再从 B @location.replace@ 跳转到 C<br/>
+从 A 页面正常跳转到 B，再从 B \`location.replace\` 跳转到 C<br/>
 从 C 按返回键，会直接回到 A<br/>
 这没问题<br/>
 但如果 C 是一个无效的网址，浏览器会显示“无法打开该网址”，此时再按返回键<br/>
@@ -36,7 +36,7 @@ IE11 中 flex:1 没高度的，需要用 flex:auto;
 
 在计算属性中调用别的计算属性，调用次数越多越卡，尤其是在循环中
 
-@@@javascript
+\`\`\`javascript
 // 错误的做法：
 for (let i = 0; i < 1000; i++) {
     let a = this.B; // B是另一个计算属性
@@ -47,7 +47,7 @@ const b = this.B;
 for (let i = 0; i < 1000; i++) {
     let a = b; // 这样就避免了循环中每次都去访问this.B
 }
-@@@
+\`\`\`
     
  `;
 })();

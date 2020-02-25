@@ -15,13 +15,13 @@
 
 - 引入本体：
 
-@@@
+\`\`\`
 <script type="text/javascript" src="charting_library/charting_library.min.js"></script>
-@@@
+\`\`\`
 
 - 然后写代码：
 
-@@@
+\`\`\`
 <div id="tv_chart_container"><div>
 
 <script>
@@ -112,7 +112,7 @@
         settings_adapter:{}, // 设置/删除 高级功能 略
     });
 </script>
-@@@
+\`\`\`
 
 ### 图表初始化时可配置的所有属性（不包含交易终端）
 
@@ -165,13 +165,13 @@
 > 也可以配置为官方提供的 UDF，UDF 实际上也是实现了 JS API
 > https://github.com/tradingview/charting_library/wiki/JS-Api
 
-@@@
+\`\`\`
 TradingView.onready(function() {
     var widget = window.tvWidget = new TradingView.widget({
         datafeed:{
             /**
             * 获取服务器端的配置信息，服务端应该实现一个接口返回对应的数据
-            * @param callback 回调函数，获取到数据后调用此函数把数据传给图表
+            * \`param callback 回调函数，获取到数据后调用此函数把数据传给图表
             * 后端应该返回这样的数据：
             {
                 // 所有的证券交易所代码，用于搜索框将出现的选项，表明后端程序员能提供这些交易所的数据
@@ -202,10 +202,10 @@ TradingView.onready(function() {
 
             /**
             * 用户进行搜索时，图表会自动调用该函数
-            * @param userInput 用户在搜索框输入的字符串
-            * @param exchange 用户选择的交易所，即onReady中后端返回的那些
-            * @param symbolType 用户选择的交易对类型 即onReady中后端返回的那些
-            * @param onResultReadyCallback 回调函数
+            * \`param userInput 用户在搜索框输入的字符串
+            * \`param exchange 用户选择的交易所，即onReady中后端返回的那些
+            * \`param symbolType 用户选择的交易对类型 即onReady中后端返回的那些
+            * \`param onResultReadyCallback 回调函数
             * 后端应该返回这样对数据：
             [
                 {
@@ -226,9 +226,9 @@ TradingView.onready(function() {
 
             /**
             * 根据交易对名字获取交易对详细信息
-            * @param symbolName 交易对名字
-            * @param onSymbolResolvedCallback 成功后调用此回调
-            * @param onResolveErrorCallback 失败调用此回调
+            * \`param symbolName 交易对名字
+            * \`param onSymbolResolvedCallback 成功后调用此回调
+            * \`param onResolveErrorCallback 失败调用此回调
             * 后端应该返回这样的数据：（称为symbolInfo）
                 {
                     name: 'USDBTC', // 交易对名字
@@ -269,13 +269,13 @@ TradingView.onready(function() {
             /**
             * 获取指定时间段内段所有数据
             * 图表会自动调用，比如用户查看的是每5分钟的数据，则图表在需要获数据时，自动调用此函数
-            * @param symbolInfo 交易对详细信息
-            * @param resolution 时间间隔
-            * @param from unix时间戳 起始时间
-            * @param to unxi时间戳 结束时间
-            * @param onHistoryCallback 成功时的回调
-            * @param onErrorCallback 失败时的回调
-            * @param firstDataRequest true/false 图表是否是第1次获取数据（即获取）
+            * \`param symbolInfo 交易对详细信息
+            * \`param resolution 时间间隔
+            * \`param from unix时间戳 起始时间
+            * \`param to unxi时间戳 结束时间
+            * \`param onHistoryCallback 成功时的回调
+            * \`param onErrorCallback 失败时的回调
+            * \`param firstDataRequest true/false 图表是否是第1次获取数据（即获取）
             onHistoryCallback接收两个参数：
                 第1个应该是数组:[
                     {
@@ -300,11 +300,11 @@ TradingView.onready(function() {
             * 由图表自动调用，用户每选择一个不同的交易对或每选择一个不同的时间间隔，就会触发一次该函数
             * 图表会自动创建一个对象，该交易对有新数据时，监听者会自动更新数据
             * （如果你自己要用socket获取数据的话，需要把这些自动产生的监听者保存下来，当获取到新数据时手动调用onRealtimeCallback来更新数据，官方UDF里也是这么干的）
-            * @param symbolInfo 当前交易对的详情
-            * @param resolution 时间间隔
-            * @param onRealtimeCallback 调用此方法将把新的数据更新到图表中
-            * @param subscriberUID 该监听者的唯一ID，默认是：交易对名称_时间间隔
-            * @param onResetCacheNeededCallback 刷新缓存的数据？
+            * \`param symbolInfo 当前交易对的详情
+            * \`param resolution 时间间隔
+            * \`param onRealtimeCallback 调用此方法将把新的数据更新到图表中
+            * \`param subscriberUID 该监听者的唯一ID，默认是：交易对名称_时间间隔
+            * \`param onResetCacheNeededCallback 刷新缓存的数据？
             **/
             subscribeBars: function(symbolInfo,resolution,onRealtimeCallback,subscriberUID,onResetCacheNeededCallback){},
 
@@ -313,7 +313,7 @@ TradingView.onready(function() {
             * 销毁指定的监听者
             * 这个也是图表自动调用的，目前还不清楚具体什么情况会被调用
             * 只知道是图表觉得不再需要接收某交易对数据时，会自动调用
-            * @param subscriberUID 监听者的ID
+            * \`param subscriberUID 监听者的ID
             **/
             unsubscribeBars(subscriberUID){},
 
@@ -321,9 +321,9 @@ TradingView.onready(function() {
             /**
             * 可选的
             * 图表库在需要某些历史数据来覆盖K柱时会自动调用
-            * @param resolution 时间间隔
-            * @param resolutionBack 'D'或'M',时间段的类型
-            * @param intervalBack 期数，比如6,就是6个时间间隔之间的数据
+            * \`param resolution 时间间隔
+            * \`param resolutionBack 'D'或'M',时间段的类型
+            * \`param intervalBack 期数，比如6,就是6个时间间隔之间的数据
             * 该函数应该直接返回一个对象：
             {
                 resolutionBack: 'M',
@@ -335,11 +335,11 @@ TradingView.onready(function() {
 
             /**
             * 获取某时间段内当前用户所做的所有标记,每个K柱最多做10个标记
-            * @param symbolInfo 当前交易对的详情
-            * @param from 开始的时间戳
-            * @param to 结束的时间戳
-            * @param onDataCallback 成功的回调
-            * @param resolution 时间间隔
+            * \`param symbolInfo 当前交易对的详情
+            * \`param from 开始的时间戳
+            * \`param to 结束的时间戳
+            * \`param onDataCallback 成功的回调
+            * \`param resolution 时间间隔
             * onDataCallback接收这样的数据：
             [
                 {
@@ -365,14 +365,14 @@ TradingView.onready(function() {
 
             /**
             * 获取服务器时间
-            * @param callback 回调
+            * \`param callback 回调
             * callback接收这样的数据：1445324591
             **/
             getServerTime: function(callback){}
         }
     });
 });
-@@@
+\`\`\`
 
 `;
 })();

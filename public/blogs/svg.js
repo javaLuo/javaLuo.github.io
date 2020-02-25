@@ -6,7 +6,7 @@
 #1.基本
 
 * 一个最简单例子 test.svg文件
-@@@
+\`\`\`
 <?xml version="1.0" standalone="no"?>
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
@@ -19,7 +19,7 @@ xmlns="http://www.w3.org/2000/svg">
 stroke-width="2" fill="red"/>
 
 </svg>
-@@@
+\`\`\`
 
 > 第1行是xml声明，以下是xml格式的代码
 version - 版本
@@ -27,13 +27,13 @@ standalong - 是否是独立的，即下面的代码中是否没有引用外部�
 
 > 第2行包含了外部SVG DTD文件。是W3C标准，定义了所有合法的SVG元素
 
-> 第3行是正式的svg代码，svg代码由@@@<svg>@@@标签包裹
+> 第3行是正式的svg代码，svg代码由\`\`\`<svg>\`\`\`标签包裹
 width/height设置宽高、version设置使用的svg版本、xmlns设置可定义svg的命名空间
 
 #页面中如何引用.svg文件
 
-* @@@<embed>@@@
-@@@
+* \`\`\`<embed>\`\`\`
+\`\`\`
 <embed
     src="./test.svg"
     width="100"
@@ -42,11 +42,11 @@ width/height设置宽高、version设置使用的svg版本、xmlns设置可定�
     pluginspage="http://www.adobe.com/svg/viewer/install/"
 />
 // pluginspage是下载svg插件的地址，因为IE不支持svg,需要插件
-@@@
+\`\`\`
 但embed不是W3C规范的标签，虽然所有浏览器都支持
 
-* @@@<object>@@@
-@@@
+* \`\`\`<object>\`\`\`
+\`\`\`
 <object
     data="./test.svg"
     width="100"
@@ -55,30 +55,30 @@ width/height设置宽高、version设置使用的svg版本、xmlns设置可定�
     codebase="http://www.adobe.com/svg/viewer/install/"
 />
 // codebase指向svg插件下载地址
-@@@
+\`\`\`
 object是w3c标准，所有浏览器都支持，但无法使用脚本
 如果安装了Adobe SVG Viewer插件，则object无法在IE下工作
 
-* @@@<iframe>@@@
-@@@
+* \`\`\`<iframe>\`\`\`
+\`\`\`
 <iframe
     src="./test.svg"
     width="100"
     height="100"
 ></iframe>
-@@@
+\`\`\`
 
-* @@@<img>@@@
-@@@
+* \`\`\`<img>\`\`\`
+\`\`\`
 <img src="./test.svg" />
-@@@
+\`\`\`
 
 #SVG内置基本形状
 注：所有的属性都可以写在style里，所有的style也可以直接写成属性
 （不需要驼峰转换）
 但有些属性写到style中后无法使用百分比定位，比如x/y
-* @@@<rect>@@@ 矩形
-@@@
+* \`\`\`<rect>\`\`\` 矩形
+\`\`\`
 <rect
     x="20%" // 左上角x位置
     y="50"  // 左上角y位置
@@ -93,19 +93,19 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
             stroke-opacity: 0.9; // 边框透明度
             opacity: 0.8;   // 整个元素的透明度
 />
-@@@
-* @@@<circle>@@@ 圆
-@@@
+\`\`\`
+* \`\`\`<circle>\`\`\` 圆
+\`\`\`
 <circle
     cx="100"    // 圆心x 默认0
     cy="50"     // 圆心y 默认0
     r="40"      // 半径
     style="..."
 />
-@@@
+\`\`\`
 
-* @@@<ellipse>@@@ 椭圆
-@@@
+* \`\`\`<ellipse>\`\`\` 椭圆
+\`\`\`
 <ellipse
     cx="100"    // 圆心x 默认0
     cy="50"     // 圆心y 默认0
@@ -113,9 +113,9 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
     ry="50"     // y方向半径
     style="..."
 >
-@@@
-* @@@<line>@@@ 线段
-@@@
+\`\`\`
+* \`\`\`<line>\`\`\` 线段
+\`\`\`
 <line
     x1="0"  // 起点x
     y1="0"  // 起点y
@@ -125,29 +125,29 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
     stroke-width="2"
     style="..."
 />
-@@@
+\`\`\`
 线条需要stroke才能显示，fill无效
 
-* @@@<polygon>@@@ 多边形
-@@@
+* \`\`\`<polygon>\`\`\` 多边形
+\`\`\`
 <polygon
     points="0,0 50,50 120,200"  // 至少3个点
     fill="#f00"
 />
-@@@
+\`\`\`
 
-* @@@<polyline>@@@ 折线
-@@@
+* \`\`\`<polyline>\`\`\` 折线
+\`\`\`
 <polyline
     points="0,0 0,20 20,20 40,40" // 至少两个点
 />
-@@@
+\`\`\`
 所有的点从头连到尾，不闭合 fill无效
 
-* @@@<path>@@@ 路径
-@@@
+* \`\`\`<path>\`\`\` 路径
+\`\`\`
 <path d="M250 150 L150 350 L350 350 Z" />
-@@@
+\`\`\`
 定义路径，最后会闭合为一个图形
 所有可用的指令：
 1. M 移动到某点
@@ -202,7 +202,7 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
 19. feSpotLight
 每个svg元素上都可以同时运用多个滤镜
 
-@@@
+\`\`\`
 <svg>
     <defs>  // 所有的filter都定义在defs中
         <filter id="f1">    // 用filter标签，给它个ID
@@ -221,10 +221,10 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
         style="filter:url(#f1)"  // 也可以在style中引用
 /> 
 </svg>
-@@@
+\`\`\`
 #SVG线性渐变
-渐变也必须在@@@<defs>@@@中定义
-@@@
+渐变也必须在\`\`\`<defs>\`\`\`中定义
+\`\`\`
 <defs>
     <linearGradient id="id", x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" style="stop-color:#000;stop-opacity:1" />
@@ -233,13 +233,13 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
 </defs>
 
 <rect fill="url(#id)" width="100" height="100"/>
-@@@
-@@@<linearGradient>@@@定义线性渐变。x1/y1渐变开始的位置，x2/y2渐变结束的位置<br/>
-@@@<stop>@@@定义渐变的关键帧，offset位置<br/>
+\`\`\`
+\`\`\`<linearGradient>\`\`\`定义线性渐变。x1/y1渐变开始的位置，x2/y2渐变结束的位置<br/>
+\`\`\`<stop>\`\`\`定义渐变的关键帧，offset位置<br/>
 定义好了后就可以通过id引用
 
 #SVG放射性渐变
-@@@
+\`\`\`
 <defs>
     <radialGradient id="id" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
         <stop offset="0%" style="stop-color:#000" />
@@ -247,8 +247,8 @@ object是w3c标准，所有浏览器都支持，但无法使用脚本
     </radialGradient>
     <rect fill="url(#id)" width="100" height="100"/>
 </defs>
-@@@
-@@@<radialGradient>@@@定义放射性渐变
+\`\`\`
+\`\`\`<radialGradient>\`\`\`定义放射性渐变
 cx/cy/r定义渐变的外圈（圆心及半径），渐变只会在这个圆内部发生，超出范围的被裁剪
 fx/fy定义内圆心，及渐变开始的点，渐变将以这个点为起始点像四周扩散
 

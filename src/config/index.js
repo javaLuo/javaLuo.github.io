@@ -225,7 +225,7 @@ export const blogs = [
   },
   {
     id: "pit",
-    name: "遇到的所有的坑们",
+    name: "我所需要的各种匪夷所思的坑们",
     info: "各种匪夷所思的坑，持续记录",
     type: 1,
     date: "2020/01/10",
@@ -389,6 +389,14 @@ export const blogs = [
     type: 2,
     date: "2018/07/09",
     tags: ["js", "小程序"]
+  },
+  {
+    id: "actions",
+    name: "GitHub Actions自动部署Vue-cli项目到GitHub pages",
+    info: "自动部署vue项目到github博客页面教程",
+    type: 1,
+    date: "2020/02/25",
+    tags: ["js"]
   }
 ];
 

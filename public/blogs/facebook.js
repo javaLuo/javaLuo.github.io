@@ -5,8 +5,8 @@
   window.blogs.facebook = `
 > 不管你是使用普通的网页连接分享，还是使用JavaScript SDK。 下面的方法都有效。
 
-###1. 直接在@<head>@标签中设置以下meta
-@@@html
+###1. 直接在\`<head>\`标签中设置以下meta
+\`\`\`html
 <meta property="fb:app_id"        content="150192****06562" />
 <meta property="og:url"           content="https://isluo.com/" />
 <meta property="og:type"          content="website" />
@@ -20,7 +20,7 @@
 * og: title       标题，生成的facebook分享对话框中的标题
 * og: description 简介，生成的facebook分享对话框中的简介，不要太多
 * og: image       图片，分享对话框中左侧的图片，最好是正方形，大小至少在90*90以上
-@@@
+\`\`\`
 
 ###2. 进入facebook调试工具
 facebook share 调试器：<br/>

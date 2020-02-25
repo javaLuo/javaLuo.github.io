@@ -5,9 +5,7 @@
       <el-breadcrumb>
         <el-breadcrumbItem to="/all">博客列表</el-breadcrumbItem>
         <el-breadcrumbItem :to="breadType.url">
-          {{
-          breadType.title
-          }}
+          {{ breadType.title }}
         </el-breadcrumbItem>
         <el-breadcrumbItem>{{ blogNow.name }}</el-breadcrumbItem>
       </el-breadcrumb>
@@ -16,7 +14,11 @@
       <div class="title">{{ blogNow.name }}</div>
       <div class="date">{{ blogNow.date }}</div>
     </div>
-    <div ref="theBody" v-html="htmlData" class="the-body markdown-body editormd-html-preview"></div>
+    <div
+      ref="theBody"
+      v-html="htmlData"
+      class="the-body markdown-body editormd-html-preview"
+    ></div>
     <div class="the-end">
       <img :src="ImgFeather" />
       <div>
@@ -103,14 +105,14 @@ export default {
         return null;
       }
       if (window.blogs && window.blogs[id]) {
-        this.sourceData = window.blogs[id].replace(/@/g, "`");
+        this.sourceData = window.blogs[id].replace(/\\`/g, "`");
         return;
       }
       const dom = document.createElement("script");
       dom.type = "text/javascript";
       dom.src = `blogs/${id}.js`;
       dom.onload = () => {
-        this.sourceData = window.blogs[id].replace(/@/g, "`");
+        this.sourceData = window.blogs[id].replace(/\\`/g, "`");
       };
       dom.onerror = () => {
         this.$message.error("文章加载失败，请刷新页面");

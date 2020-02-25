@@ -5,16 +5,16 @@
   window.blogs.orbitcontrols = `
 ### 构造函数
 
-@@@
+\`\`\`
 /**
- * @param camera 相机实例
- * @param dom 可选 一个DOM元素。
+ * \`param camera 相机实例
+ * \`param dom 可选 一个DOM元素。
  * 默认控制器各事件都是绑定在#document上的
  * 如果不想在整个文档上触发事件，可以指定一个dom元素把事件绑定到此dom上
  * **/
 const dom = document.getElementById('id');
 const c = new THREE.OrbitControls(camera, dom);
-@@@
+\`\`\`
 
 ### 所有实例属性
 

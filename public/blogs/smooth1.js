@@ -8,16 +8,16 @@
 
 html:
 
-@@@
+\`\`\`
 <div id="scroll-box" class="scroll-box">
     <p>1</p>
     ... 很多p标签
 </div>
-@@@
+\`\`\`
 
 css:
 
-@@@
+\`\`\`
 .scroll-box{
     height: 300px;
     overflow: hidden;
@@ -32,11 +32,11 @@ css:
     opacity: 1;
     transform: translateX(0);
 }
-@@@
+\`\`\`
 
 JS:
 
-@@@
+\`\`\`
 const p = document.querySelectorAll("#scroll-box>p");
 
 const observer = new IntersectionObserver((entries)=>{
@@ -56,7 +56,7 @@ const observer = new IntersectionObserver((entries)=>{
 Array.from(p).forEach((item)=>{
     observer.observe(item);
 })
-@@@
+\`\`\`
 
 ### 效果图：
 

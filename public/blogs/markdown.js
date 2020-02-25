@@ -19,17 +19,17 @@
 
 Markdown 语法：
 
-@@@
-# 第一级标题 @<h1>@ 
-## 第二级标题 @<h2>@ 
-###### 第六级标题 @<h6>@ 
-@@@
+\`\`\`
+# 第一级标题 \`<h1>\` 
+## 第二级标题 \`<h2>\` 
+###### 第六级标题 \`<h6>\` 
+\`\`\`
 
 效果如下：
 
-# 第一级标题 @<h1>@ 
-## 第二级标题 @<h2>@ 
-###### 第六级标题 @<h6>@ 
+# 第一级标题 \`<h1>\` 
+## 第二级标题 \`<h2>\` 
+###### 第六级标题 \`<h6>\` 
 
 
 
@@ -37,22 +37,22 @@ Markdown 语法：
 
 Markdown 语法：
 
-@@@
-*这些文字会生成@<em>@*
-_这些文字会生成@<u>@_
+\`\`\`
+*这些文字会生成\`<em>\`*
+_这些文字会生成\`<u>\`_
 
-**这些文字会生成@<strong>@**
-__这些文字会生成@<strong>@__
-@@@
+**这些文字会生成\`<strong>\`**
+__这些文字会生成\`<strong>\`__
+\`\`\`
 
-在 MWeb 中的快捷键为： @CMD + U@、@CMD + I@、@CMD + B@
+在 MWeb 中的快捷键为： \`CMD + U\`、\`CMD + I\`、\`CMD + B\`
 效果如下：
 
-*这些文字会生成@<em>@*
-_这些文字会生成@<u>@_
+*这些文字会生成\`<em>\`*
+_这些文字会生成\`<u>\`_
 
-**这些文字会生成@<strong>@**
-__这些文字会生成@<strong>@__
+**这些文字会生成\`<strong>\`**
+__这些文字会生成\`<strong>\`__
 
 ## 换行
 
@@ -64,62 +64,62 @@ __这些文字会生成@<strong>@__
 
 Markdown 语法：
 
-@@@
-* 项目一 无序列表 @* + 空格键@
+\`\`\`
+* 项目一 无序列表 \`* + 空格键\`
 * 项目二
-    * 项目二的子项目一 无序列表 @TAB + * + 空格键@
+    * 项目二的子项目一 无序列表 \`TAB + * + 空格键\`
     * 项目二的子项目二
-@@@
+\`\`\`
 
 效果如下：
 
-* 项目一 无序列表 @* + 空格键@
+* 项目一 无序列表 \`* + 空格键\`
 * 项目二
-    * 项目二的子项目一 无序列表 @TAB + * + 空格键@
+    * 项目二的子项目一 无序列表 \`TAB + * + 空格键\`
     * 项目二的子项目二
 
 ### 有序列表
 
 Markdown 语法：
 
-@@@
-1. 项目一 有序列表 @数字 + . + 空格键@
+\`\`\`
+1. 项目一 有序列表 \`数字 + . + 空格键\`
 2. 项目二 
 3. 项目三
-    1. 项目三的子项目一 有序列表 @TAB + 数字 + . + 空格键@
+    1. 项目三的子项目一 有序列表 \`TAB + 数字 + . + 空格键\`
     2. 项目三的子项目二
-@@@
+\`\`\`
 
 效果如下：
 
-1. 项目一 有序列表 @数字 + . + 空格键@
+1. 项目一 有序列表 \`数字 + . + 空格键\`
 2. 项目二 
 3. 项目三
-    1. 项目三的子项目一 有序列表 @TAB + 数字 + . + 空格键@
+    1. 项目三的子项目一 有序列表 \`TAB + 数字 + . + 空格键\`
     2. 项目三的子项目二
 
 ### 任务列表（Task lists）
 
 Markdown 语法：
 
-@@@
-- [ ] 任务一 未做任务 @- + 空格 + [ ]@
-- [x] 任务二 已做任务 @- + 空格 + [x]@
-@@@
+\`\`\`
+- [ ] 任务一 未做任务 \`- + 空格 + [ ]\`
+- [x] 任务二 已做任务 \`- + 空格 + [x]\`
+\`\`\`
 
 效果如下：
 
-- [ ] 任务一 未做任务 @- + 空格 + [ ]@
-- [x] 任务二 已做任务 @- + 空格 + [x]@
+- [ ] 任务一 未做任务 \`- + 空格 + [ ]\`
+- [x] 任务二 已做任务 \`- + 空格 + [x]\`
 
 ## 图片
 
 Markdown 语法：
 
-@@@
+\`\`\`
 ![GitHub set up](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
 格式: ![Alt Text](url)
-@@@
+\`\`\`
 
 
 效果如下：
@@ -130,15 +130,15 @@ Markdown 语法：
 
 Markdown 语法：
 
-@@@
-email <example@example.com>
+\`\`\`
+email <example\`example.com>
 [GitHub](http://github.com)
 自动生成连接  <http://www.github.com/>
-@@@
+\`\`\`
 
 
 
-Email 连接： <example@example.com>
+Email 连接： <example\`example.com>
 [连接标题Github网站](https://github.com)
 自动生成连接像： <https://www.github.com/> 这样
 
@@ -146,11 +146,11 @@ Email 连接： <example@example.com>
 
 Markdown 语法：
 
-@@@
+\`\`\`
 某某说:
 > 第一行引用
 > 第二行费用文字
-@@@
+\`\`\`
 
 效果如下：
 
@@ -162,51 +162,51 @@ Markdown 语法：
 
 Markdown 语法：
 
-@@@
-像这样即可：@<addr>@ @code@
-@@@
+\`\`\`
+像这样即可：\`<addr>\` \`code\`
+\`\`\`
 
 
 效果如下：
 
-像这样即可：@<addr>@ @code@
+像这样即可：\`<addr>\` \`code\`
 
 ## 多行或者一段代码
 
 Markdown 语法：
 
-    @@@js
+    \`\`\`js
     function fancyAlert(arg) {
         if(arg) {
         $.facebox({div:'#foo'})
         }
 
     }
-    @@@
+    \`\`\`
 
 
 效果如下：
 
-@@@js
+\`\`\`js
 function fancyAlert(arg) {
     if(arg) {
         $.facebox({div:'#foo'})
     }
     
 }
-@@@
+\`\`\`
 
 ## 顺序图或流程图
 
 Markdown 语法：
 
-    @@@sequence
+    \`\`\`sequence
     张三->李四: 嘿，小四儿, 写博客了没?
     Note right of 李四: 李四愣了一下，说：
     李四-->张三: 忙得吐血，哪有时间写。
-    @@@
+    \`\`\`
 
-    @@@flow
+    \`\`\`flow
     st=>start: 开始
     e=>end: 结束
     op=>operation: 我的操作
@@ -215,17 +215,17 @@ Markdown 语法：
     st->op->cond
     cond(yes)->e
     cond(no)->op
-    @@@
+    \`\`\`
 
-效果如下（ @Preferences@ - @Themes@ - @Enable sequence & flow chart@ 才会看到效果 ）：
+效果如下（ \`Preferences\` - \`Themes\` - \`Enable sequence & flow chart\` 才会看到效果 ）：
 
-@@@sequence
+\`\`\`sequence
 张三->李四: 嘿，小四儿, 写博客了没?
 Note right of 李四: 李四愣了一下，说：
 李四-->张三: 忙得吐血，哪有时间写。
-@@@
+\`\`\`
 
-@@@flow
+\`\`\`flow
 st=>start: 开始
 e=>end: 结束
 op=>operation: 我的操作
@@ -234,7 +234,7 @@ cond=>condition: 确认？
 st->op->cond
 cond(yes)->e
 cond(no)->op
-@@@
+\`\`\`
 
 更多请参考：<http://bramp.github.io/js-sequence-diagrams/>, <http://adrai.github.io/flowchart.js/>
 
@@ -242,12 +242,12 @@ cond(no)->op
 
 Markdown 语法：
 
-@@@
+\`\`\`
 第一格表头 | 第二格表头
 --------- | -------------
 内容单元格 第一列第一格 | 内容单元格第二列第一格
 内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格
-@@@
+\`\`\`
 
 效果如下：
 
@@ -291,9 +291,9 @@ Markdown 语法：
 Markdown 语法：
 
 
-@@@
+\`\`\`
 $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
-@@@
+\`\`\`
 
 效果如下：
 
@@ -306,9 +306,9 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 Markdown 语法：
 
-@@@
+\`\`\`
 [TOC]
-@@@
+\`\`\`
 
 效果如下：
 
