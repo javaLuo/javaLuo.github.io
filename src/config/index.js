@@ -2,9 +2,9 @@ export const masterName = "javaLuo"; // 作者在GitHub的用户名
 export const issueName = "javaimluo"; // 存放所有评论留言的项目名称
 export const client_id = "f598c816b3b65783625b"; // github申请的client_id，用于gitment
 export const client_secret = "702577a65885617a20f9b39e07de260f7987aef7"; // github申请的client_secret，用于gitment
-export const gitBaseUrl = "https://api.github.com/graphql"; // github API基础访问路径
-export const gitToken = "dc1f508d1640bc3cfdaf3b6219225c71505e97e6"; // github v4 访问所需令牌
-
+// export const gitBaseUrl = "https://api.github.com/graphql"; // github API基础访问路径
+// export const gitToken = "dc1f508d1640bc3cfdaf3b6219225c71505e97e6"; // github v4 访问所需令牌
+// export const accessToken = "96b11f4c40e41a1a3c0f57c17157abf02e168e8e"; // 用于github actions的token
 // 1笔记，2作品，3日志
 export const blogs = [
   {
