@@ -18,9 +18,9 @@ jobs:
           node-version: 10.x
       - name: Install and Build
         run: |
-          npm cache clean --force
-          npm install
-          npm run build
+          npm install yarn -g
+          yarn install
+          yarn run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
