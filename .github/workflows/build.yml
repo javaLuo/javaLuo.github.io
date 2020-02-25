@@ -24,6 +24,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.access_token_public_key }}
+          ACCESS_TOKEN: ${{ secrets.access_token_public_key_2 }}
           BRANCH: master
           FOLDER: dist
