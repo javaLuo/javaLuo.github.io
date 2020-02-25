@@ -27,7 +27,7 @@ allowfullscreen>
 > 以上文件均来自THREE.js官方下载的包里
 
 ### 完整代码例子
-@@@
+\`\`\`
 <!-- 辉光例子 -->
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -114,7 +114,7 @@ allowfullscreen>
     </script>
     </body>
 </html>
-@@@
+\`\`\`
 
 ### 源码地址：
 

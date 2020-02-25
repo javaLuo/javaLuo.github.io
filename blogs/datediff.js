@@ -6,7 +6,7 @@
 网上的方法大多是直接将两个日期取毫秒数相减
 
 没有考虑第一天最后1秒到第2天第1秒，其实也是过了一天的情况
-@@@
+\`\`\`
 function dateDiff(sDate,  eDate){
     const y = Math.abs(eDate.getFullYear() - sDate.getFullYear());
     const m = Math.abs(eDate.getMonth() - sDate.getMonth());
@@ -23,7 +23,7 @@ function dateDiff(sDate,  eDate){
         return 1 + diff;
     }
 }
-@@@
+\`\`\`
 
 - 不知道有没有BUG，个人测试没测出BUG
 `;

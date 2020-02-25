@@ -10,7 +10,7 @@
 新建一个webpack.dll.config.js ：
 (我是创建在根目录下的)
 
-@@@
+\`\`\`
 const path = require("path");
 const webpack = require("webpack");
 const pkg = require('./package.json'); // 引入package.json
@@ -32,14 +32,14 @@ module.exports = {
         })
     ]
 };
-@@@
+\`\`\`
 
 #2.
 原webpack.dev.config.js (即开发环境所用到的webpack配置文件)：
 在plugins字段中增加DllReferencePlugin插件
 
 
-@@@
+\`\`\`
 plugins: [
         new webpack.DllReferencePlugin({
             context: __dirname, // 与DllPlugin中的那个context保持一致
@@ -51,26 +51,26 @@ plugins: [
         }),
         // ...
     ]
-@@@
+\`\`\`
 #3. 引入index.html
 需要在项目index.html中引入上面生成的dll.js文件
-@@@
+\`\`\`
 <script src="/vendor.dll.js"></script>
 // 注意1： vendor.dll.js必须在bundle.js之前引入，因为bundle.js依赖vendor.dll.js。
 // 注意2： 这个路径啊,我因为用的是webpack-dev-middleware自定义的服务，所以需要我自己提供/vendor.dll.js的访问。
 // 我使用的是express，配置了：app.use(express.static('dll')); 所以访问路径直接就是"/vendor.dll.js"
 // 如果用的webpack.dev.server就不用担心这个
-@@@
+\`\`\`
 
 #4.
 package.json文件中添加一条用于预编译的指令：
 
-@@@
+\`\`\`
 "scripts": {
     "dll": "webpack -p --config webpack.dll.config.js --progress --profile --colors",
     "start": "node server.js",
     }
-@@@
+\`\`\`
 
 #5
 执行npm run dll，打包好dll

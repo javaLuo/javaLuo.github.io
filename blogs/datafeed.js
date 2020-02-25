@@ -41,14 +41,14 @@
 > 但如果本身项目用了 webpack 就不需要了，如果项目配置了 ts 的解析器直接引入 datafeed 的 ts 源文件打包也可以，
 > 或者将 ts 文件编译为 js，在项目中直接使用这些 js 即可
 
-@@@
+\`\`\`
   const udf = require("../../datafeeds/udf/lib/udf-compatible-datafeed");
 /**
  * 生成udf实例
  @param url 基础请求地址，udf中的所有请求都会基于此地址
 **/
   const datafeed = new udf.UDFCompatibleDatafeed("https://xxx.com");
-@@@
+\`\`\`
 
 ### 后端需要实现这些接口
 

@@ -22,72 +22,72 @@ MDN 文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Gu
 括号中的内容被看成一个整体
 
 **用法1:**
-@@@javascript
+\`\`\`javascript
 const reg = /(hi)(U)\\1\\2/;
-@@@
+\`\`\`
 \\1\\2表示取前面的子表达式，(hi)就是第1个，(U)是第2个，上面的表达式等价于：
-@@@javascript
+\`\`\`javascript
 const reg = /hiUhiU/;
-@@@
+\`\`\`
 
 **用法2:**
-@@@javascript
+\`\`\`javascript
 const str = "Hi, I'am 坂本";
 const reg = /(坂本)/;
 str.replace(reg, "逼王$1，有何贵干"); // "Hi,I'am 逼王坂本，有何贵干"
-@@@
+\`\`\`
 每一个括号都是一个子表达式，都有一个编号，按顺序从1开始<br/>
 可以在replace中用$1,$2这样的形式来替换对应位置的字符串
 
 2. 非捕获括号 (?:)
-@@@javascript
+\`\`\`javascript
 const reg = /(?:hi)(U)\\1/;
-@@@
+\`\`\`
 (?:hi)不进行编号，就是说(U)才是第1个。上面的表达式等价于：
-@@@javascript
+\`\`\`javascript
 const reg = /hiUU/;
-@@@
+\`\`\`
 即(?:)与一般的()意义相同，只是不进行捕获，不进行编号。在str.replace中也不能用$1的方式来替换
 
 
 ### 正向断言 和 反向断言
 
 测试字符串:
-@@@javascript
+\`\`\`javascript
 const str = "Java7 Java8";
-@@@
+\`\`\`
 
 1. 正向肯定断言 (?=)
-@@@javascript
+\`\`\`javascript
 const reg = /Java(?=8)/; // 匹配“Java”字符串，但这个字符串后面必须跟着数字8
 str.search(reg); // 6, 返回下标6，说明匹配到的是Java8的那个“Java”
-@@@
+\`\`\`
 
 2. 正向否定断言 (?!)
-@@@javascript
+\`\`\`javascript
 const reg=/Java(?!8)/; // 匹配“Java”字符串，但这个字符串后面必须不跟着数字8
 str.search(reg); // 0, 返回下标0，说明匹配到的是Java7的那个“Java”
-@@@
+\`\`\`
 
 3. 反向肯定断言 (?<=)
-@@@javascript
+\`\`\`javascript
 const reg = /(?<=J)a/; // 匹配字符“a”，这个字符的前面必须是字符“J”
 str.search(reg); // 1, 返回下标1，说明匹配到的是Java7中的第1个"a"
-@@@
+\`\`\`
 
 4. 反向否定断言 (?<!)
-@@@javascript
+\`\`\`javascript
 const reg = /(?<!J)a/; // 匹配字符“a”, 这个字符的前面必须不是字符“J”
 str.search(reg); // 3, 返回下标3，说明匹配到的是Java7中的第2个“a”
-@@@
+\`\`\`
 
 > 反向断言在ES9中才加入。反向断言用于提取字符串很方便：
 
-@@@
-const str = "@1,@23,@456"; // 现在想提取字符串中的数字
-const reg = /(?<=@)\\d+/g;
+\`\`\`
+const str = "\`1,\`23,\`456"; // 现在想提取字符串中的数字
+const reg = /(?<=\`)\\d+/g;
 str.match(reg); // ["1","23","456"];
-@@@
+\`\`\`
 
 ### 标签
 

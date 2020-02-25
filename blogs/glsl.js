@@ -33,11 +33,11 @@
 
 > 矢量的分量选择
 
-@@@js
+\`\`\`js
 v.xyzw; // 表示坐标
 v.rgba; // 表示颜色
 v.stpq; // 表示纹理坐标
-@@@
+\`\`\`
 
 ### 矩阵
 
@@ -91,7 +91,7 @@ v.stpq; // 表示纹理坐标
 
 ### 结构体
 
-@@@c++
+\`\`\`c++
 // 声明自定义结构体
 struct name{
     vec3 position;
@@ -99,14 +99,14 @@ struct name{
 }
 // 使用
 name n; // 定义量一个n变量，其类型为name
-@@@
+\`\`\`
 
 ### 数组
 
-@@@c++
+\`\`\`c++
 // 声明数组
 vec4 arrName[10]; // arrName是一个长度10的数组，类型为vec4
-@@@
+\`\`\`
 
 ### void
 
@@ -124,11 +124,11 @@ vec4 arrName[10]; // arrName是一个长度10的数组，类型为vec4
 | const      | 常量     | 不可更改，仅在其声明的着色器内有效                                                                         |
 | 不写限定符 | 缺省     | 在当前着色器中可读可写，跟同类型的其他变量可交互                                                           |
 
-@@@c++
+\`\`\`c++
 // 例子：完整声明一个变量
 varying lowp vec4 color = vec4(0.0,0.0,0.0,1.0);
 // 限定符 精度 类型 变量名 = 值
-@@@
+\`\`\`
 
 ---
 
@@ -277,30 +277,30 @@ varying lowp vec4 color = vec4(0.0,0.0,0.0,1.0);
 
 ### 只能在顶点着色器中使用的
 
-@@@c++
+\`\`\`c++
 vec4 texture2DLod(sampler2D sampler, vec2 coord, float lod);
 vec4 texture2DProjLod(sampler2D sampler, vec3 coord, float lod);
 vec4 texture2DProjLod(sampler2D sampler, vec4 coord, float lod);
 vec4 textureCubeLod(samplerCube sampler, vec3 coord, float lod);
-@@@
+\`\`\`
 
 ### 只能在片段着色器中使用的
 
-@@@c++
+\`\`\`c++
 vec4 texture2D(sampler2D sampler, vec2 coord, float bias);
 vec4 texture2DProj(sampler2D sampler, vec3 coord, float bias);
 vec4 texture2DProj(sampler2D sampler, vec4 coord, float bias);
 vec4 textureCube(samplerCube sampler, vec3 coord, float bias);
-@@@
+\`\`\`
 
 ### 顶点片段都能用的
 
-@@@c++
+\`\`\`c++
 vec4 texture2D(sampler2D sampler, vec2 coord); // 常用
 vec4 texture2DProj(sampler2D sampler, vec3 coord);
 vec4 texture2DProj(sampler2D sampler, vec4 coord);
 vec4 textureCube(samplerCube sampler, vec3 coord);
-@@@
+\`\`\`
 
   `;
 })();

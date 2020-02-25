@@ -5,15 +5,15 @@
   window.blogs.download = `
 ### html
 
-@@@html
+\`\`\`html
 <img src="https://isluo.com/kernel/index/img/welcome/girl.png" onclick="get(event)" />
-@@@
+\`\`\`
 
 ### js
 
-以 @axios@ 为例
+以 \`axios\` 为例
 
-@@@javascript
+\`\`\`javascript
     /** 异步请求文件数据 **/
     async get(e){
     const src = e.target.src; // 获取链接地址
@@ -31,8 +31,8 @@
 
     /**
     * 封装了一个下载的方法
-    * @param data 文件二进制数据
-    * @param filename 保存的文件名
+    * \`param data 文件二进制数据
+    * \`param filename 保存的文件名
     **/
     download(data, fileName){
     // 将文件二进制数据转换为blob数据
@@ -58,24 +58,24 @@
         navigator.msSaveBlob(blob, fileName);
     }
     }
-@@@
+\`\`\`
 
 ### 原理
 
-普通的文件，@<a>@ 标签的 download 属性，浏览器会直接打开文件<br/>
+普通的文件，\`<a>\` 标签的 download 属性，浏览器会直接打开文件<br/>
 所以用 get 请求直接请求这个文件的二进制数据<br/>
-转换为 blob 数据，赋给 @<a>@ 标签，再下载<br/>
+转换为 blob 数据，赋给 \`<a>\` 标签，再下载<br/>
 这时候就可以弹出下载框了
 
 ### 实际运用中更好一点的方法
 
 > 这样做可以快速弹出下载框，而不用等待 axios 请求完成再弹出下载框
 
-@@@javascript
+\`\`\`javascript
 /**
  * 封装了一个下载的方法
- * @param src 文件的路径
- * @param filename 保存的文件名
+ * \`param src 文件的路径
+ * \`param filename 保存的文件名
  **/
 export async function download(src, fileName) {
     const link = document.createElement("a");
@@ -105,7 +105,7 @@ export async function download(src, fileName) {
     return true;
     }
 }
-@@@
+\`\`\`
 
 ### 注意
 

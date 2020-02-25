@@ -14,7 +14,7 @@
 * 最坏情况O(n*n)
 * 空间复杂度O(1)
 * 稳定性：稳定
-@@@
+\`\`\`
 function sort(arr){
 	for(let i=0;i<arr.length;i++) {
 		for(let j=0;j<arr.length-1-i;j++) {
@@ -28,10 +28,10 @@ function sort(arr){
 	}
 	return arr;
 }
-@@@
+\`\`\`
 
 ### 快速排序 阮一峰版
-@@@
+\`\`\`
 function sort(arr){
 		if(arr.length<=1){return arr};
 
@@ -50,10 +50,10 @@ function sort(arr){
 
 const arr1 = [4,3,2,1,5];
 const arr2 = sort(arr1); // [1,2,3,4,5];
-@@@
+\`\`\`
 
 ### 快速排序 不创建临时数组版
-@@@
+\`\`\`
 function quickSort(arr, start = 0, end = arr.length - 1) {
     let i = start;
     let j = end;
@@ -89,13 +89,13 @@ function quickSort(arr, start = 0, end = arr.length - 1) {
 
 const arr1 = [4,3,2,1,5];
 quickSort(arr1); // [1,2,3,4,5]
-@@@
+\`\`\`
 
 ### 二分法查找
-@@@
+\`\`\`
 /**
- * @param arr 数组
- * @param res 要查找的数
+ * \`param arr 数组
+ * \`param res 要查找的数
 **/
 function find(arr, res, start = 0, end = arr.length - 1){
 	const centerKey = Math.floor((end + start)/2);
@@ -112,10 +112,10 @@ function find(arr, res, start = 0, end = arr.length - 1){
 }
 const arr = [1,2,3,4,5,6,7,8,9,10];
 find(arr, 4); // 下标为3
-@@@
+\`\`\`
 
 ## 深拷贝
-@@@
+\`\`\`
 function clone(obj){
 		if(typeof obj !== "object"){
 			return obj;
@@ -128,15 +128,15 @@ function clone(obj){
 	}
 
 // 简单深拷贝，没处理原型链，没处理循环引用
-@@@
+\`\`\`
 
 ## 暴力深拷贝
-@@@
+\`\`\`
 JSON.parse(JSON.stringify(obj));
-@@@
+\`\`\`
 
 ## 手动实现parseInt
-@@@
+\`\`\`
 function _parseInt(str){
 		const arr = str.split("");
 		const temp = [];
@@ -157,17 +157,17 @@ function _parseInt(str){
 		return res || NaN;
 	}
 // 只实现了一个十进制版本的
-@@@
+\`\`\`
 
 ## 判断字符串是否是回文（前后对称）
-@@@
+\`\`\`
 function isPalindrome1(str){
 	return str === str.split("").reverse().join("");
 }
-@@@
+\`\`\`
 
 ## 阶乘(循环)
-@@@
+\`\`\`
 function factorial(num){
 	// 先自动转数字、转整数。再判断数字的正负，负数无阶乘、 0的阶乘=1
 	let res = Number(num<<0) >= 0 ? 1 : NaN;
@@ -180,10 +180,10 @@ function factorial(num){
 factorial(4.123); // 24
 factorial(0); // 1
 factorial(-1); // NaN
-@@@
+\`\`\`
 
 ## 阶乘（递归）
-@@@
+\`\`\`
 function factorial(num, res=1){
 	const n = Number(num<<0);
 	if(Object.is(n, NaN) || n<0){
@@ -198,10 +198,10 @@ function factorial(num, res=1){
 factorial(4.123); // 24
 factorial(0); // 1
 factorial(-1); // NaN
-@@@
+\`\`\`
 
 ## 字符串中出现最多的字符
-@@@
+\`\`\`
 function maxNum(str){
 	const obj = str.split("").reduce((res, item)=>{
 		res[item] = res.hasOwnProperty(item) ? ++res[item] : 1;
@@ -211,17 +211,17 @@ function maxNum(str){
 }
 
 maxNum("abbcccdddd"); // ["d", 4]
-@@@
+\`\`\`
 
 ## 数组扁平化（暴力方式）
-@@@
+\`\`\`
 var arr = [1,[2,3],[4,[5,6]]];
 arr.toString().split(",");
 // 但会把所有数组元素变成字符串
-@@@
+\`\`\`
 
 ## 数组扁平化
-@@@
+\`\`\`
 function flatten(k) {
 	let t = [];
 	if(k instanceof Array){
@@ -235,6 +235,6 @@ function flatten(k) {
 }
 
 flatten([1,[2,3],[4,[5,6,[7]]]]); // [1,2,3,4,5,6,7];
-@@@
+\`\`\`
 `;
 })();

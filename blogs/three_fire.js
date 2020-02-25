@@ -15,7 +15,7 @@ allowfullscreen>
 
 官方提供了 Fire.js
 
-@@@
+\`\`\`
 // 创建一个平面
 var plane = new THREE.PlaneBufferGeometry( 20, 20 );
 
@@ -25,7 +25,7 @@ fire = new THREE.Fire( plane, {
     textureHeight: 512,
     debug: false
 });
-@@@
+\`\`\`
 
 ## 参数
 

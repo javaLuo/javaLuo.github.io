@@ -28,7 +28,7 @@
 **grid-template-areas 定义具名的区域 非必要**
 > 例子：
 
-@@@
+\`\`\`
     grid-template-areas:
         "header header header"
         "menu main main main"
@@ -44,7 +44,7 @@
         <div class="item-c">3</div>
         <div class="item-d">4</div>
     </div>
-@@@
+\`\`\`
 
 > 就像table合并行列一样，可以纵横合并，但只能是矩形，不能是奇怪的形状
 
@@ -56,11 +56,11 @@
 
 > 还可以接受一个更复杂但更方便的参数来同时设置3个值：
 
-@@@
+\`\`\`
 [line-name] "header header header header" 25px [line-name]
 [line-name] "menu main main main" auto [line-name]
 [line-name] "footer footer footer footer" 25px [line-name]
-@@@
+\`\`\`
 >第1行，是header 区域，4列，这一行有25px高<br/>
 第2行，menu区域和main区域，4列，这一行高度为auto<br/>
 第3行，footer区域，4列，这一行有25px高<br/>
@@ -147,16 +147,16 @@
 **grid-column 简写grid-column-start/grid-column-end**
 
 例： 
-@@@
+\`\`\`
 grid-column: 1/3; 或 1/span 2;
-@@@
+\`\`\`
 
 **grid-row 简写grid-row-start/grid-row-end**
 
 例：
-@@@
+\`\`\`
 grid-row: 1/3; 或 1/span 2;
-@@@
+\`\`\`
 
 **grid-area 指定所占区域，配合父级的grid-template-areas使用**
 

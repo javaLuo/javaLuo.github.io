@@ -10,26 +10,26 @@
 
 | 属性            | 描述                                                                               |
 | --------------- | ---------------------------------------------------------------------------------- |
-| title           | 当前文档的@<title>@中的文本，没有@<title>@返回空字符串                             |
+| title           | 当前文档的\`<title>\`中的文本，没有\`<title>\`返回空字符串                             |
 | lastModified    | 当前文档最后被修改的时间，返回日期字符串                                           |
 | referrer        | 返回当前文档的访问来源，比如存在github上的页面会返回github.com                     |
 | URL             | 文档完整URL，即访问路径                                                            |
 | compatMode      | 浏览器渲染模式，BackCompat(向后兼容模式)，CSS1Compat(严格模式)                     |
-| doctype         | 返回@<!DOCTYPE html>@这个对象，这个标签必须写在最前面且前面没有空格才获取得到      |
-| documentElement | 返回文档的直接子节点，一般是@<html>@对象                                           |
-| head            | @<head>@对象                                                                       |
-| body            | @<body>@对象                                                                       |
+| doctype         | 返回\`<!DOCTYPE html>\`这个对象，这个标签必须写在最前面且前面没有空格才获取得到      |
+| documentElement | 返回文档的直接子节点，一般是\`<html>\`对象                                           |
+| head            | \`<head>\`对象                                                                       |
+| body            | \`<body>\`对象                                                                       |
 | activeElement   | 返回文档中当前被激活（focused/active）的元素                                       |
 | defaultView     | 当前文档的javaScript顶层对象，即window对象                                         |
 | all             | 返回文档中所有的元素, 是[object HTMLAllCollection]类数组对象                       |
-| forms           | 返回文档中所有的@<form>@                                                           |
-| images          | 返回文档中所有的@<img>@                                                            |
-| scripts         | 返回文档中所有的@<script>@                                                         |
-| styleSheets     | 返回文档中所有的@<link rel="stylesheet">@和@<style>@                               |
+| forms           | 返回文档中所有的\`<form>\`                                                           |
+| images          | 返回文档中所有的\`<img>\`                                                            |
+| scripts         | 返回文档中所有的\`<script>\`                                                         |
+| styleSheets     | 返回文档中所有的\`<link rel="stylesheet">\`和\`<style>\`                               |
 | anchors         | 返回文档中所有锚点元素的列表                                                       |
 | characterSet    | 返回文档正在使用的字符集                                                           |
 | contentType     | 文档的Content-Type(MIME)类型                                                       |
-| embeds          | 所有的嵌入式元素@<embed>@                                                          |
+| embeds          | 所有的嵌入式元素\`<embed>\`                                                          |
 | hidden          | 文档是否被隐藏                                                                     |
 | cookie          | 该文档的所有cookie,一个字符串，每条cookie以分号隔开                                |
 | designMode      | 控制整个文档是否可编辑，默认“off”, 改为“on”变成全局可编辑                      |
