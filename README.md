@@ -1,7 +1,29 @@
-# javaLuo.github.io
-个人博客
-https://blog.isluo.com
+# vue-cli-new
 
-> vue-cli/github api
+## Project setup
+```
+npm install
+```
 
-想着重新更新一版来着，但估计自己懒得不行.
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
