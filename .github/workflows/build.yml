@@ -23,7 +23,7 @@ jobs:
           yarn run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
-        env:
+        with:
           ACCESS_TOKEN: ${{ secrets.access_token_public_key }}
           BRANCH: master
           FOLDER: dist
