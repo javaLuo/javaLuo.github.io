@@ -5,7 +5,7 @@ on:
       - source
 jobs:
   build-and-deploy:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -18,7 +18,9 @@ jobs:
           node-version: 10.x
       - name: Install and Build
         run: |
-          npm install && npm run build
+          npm cache clean
+          npm install
+          npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
