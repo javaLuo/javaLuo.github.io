@@ -68,7 +68,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/flex.js"
   },
   {
-    "revision": "997c683f441ad2e4f1a91e641215498b",
+    "revision": "7027ca3f403406c77e3337a6646493f9",
     "url": "/blogs/flip.js"
   },
   {
@@ -88,7 +88,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/grid.js"
   },
   {
-    "revision": "9718926afe1575cb177f91a7ae055c05",
+    "revision": "c05d9f50efe454f26c9551677f16c5fe",
     "url": "/blogs/hooks.js"
   },
   {

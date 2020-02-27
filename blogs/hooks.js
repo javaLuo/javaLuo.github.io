@@ -59,7 +59,7 @@ export default function Container(props){
     const [count, setCount] = useState(0);
 
     useEffect(()=>{
-        document.title = \`count = ${count}\`;
+        document.title = \`count = \${count}\`;
     });
 
     return <button onClick={() => setCount(count+1)}>count加1</button>;
@@ -72,7 +72,7 @@ export default function Container(props){
 * useEffect第2个参数接受一个数组
 \`\`\`
 useEffect(()=>{
-    document.title = \`count = ${count}\`;
+    document.title = \`count = \${count}\`;
 },[count]);
 \`\`\`
 > 表示只有在count改变时才会触发<br/>
@@ -82,7 +82,7 @@ useEffect(()=>{
 * useEffect还能设置一个return返回值
 \`\`\`
 useEffect(()=>{
-    document.title = \`count = ${count}\`;
+    document.title = \`count = \${count}\`;
     return () => {
         document.title = '首页';
     }
@@ -94,7 +94,7 @@ useEffect(()=>{
 
 \`\`\`
 useEffect(()=>{
-    document.title = \`count = ${count}\`;
+    document.title = \`count = \${count}\`;
 },[count]);
 
 useEffect(()=>{
