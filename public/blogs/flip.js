@@ -63,7 +63,7 @@ first = doms => {
     let no = item.getAttribute('data-flip-no');
     // 看当前DOM是否被编号，没被编号说明是新增的
     if (!no) {
-        no = \`${new Date().getTime()}_${index}\`;
+        no = \`\${new Date().getTime()}_\${index}\`;
         item.setAttribute('data-flip-no', no);
     }
 
@@ -100,10 +100,10 @@ last = (current, type) => {
         // DOM中存在未被编号的元素，表示这是一个新增的元素
         // 给新增的元素添加“进入”的动画状态
         if (!no) {
-        no = \`${new Date().getTime()}_${index}\`;
+        no = \`\${new Date().getTime()}_\${index}\`;
         item.setAttribute('data-flip-no', no);
         if (this.props.transClass) {
-            item.classList.add(\`${this.props.transClass}-enter\`);
+            item.classList.add(\`\${this.props.transClass}-enter\`);
             item.style = '';
         } else {
             item.style.transform = \`translate(0, 20px)\`;
@@ -112,9 +112,9 @@ last = (current, type) => {
         }
         } else if (this.f[no]) {
         // 其他元素根据初始位置和最终位置反转，让它们看起来仍然在初始位置
-        item.style.transform = \`translate(${this.f[no].x - l.x}px, ${this.f[no]
+        item.style.transform = \`translate(\${this.f[no].x - l.x}px, \${this.f[no]
     .y - l.y}px)\`;
-        item.style.webkitTransform = \`translate(${this.f[no].x - l.x}px, ${this
+        item.style.webkitTransform = \`translate(\${this.f[no].x - l.x}px, \${this
     .f[no].y - l.y}px)\`;
         delete this.f[no]; // 删掉已处理过的元素，剩下的元素表示需要被移除
         }
@@ -167,17 +167,17 @@ last = (current, type) => {
 play = doms => {
     setTimeout(() => {
     doms.forEach(item => {
-        item.style.transition = \`opacity ${this.props.speed ||
-          300}ms, transform ${this.props.speed || 300}ms\`;
-        item.style.webkitTransition = \`opacity ${
+        item.style.transition = \`opacity \${this.props.speed ||
+          300}ms, transform \${this.props.speed || 300}ms\`;
+        item.style.webkitTransition = \`opacity \${
           this.props.speed
-        }ms, -webkit-transform ${this.props.speed || 300}ms\`;
+        }ms, -webkit-transform \${this.props.speed || 300}ms\`;
     });
     setTimeout(() =>
         doms.forEach(item => {
         if (item.getAttribute('data-remove')) {
             if (this.props.transClass) {
-            item.classList.add(\`${this.props.transClass}-leave\`);
+            item.classList.add(\`\${this.props.transClass}-leave\`);
             } else {
             item.style.transform = 'translate(0,20px)';
             item.style.webkitTransform = 'translate(0,20px)';
@@ -185,7 +185,7 @@ play = doms => {
             }
         } else {
             if (this.props.transClass) {
-            item.classList.remove(\`${this.props.transClass}-enter\`);
+            item.classList.remove(\`\${this.props.transClass}-enter\`);
             }
             item.style.transform = '';
             item.style.webkitTransform = '';
