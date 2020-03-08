@@ -150,7 +150,7 @@ export default {
   .the-body {
     padding: 0 !important;
     overflow-x: hidden;
-    font-size: 16px;
+    font-size: 18px;
     img {
       border-radius: 4px;
     }
