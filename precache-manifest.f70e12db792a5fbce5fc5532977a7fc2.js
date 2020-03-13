@@ -156,7 +156,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/smooth1.js"
   },
   {
-    "revision": "da9a9c0e3dec7138a7fe176b6adb70e2",
+    "revision": "ed54e7ebaf500bf856b8f00cf6751faf",
     "url": "/blogs/snow_mountain.js"
   },
   {
