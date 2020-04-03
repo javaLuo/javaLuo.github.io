@@ -192,7 +192,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/water.js"
   },
   {
-    "revision": "0fe454d6c8717e8c8775233226230c88",
+    "revision": "9eac2de2cf2c12972d79784d5976220a",
     "url": "/blogs/words.js"
   },
   {
