@@ -1,5 +1,10 @@
 <template>
-  <div id="home" class="home" @mousewheel="onMouseWheel" @DOMMouseScroll="onMouseWheel">
+  <div
+    id="home"
+    class="home"
+    @mousewheel="onMouseWheel"
+    @DOMMouseScroll="onMouseWheel"
+  >
     <audio
       v-if="isPc"
       class="audio"
@@ -34,7 +39,7 @@ import Page3 from "./homePages/Page3.vue";
 import { mapState } from "vuex";
 export default {
   name: "home",
-  data: function() {
+  data: function () {
     return {
       isPc: isPc(),
       scrollDom: null,
@@ -43,22 +48,22 @@ export default {
       mp3Dom: {
         // audio, 一个音轨
         canplay: false,
-        a: null
-      }
+        a: null,
+      },
     };
   },
   components: {
     Page1,
     Page2,
-    Page3
+    Page3,
   },
   computed: {
     ...mapState({
-      play: state => state.page.playing,
-      hi: state => state.app.hi
-    })
+      play: (state) => state.page.playing,
+      hi: (state) => state.app.hi,
+    }),
   },
-  mounted: function() {
+  mounted: function () {
     /** PC端才初始化iscroll和声音 **/
     if (this.isPc) {
       this.initScroll();
@@ -66,7 +71,7 @@ export default {
       this.mp3Dom.a.volume = 0;
     }
   },
-  beforeDestroy: function() {
+  beforeDestroy: function () {
     /** 离开前销毁iscroll实例 **/
     this.scrollDom && this.scrollDom.destroy();
   },
@@ -76,11 +81,11 @@ export default {
       this.scrollDom = new IScroll("#scroller", {
         snap: true,
         bounceEasing: {
-          style: "cubic-bezier(1,0.1,0.1,1)"
+          style: "cubic-bezier(1,0.1,0.1,1)",
         },
         bounceTime: 1000,
         preventDefault: true,
-        disablePointer: true
+        disablePointer: true,
       });
       this.scrollDom.on("scrollEnd", () => {
         this.scrolling = false;
@@ -159,7 +164,7 @@ export default {
       } else {
         this.mp3Dom.a.pause();
       }
-    }
+    },
   },
   watch: {
     pageNow(newV) {
@@ -168,7 +173,7 @@ export default {
         document.body.classList.remove("page0");
         if (newV === 2 && isPc) {
           this.$store.dispatch({
-            type: "app/getHi"
+            type: "app/getHi",
           });
         }
       } else {
@@ -182,8 +187,8 @@ export default {
       } else {
         this.onMp3Pause();
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

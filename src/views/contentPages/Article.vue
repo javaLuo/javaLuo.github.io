@@ -15,7 +15,11 @@
       ></el-input>
     </div>
     <transition-group name="list" tag="ul" class="live">
-      <ArtiveList v-for="v in pageNowData" :thisData="v" :key="v.name"></ArtiveList>
+      <ArtiveList
+        v-for="v in pageNowData"
+        :thisData="v"
+        :key="v.name"
+      ></ArtiveList>
     </transition-group>
     <MyLoading :show="!pageNowData.length" />
     <div class="pagin">
@@ -38,27 +42,27 @@ import { sortDate } from "../../util/tools";
 import MyLoading from "../../components/MyLoading";
 export default {
   name: "name-article",
-  data: function() {
+  data: function () {
     return {
       pageNow: 1,
       pageSize: 10,
       total: 0,
       pageNowData: [],
-      searchValue: ""
+      searchValue: "",
     };
   },
   components: {
     ArtiveList,
-    MyLoading
+    MyLoading,
   },
   computed: {
     ...mapState({
-      blogConfig: state => state.app.blogConfig
+      blogConfig: (state) => state.app.blogConfig,
     }),
     searchData() {
-      let res = this.blogConfig.filter(item => item.type === 3);
+      let res = this.blogConfig.filter((item) => item.type === 3);
       if (this.searchValue) {
-        res = res.filter(item => {
+        res = res.filter((item) => {
           return item.name
             .toLowerCase()
             .includes(this.searchValue.toLowerCase());
@@ -72,7 +76,7 @@ export default {
           index >= (this.pageNow - 1) * this.pageSize &&
           index < this.pageNow * this.pageSize
       );
-    }
+    },
   },
   watch: {
     searchValue(newV) {
@@ -82,7 +86,7 @@ export default {
       handler(newV) {
         this.total = newV.length;
       },
-      immediate: true
+      immediate: true,
     },
     listData: {
       handler(newV) {
@@ -96,15 +100,15 @@ export default {
           setTimeout(() => this.pageNowData.push(temp[i]), i * 80);
         }
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   methods: {
     /** 页码改变时触发 **/
     onPageChange(v) {
       this.pageNow = v;
-    }
-  }
+    },
+  },
 };
 </script>
 

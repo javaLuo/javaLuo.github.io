@@ -12,8 +12,9 @@ export const blogs = [
     name: "Ghost Blade 鬼刀",
     info: "Ghost Blade 鬼刀 主题宣传站。素材均来自wlop大佬",
     type: 2,
+    pic: "https://isluo.com/files/work/gd1.jpg",
     date: "2018/03/10",
-    tags: ["作品", "canvas"]
+    tags: ["作品", "canvas"],
   },
   {
     id: "abouttime",
@@ -21,7 +22,7 @@ export const blogs = [
     info: "什么GMT、UTC、夏令时，受够了",
     type: 1,
     date: "2019/02/22",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "along",
@@ -29,7 +30,7 @@ export const blogs = [
     info: "在C世界的边缘地带，只有一扇窗户，其余三面被书籍围住",
     type: 3,
     date: "2012/10/17",
-    tags: ["日志"]
+    tags: ["日志"],
   },
   {
     id: "algorithm",
@@ -37,7 +38,7 @@ export const blogs = [
     info: "基础算法记录 上学时写得都很溜，现在全忘了",
     type: 1,
     date: "2018/06/02",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "b_night_snow",
@@ -45,7 +46,7 @@ export const blogs = [
     info: "青春岁月留下的痕迹",
     type: 3,
     date: "2008/04/04",
-    tags: ["日志", "故事"]
+    tags: ["日志", "故事"],
   },
   {
     id: "brcity",
@@ -54,7 +55,7 @@ export const blogs = [
       "他正趴在冷冰冰的生满锈迹的钢板上，身子被雨水淋了个遍，寒意席卷了每一寸皮肤…",
     type: 3,
     date: "2011/09/19",
-    tags: ["日志", "故事"]
+    tags: ["日志", "故事"],
   },
   {
     id: "datafeed",
@@ -62,7 +63,7 @@ export const blogs = [
     info: "图表学习记录",
     type: 1,
     date: "2018/09/27",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "datediff",
@@ -70,7 +71,7 @@ export const blogs = [
     info: "第一天最后1秒到第二天第1秒，也是过了一天!",
     type: 1,
     date: "2018/04/02",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "dll",
@@ -79,7 +80,7 @@ export const blogs = [
       "现在因为有HMR局部热更新，所以dllPlugin这两个插件用得少了，不过还是记录一下配置方法，可能以后会再次使用",
     type: 1,
     date: "2018/04/02",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "download",
@@ -87,7 +88,7 @@ export const blogs = [
     info: "a标签download属性，弹出下载框的方式下载内容，而不是让浏览器解析",
     type: 1,
     date: "2019/05/07",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "earth",
@@ -96,7 +97,7 @@ export const blogs = [
     pic: "https://isluo.com/files/work/earth.jpg",
     type: 2,
     date: "2018/03/14",
-    tags: ["js", "three.js"]
+    tags: ["js", "three.js"],
   },
   {
     id: "facebook",
@@ -104,7 +105,7 @@ export const blogs = [
     info: "acebook的分享设置及注意的地方",
     type: 1,
     date: "2018/07/02",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "featuresets",
@@ -112,7 +113,7 @@ export const blogs = [
     info: "图表笔记",
     type: 1,
     date: "2018/09/29",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "flex",
@@ -120,7 +121,7 @@ export const blogs = [
     info: "flex各属性",
     type: 1,
     date: "2018/03/28",
-    tags: ["css"]
+    tags: ["css"],
   },
   {
     id: "flip",
@@ -128,7 +129,7 @@ export const blogs = [
     info: "First-Last-Invert-Play动画，太骚了，大佬的气息如泉涌般袭来",
     type: 1,
     date: "2019/02/14",
-    tags: ["js", "css"]
+    tags: ["js", "css"],
   },
   {
     id: "glsl",
@@ -137,7 +138,7 @@ export const blogs = [
       "需要一颗虔诚的心来专研这一切，真希望自己能静下心来，有连续的时间来学习这些东西",
     type: 1,
     date: "2019/11/22",
-    tags: ["js", "webgl"]
+    tags: ["js", "webgl"],
   },
   {
     id: "graphql",
@@ -145,7 +146,7 @@ export const blogs = [
     info: "最近学习了一下GraphQL，我觉得这是一种更合理的前后端交互方式",
     type: 1,
     date: "2018/12/08",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "grid",
@@ -153,7 +154,7 @@ export const blogs = [
     info: "grid布局相关属性笔记，方便查阅",
     type: 1,
     date: "2018/06/07",
-    tags: ["css"]
+    tags: ["css"],
   },
   {
     id: "hooks",
@@ -161,7 +162,7 @@ export const blogs = [
     info: "笔记，需要在实际应用中才能掌握",
     type: 1,
     date: "2019/02/10",
-    tags: ["js", "React"]
+    tags: ["js", "React"],
   },
   {
     id: "hospital",
@@ -170,7 +171,7 @@ export const blogs = [
       "以前从来没自己去过医院，都不知道流程，直到自己身体出现问题，痛不欲生",
     type: 3,
     date: "2019/12/19",
-    tags: ["日志"]
+    tags: ["日志"],
   },
   {
     id: "isluo",
@@ -179,7 +180,7 @@ export const blogs = [
     pic: "https://isluo.com/imgs/blog-isluo.jpg",
     type: 2,
     date: "2018/04/27",
-    tags: ["作品"]
+    tags: ["作品"],
   },
   {
     id: "markdown",
@@ -187,7 +188,7 @@ export const blogs = [
     info: "从别处搬运的，记录于此，方便自己查阅",
     type: 1,
     date: "2018/04/27",
-    tags: ["js", "markdown"]
+    tags: ["js", "markdown"],
   },
   {
     id: "offset",
@@ -195,7 +196,7 @@ export const blogs = [
     info: "常用的DOM对象各种高度和位置设置的API",
     type: 1,
     date: "2018/07/17",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "orbitcontrols",
@@ -203,7 +204,7 @@ export const blogs = [
     info: "常用的DOM对象各种高度和位置设置的API",
     type: 1,
     date: "2018/09/24",
-    tags: ["js", "three.js"]
+    tags: ["js", "three.js"],
   },
   {
     id: "paomo",
@@ -212,7 +213,7 @@ export const blogs = [
     pic: "https://isluo.com/files/work/pm1.jpg",
     type: 2,
     date: "2018/03/26",
-    tags: ["作品"]
+    tags: ["作品"],
   },
   {
     id: "picture",
@@ -221,7 +222,7 @@ export const blogs = [
       "sizes中是基础规格值，与dpi相乘得到最终规格值，拿着最终规格值去srcset里找符合的图片资源加载",
     type: 1,
     date: "2019/08/19",
-    tags: ["html"]
+    tags: ["html"],
   },
   {
     id: "pit",
@@ -229,7 +230,7 @@ export const blogs = [
     info: "各种匪夷所思的坑，持续记录",
     type: 1,
     date: "2020/01/10",
-    tags: ["js", "html"]
+    tags: ["js", "html"],
   },
   {
     id: "pre",
@@ -237,7 +238,7 @@ export const blogs = [
     info: "目前有5个：preload、prefetch、preconnect、dns-prefetch、prerender",
     type: 1,
     date: "2019/10/11",
-    tags: ["html"]
+    tags: ["html"],
   },
   {
     id: "qi",
@@ -245,7 +246,7 @@ export const blogs = [
     info: "补充奇怪的知识",
     type: 1,
     date: "2018/07/11",
-    tags: ["html", "css", "js"]
+    tags: ["html", "css", "js"],
   },
   {
     id: "reg",
@@ -253,7 +254,7 @@ export const blogs = [
     info: "易混淆的，易忘的，常用的正则知识",
     type: 1,
     date: "2019/02/20",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "rose",
@@ -262,7 +263,7 @@ export const blogs = [
     pic: "https://isluo.com/files/work/rose1.jpg",
     type: 2,
     date: "2018/03/26",
-    tags: ["three.js"]
+    tags: ["three.js"],
   },
   {
     id: "sailor",
@@ -270,7 +271,7 @@ export const blogs = [
     info: "他曾时常梦见船长的女儿和那晚的风暴，但现在他只想像个凡人一样",
     type: 3,
     date: "2017/10/16",
-    tags: ["日志", "故事"]
+    tags: ["日志", "故事"],
   },
   {
     id: "seven_years",
@@ -279,7 +280,7 @@ export const blogs = [
     pic: "https://isluo.com/imgs/blog-seven-years.png",
     type: 3,
     date: "2017/10/22",
-    tags: ["日志"]
+    tags: ["日志"],
   },
   {
     id: "shadow",
@@ -287,7 +288,7 @@ export const blogs = [
     info: "潜伏在HTML表面之下的代码",
     type: 1,
     date: "2019/03/25",
-    tags: ["js", "html"]
+    tags: ["js", "html"],
   },
   {
     id: "smooth1",
@@ -295,7 +296,7 @@ export const blogs = [
     info: "以前用jquery写过，现在这种方式我认为更好一点。CSS变量的话貌似做不到",
     type: 1,
     date: "2018/08/01",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "snow_mountain",
@@ -303,7 +304,7 @@ export const blogs = [
     info: "这具身体不是他，他只是在控制着这骨骼和血肉筑成的躯干。",
     type: 3,
     date: "2019/04/15",
-    tags: ["日志", "故事"]
+    tags: ["日志", "故事"],
   },
   {
     id: "svg",
@@ -311,7 +312,7 @@ export const blogs = [
     info: "啊，不用的话就会忘掉",
     type: 1,
     date: "2018/05/06",
-    tags: ["js", "svg"]
+    tags: ["js", "svg"],
   },
   {
     id: "three_1",
@@ -319,7 +320,7 @@ export const blogs = [
     info: "Three.js官方示例学习笔记",
     type: 1,
     date: "2018/11/23",
-    tags: ["js", "three.js"]
+    tags: ["js", "three.js"],
   },
   {
     id: "three_fire",
@@ -327,7 +328,7 @@ export const blogs = [
     info: "Three.js官方示例学习笔记",
     type: 1,
     date: "2019/01/17",
-    tags: ["js", "three.js"]
+    tags: ["js", "three.js"],
   },
   {
     id: "three_fire",
@@ -335,7 +336,7 @@ export const blogs = [
     info: "主要说明一下Tradingview不好理解的地方",
     type: 1,
     date: "2018/09/16",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "url",
@@ -343,7 +344,7 @@ export const blogs = [
     info: "可能以后还会用到的网址",
     type: 1,
     date: "2018/04/12",
-    tags: ["html"]
+    tags: ["html"],
   },
   {
     id: "violet",
@@ -353,7 +354,7 @@ export const blogs = [
       "近期在看的动漫，闲暇时间做了这个网站，轻微剧透，为了高清，加载速度可能有点慢",
     type: 2,
     date: "2018/03/27",
-    tags: ["作品"]
+    tags: ["作品"],
   },
   {
     id: "wasm",
@@ -362,7 +363,7 @@ export const blogs = [
       "WebAssembly本身的API并不难，需要关心的是wasm的限制和在实际应用中的使用",
     type: 1,
     date: "2019/01/11",
-    tags: ["js"]
+    tags: ["js"],
   },
   {
     id: "water",
@@ -372,7 +373,7 @@ export const blogs = [
       "https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/book.jpg",
     type: 1,
     date: "2018/06/23",
-    tags: ["作品", "three.js"]
+    tags: ["作品", "three.js"],
   },
   {
     id: "words",
@@ -380,7 +381,7 @@ export const blogs = [
     info: "心中激起涟漪和触动的句子",
     type: 3,
     date: "2018/06/16",
-    tags: ["文学"]
+    tags: ["文学"],
   },
   {
     id: "wxstudy",
@@ -388,7 +389,7 @@ export const blogs = [
     info: "关于专升本复习的小程序，真实复习班资料",
     type: 2,
     date: "2018/07/09",
-    tags: ["js", "小程序"]
+    tags: ["js", "小程序"],
   },
   {
     id: "actions",
@@ -396,19 +397,19 @@ export const blogs = [
     info: "自动部署vue项目到github博客页面教程",
     type: 1,
     date: "2020/02/25",
-    tags: ["js"]
-  }
+    tags: ["js"],
+  },
 ];
 
 export const share = [
   {
     title: "DAN DAN 心魅かれてく",
     url:
-      "//player.bilibili.com/player.html?aid=20028312&cid=32674930&page=1&high_quality=1"
+      "//player.bilibili.com/player.html?aid=20028312&cid=32674930&page=1&high_quality=1",
   },
   {
     title: "【微小微】Apink - My My",
     url:
-      "//player.bilibili.com/player.html?aid=2573814&cid=4020549&page=1&high_quality=1"
-  }
+      "//player.bilibili.com/player.html?aid=2573814&cid=4020549&page=1&high_quality=1",
+  },
 ];

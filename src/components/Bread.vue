@@ -9,19 +9,14 @@
 /** 文章列表页 **/
 export default {
   name: "bread",
-  data: function() {
+  data: function () {
     return {};
   },
   props: {
-    breadData: String
+    breadData: String,
   },
   components: {},
   mounted() {},
-  computed: {}
+  computed: {},
 };
 </script>
-
-<style scoped lang="less">
-.bread {
-}
-</style>
