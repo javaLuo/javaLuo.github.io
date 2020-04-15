@@ -200,39 +200,39 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/wxstudy.js"
   },
   {
-    "revision": "bfb7b0b978685ab998e3",
+    "revision": "008d1d85f760a3ebca8e",
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "4ab98c8d24e2988f407d",
-    "url": "/css/app.7a71d055.css"
+    "revision": "3df824348d6578d14176",
+    "url": "/css/app.3b9ec869.css"
   },
   {
-    "revision": "6cd895a81193ac44a583",
-    "url": "/css/article.cf788b91.css"
+    "revision": "90553795fd7e1a35ca06",
+    "url": "/css/article.760a7c8f.css"
   },
   {
-    "revision": "d9fdda473a63579fd5d5",
-    "url": "/css/chunk-vendors.f717906f.css"
+    "revision": "fd83702bb354593c9c5d",
+    "url": "/css/chunk-vendors.76c608ad.css"
   },
   {
-    "revision": "ca29d6bca3cb85e6f0db",
+    "revision": "285cf1625f185514aaea",
     "url": "/css/detail.bc08088b.css"
   },
   {
-    "revision": "196ce8c6b9f9bc677252",
+    "revision": "80591e566a0de7f0d3f3",
     "url": "/css/live.f3589bcc.css"
   },
   {
-    "revision": "61ca693d931eaf4fcc76",
+    "revision": "dd901441ba241eb518b1",
     "url": "/css/share.87fdfe7b.css"
   },
   {
-    "revision": "cd61e45e5f80c4e45dba",
+    "revision": "0d53a4859cc91aab7288",
     "url": "/css/tags.4967c690.css"
   },
   {
-    "revision": "257f3ef0b336682e499c",
+    "revision": "7288e573a73bd351a9b3",
     "url": "/css/works.e3062cf2.css"
   },
   {
@@ -652,44 +652,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "b6b7b642f177ea291a8e6d39cbecbc2d",
+    "revision": "73a0e9fd8ce915173017fd28ce13ae05",
     "url": "/index.html"
   },
   {
-    "revision": "bfb7b0b978685ab998e3",
-    "url": "/js/about.3d62a4a2.js"
+    "revision": "008d1d85f760a3ebca8e",
+    "url": "/js/about.b7091928.js"
   },
   {
-    "revision": "4ab98c8d24e2988f407d",
-    "url": "/js/app.d34fb9fb.js"
+    "revision": "3df824348d6578d14176",
+    "url": "/js/app.40746881.js"
   },
   {
-    "revision": "6cd895a81193ac44a583",
-    "url": "/js/article.558cd06f.js"
+    "revision": "90553795fd7e1a35ca06",
+    "url": "/js/article.ea4baae3.js"
   },
   {
-    "revision": "d9fdda473a63579fd5d5",
-    "url": "/js/chunk-vendors.f5aae4cf.js"
+    "revision": "fd83702bb354593c9c5d",
+    "url": "/js/chunk-vendors.c2176d9e.js"
   },
   {
-    "revision": "ca29d6bca3cb85e6f0db",
-    "url": "/js/detail.42f7b6a8.js"
+    "revision": "285cf1625f185514aaea",
+    "url": "/js/detail.2cd2f24b.js"
   },
   {
-    "revision": "196ce8c6b9f9bc677252",
-    "url": "/js/live.f4cde19b.js"
+    "revision": "80591e566a0de7f0d3f3",
+    "url": "/js/live.640a9358.js"
   },
   {
-    "revision": "61ca693d931eaf4fcc76",
-    "url": "/js/share.97d1fdc2.js"
+    "revision": "dd901441ba241eb518b1",
+    "url": "/js/share.257adb03.js"
   },
   {
-    "revision": "cd61e45e5f80c4e45dba",
-    "url": "/js/tags.ef92531f.js"
+    "revision": "0d53a4859cc91aab7288",
+    "url": "/js/tags.9613e4a0.js"
   },
   {
-    "revision": "257f3ef0b336682e499c",
-    "url": "/js/works.3d9ef5fa.js"
+    "revision": "7288e573a73bd351a9b3",
+    "url": "/js/works.5b581d7d.js"
   },
   {
     "revision": "2f94dd14e4fc3ea6540c633fd568f036",
