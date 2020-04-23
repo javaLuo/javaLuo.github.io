@@ -12,67 +12,71 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/abouttime.js"
   },
   {
-    "revision": "9e761566d96165cc93f265bf443a086b",
+    "revision": "7b786375c70429830584d5fc22e9df82",
     "url": "/blogs/actions.js"
   },
   {
-    "revision": "69c22619f957d94914647c5f6d7a9a87",
+    "revision": "41d57a6605bfd2b19c5fed55646f8d50",
     "url": "/blogs/algorithm.js"
   },
   {
-    "revision": "66642e1e10106460edf51e7e0a585874",
+    "revision": "48fac4e2db994a7caeb97e16c183ba68",
     "url": "/blogs/along.js"
   },
   {
-    "revision": "d003c757eaf9cdbb184b8c62609d394c",
+    "revision": "810e5b6e6f97c1710d6d62728aa68199",
     "url": "/blogs/b_night_snow.js"
   },
   {
-    "revision": "065a396dc8e3da324d9fa369cc8d54e1",
+    "revision": "90cb6755a498862eb216c512377c5d71",
     "url": "/blogs/brcity.js"
   },
   {
-    "revision": "8a30f135cb3cd07fbd714d672fd50e92",
+    "revision": "92003b0947001164d1149d7068f94670",
     "url": "/blogs/datafeed.js"
   },
   {
-    "revision": "2ff2854d1b81d08db1075ee6ad837d79",
+    "revision": "54812fce9aab9baa88d99da885c963c7",
     "url": "/blogs/datediff.js"
   },
   {
-    "revision": "ceb6c92e59e133ac11bf6e634d4c85dc",
+    "revision": "81cea54955aa4479d0d4c780712e97ac",
     "url": "/blogs/dll.js"
   },
   {
-    "revision": "9f470202c29f3eacd7d10e3bfbcf5e8b",
+    "revision": "defdc5dbd22ce8ba000c7dd7d0e00809",
     "url": "/blogs/document.js"
   },
   {
-    "revision": "6f9a08c772a5898be41954ff49f96ab9",
+    "revision": "be0a49d08c2aacea8f50656bcdd479e6",
     "url": "/blogs/download.js"
   },
   {
-    "revision": "a1bc3cba80ae7aa21aa8b15b608b3a5e",
+    "revision": "c66453e62070cdcafbeccfed23cabbce",
     "url": "/blogs/earth.js"
   },
   {
-    "revision": "65f8e9f895c0969b87762efefa79483a",
+    "revision": "458bc1468f9b689475e8b468463764ba",
+    "url": "/blogs/english.md"
+  },
+  {
+    "revision": "621cf1243e669b5395de4f7c3dbc1737",
     "url": "/blogs/facebook.js"
   },
   {
-    "revision": "59bc7f73909f2301bd64b21856079327",
+    "revision": "e0768f2ed42c1c859639128183a0b049",
     "url": "/blogs/featuresets.js"
   },
   {
-    "revision": "c26e16e0eccffdea69f290f37f1d6e89",
+    "revision": "dab505ab8e2d497e15529fc588f8a16a",
     "url": "/blogs/flex.js"
   },
   {
-    "revision": "7027ca3f403406c77e3337a6646493f9",
+    "revision": "9fe8dfcc0e362528e8bb8ec5249b0bdc",
     "url": "/blogs/flip.js"
   },
   {
-    "revision": "8134623dfeb6a5c68fc303924bf9ba02",
+    "revision": "1070f83334a07256dea526fcbd243e26",
     "url": "/blogs/gd.js"
   },
   {
@@ -80,123 +84,123 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/glsl.js"
   },
   {
-    "revision": "4b4161ff5d6e692f6a89a9ae610de282",
+    "revision": "666e2b9f445d3a51bf66935cf0e89e73",
     "url": "/blogs/graphql.js"
   },
   {
-    "revision": "3940db6645563c5f47d7a2153a5a5ffb",
+    "revision": "1dd65dad4452ecfeed0fa1d663cde314",
     "url": "/blogs/grid.js"
   },
   {
-    "revision": "c05d9f50efe454f26c9551677f16c5fe",
+    "revision": "2f329e67827d30b24cc2097294ca501f",
     "url": "/blogs/hooks.js"
   },
   {
-    "revision": "674bb4e794b853e498be66307e79ef8f",
+    "revision": "8c68d3b4bc09a1f6af3a9312ce43e0b6",
     "url": "/blogs/hospital.js"
   },
   {
-    "revision": "388a114b6dd7764c67f6288cd75e66f4",
+    "revision": "95fda1e7521584f37f771d460359ec34",
     "url": "/blogs/isluo.js"
   },
   {
-    "revision": "7fcd53c6cd2bc5b09ca5edd1a2be7e3c",
+    "revision": "fd1e49629644dfccf56c19b326d7cef0",
     "url": "/blogs/markdown.js"
   },
   {
-    "revision": "850c61038af81ee9cb6f1bb202f6f343",
+    "revision": "617de2e6b703298b350a08dd4f45c4cc",
     "url": "/blogs/offset.js"
   },
   {
-    "revision": "b6b3415a9295a625b2780964f80b725f",
+    "revision": "f2e426d76330a2b9e82187af019b4707",
     "url": "/blogs/orbitcontrols.js"
   },
   {
-    "revision": "bb2622a595ed8ec3b2f82b1e27c02587",
+    "revision": "c0ba945dc36f425760cbee82ba262ded",
     "url": "/blogs/paomo.js"
   },
   {
-    "revision": "a82d607b665da4356397c57839ff64c3",
+    "revision": "e12d5ff87e367d529f15cc0a069da29f",
     "url": "/blogs/picture.js"
   },
   {
-    "revision": "d0ba55a01d4b9332494554ee9877cf1a",
+    "revision": "02900d54157eca10035882e4cdf682a1",
     "url": "/blogs/pit.js"
   },
   {
-    "revision": "286911850142a3bc6ef90fcab42840f0",
+    "revision": "13785b5b37866b18edb3969b1f64435e",
     "url": "/blogs/pre.js"
   },
   {
-    "revision": "17e399a41fa346979ff0ff9b4b42be31",
+    "revision": "59f70aa3490125019f7fee4d867f8720",
     "url": "/blogs/qi.js"
   },
   {
-    "revision": "613a6dba205995d83d7dbb5a259f6284",
+    "revision": "dda26d46a03b464680982c9ade1363ec",
     "url": "/blogs/reg.js"
   },
   {
-    "revision": "45d41d521cbb2764be51cfd69c935529",
+    "revision": "1839387a460cd894a24736b09f10dff3",
     "url": "/blogs/rose.js"
   },
   {
-    "revision": "31c8843faa948f850b0e0ed1d3612e9a",
+    "revision": "4f5d63fb589aeffdfa28979dd8930534",
     "url": "/blogs/sailor.js"
   },
   {
-    "revision": "97c5b04706bde250f071b65baa374e1d",
+    "revision": "676215152aa3247bdc7b3747d43af974",
     "url": "/blogs/seven_years.js"
   },
   {
-    "revision": "d213426e27705ae6be065c4e2c17ade4",
+    "revision": "d9576be842497407760a2ed24002e1ac",
     "url": "/blogs/shadow.js"
   },
   {
-    "revision": "7e4ea5ae260cb42d3dd27cc6129a53fe",
+    "revision": "cbba27a00c5282f66ed2a2a4e91317c7",
     "url": "/blogs/smooth1.js"
   },
   {
-    "revision": "ed54e7ebaf500bf856b8f00cf6751faf",
+    "revision": "3b7a0a7ec8d2940b11c05f7877c36145",
     "url": "/blogs/snow_mountain.js"
   },
   {
-    "revision": "5a21436b39f3c8c310129429449e8c9b",
+    "revision": "1812ea7421ec7d70eaec42f33de92355",
     "url": "/blogs/svg.js"
   },
   {
-    "revision": "139e2b8f73cbc8565180eacc7f6557ab",
+    "revision": "02a13aec2dc78f5f4bf6130e4c702431",
     "url": "/blogs/three_1.js"
   },
   {
-    "revision": "1b711b87127f49662e2c3ca4f93b01de",
+    "revision": "8c268fca1768787c88c2fa3544c842c1",
     "url": "/blogs/three_fire.js"
   },
   {
-    "revision": "52d151831fb6ce750190d99d18957b03",
+    "revision": "ab67e05ed9d66e424cde2026c1a98ce6",
     "url": "/blogs/tradingview.js"
   },
   {
-    "revision": "d945336740ea03746e781797222f9aef",
+    "revision": "749ab737f7ff48fca86aaecb095f93f7",
     "url": "/blogs/url.js"
   },
   {
-    "revision": "07a31158d0a9aca960e2afbfea9a8600",
+    "revision": "2c0fe4652125821f2ad80ab630ee21be",
     "url": "/blogs/violet.js"
   },
   {
-    "revision": "6ab03424e86231a19070026bf261baa2",
+    "revision": "46ecab0ccf2562a33eecac4a77b4ff27",
     "url": "/blogs/wasm.js"
   },
   {
-    "revision": "a0f644ca3e6a7f795352022d4c842e04",
+    "revision": "2e49561f4b7d9ec1a2ba96aea0780e4f",
     "url": "/blogs/water.js"
   },
   {
-    "revision": "9eac2de2cf2c12972d79784d5976220a",
+    "revision": "03b75956ae428726e4f2f2eacd69890f",
     "url": "/blogs/words.js"
   },
   {
-    "revision": "f6f38c9c05dd228f2e571b5014062daa",
+    "revision": "c6ffcb2e12ca9d5524004b29647453b7",
     "url": "/blogs/wxstudy.js"
   },
   {
