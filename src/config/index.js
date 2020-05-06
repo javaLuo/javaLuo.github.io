@@ -399,6 +399,15 @@ export const blogs = [
     date: "2020/02/25",
     tags: ["js"],
   },
+  {
+    id: "lockScreen",
+    name: "原生API锁定浏览器屏幕方向",
+    info:
+      "正统方法，真·锁定屏幕方向, Chrome、FireFox甚至IE都可以，唯独Safari这傻屌浏览器尚未支持",
+    type: 1,
+    date: "2020/05/06",
+    tags: ["js"],
+  },
 ];
 
 export const share = [
