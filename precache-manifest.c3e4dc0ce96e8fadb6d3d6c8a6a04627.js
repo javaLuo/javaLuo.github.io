@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/actions.js"
   },
   {
-    "revision": "41d57a6605bfd2b19c5fed55646f8d50",
+    "revision": "8fc5ab16ba3583e98e2f49b3232fcd81",
     "url": "/blogs/algorithm.js"
   },
   {
@@ -102,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "95fda1e7521584f37f771d460359ec34",
     "url": "/blogs/isluo.js"
+  },
+  {
+    "revision": "8de81097f033091b19981340b09c7fb6",
+    "url": "/blogs/lockScreen.js"
   },
   {
     "revision": "fd1e49629644dfccf56c19b326d7cef0",
@@ -208,7 +212,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "c05b74d1daa97cd80fb4",
+    "revision": "0232e982e626f2a55a0f",
     "url": "/css/app.3b9ec869.css"
   },
   {
@@ -656,7 +660,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "40d944906de871b1dd1ec06586d8c556",
+    "revision": "81dca162d9c4f157dce818ad549918e8",
     "url": "/index.html"
   },
   {
@@ -664,8 +668,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.b7091928.js"
   },
   {
-    "revision": "c05b74d1daa97cd80fb4",
-    "url": "/js/app.b6e2bd55.js"
+    "revision": "0232e982e626f2a55a0f",
+    "url": "/js/app.8e8f9915.js"
   },
   {
     "revision": "90553795fd7e1a35ca06",

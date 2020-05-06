@@ -14,7 +14,7 @@
 * 最坏情况O(n*n)
 * 空间复杂度O(1)
 * 稳定性：稳定
-\`\`\`
+\`\`\`javascript
 function sort(arr){
 	for(let i=0;i<arr.length;i++) {
 		for(let j=0;j<arr.length-1-i;j++) {
@@ -31,7 +31,7 @@ function sort(arr){
 \`\`\`
 
 ### 快速排序 阮一峰版
-\`\`\`
+\`\`\`javascript
 function sort(arr){
 		if(arr.length<=1){return arr};
 
@@ -53,7 +53,7 @@ const arr2 = sort(arr1); // [1,2,3,4,5];
 \`\`\`
 
 ### 快速排序 不创建临时数组版
-\`\`\`
+\`\`\`javascript
 function quickSort(arr, start = 0, end = arr.length - 1) {
     let i = start;
     let j = end;
@@ -92,7 +92,7 @@ quickSort(arr1); // [1,2,3,4,5]
 \`\`\`
 
 ### 二分法查找
-\`\`\`
+\`\`\`javascript
 /**
  * \`param arr 数组
  * \`param res 要查找的数
@@ -115,7 +115,7 @@ find(arr, 4); // 下标为3
 \`\`\`
 
 ## 深拷贝
-\`\`\`
+\`\`\`javascript
 function clone(obj){
 		if(typeof obj !== "object"){
 			return obj;
@@ -131,12 +131,12 @@ function clone(obj){
 \`\`\`
 
 ## 暴力深拷贝
-\`\`\`
+\`\`\`javascript
 JSON.parse(JSON.stringify(obj));
 \`\`\`
 
 ## 手动实现parseInt
-\`\`\`
+\`\`\`javascript
 function _parseInt(str){
 		const arr = str.split("");
 		const temp = [];
@@ -160,14 +160,14 @@ function _parseInt(str){
 \`\`\`
 
 ## 判断字符串是否是回文（前后对称）
-\`\`\`
+\`\`\`javascript
 function isPalindrome1(str){
 	return str === str.split("").reverse().join("");
 }
 \`\`\`
 
 ## 阶乘(循环)
-\`\`\`
+\`\`\`javascript
 function factorial(num){
 	// 先自动转数字、转整数。再判断数字的正负，负数无阶乘、 0的阶乘=1
 	let res = Number(num<<0) >= 0 ? 1 : NaN;
@@ -183,7 +183,7 @@ factorial(-1); // NaN
 \`\`\`
 
 ## 阶乘（递归）
-\`\`\`
+\`\`\`javascript
 function factorial(num, res=1){
 	const n = Number(num<<0);
 	if(Object.is(n, NaN) || n<0){
@@ -201,7 +201,7 @@ factorial(-1); // NaN
 \`\`\`
 
 ## 字符串中出现最多的字符
-\`\`\`
+\`\`\`javascript
 function maxNum(str){
 	const obj = str.split("").reduce((res, item)=>{
 		res[item] = res.hasOwnProperty(item) ? ++res[item] : 1;
@@ -214,14 +214,14 @@ maxNum("abbcccdddd"); // ["d", 4]
 \`\`\`
 
 ## 数组扁平化（暴力方式）
-\`\`\`
+\`\`\`javascript
 var arr = [1,[2,3],[4,[5,6]]];
 arr.toString().split(",");
 // 但会把所有数组元素变成字符串
 \`\`\`
 
 ## 数组扁平化
-\`\`\`
+\`\`\`javascript
 function flatten(k) {
 	let t = [];
 	if(k instanceof Array){
@@ -235,6 +235,28 @@ function flatten(k) {
 }
 
 flatten([1,[2,3],[4,[5,6,[7]]]]); // [1,2,3,4,5,6,7];
+\`\`\`
+
+## 防抖函数
+\`\`\`javascript
+function debounce(func, delay) {
+	let timeout;
+	return function(e) {
+			clearTimeout(timeout)
+			let args = arguments;
+			timeout = setTimeout(() => {
+				func.apply(this, args);
+			},delay);
+	}
+}
+
+// 使用
+
+const validate = debounce(function(e) {
+	console.log(e.target.value);
+}, 380);
+
+document.querySelector("input").addEventListener('input', validate);
 \`\`\`
 `;
 })();
