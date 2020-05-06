@@ -400,7 +400,7 @@ export const blogs = [
     tags: ["js"],
   },
   {
-    id: "lockScreen",
+    id: "lockscreen",
     name: "原生API锁定浏览器屏幕方向",
     info:
       "正统方法，真·锁定屏幕方向, Chrome、FireFox甚至IE都可以，唯独Safari这傻屌浏览器尚未支持",
