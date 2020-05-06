@@ -2,7 +2,7 @@
   if (!window.blogs) {
     window.blogs = {};
   }
-  window.blogs.abouttime = `
+  window.blogs.lockscreen = `
 ### 少BB，赶紧说怎么搞
 \`\`\`
 /** 

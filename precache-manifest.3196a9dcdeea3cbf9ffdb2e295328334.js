@@ -104,7 +104,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/isluo.js"
   },
   {
-    "revision": "8de81097f033091b19981340b09c7fb6",
+    "revision": "a670a84e534f1684f746da1c2aec7694",
     "url": "/blogs/lockScreen.js"
   },
   {
@@ -212,7 +212,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "0232e982e626f2a55a0f",
+    "revision": "c46a010fc650c3dbc2ab",
     "url": "/css/app.3b9ec869.css"
   },
   {
@@ -660,7 +660,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "81dca162d9c4f157dce818ad549918e8",
+    "revision": "6ab4fa50c79989abe5b047d1004e5b31",
     "url": "/index.html"
   },
   {
@@ -668,8 +668,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.b7091928.js"
   },
   {
-    "revision": "0232e982e626f2a55a0f",
-    "url": "/js/app.8e8f9915.js"
+    "revision": "c46a010fc650c3dbc2ab",
+    "url": "/js/app.f7e2215a.js"
   },
   {
     "revision": "90553795fd7e1a35ca06",
