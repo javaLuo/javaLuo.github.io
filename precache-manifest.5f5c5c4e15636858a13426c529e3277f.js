@@ -132,7 +132,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/picture.js"
   },
   {
-    "revision": "1c8863591dcc98dccce51c06ead0d3f7",
+    "revision": "7b47b6c0e78b3831c359ae90cd14179c",
     "url": "/blogs/pit.js"
   },
   {
