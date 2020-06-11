@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/brcity.js"
   },
   {
+    "revision": "b71b0c4c24c05c202887213fa42509a9",
+    "url": "/blogs/canvasapi.md"
+  },
+  {
     "revision": "92003b0947001164d1149d7068f94670",
     "url": "/blogs/datafeed.js"
   },
@@ -128,7 +132,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/picture.js"
   },
   {
-    "revision": "02900d54157eca10035882e4cdf682a1",
+    "revision": "1c8863591dcc98dccce51c06ead0d3f7",
     "url": "/blogs/pit.js"
   },
   {
