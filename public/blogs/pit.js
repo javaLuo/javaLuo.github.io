@@ -47,12 +47,12 @@ const b = this.B;
 for (let i = 0; i < 1000; i++) {
     let a = b; // 这样就避免了循环中每次都去访问this.B
 }
+\`\`\`
 
-### 5. safari中grid的坑
+### 6. safari中grid的坑
 一个div设置了min-height, display为grid，并且设置了padding,<br/>
 那么其子元素的高度如果是百分比，这个百分比是包含了padding再计算的；所以当父级高度足够小时，子元素会超出父元素。<br/>
 详见：https://codepen.io/javaluo/pen/ExPKYpG，在Safari中，高度小于400时，下方padding被超出
-\`\`\`
-    
+
  `;
 })();
