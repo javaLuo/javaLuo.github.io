@@ -109,7 +109,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "a670a84e534f1684f746da1c2aec7694",
-    "url": "/blogs/lockScreen.js"
+    "url": "/blogs/lockscreen.js"
   },
   {
     "revision": "fd1e49629644dfccf56c19b326d7cef0",
