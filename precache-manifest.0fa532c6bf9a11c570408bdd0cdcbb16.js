@@ -92,7 +92,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/graphql.js"
   },
   {
-    "revision": "1dd65dad4452ecfeed0fa1d663cde314",
+    "revision": "5b886897c3747b1000ca430b955411ce",
     "url": "/blogs/grid.js"
   },
   {
