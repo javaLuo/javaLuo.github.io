@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.0fa532c6bf9a11c570408bdd0cdcbb16.js"
+  "/precache-manifest.ed0fd9960b7ce4e1f11fb9008ebf75e4.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "isluo"});
