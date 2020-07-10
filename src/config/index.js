@@ -371,7 +371,7 @@ export const blogs = [
     info: "消灭人类暴政，世界属于三体",
     pic:
       "https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/book.jpg",
-    type: 1,
+    type: 2,
     date: "2018/06/23",
     tags: ["作品", "three.js"],
   },
