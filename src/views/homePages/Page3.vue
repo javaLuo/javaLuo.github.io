@@ -47,7 +47,7 @@
           </a>
         </el-tooltip>
       </li>
-      <li class="title" style="margin-top: 16px">去往其他服务器</li>
+      <li class="title" style="margin-top: 16px;">去往其他服务器</li>
       <li class="line"></li>
 
       <li class="friend">
@@ -72,6 +72,14 @@
           target="_blank"
           rel="nofollow me noopener noreferrer"
           >Microanswer 首页</a
+        >
+      </li>
+      <li class="friend">
+        <a
+          href="https://kalasearch.cn"
+          target="_blank"
+          rel="nofollow me noopener noreferrer"
+          >卡拉搜索</a
         >
       </li>
     </ul>
@@ -149,7 +157,7 @@ import ImgEmail from "../../assets/footer/email.png";
 import ImgWeChart from "../../assets/weima2.png";
 export default {
   name: "page3",
-  data: function() {
+  data: function () {
     return {
       LogoVue,
       LogoGitHub,
@@ -160,12 +168,12 @@ export default {
       ImgEmail,
       ImgWechart,
       ImgTwitter,
-      ImgWeChart
+      ImgWeChart,
     };
   },
   props: {
-    hi: { type: Object }
-  }
+    hi: { type: Object },
+  },
 };
 </script>
 
