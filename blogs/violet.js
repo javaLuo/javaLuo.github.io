@@ -9,8 +9,8 @@
 
 比较喜欢, 所以做了一个主题网站
 
->上线地址：<a href="https://isluo.com/work/violet" target="_blank">https://isluo.com/work/violet</a>
-
+>上线地址(国际)：<a href="https://isluo.com/work/violet" target="_blank">https://isluo.com/work/violet</a><br/>
+>上线地址(国内)：<a href="https://isluo.gitee.io/work/violet" target="_blank">https://isluo.gitee.io/work/violet</a>
 ![violet](https://isluo.com/imgs/blog-violet1.jpg)
 
 ![violet](https://isluo.com/imgs/blog-violet2.jpg)

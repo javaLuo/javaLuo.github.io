@@ -192,7 +192,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/url.js"
   },
   {
-    "revision": "2c0fe4652125821f2ad80ab630ee21be",
+    "revision": "b5f7f49c471cef6d0cd8a9c9b06eaa91",
     "url": "/blogs/violet.js"
   },
   {
@@ -200,7 +200,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/wasm.js"
   },
   {
-    "revision": "2e49561f4b7d9ec1a2ba96aea0780e4f",
+    "revision": "5b679525517a75a999a529e2e0155df4",
     "url": "/blogs/water.js"
   },
   {
@@ -216,7 +216,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "7e421d224a85e5ee7bab",
+    "revision": "a12dfac514b2d9aa5d1f",
     "url": "/css/app.38c98150.css"
   },
   {
@@ -664,7 +664,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "bc200657a35cd5b1118119e7e55b748d",
+    "revision": "baf359a51600a06714c64fd668446b4c",
     "url": "/index.html"
   },
   {
@@ -672,8 +672,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.45112fa0.js"
   },
   {
-    "revision": "7e421d224a85e5ee7bab",
-    "url": "/js/app.dcfb4574.js"
+    "revision": "a12dfac514b2d9aa5d1f",
+    "url": "/js/app.e539c4f2.js"
   },
   {
     "revision": "769cfeccf4ae887e2c71",
