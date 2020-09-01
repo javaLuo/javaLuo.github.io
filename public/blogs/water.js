@@ -27,7 +27,7 @@
 * 本网站源代码可随意使用
 <br/>
 <div align=center>
-<img src="https://isluo.com/work/water/up.jpg" width="500" />
+<img src="https://isluo.com/work/water/libs/imgs/up.jpg" width="500" />
 </div>
 
 * 微信扫一扫上方二维码可小额赞赏我。
