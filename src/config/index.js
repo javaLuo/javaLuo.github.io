@@ -369,8 +369,7 @@ export const blogs = [
     id: "water",
     name: "三体水滴计划 3D",
     info: "消灭人类暴政，世界属于三体",
-    pic:
-      "https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/book.jpg",
+    pic: "https://isluo.com/work/water/libs/imgs/book.jpg",
     type: 2,
     date: "2018/06/23",
     tags: ["作品", "three.js"],

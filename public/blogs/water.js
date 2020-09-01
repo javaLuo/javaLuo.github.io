@@ -10,8 +10,8 @@
 * THREE.JS v92, IE11+以上支持
 * 页面排版 简单排了排，没有什么设计能力
 
-### 地址
-<a href="https://isluo.com/work/water/" target="_blank">https://isluo.com/work/water/</a>
+### 地址(国内)
+<a href="https://isluo.gitee.io/work/water/" target="_blank">https://isluo.gitee.io/work/water/</a>
 
 ### 关于《三体》
 《三体》是刘慈欣 大刘的长篇科幻小说，共3部。获得了星云奖、雨果奖等国际奖项。
@@ -27,7 +27,7 @@
 * 本网站源代码可随意使用
 <br/>
 <div align=center>
-<img src="https://raw.githubusercontent.com/javaLuo/water/master/libs/imgs/up.jpg" width="500" />
+<img src="https://isluo.com/work/water/up.jpg" width="500" />
 </div>
 
 * 微信扫一扫上方二维码可小额赞赏我。

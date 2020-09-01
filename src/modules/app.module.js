@@ -11,8 +11,8 @@ const App = {
     blogConfig: blogs, // 文章配置信息缓存
     hi: {
       // 一言
-      hitokoto: "Loading..."
-    }
+      hitokoto: "Loading...",
+    },
   },
   actions: {
     /** 获取一言随机一条语句 **/
@@ -23,20 +23,20 @@ const App = {
         if (msg.status === 200 || msg.status === 304) {
           context.commit({
             type: "setHi",
-            data: msg.data
+            data: msg.data,
           });
         }
         return msg;
       } catch (e) {
         Message.info("一言获取失败，需要翻墙");
       }
-    }
+    },
   },
   mutations: {
     setHi(state, payload) {
       state.hi = payload.data;
-    }
-  }
+    },
+  },
 };
 
 export default App;
