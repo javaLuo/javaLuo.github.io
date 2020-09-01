@@ -200,7 +200,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/wasm.js"
   },
   {
-    "revision": "5b679525517a75a999a529e2e0155df4",
+    "revision": "4d4cfae1d53bc0497daee8dc4544eac3",
     "url": "/blogs/water.js"
   },
   {
