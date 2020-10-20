@@ -407,6 +407,15 @@ export const blogs = [
     date: "2020/05/06",
     tags: ["js"],
   },
+  {
+    id: "gitssh",
+    name: "Windows中使用Git生成ssh rsa key",
+    info:
+      "生成key后，将公钥添加到Github用户Setting中，本地把私钥设置到sourcetree中，就可以用SSH来拉取和提交代码了",
+    type: 1,
+    date: "2020/10/20",
+    tags: ["Github"],
+  },
 ];
 
 export const share = [
