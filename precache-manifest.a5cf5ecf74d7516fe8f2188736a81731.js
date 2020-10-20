@@ -84,6 +84,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/gd.js"
   },
   {
+    "revision": "bd0970777e50bbb3cd5fc97ce46c42e1",
+    "url": "/blogs/gitssh.js"
+  },
+  {
     "revision": "154ed8914af73d011092a589ce56ce2c",
     "url": "/blogs/glsl.js"
   },
@@ -216,7 +220,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "72c2d3056e4d7fe70c26",
+    "revision": "3148749d53ca7a520b7b",
     "url": "/css/app.38c98150.css"
   },
   {
@@ -664,7 +668,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "a09dbcbcc519834336e9e93e904a0540",
+    "revision": "3c5f17cc2dc06c26c721406a0bf2cebb",
     "url": "/index.html"
   },
   {
@@ -672,8 +676,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.af22098b.js"
   },
   {
-    "revision": "72c2d3056e4d7fe70c26",
-    "url": "/js/app.355dd124.js"
+    "revision": "3148749d53ca7a520b7b",
+    "url": "/js/app.e0156e63.js"
   },
   {
     "revision": "2451bfae34af614f2669",
