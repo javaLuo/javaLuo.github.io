@@ -2,7 +2,7 @@
     if (!window.blogs) {
       window.blogs = {};
     }
-    window.blogs.brcity = `
+    window.blogs.gitssh = `
     ### 1. 安装Git客户端
     <a href="https://git-scm.com/downloads" target="_blank" rel="nofollow noreferrer">https://git-scm.com/downloads</a> <br/>
     下一步，下一步，下一步...
