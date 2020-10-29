@@ -180,6 +180,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/svg.js"
   },
   {
+    "revision": "51f6edc37f2a5a9d75cc1ef3f979a3d2",
+    "url": "/blogs/taobao.js"
+  },
+  {
     "revision": "02a13aec2dc78f5f4bf6130e4c702431",
     "url": "/blogs/three_1.js"
   },
@@ -220,7 +224,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "3148749d53ca7a520b7b",
+    "revision": "a6c44c028996447ea5b4",
     "url": "/css/app.38c98150.css"
   },
   {
@@ -664,11 +668,43 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/share_wechart.f5ec21b1.png"
   },
   {
+    "revision": "1d697a013628dd1d62d60cbc6cdf9c4c",
+    "url": "/img/taobao/ali1.png"
+  },
+  {
+    "revision": "edd8fc8735f68f6433fc83f26d7f31bd",
+    "url": "/img/taobao/ali2.png"
+  },
+  {
+    "revision": "aae1678e28c2333e134e2cfa3fceede2",
+    "url": "/img/taobao/t1.png"
+  },
+  {
+    "revision": "b53a1a566984a9caf07e61bc3829230b",
+    "url": "/img/taobao/t2.png"
+  },
+  {
+    "revision": "db732c549e2cb2ebfa85641965cc6d51",
+    "url": "/img/taobao/t3.png"
+  },
+  {
+    "revision": "2d31485ecadb754d5410486a3d610ff1",
+    "url": "/img/taobao/t4.png"
+  },
+  {
+    "revision": "bc3040f19e21a54fdc9cc19c131650bd",
+    "url": "/img/taobao/t5.png"
+  },
+  {
+    "revision": "1bea387ea43494cf6ce02e7a75cba65e",
+    "url": "/img/taobao/t6.png"
+  },
+  {
     "revision": "734fea3147a32a55fcfef9a4ec1164a0",
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "3c5f17cc2dc06c26c721406a0bf2cebb",
+    "revision": "1579a14a10518975de409217026d2140",
     "url": "/index.html"
   },
   {
@@ -676,8 +712,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.af22098b.js"
   },
   {
-    "revision": "3148749d53ca7a520b7b",
-    "url": "/js/app.e0156e63.js"
+    "revision": "a6c44c028996447ea5b4",
+    "url": "/js/app.e033abbd.js"
   },
   {
     "revision": "2451bfae34af614f2669",
