@@ -180,7 +180,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/svg.js"
   },
   {
-    "revision": "5f1073b6c5a4503d31e951d022934d85",
+    "revision": "4acfa9a7d338412a039d733486c00bb3",
     "url": "/blogs/taobao.js"
   },
   {
