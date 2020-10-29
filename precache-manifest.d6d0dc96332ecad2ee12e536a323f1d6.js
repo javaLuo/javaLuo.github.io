@@ -672,7 +672,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/taobao/ali1.png"
   },
   {
-    "revision": "edd8fc8735f68f6433fc83f26d7f31bd",
+    "revision": "ce3a09cd988c082d312e2216fd722d55",
     "url": "/img/taobao/ali2.png"
   },
   {
