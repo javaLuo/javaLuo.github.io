@@ -79,13 +79,13 @@
 
   |字段名|值|解释|
   |----|----|----|
-  |_ariver_appid|300xxxx...|小程序的唯一ID|
+  |\_ariver\_appid|300xxxx...|小程序的唯一ID|
   |nbsv|0.0.1|要拉起的小程序版本号，填多少打开的版本就是多少|
   |nbsource|debug|表示使用开发模式，必须填这个，不然会直接拉起线上环境的小程序|
   |nbsn|TRIAL|表示使用测试环境的云函数，必须填这个，不然会请求线上环境的云函数|
-  |_mp_code|tb|不知道干嘛用的，不填貌似也没影响|
+  |\_mp\_code|tb|不知道干嘛用的，不填貌似也没影响|
   |transition|present|不知道干嘛用的，应该是效果相关吧，没看出什么作用|
-  |_ariver_ua|TB或TM|默认TB，填TB拉起淘宝APP，填TM拉起天猫APP|
+  |\_ariver\_ua|TB或TM|默认TB，填TB拉起淘宝APP，填TM拉起天猫APP|
   |query| a=123&b=345|传给小程序的参数，会在被拉起的小程序的\`app.js\`的\`onLaunch\`中获取到这些参数|
   |page|pages%2Findex%2Findex%3Fc%3D678%26d%3D91011|拉起小程序的特定页面，可以带参数，会在被拉起的小程序对应页面的\`onLoad\`中获取到这些参数，请注意使用\`encodeURIComponent\`处理一下
 
