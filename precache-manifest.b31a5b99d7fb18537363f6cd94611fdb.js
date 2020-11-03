@@ -180,7 +180,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/svg.js"
   },
   {
-    "revision": "0d90629f004d206d623fb0795dc06bf3",
+    "revision": "361048b3412d51f89d9cc7ba76f84510",
     "url": "/blogs/taobao.js"
   },
   {
@@ -674,6 +674,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ce3a09cd988c082d312e2216fd722d55",
     "url": "/img/taobao/ali2.png"
+  },
+  {
+    "revision": "fa1265c84d58c13fde5c439062baa212",
+    "url": "/img/taobao/sx1.png"
   },
   {
     "revision": "aae1678e28c2333e134e2cfa3fceede2",
