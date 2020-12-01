@@ -158,6 +158,10 @@
 > 用户的版本都这么高的吗？ 官方最新版本是1.24.8，用户直接9.x.x了，我靠，完全对不上呀，这怎么设置？惊了
 > 原因：9.x.x这个指的是淘宝APP的版本号，并不是基础库版本，\`my.SDKVersion\`这个属性得到的才是小程序基础库版本！
 
+18. 顶部导航栏透明
+> 在安卓上只需要设置\`"transparentTitle": "always"\`就行了<br/>
+> 在iphone上需要设置\`"transparentTitle": "always"\`和\`"navigationBarForceEnable": false\`,否则iphone的表现就像\`auto\`一样。
+
 ## 尾声
 以前一直以为微信开发就像一坨屎，接触了淘宝之后发现这特么是在粪坑里打滚。
 
