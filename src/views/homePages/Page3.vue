@@ -16,7 +16,7 @@
           <div slot="content">
             <img class="img-wechart" :src="ImgWeChart" />
           </div>
-          <img :src="ImgWechart" />
+          <img :src="ImgWechart" class="ml" />
         </el-tooltip>
         <el-tooltip
           class="item"
@@ -29,7 +29,7 @@
             target="_blank"
             rel="me noopener"
           >
-            <img :src="ImgTwitter" />
+            <img :src="ImgTwitter" class="ml" />
           </a>
         </el-tooltip>
         <el-tooltip
@@ -39,7 +39,7 @@
           placement="top"
         >
           <a href="mailto:376693576@qq.com" target="_blank" rel="me noopener">
-            <img :src="ImgEmail" />
+            <img :src="ImgEmail" class="ml" />
           </a>
         </el-tooltip>
       </li>
@@ -215,7 +215,7 @@ export default {
       &:hover {
         transform: translate(-2px, -2px);
         box-shadow: 0 2px 8px #000;
-        background-color: #111;
+        background-color: #222;
       }
     }
   }
@@ -252,9 +252,9 @@ export default {
         &:hover {
           opacity: 0.8;
         }
-        & + img {
-          margin-left: 8px;
-        }
+      }
+      .ml {
+        margin-left: 8px;
       }
     }
   }
