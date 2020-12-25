@@ -45,15 +45,15 @@
       </li>
       <li class="title" style="margin-top: 16px">去往其他异次元世界</li>
       <li class="line"></li>
-
-      <li class="friend">
+      <li class="friend-box">
         <a href="https://www.microanswer.cn" target="_blank" rel="noopener"
-          >Microanswer 首页</a
+          >Microanswer</a
         >
-      </li>
-      <li class="friend">
         <a href="https://blog.itnote.me" target="_blank" rel="noopener"
           >Mt.r 先生</a
+        >
+        <a href="http://lsy.dulv.net" target="_blank" rel="noopener"
+          >平平无奇深情段子手无霜</a
         >
       </li>
     </ul>
@@ -106,10 +106,7 @@
     </div>
     <div class="last">
       © 2014–2020
-      <a
-        href="https://isluo.com"
-        target="_blank"
-        rel="nofollow me noopener noreferrer"
+      <a href="https://isluo.com" target="_blank" rel="me noopener"
         >isluo.com</a
       >
       Ltd.
@@ -202,6 +199,27 @@ export default {
       }
     }
   }
+  .friend-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .friend-box {
+    & > a {
+      flex: none;
+      padding: 2px 4px;
+      color: #fff;
+      border-radius: 4px;
+      margin: 0 0 4px 4px;
+      transition: transform 256ms, box-shadow 256ms, background-color 256ms;
+      &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 0 2px 8px #000;
+        background-color: #111;
+      }
+    }
+  }
+
   .friends-link {
     list-style: none;
     font-size: 14px;
@@ -225,9 +243,6 @@ export default {
       }
     }
     .find {
-      a {
-        margin-left: 8px;
-      }
       img {
         cursor: pointer;
         height: 24px;
@@ -240,14 +255,6 @@ export default {
         & + img {
           margin-left: 8px;
         }
-      }
-    }
-
-    a {
-      color: #aaa;
-      transition: color 200ms;
-      &:hover {
-        color: #f0f0f0;
       }
     }
   }
