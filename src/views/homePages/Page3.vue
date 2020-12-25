@@ -43,22 +43,17 @@
           </a>
         </el-tooltip>
       </li>
-      <li class="title" style="margin-top: 16px">去往其他服务器</li>
+      <li class="title" style="margin-top: 16px">去往其他异次元世界</li>
       <li class="line"></li>
 
       <li class="friend">
-        <a href="//www.ruanyifeng.com" target="_blank" rel="noopener"
-          >阮一峰的个人网站</a
-        >
-      </li>
-      <li class="friend">
-        <a href="https://www.zhangxinxu.com" target="_blank" rel="noopener"
-          >张鑫旭-鑫空间-鑫生活</a
-        >
-      </li>
-      <li class="friend">
         <a href="https://www.microanswer.cn" target="_blank" rel="noopener"
           >Microanswer 首页</a
+        >
+      </li>
+      <li class="friend">
+        <a href="https://blog.itnote.me" target="_blank" rel="noopener"
+          >Mt.r 先生</a
         >
       </li>
     </ul>
