@@ -51,7 +51,8 @@ export const blogs = [
   {
     id: "brcity",
     name: "边城",
-    info: "他正趴在冷冰冰的生满锈迹的钢板上，身子被雨水淋了个遍，寒意席卷了每一寸皮肤…",
+    info:
+      "他正趴在冷冰冰的生满锈迹的钢板上，身子被雨水淋了个遍，寒意席卷了每一寸皮肤…",
     type: 3,
     date: "2011/09/19",
     tags: ["日志", "故事"],
@@ -75,7 +76,8 @@ export const blogs = [
   {
     id: "dll",
     name: "webpack.DllPlugin和webpack.DllReferencePlugin静态资源预编译插件",
-    info: "现在因为有HMR局部热更新，所以dllPlugin这两个插件用得少了，不过还是记录一下配置方法，可能以后会再次使用",
+    info:
+      "现在因为有HMR局部热更新，所以dllPlugin这两个插件用得少了，不过还是记录一下配置方法，可能以后会再次使用",
     type: 1,
     date: "2018/04/02",
     tags: ["js"],
@@ -132,7 +134,8 @@ export const blogs = [
   {
     id: "glsl",
     name: "GLSL 基础",
-    info: "需要一颗虔诚的心来专研这一切，真希望自己能静下心来，有连续的时间来学习这些东西",
+    info:
+      "需要一颗虔诚的心来专研这一切，真希望自己能静下心来，有连续的时间来学习这些东西",
     type: 1,
     date: "2019/11/22",
     tags: ["js", "webgl"],
@@ -215,7 +218,8 @@ export const blogs = [
   {
     id: "picture",
     name: "HTML5 响应式图片picture标签使用方法",
-    info: "sizes中是基础规格值，与dpi相乘得到最终规格值，拿着最终规格值去srcset里找符合的图片资源加载",
+    info:
+      "sizes中是基础规格值，与dpi相乘得到最终规格值，拿着最终规格值去srcset里找符合的图片资源加载",
     type: 1,
     date: "2019/08/19",
     tags: ["html"],
@@ -346,7 +350,8 @@ export const blogs = [
     id: "violet",
     name: "紫罗兰永恒花园",
     pic: "https://isluo.com/imgs/blog-violet1.jpg",
-    info: "近期在看的动漫，闲暇时间做了这个网站，轻微剧透，为了高清，加载速度可能有点慢",
+    info:
+      "近期在看的动漫，闲暇时间做了这个网站，轻微剧透，为了高清，加载速度可能有点慢",
     type: 2,
     date: "2018/03/27",
     tags: ["作品"],
@@ -354,7 +359,8 @@ export const blogs = [
   {
     id: "wasm",
     name: "装逼课程：WebAssembly(wasm)用webpack加载的正确姿势",
-    info: "WebAssembly本身的API并不难，需要关心的是wasm的限制和在实际应用中的使用",
+    info:
+      "WebAssembly本身的API并不难，需要关心的是wasm的限制和在实际应用中的使用",
     type: 1,
     date: "2019/01/11",
     tags: ["js"],
@@ -395,7 +401,8 @@ export const blogs = [
   {
     id: "lockscreen",
     name: "原生API锁定浏览器屏幕方向",
-    info: "正统方法，真·锁定屏幕方向, Chrome、FireFox甚至IE都可以，唯独Safari这傻屌浏览器尚未支持",
+    info:
+      "正统方法，真·锁定屏幕方向, Chrome、FireFox甚至IE都可以，唯独Safari这傻屌浏览器尚未支持",
     type: 1,
     date: "2020/05/06",
     tags: ["js"],
@@ -403,7 +410,8 @@ export const blogs = [
   {
     id: "gitssh",
     name: "Windows中使用Git生成ssh rsa key",
-    info: "生成key后，将公钥添加到Github用户Setting中，本地把私钥设置到sourcetree中，就可以用SSH来拉取和提交代码了",
+    info:
+      "生成key后，将公钥添加到Github用户Setting中，本地把私钥设置到sourcetree中，就可以用SSH来拉取和提交代码了",
     type: 1,
     date: "2020/10/20",
     tags: ["Github"],
@@ -411,24 +419,36 @@ export const blogs = [
   {
     id: "taobao",
     name: "淘宝小程序（淘宝商家应用）开发巨TM坑我狂踩指西",
-    info: "以前一直以为微信开发体验是一坨屎，直到接触了淘宝开发，才发现微信开发简直是一根巧克力味的屎做成的冰棒，美妙，甚至还想再吃几根",
+    info:
+      "以前一直以为微信开发体验是一坨屎，直到接触了淘宝开发，才发现微信开发简直是一根巧克力味的屎做成的冰棒，美妙，甚至还想再吃几根",
     type: 1,
     date: "2020/10/29",
     tags: ["小程序", "js"],
+  },
+  {
+    id: "shadow2",
+    name: "一种前端防御技术",
+    info: "在服务器被黑的情况下，前端如何保护用户关键信息不被修改",
+    type: 1,
+    date: "2020/12/31",
+    tags: ["js"],
   },
 ];
 
 export const share = [
   {
     title: "DAN DAN 心魅かれてく",
-    url: "//player.bilibili.com/player.html?aid=20028312&cid=32674930&page=1&high_quality=1",
+    url:
+      "//player.bilibili.com/player.html?aid=20028312&cid=32674930&page=1&high_quality=1",
   },
   {
     title: "【微小微】Apink - My My",
-    url: "//player.bilibili.com/player.html?aid=2573814&cid=4020549&page=1&high_quality=1",
+    url:
+      "//player.bilibili.com/player.html?aid=2573814&cid=4020549&page=1&high_quality=1",
   },
   {
     title: "Sofia - She Taught Me How to Yodel",
-    url: "//player.bilibili.com/player.html?aid=626401766&bvid=BV1Mt4y1X718&cid=213794602&page=1&high_quality=1",
+    url:
+      "//player.bilibili.com/player.html?aid=626401766&bvid=BV1Mt4y1X718&cid=213794602&page=1&high_quality=1",
   },
 ];
