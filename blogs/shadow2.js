@@ -26,7 +26,7 @@ JS:
 \`\`\`js
 // 当前端请求接口获得用户真实的钱包地址时，我们做如下操作
 const wallet = document.getElementById('wallet');
-let shadow = wallet.attachShadow({mode: 'closed'}); // 创建shatdow，且为closed模式
+let shadow = wallet.attachShadow({mode: 'closed'}); // 创建shadow，且为closed模式
 const t = document.createElement('span'); // 创建一个span
 t.innerText = '真实的用户钱包地址'; // 将真实的钱包地址写入span
 shadow.appendChild(t) // 将该span放进shadow
