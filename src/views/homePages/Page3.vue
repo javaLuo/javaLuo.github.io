@@ -105,7 +105,7 @@
       <div>感谢开源世界的恩惠</div>
     </div>
     <div class="last">
-      © 2014–2020
+      © 2014–{{ new Date().getFullYear() }}
       <a href="https://isluo.com" target="_blank" rel="me noopener"
         >isluo.com</a
       >
