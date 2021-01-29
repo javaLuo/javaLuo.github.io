@@ -108,6 +108,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/hospital.js"
   },
   {
+    "revision": "7eb9d0f0821f3761175a953f7cb47248",
+    "url": "/blogs/iconfont.js"
+  },
+  {
     "revision": "95fda1e7521584f37f771d460359ec34",
     "url": "/blogs/isluo.js"
   },
@@ -228,7 +232,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "99fd09b61fc3b9c9fdec",
+    "revision": "47a71183027806d0d326",
     "url": "/css/app.99b27f93.css"
   },
   {
@@ -624,6 +628,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/feather.a31c2a8d.png"
   },
   {
+    "revision": "38d2b351b8fc7f857b197c6d1c47180c",
+    "url": "/img/iconfont/i1.png"
+  },
+  {
+    "revision": "7e42cce5bdd2aae9e3c68eae4cdea8ce",
+    "url": "/img/iconfont/i2.png"
+  },
+  {
+    "revision": "bed32b0782b119fc60ad1f09aedd49ed",
+    "url": "/img/iconfont/i3.png"
+  },
+  {
+    "revision": "ccd7591fe96c8673ce7190d14b3dd327",
+    "url": "/img/iconfont/i4.png"
+  },
+  {
     "revision": "14a0936bd54fd18c22b5e7fb86ba26a3",
     "url": "/img/loading.14a0936b.gif"
   },
@@ -720,7 +740,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "645081ff731e7aaf0f71fd4959b7cfba",
+    "revision": "8022f886b795d02834a8cd8218eaa694",
     "url": "/index.html"
   },
   {
@@ -728,8 +748,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.0a8fe07e.js"
   },
   {
-    "revision": "99fd09b61fc3b9c9fdec",
-    "url": "/js/app.54cc964b.js"
+    "revision": "47a71183027806d0d326",
+    "url": "/js/app.2f964b3a.js"
   },
   {
     "revision": "34995b0fd4ab70efa5aa",
