@@ -36,21 +36,20 @@
 <script>
 /** 文章列表页 **/
 import { mapState } from "vuex";
-import { sortDate } from "@/util/tools";
 import MyLoading from "@/components/MyLoading";
 import { share } from "@/config";
 export default {
   name: "share",
-  data: function() {
+  data() {
     return {
       pageNow: 1,
       pageSize: 5,
       total: 0,
-      pageNowData: []
+      pageNowData: [],
     };
   },
   components: {
-    MyLoading
+    MyLoading,
   },
   mounted() {
     const temp = this.listData;
@@ -67,8 +66,8 @@ export default {
             index >= (this.pageNow - 1) * this.pageSize &&
             index < this.pageNow * this.pageSize
         );
-      }
-    })
+      },
+    }),
   },
   watch: {
     listData(newV) {
@@ -78,14 +77,14 @@ export default {
       for (let i = 0; temp[i]; i++) {
         setTimeout(() => this.pageNowData.push(temp[i]), i * 100);
       }
-    }
+    },
   },
   methods: {
     /** 页码改变时触发 **/
     onPageChange(v) {
       this.pageNow = v;
-    }
-  }
+    },
+  },
 };
 </script>
 

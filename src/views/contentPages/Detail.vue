@@ -42,11 +42,11 @@ import ImgFeather from "../../assets/feather.png";
 const converter = new ShowDown.Converter({ tables: true });
 export default {
   name: "name-detail",
-  data: function() {
+  data() {
     return {
       sourceData: null,
       ImgFeather,
-      htmlData: ""
+      htmlData: "",
     };
   },
   mounted() {
@@ -63,7 +63,7 @@ export default {
       this.$nextTick(() => {
         // color-brewer
         const allCodesDom = document.querySelectorAll("pre code");
-        Array.from(allCodesDom).forEach(item => {
+        Array.from(allCodesDom).forEach((item) => {
           window.hljs.highlightBlock(item);
         });
       });
@@ -72,14 +72,14 @@ export default {
       handler(newV) {
         document.title = `${newV.name} | Luo's Blog`;
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   computed: {
     ...mapState({
       blogNow(state) {
         return (
-          state.app.blogConfig.find(item => {
+          state.app.blogConfig.find((item) => {
             return item.id === this.$route.params.id;
           }) || {}
         );
@@ -95,8 +95,8 @@ export default {
           default:
             return { title: "文章列表", url: "/live " };
         }
-      }
-    })
+      },
+    }),
   },
   methods: {
     /** 通过标题向github请求文章详细内容 **/
@@ -133,12 +133,12 @@ export default {
         repo: issueName, // 评论存储项目
         admin: [masterName], // 拥有写权利的github名称，即可以新建issue的帐号
         title: `${document.title} ${this.$route.params.id}`, // 新建的issue的标题
-        distractionFreeMode: false // 是否开启全屏遮罩效果
+        distractionFreeMode: false, // 是否开启全屏遮罩效果
       });
 
       gitalk.render("gitalk-box");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -152,7 +152,7 @@ export default {
     overflow-x: hidden;
     font-size: 18px;
     img {
-      border-radius: 4px;
+      border-radius: 8px;
     }
   }
   .markdown-body {

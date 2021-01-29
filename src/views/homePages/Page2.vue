@@ -12,23 +12,23 @@ import Menus from "../../components/Menus.vue";
 import { isPc } from "../../util/tools";
 export default {
   name: "page2",
-  data: function() {
+  data() {
     return {
       isPc: isPc(),
       isShow: false,
-      scrollDom: null
+      scrollDom: null,
     };
   },
   props: {
-    pageNow: Number
+    pageNow: Number,
   },
   components: {
-    Menus
+    Menus,
   },
   methods: {
     onClickScroll() {
       this.$emit("onDownClick", 2);
-    }
+    },
   },
   mounted() {
     if (this.pageNow === 1) {
@@ -37,7 +37,7 @@ export default {
   },
   beforeUpdate() {
     this.isShow = this.pageNow === 1;
-  }
+  },
 };
 </script>
 

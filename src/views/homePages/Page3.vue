@@ -128,7 +128,7 @@ import ImgEmail from "../../assets/footer/email.png";
 import ImgWeChart from "../../assets/weima2.png";
 export default {
   name: "page3",
-  data: function () {
+  data() {
     return {
       LogoVue,
       LogoGitHub,

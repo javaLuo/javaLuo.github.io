@@ -17,13 +17,13 @@
     <div id="scroller" class="scroller">
       <ul class="scroll-wrapper">
         <li v-if="isPc" class="scroll-page">
-          <Page1 :pageNow="pageNow" @onDownClick="onClickScroll"></Page1>
+          <Page1 :pageNow="pageNow" @onDownClick="onClickScroll" />
         </li>
         <li class="scroll-page">
-          <Page2 :pageNow="pageNow" @onDownClick="onClickScroll"></Page2>
+          <Page2 :pageNow="pageNow" @onDownClick="onClickScroll" />
         </li>
         <li v-if="isPc" class="scroll-page foot-page">
-          <Page3 :pageNow="pageNow" :hi="hi"></Page3>
+          <Page3 :pageNow="pageNow" :hi="hi" />
         </li>
       </ul>
     </div>

@@ -3,7 +3,7 @@
     <img
       class="backImg"
       :class="{ show: isBackShow }"
-      :src="`https://uploadbeta.com/api/pictures/random/`"
+      src="https://api.ixiaowai.cn/gqapi/gqapi.php"
       @load="onBackImgLoad"
     />
     <div class="shadow all_trans1s"></div>
@@ -22,18 +22,17 @@ import ImgDown from "../../assets/down.png";
 
 export default {
   name: "page1",
-  data: function() {
+  data() {
     return {
       isShow: false,
       ImgDown,
-      imgNum: 0, // 首页随机背景图的编号
-      isBackShow: false // 首页背景图是否加载
+      isBackShow: false, // 首页背景图是否加载
     };
   },
-  props: ["pageNow"],
-  beforeMount() {
-    this.imgNum = this.getRandom(0, 29);
+  props: {
+    pageNow: Number,
   },
+
   mounted() {
     if (this.pageNow === 0) {
       this.isShow = true;
@@ -43,9 +42,6 @@ export default {
     this.isShow = this.pageNow === 0;
   },
   methods: {
-    getRandom(min, max) {
-      return Math.round(Math.random() * (max - min) + min);
-    },
     // 点击了向下的按钮，跳转到下面一页
     onDownClick() {
       this.$emit("onDownClick", 1);
@@ -54,8 +50,8 @@ export default {
     // 背景图加载成功时执行
     onBackImgLoad() {
       this.isBackShow = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
