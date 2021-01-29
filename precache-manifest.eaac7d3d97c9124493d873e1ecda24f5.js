@@ -108,7 +108,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/hospital.js"
   },
   {
-    "revision": "7eb9d0f0821f3761175a953f7cb47248",
+    "revision": "86e3a38f59536786cb2d23aa06783f56",
     "url": "/blogs/iconfont.js"
   },
   {
@@ -228,39 +228,39 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/wxstudy.js"
   },
   {
-    "revision": "1f86e82fe422fd6efd55",
+    "revision": "d49607a0ef01c07a58ff",
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "47a71183027806d0d326",
-    "url": "/css/app.99b27f93.css"
+    "revision": "4e2183604ece61634a61",
+    "url": "/css/app.207c87b9.css"
   },
   {
-    "revision": "34995b0fd4ab70efa5aa",
+    "revision": "263ccf4de5d66fdadd42",
     "url": "/css/article.760a7c8f.css"
   },
   {
-    "revision": "b3af1b62549438e63a9e",
+    "revision": "f103762a619280834730",
     "url": "/css/chunk-vendors.b9f99142.css"
   },
   {
-    "revision": "9eb0ea503782e659d38a",
-    "url": "/css/detail.3a8195f8.css"
+    "revision": "6d707a05aa1311f1aec7",
+    "url": "/css/detail.81a578b9.css"
   },
   {
-    "revision": "d576d7817fdf48240f5a",
+    "revision": "53074c81b06098db0deb",
     "url": "/css/live.f3589bcc.css"
   },
   {
-    "revision": "096431328e368246cfa1",
-    "url": "/css/share.87fdfe7b.css"
+    "revision": "50c1091ceb26e2f49b20",
+    "url": "/css/share.24060860.css"
   },
   {
-    "revision": "6709ae090d7dc11a16d1",
+    "revision": "3a02c03eeb7c6f69e67b",
     "url": "/css/tags.4967c690.css"
   },
   {
-    "revision": "2f4623afb4b76c695174",
+    "revision": "1f82571617f4391596b3",
     "url": "/css/works.e3062cf2.css"
   },
   {
@@ -740,44 +740,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "8022f886b795d02834a8cd8218eaa694",
+    "revision": "bc7ab1264bdd09d6b3287c31c41f0a0a",
     "url": "/index.html"
   },
   {
-    "revision": "1f86e82fe422fd6efd55",
-    "url": "/js/about.0a8fe07e.js"
+    "revision": "d49607a0ef01c07a58ff",
+    "url": "/js/about.cd08fd0d.js"
   },
   {
-    "revision": "47a71183027806d0d326",
-    "url": "/js/app.2f964b3a.js"
+    "revision": "4e2183604ece61634a61",
+    "url": "/js/app.8b572aa8.js"
   },
   {
-    "revision": "34995b0fd4ab70efa5aa",
-    "url": "/js/article.5f61ccfc.js"
+    "revision": "263ccf4de5d66fdadd42",
+    "url": "/js/article.dc03b3b4.js"
   },
   {
-    "revision": "b3af1b62549438e63a9e",
-    "url": "/js/chunk-vendors.8259d2f7.js"
+    "revision": "f103762a619280834730",
+    "url": "/js/chunk-vendors.25a3af2f.js"
   },
   {
-    "revision": "9eb0ea503782e659d38a",
-    "url": "/js/detail.24699d03.js"
+    "revision": "6d707a05aa1311f1aec7",
+    "url": "/js/detail.a9452812.js"
   },
   {
-    "revision": "d576d7817fdf48240f5a",
-    "url": "/js/live.5ef0410e.js"
+    "revision": "53074c81b06098db0deb",
+    "url": "/js/live.7504a629.js"
   },
   {
-    "revision": "096431328e368246cfa1",
-    "url": "/js/share.07ebb3ad.js"
+    "revision": "50c1091ceb26e2f49b20",
+    "url": "/js/share.09875b8f.js"
   },
   {
-    "revision": "6709ae090d7dc11a16d1",
-    "url": "/js/tags.9b3a32a3.js"
+    "revision": "3a02c03eeb7c6f69e67b",
+    "url": "/js/tags.1aaa9aa7.js"
   },
   {
-    "revision": "2f4623afb4b76c695174",
-    "url": "/js/works.20edca9f.js"
+    "revision": "1f82571617f4391596b3",
+    "url": "/js/works.b428f06a.js"
   },
   {
     "revision": "2f94dd14e4fc3ea6540c633fd568f036",
