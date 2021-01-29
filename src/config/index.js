@@ -138,7 +138,7 @@ export const blogs = [
       "需要一颗虔诚的心来专研这一切，真希望自己能静下心来，有连续的时间来学习这些东西",
     type: 1,
     date: "2019/11/22",
-    tags: ["js", "webgl"],
+    tags: ["js", "three.js"],
   },
   {
     id: "graphql",
@@ -164,15 +164,15 @@ export const blogs = [
     date: "2019/02/10",
     tags: ["js", "React"],
   },
-  // {
-  //   id: "hospital",
-  //   name: "第一次去医院",
-  //   info:
-  //     "以前从来没自己去过医院，都不知道流程，直到自己身体出现问题，痛不欲生",
-  //   type: 3,
-  //   date: "2019/12/19",
-  //   tags: ["日志"],
-  // },
+  {
+    id: "hospital",
+    name: "第一次去医院",
+    info:
+      "以前从来没自己去过医院，都不知道流程，直到自己身体出现问题，痛不欲生",
+    type: 3,
+    date: "2019/12/19",
+    tags: ["日志"],
+  },
   {
     id: "isluo",
     name: "个人网站 主站",
@@ -263,7 +263,7 @@ export const blogs = [
     pic: "https://isluo.com/files/work/rose1.jpg",
     type: 2,
     date: "2018/03/26",
-    tags: ["three.js"],
+    tags: ["作品", "three.js"],
   },
   {
     id: "sailor",
@@ -312,7 +312,7 @@ export const blogs = [
     info: "啊，不用的话就会忘掉",
     type: 1,
     date: "2018/05/06",
-    tags: ["js", "svg"],
+    tags: ["css", "svg"],
   },
   {
     id: "three_1",
@@ -331,7 +331,7 @@ export const blogs = [
     tags: ["js", "three.js"],
   },
   {
-    id: "three_fire",
+    id: "tradingview",
     name: "TradingView笔记 配置和JS API",
     info: "主要说明一下Tradingview不好理解的地方",
     type: 1,
@@ -396,7 +396,7 @@ export const blogs = [
     info: "自动部署vue项目到github博客页面教程",
     type: 1,
     date: "2020/02/25",
-    tags: ["js"],
+    tags: ["Github"],
   },
   {
     id: "lockscreen",
@@ -432,6 +432,14 @@ export const blogs = [
     type: 1,
     date: "2020/12/31",
     tags: ["js"],
+  },
+  {
+    id: "iconfont",
+    name: "支付宝小程序/手淘小程序 使用 阿里巴巴矢量图标库iconfont的方法",
+    info: "亲测有效。这篇文章是转载的，记录一下，免得哪天找不到了",
+    type: 1,
+    date: "2021/01/29",
+    tags: ["小程序", "css"],
   },
 ];
 
