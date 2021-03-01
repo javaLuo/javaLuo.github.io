@@ -98,7 +98,7 @@ struct name{
     vec3 color;
 }
 // 使用
-name n; // 定义量一个n变量，其类型为name
+name n; // 定义了一个n变量，其类型为name
 \`\`\`
 
 ### 数组
@@ -147,7 +147,7 @@ varying lowp vec4 color = vec4(0.0,0.0,0.0,1.0);
 | \#error     | 抛出错误信息，写到当前着色器的日志里：\#error 报错了                                                                                                                        |
 | \#pragma    | 控制某些内置功能：\#pragma debug(on) 开启调试模式， \#pragma optimize(off) 关闭优化                                                                                         |
 | \#extension | 是否启用某些扩展功能：\#extension 扩展名 启用方式； require 若不支持则报错；enable 若不支持则警告；warn：检查所有使用到该扩展到地方并警告；disable 禁用扩展，若不支持则警告 |
-| \#version   | 指定要使用的 GLSL 版本，必须卸载最前面 \#version 100                                                                                                                        |
+| \#version   | 指定要使用的 GLSL 版本，必须写在最前面 \#version 100                                                                                                                        |
 
 ### 内置宏
 
@@ -250,7 +250,7 @@ varying lowp vec4 color = vec4(0.0,0.0,0.0,1.0);
 | vec3 cross(vec3 x,vec3 y)       | 返回 x 和 y 的叉积                                                  |
 | T normalize(T x)                | 归一化，即返回一个方向与 x 相同，但长度为 1 的向量                  |
 | T faceforward(T N, T I, T Nref) | 如果 dot(Nref,I)小于 0 则返回 N，否则返回-N                         |
-| T reflect(T I, T N)             | 入射向量 I 和表面法线 N，返回反射方向：I-2*dot(N,I)*N。N 必须归一化 |
+| T reflect(T I, T N)             | 入射向量 I 表面法线 N，返回反射方向：I-2*dot(N,I)*N。N 必须归一化 |
 | T refract(T I, T N, float eta)  | 入射向量 I，表面法线 N，折射率 eta, 返回折射向量                    |
 
 ### 矩阵函数
@@ -302,5 +302,28 @@ vec4 texture2DProj(sampler2D sampler, vec4 coord);
 vec4 textureCube(samplerCube sampler, vec3 coord);
 \`\`\`
 
+### 相关资料
+
+权威官方文档：https://www.opengl.org/documentation/glsl/
+<br/>
+权威民间金典新手教程：http://blog.csdn.net/racehorse
+<br/>
+一个具体完整的ＧＬＳＬ代码:http://www.ituring.com.cn/article/851
+<br/>
+GLSL简单介绍和全部内置变量：http://www.linuxgraphics.cn/opengl/shader_overview.html
+<br/>
+http://blog.csdn.net/kaixinbingju/article/details/14518387
+<br/>
+http://www.cnblogs.com/mazhenyu/p/3804518.html
+<br/>
+百度文库完整PPT：http://wenku.baidu.com/link?url=KUUhkIFpxtJOptnaFccKEWqOJw-yvnLoYGdkiwmYW0mnRpoSENQrk6TVst1_rHZJM_2sBh61H5tKX8pbNFyImM_ObOSrMDnp9LD2bqYjjCi
+<br/>
+百度文库入门WORLD教程：http://wenku.baidu.com/link?url=wokPChPUUK9nuFTefB0WgxOK7ZGsfLMSRZ8JjXrB7mHR063L61GUkpWrNe7I58peo5dt6fdLVIfLoEvh5nNHRdedcKZl0qMZzwLSzD6Nj5e
+<br/>
+http://wenku.baidu.com/view/be62e6bcf121dd36a32d824c.html?re=view
+<br/>
+http://wenku.baidu.com/view/518048d528ea81c758f57800.html
+<br/>
+GLSL语言语法基础：http://my.oschina.net/sweetdark/blog/208024#OSC_h3_12
   `;
 })();
