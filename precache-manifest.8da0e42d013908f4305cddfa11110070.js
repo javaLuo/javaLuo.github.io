@@ -88,7 +88,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/gitssh.js"
   },
   {
-    "revision": "154ed8914af73d011092a589ce56ce2c",
+    "revision": "489dbdfe3709190f1883b196e67bc7b2",
     "url": "/blogs/glsl.js"
   },
   {
@@ -188,7 +188,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/svg.js"
   },
   {
-    "revision": "e923e92c588457e760236a32311b4ead",
+    "revision": "97509469fbc3243a975d8f8b87eba0e4",
     "url": "/blogs/taobao.js"
   },
   {
