@@ -10,7 +10,7 @@
 4. varyings 变量，在顶点着色器中读写它的值，在片元着色器中设置同名变量，可以只读这个值
 
 ### 着色器
-\`\`\`glsl
+\`\`\`js
 <script type="x-shader/x-vertex">
   attribute vec4 a_position; // 属性变量 vec4 接受外部传入的顶点位置信息
   uniform vec2 u_resolution;  // 全局变量 vec2 接受外界传入的canvas画布信息
@@ -19,7 +19,8 @@
     // 下面这些方法转换canvas坐标到裁剪坐标
     vec2 zeroToOne = a_position.xy / u_resolution;
     vec2 clipSpace = zeroToOne * 2.0 - 1.0;
-    gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1); // 这里垂直反转了一下坐标，因为webGL坐标原点在左下角，而canvas原点在左上角
+    // 这里垂直反转了一下坐标，因为webGL坐标原点在左下角，而canvas原点在左上角
+    gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
   }
 </script>
 
@@ -99,7 +100,7 @@ function createProgram(gl, vertexShader, fragmentShader) {
   gl.useProgram(program); // 告诉GPU使用这一个着色器程序
 
   const positionBuffer = gl.createBuffer(); // 创建一个缓冲
-  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer); // 将这个缓冲绑定到gl.ARRAY_BUFFER, gl.ARRAY_BUFFER可以想象为缓冲区和GPU之间的一个链接点（驿站，中转站）
+  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer); // 将这个缓冲绑定到gl.ARRAY_BUFFER, 可以想象为缓冲区和GPU之间的一个链接点（驿站，中转站）
   const positions = new Float32Array([0,0,100,0,100]); // 准备放到缓冲中的顶点数据
   gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW); // 将顶点数据装配进缓冲中
 
@@ -110,12 +111,12 @@ function createProgram(gl, vertexShader, fragmentShader) {
   const size = 2; // 每次迭代运行提取两个单位数据
   const type = gl.FLOAT; // 每个单位的数据类型是32位浮点型
   const normalize = false; // 不需要归一化数据
-  const stride = 0; // 0 = 移动单位数量 * 每个单位占用内存（sizeof(type)）buffer中的步进偏移量，比如填32，则每运行一次后，下次会跳过32位（正好跳过一个点），然后再开始读取
+  const stride = 0; // 0 = 移动单位数量 * 每个单位占用内存（sizeof(type)）buffer中的步进偏移量
   const offset = 0; // 偏移量，从缓冲起始下标位置开始读取数组中的值
   gl.vertexAttribPointer(positionAttributeLocation, size, type, normalize, stride, offset); // 设置GPU读取a_position属性的方式
 
   const resolutionUniformLocation = gl.getUniformLocation(program, "u_resolution"); // 找到全局属性u_resolution的句柄
-  gl.uniform2f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height); // 给u_resolution属性传值，用的gl.uniform2f,所以需要传2个浮点数
+  gl.uniform2f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height); // 给u_resolution属性传值
 
   const colorUniformLocation = gl.getUniformLocation(program, "u_color"); // 找到全局属性u_color的句柄
   gl.uniform4f(colorUniformLocation, 1,0,0,1); // 给u_color传值
@@ -131,94 +132,90 @@ function createProgram(gl, vertexShader, fragmentShader) {
 
 #### gl.createShader(type)
 
-**解释**
-创建一个新的空的着色器
-
-**参数**
-type - 可选值：\`gl.VERTEX_SHADER\`顶点着色器 / \`gl.FRAGMENT_SHADER\`片元着色器
-
-**返回值**
+**解释**<br/>
+创建一个新的空的着色器<br/>
+**参数**<br/>
+type - 可选值：\`gl.VERTEX_SHADER\`顶点着色器 / \`gl.FRAGMENT_SHADER\`片元着色器<br/>
+**返回值**<br/>
 shader - WebGLShader对象
 
 ---
 
 #### gl.shaderSource(shader, source)
-**解释**
-给shader装载着色器源代码
-**参数**
+**解释**<br/>
+给shader装载着色器源代码<br/>
+**参数**<br/>
 shader - 着色器对象，通过gl.createShader()得到<br/>
 source - 着色器源代码
 
 ---
 
 #### gl.compileShader(shader)
-**解释**
-编译shader，一般跟在gl.shaderSource()之后
-**参数**
+**解释**<br/>
+编译shader，一般跟在gl.shaderSource()之后<br/>
+**参数**<br/>
 shader - 着色器对象，通过gl.createShader()得到
 
 ---
 
 #### gl.getShaderParameter(shader, pname)
-**解释**
-获取shader的相关信息，一般用于检测shader是否编译成功
-**参数**
-shader - 着色器
-pname - \`gl.DELETE_STATUS\`查询着色器是否被标记为删除 / \`gl.COMPILE_STATUS\`查询着色器是否编译成功 / \`gl.SHADER_TYPE\`查询着色器是顶点(\`gl.VERTEX_SHADER\`)还是片元(\`gl.FRAGMENT_SHADER\`)
-**返回值**
+**解释**<br/>
+获取shader的相关信息，一般用于检测shader是否编译成功<br/>
+**参数**<br/>
+shader - 着色器<br/>
+pname - \`gl.DELETE_STATUS\`查询着色器是否被标记为删除 / \`gl.COMPILE_STATUS\`查询着色器是否编译成功 / \`gl.SHADER_TYPE\`查询着色器是顶点(\`gl.VERTEX_SHADER\`)还是片元(\`gl.FRAGMENT_SHADER\`)<br/>
+**返回值**<br/>
 根据pname不同可能返回boolean值或着色器类型信息
 
 ---
 
 #### gl.getShaderInfoLog(shader)
-**解释**
-输出着色器的信息日志，只有在编译错误或有警告时才有信息
-**参数**
-shader - 着色器
-**返回值**
+**解释**<br/>
+输出着色器的信息日志，只有在编译错误或有警告时才有信息<br/>
+**参数**<br/>
+shader - 着色器<br/>
+**返回值**<br/>
 info - string类型的错误信息
 
 ---
 
 #### gl.deleteShader(shader)
-**解释**
-删除着色器,释放内存。<br/>当该着色器正在使用或已链接到着色器程序时，只会标记为删除，当解除所有链接未被使用时，才会真正删除。
-**参数**
+**解释**<br/>
+删除着色器,释放内存。<br/>当该着色器正在使用或已链接到着色器程序时，只会标记为删除，当解除所有链接未被使用时，才会真正删除。<br/>
+**参数**<br/>
 shader - 着色器
 
 ---
 
 #### gl.createProgram()
-**解释**
-创建一个新的空的着色器程序
-**返回值**
+**解释**<br/>
+创建一个新的空的着色器程序<br/>
+**返回值**<br/>
 program - WebGLProgram对象
 
 ---
 
 #### gl.attachShader(program, shader)
-**解释**
-给program装载shader，一般需要调用两次，分别装配vertexShader和fragmentShader
-**参数**
+**解释**<br/>
+给program装载shader，一般需要调用两次，分别装配vertexShader和fragmentShader<br/>
+**参数**<br/>
 program - 着色器程序 WebGLProgram对象<br/>
-shader - 着色器 WebGLShader对象
-**返回值**
-无
+shader - 着色器 WebGLShader对象<br/>
 
 ---
 
 #### gl.linkProgram(program)
-**解释**
-将着色器程序链接到GPU上
-**参数**
+**解释**<br/>
+将着色器程序链接到GPU上<br/>
+**参数**<br/>
 program - 着色器程序 WebGLProgram对象
 
 ---
 
 #### gl.getProgramParameter(program, pname)
-**解释**
-检查program的状态信息
-**参数**
+**解释**<br/>
+检查program的状态信息<br/>
+**参数**<br/>
 program - 着色器程序 WebGLProgram对象<br/>
 pname - <br/>
 - \`gl.DELETE_STATUS\`：返回一个GLboolean, 指示程序是否已标记为删除。
@@ -230,45 +227,42 @@ pname - <br/>
 - \`gl.TRANSFORM_FEEDBACK_BUFFER_MODE\`: 仅WEBGL2.0, 返回缓冲模式, \`gl.SEPARATE_ATTRIBS\`或\`gl.INTERLEAVED_ATTRIBS\`
 - \`gl.TRANSFORM_FEEDBACK_VARYINGS\`：仅WEBGL2.0，返回GLint, 指示在变换反馈模式下要捕获的varying类型变量的数量。
 - \`gl.ACTIVE_UNIFORM_BLOCKS\`: 仅WEBGL2.0，返回GLint,指示uniform block的数量
-**返回值**
+
+**返回值**<br/>
 根据pname返回对应信息
 
 ---
 
 #### gl.getProgramInfoLog(program)
-**解释**
-输出program的报错和警告信息
-**参数**
-program - 着色器程序对象
-**返回值**
+**解释**<br/>
+输出program的报错和警告信息<br/>
+**参数**<br/>
+program - 着色器程序对象<br/>
+**返回值**<br/>
 info - string类型的错误信息
 
 ---
 
 #### gl.deleteProgram(program)
-**解释**
-删除program，如果该program已链接或正在使用,则只会标记删除；待已解除和未使用时才会真正删除
-**参数**
-program - 着色器对象
-**返回值**
-无
+**解释**<br/>
+删除program，如果该program已链接或正在使用,则只会标记删除；待已解除和未使用时才会真正删除<br/>
+**参数**<br/>
+program - 着色器对象<br/>
 
 ---
 
 #### gl.createBuffer()
-**解释**
-创建一个缓冲，一般用于把顶点信息传进着色器
-**参数**
-无
-**返回值**
+**解释**<br/>
+创建一个缓冲，一般用于把顶点信息传进着色器<br/>
+**返回值**<br/>
 buffer - WebGLBuffer对象
 
 ---
 
 #### gl.bindBuffer(target, buffer);
-**解释**
-把buffer绑定到目标，这个目标可以理解为GPU和缓冲之间的中转站，buffer需要跟这个中转站绑定，才能传输数据
-**参数**
+**解释**<br/>
+把buffer绑定到目标，这个目标可以理解为GPU和缓冲之间的中转站，buffer需要跟这个中转站绑定，才能传输数据<br/>
+**参数**<br/>
 target - <br/>
 - \`gl.ARRAY_BUFFER\`: 包含顶点属性的缓冲区，例如顶点坐标，纹理坐标数据或顶点颜色数据,该中转站专门处理顶点相关数据
 - \`gl.ELEMENT_ARRAY_BUFFER\`: 用于索引的中转站
@@ -284,33 +278,34 @@ buffer - 缓冲
 ---
 
 #### gl.useProgram(program)
-**解释**
-告诉GPU当前使用哪一个着色器程序。 GPU应该可以链接多个着色器程序，但在某一时刻需要具体指定使用哪一个
-**参数**
+**解释**<br/>
+告诉GPU当前使用哪一个着色器程序。 GPU应该可以链接多个着色器程序，但在某一时刻需要具体指定使用哪一个<br/>
+**参数**<br/>
 program - 着色器程序
 
 ---
 
 #### gl.getAttribLocation(program, name);
-**解释**
-获取着色器中某个变量的句柄，只有获取了句柄，外部才能调用相关方法给该句柄传值
-**参数**
-program - 着色器程序
-name - 着色器中某自定义变量的变量名
-**返回值**
+**解释**<br/>
+获取着色器中某个变量的句柄，只有获取了句柄，外部才能调用相关方法给该句柄传值<br/>
+**参数**<br/>
+program - 着色器程序<br/>
+name - 着色器中某自定义变量的变量名<br/>
+**返回值**<br/>
 一个整数，句柄值
 
 ---
 
 #### gl.bufferData(target, typeArray, usage)
-**解释**
+**解释**<br/>
 将类型化数组数据传送给指定的中转站目标，该中转站再把数据装载进绑定的缓冲区<br/>
-该方法有多个重载：
+该方法有多个重载：<br/>
 - \`void gl.bufferData(target, size, usage);\`
 - \`void gl.bufferData(target, ArrayBuffer srcData, usage);\`
 - \`void gl.bufferData(target, ArrayBufferView srcData, usage);\`
 - \`void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);\` 仅WEBGL2.0
-**参数**
+
+**参数**<br/>
 target - 目标<br/>
   - \`gl.ARRAY_BUFFER\`: 把数据传输给管顶点的中转站
   - \`gl.ELEMENT_ARRAY_BUFFER\`: 把数据传输给管索引的中转站
@@ -340,18 +335,18 @@ length - 可选，GLuint, 默认0
 ---
 
 #### gl.enableVertexAttribArray(positionAttributeLocation)
-**解释**
-启动某个attribute类型的变量，attribute类型的变量需要先启用，启用后可以使用相关API
-**参数**
+**解释**<br/>
+启动某个attribute类型的变量，attribute类型的变量需要先启用，启用后可以使用相关API<br/>
+**参数**<br/>
 positionAttributeLocation - 某个attribute变量的句柄，由\`gl.getAttribLocation()\`获取
 
 ---
 
 #### gl.vertexAttribPointer(positionAttributeLocation, size, type, normalize, stride, offset);
-**解释**
+**解释**<br/>
 设置attribute属性如何正确的获取缓冲区中转站的数据。<br/>
-因为缓冲中的数据是一个类型化数组，有很多值，每一组值表示一个顶点，着色器需要运行很多次来分别处理每一个顶点，每一次运行时，attribute需要根据一定的设置来读取下一个顶点，有点像迭代器。
-**参数**
+因为缓冲中的数据是一个类型化数组，有很多值，每一组值表示一个顶点，着色器需要运行很多次来分别处理每一个顶点，每一次运行时，attribute需要根据一定的设置来读取下一个顶点，有点像迭代器。<br/>
+**参数**<br/>
 positionAttributeLocation - attribute属性句柄，表示要设置这一个attribute变量<br/>
 size - 整数，每次从数组中提取几个数据,只能是1,2,3,4其中之一，最大4<br/>
 type - 数据的类型，比如缓冲区中是Float32Array的数据，通常就应该设置为\`gl.FLOAT\`<br/>
@@ -369,67 +364,67 @@ offset - 偏移量，首次读取时偏移多少个字节开始读数据，单�
 ---
 
 #### gl.getUniformLocation(program, name)
-**解释**
-获取某个uniform类型变量的句柄
-**参数**
-program - 着色器程序
-name - 着色器中某个uniform变量的变量名
-**返回值**
+**解释**<br/>
+获取某个uniform类型变量的句柄<br/>
+**参数**<br/>
+program - 着色器程序<br/>
+name - 着色器中某个uniform变量的变量名<br/>
+**返回值**<br/>
 句柄值
 
 ---
 
 #### gl.uniform2f(location, value1,value2)
-**解释**
-设置某个uniform变量的值，还有配套的方法，比如\`gl.uniform4f\`就需要传递4个值
-**参数值**
-location - uniform变量句柄
-value1 - 值
+**解释**<br/>
+设置某个uniform变量的值，还有配套的方法，比如\`gl.uniform4f\`就需要传递4个值<br/>
+**参数值**<br/>
+location - uniform变量句柄<br/>
+value1 - 值<br/>
 value2 - 值
 
 ---
 
 #### gl.viewport(x,y,width,height);
-**解释**
+**解释**<br/>
 设置视口分辨率，该方法指定x,y从标准化设备坐标到窗口坐标的映射。就是设置分辨率，一般设置成跟canvas实际大小一致。<br/>
 canvas有个CSS大小，canvas自身还有个canvas.width/canvas.height属性，还有webgl的设置，这3者应该保持一致<br/>
-这个方法可以用在改变浏览器窗口大小后调用
-**参数**
-x,y - webgl坐标系原点，默认是0，0 （左下角）
-width,height - 非负数，默认值canvas的宽高
-**例子**
+这个方法可以用在改变浏览器窗口大小后调用<br/>
+**参数**<br/>
+x,y - webgl坐标系原点，默认是0，0 （左下角）<br/>
+width,height - 非负数，默认值canvas的宽高<br/>
+**例子**<br/>
 \`gl.viewport(0,0,gl.canvas.widht, gl.canvas.height)\`
 
 ---
 
 #### gl.clearColor(r,g,b,a)
-**解释**
-指定清除颜色缓冲区时使用的颜色，就是橡皮擦的颜色
-**参数**
+**解释**<br/>
+指定清除颜色缓冲区时使用的颜色，就是橡皮擦的颜色<br/>
+**参数**<br/>
 r,g,b,a - 4个通道值
 
 ---
 
 #### gl.clearDepth(depth)
-**解释**
-设置清除深度缓冲区时的默认值
-**参数**
+**解释**<br/>
+设置清除深度缓冲区时的默认值<br/>
+**参数**<br/>
 depth - 深度值，默认1，可以使用\`gl.DEPTH_CLEAR_VALUE\`获取当前深度值
 
 ---
 
 #### gl.clearStencil(s)
-**解释**
-设置清除深度缓冲区时的默认值
-**参数**
+**解释**<br/>
+设置清除深度缓冲区时的默认值<br/>
+**参数**<br/>
 s - 清除模板缓冲区时使用的索引，默认0，\`gl.STENCIL_CLEAR_VALUE\`获取当前模板索引值
 
 ---
 
 #### gl.clear(mask);
-**解释**
-用预设值清除指定缓冲区的数据
-**参数**
+**解释**<br/>
+用预设值清除指定缓冲区的数据<br/>
+**参数**<br/>
 mask - <br/>
 - gl.COLOR_BUFFER_BIT 颜色缓冲区
 - gl.DEPTH_BUFFER_BIT 深度缓冲区
@@ -441,9 +436,9 @@ mask - <br/>
 ---
 
 #### gl.drawArrays(mode, first, count)
-**解释**
-设置好着色器，设置好缓冲区，设置好数据等等后，执行该方法根据缓冲区数组中的顶点数据绘制一帧到canvas上
-**参数**
+**解释**<br/>
+设置好着色器，设置好缓冲区，设置好数据等等后，执行该方法根据缓冲区数组中的顶点数据绘制一帧到canvas上<br/>
+**参数**<br/>
 mode - 绘制的方式<br/>
   - \`gl.POINTS\`：绘制点,每个顶点被单独绘制出来
   - \`gl.LINE_STRIP\`：画一条直线到下一个顶点。所有的点将连起来形成一条折线
@@ -453,5 +448,5 @@ mode - 绘制的方式<br/>
   - \`gl.TRIANGLE_FAN\`：三角形扇，第1个点作为公共顶点，和其他每两个顶点相连，像扇形。
   - \`gl.TRIANGLES\`：每三个顶点组成一个三角形
 
-  `;
+`;
 })();
