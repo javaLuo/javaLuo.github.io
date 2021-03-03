@@ -442,7 +442,7 @@ export const blogs = [
     tags: ["小程序", "css"],
   },
   {
-    id: "wegbl1",
+    id: "webgl1",
     name: "WEBGL学习笔记01",
     info: "学吧，兄弟",
     type: 1,
