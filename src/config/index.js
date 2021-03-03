@@ -441,6 +441,14 @@ export const blogs = [
     date: "2021/01/29",
     tags: ["小程序", "css"],
   },
+  {
+    id: "wegbl1",
+    name: "WEBGL学习笔记01",
+    info: "学吧，兄弟",
+    type: 1,
+    date: "2021/01/29",
+    tags: ["小程序", "css"],
+  },
 ];
 
 export const share = [
