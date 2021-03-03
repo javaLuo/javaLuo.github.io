@@ -232,7 +232,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "16911fff8fee50be947e",
+    "revision": "5b395616f8904ae70ba1",
     "url": "/css/app.207c87b9.css"
   },
   {
@@ -740,7 +740,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "d6375092cf2bbe0e6da71640753769d5",
+    "revision": "322d1b43c28d655c20fe9c061ca60bd2",
     "url": "/index.html"
   },
   {
@@ -748,8 +748,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.cd08fd0d.js"
   },
   {
-    "revision": "16911fff8fee50be947e",
-    "url": "/js/app.e3cb6474.js"
+    "revision": "5b395616f8904ae70ba1",
+    "url": "/js/app.c1bf9ca1.js"
   },
   {
     "revision": "263ccf4de5d66fdadd42",
