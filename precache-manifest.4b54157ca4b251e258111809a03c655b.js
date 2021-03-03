@@ -32,10 +32,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/brcity.js"
   },
   {
-    "revision": "b71b0c4c24c05c202887213fa42509a9",
-    "url": "/blogs/canvasapi.md"
-  },
-  {
     "revision": "92003b0947001164d1149d7068f94670",
     "url": "/blogs/datafeed.js"
   },
@@ -220,6 +216,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/water.js"
   },
   {
+    "revision": "85b8d945c8c5700f8ba3cebabc474737",
+    "url": "/blogs/webgl1.js"
+  },
+  {
     "revision": "03b75956ae428726e4f2f2eacd69890f",
     "url": "/blogs/words.js"
   },
@@ -232,7 +232,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.465e618e.css"
   },
   {
-    "revision": "4e2183604ece61634a61",
+    "revision": "16911fff8fee50be947e",
     "url": "/css/app.207c87b9.css"
   },
   {
@@ -740,7 +740,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "bc7ab1264bdd09d6b3287c31c41f0a0a",
+    "revision": "d6375092cf2bbe0e6da71640753769d5",
     "url": "/index.html"
   },
   {
@@ -748,8 +748,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.cd08fd0d.js"
   },
   {
-    "revision": "4e2183604ece61634a61",
-    "url": "/js/app.8b572aa8.js"
+    "revision": "16911fff8fee50be947e",
+    "url": "/js/app.e3cb6474.js"
   },
   {
     "revision": "263ccf4de5d66fdadd42",
