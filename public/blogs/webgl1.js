@@ -10,7 +10,7 @@
 4. varyings 变量，在顶点着色器中读写它的值，在片元着色器中设置同名变量，可以只读这个值
 
 ### 着色器
-\`\`\`js
+\`\`\`glsl
 <script type="x-shader/x-vertex">
   attribute vec4 a_position; // 属性变量 vec4 接受外部传入的顶点位置信息
   uniform vec2 u_resolution;  // 全局变量 vec2 接受外界传入的canvas画布信息
