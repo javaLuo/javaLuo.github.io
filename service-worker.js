@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.40364c8639fbaf42c46824dfcbea3f37.js"
+  "/precache-manifest.cfe2688dc237f58f0590fd438d11c075.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "isluo"});
+workbox.core.setCacheNameDetails({prefix: "vue3-blog-github"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
