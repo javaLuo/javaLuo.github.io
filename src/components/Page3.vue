@@ -10,13 +10,13 @@
           content="QQ 376693576"
           placement="top"
         >
-          <img :src="ImgQQ" />
+          <img src="@/assets/footer/share_qq.png" />
         </el-tooltip>
         <el-tooltip class="item" effect="dark" placement="top">
-          <div slot="content">
-            <img class="img-wechart" :src="ImgWeChart" />
-          </div>
-          <img :src="ImgWechart" class="ml" />
+          <template v-slot:content>
+            <img class="img-wechart" src="@/assets/weima2.png" />
+          </template>
+          <img src="@/assets/footer/share_wechart.png" class="ml" />
         </el-tooltip>
         <el-tooltip
           class="item"
@@ -29,7 +29,7 @@
             target="_blank"
             rel="me noopener"
           >
-            <img :src="ImgTwitter" class="ml" />
+            <img src="@/assets/footer/share_twitter.png" class="ml" />
           </a>
         </el-tooltip>
         <el-tooltip
@@ -39,7 +39,7 @@
           placement="top"
         >
           <a href="mailto:376693576@qq.com" target="_blank" rel="me noopener">
-            <img :src="ImgEmail" class="ml" />
+            <img src="@/assets/footer/email.png" class="ml" />
           </a>
         </el-tooltip>
       </li>
@@ -72,7 +72,7 @@
           rel="nofollow me noopener noreferrer"
           title="vue.js"
         >
-          <img :src="LogoVue" />
+          <img src="@/assets/logo-vue.png" />
         </a>
 
         <a
@@ -81,7 +81,7 @@
           rel="nofollow me noopener noreferrer"
           title="mozilla.org"
         >
-          <img :src="LogoMdn" />
+          <img src="@/assets/logo-mdn.png" />
         </a>
         <a
           href="http://www.w3school.com.cn/"
@@ -89,7 +89,7 @@
           rel="nofollow me noopener noreferrer"
           title="w3school"
         >
-          <img :src="LogoHTML5" />
+          <img src="@/assets/logo-html5.png" />
         </a>
         <a
           href="https://github.com/javaLuo"
@@ -97,11 +97,11 @@
           rel="nofollow me noopener noreferrer"
           title="github"
         >
-          <img :src="LogoGitHub" />
+          <img src="@/assets/logo-github.png" />
         </a>
       </div>
-      <div>vue-cli 4.x 全家桶框架支持</div>
-      <div>整站都放在了GitHub, V3API获取文章和评论</div>
+      <div>Vue3.0 全家桶框架支持</div>
+      <div>GitHub Pages, V3API获取文章和评论</div>
       <div>感谢开源世界的恩惠</div>
     </div>
     <div class="last">
@@ -115,35 +115,10 @@
 </template>
 
 <script>
-import LogoVue from "../../assets/logo-vue.png";
-import LogoGitHub from "../../assets/logo-github.png";
-import LogoMdn from "../../assets/logo-mdn.png";
-import LogoHTML5 from "../../assets/logo-html5.png";
-import ImgPic from "../../assets/myhead.png";
-
-import ImgQQ from "../../assets/footer/share_qq.png";
-import ImgWechart from "../../assets/footer/share_wechart.png";
-import ImgTwitter from "../../assets/footer/share_twitter.png";
-import ImgEmail from "../../assets/footer/email.png";
-import ImgWeChart from "../../assets/weima2.png";
 export default {
   name: "page3",
-  data() {
-    return {
-      LogoVue,
-      LogoGitHub,
-      LogoMdn,
-      LogoHTML5,
-      ImgPic,
-      ImgQQ,
-      ImgEmail,
-      ImgWechart,
-      ImgTwitter,
-      ImgWeChart,
-    };
-  },
   props: {
-    hi: { type: Object },
+    hi: Object,
   },
 };
 </script>

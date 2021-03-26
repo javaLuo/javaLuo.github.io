@@ -1,6 +1,10 @@
 <template>
   <div class="page2" :class="{ show: isShow, mobile: !isPc }">
-    <Menus @onClickScroll="onClickScroll" />
+    <Menus
+      :isPlaying="isPlaying"
+      @onClickScroll="onClickScroll"
+      @onPlayOrStop="onPlayOrStop"
+    />
     <div id="bodyBox" class="body-box" @mousewheel.stop @DOMMouseScroll.stop>
       <router-view></router-view>
     </div>
@@ -8,35 +12,35 @@
 </template>
 
 <script>
-import Menus from "../../components/Menus.vue";
-import { isPc } from "../../util/tools";
+import { computed } from "vue";
+import Menus from "@/components/Menus.vue";
+
 export default {
   name: "page2",
-  data() {
-    return {
-      isPc: isPc(),
-      isShow: false,
-      scrollDom: null,
-    };
-  },
   props: {
+    isPc: Boolean,
+    isPlaying: Boolean,
     pageNow: Number,
   },
   components: {
     Menus,
   },
-  methods: {
-    onClickScroll() {
-      this.$emit("onDownClick", 2);
-    },
-  },
-  mounted() {
-    if (this.pageNow === 1) {
-      this.isShow = true;
-    }
-  },
-  beforeUpdate() {
-    this.isShow = this.pageNow === 1;
+  setup(props, context) {
+    const isShow = computed(() => props.pageNow === 1);
+
+    const onClickScroll = () => {
+      context.emit("onDownClick", props.pageNow === 2 ? 1 : 2);
+    };
+
+    const onPlayOrStop = (type) => {
+      context.emit("onPlayOrStop", type);
+    };
+
+    return {
+      isShow,
+      onClickScroll,
+      onPlayOrStop,
+    };
   },
 };
 </script>

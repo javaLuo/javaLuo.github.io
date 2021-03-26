@@ -12,18 +12,23 @@
       loop
       preload
       @canplaythrough="onCanPlay"
-      id="audio1"
+      ref="refMp3Dom"
     ></audio>
     <div id="scroller" class="scroller">
       <ul class="scroll-wrapper">
         <li v-if="isPc" class="scroll-page">
-          <Page1 :pageNow="pageNow" @onDownClick="onClickScroll" />
+          <Page1 :pageNow="refPageNow" @onDownClick="onClickScroll" />
         </li>
         <li class="scroll-page">
-          <Page2 :pageNow="pageNow" @onDownClick="onClickScroll" />
+          <Page2
+            :pageNow="refPageNow"
+            :isPlaying="isPlaying"
+            @onDownClick="onClickScroll"
+            @onPlayOrStop="onPlayOrStop"
+          />
         </li>
         <li v-if="isPc" class="scroll-page foot-page">
-          <Page3 :pageNow="pageNow" :hi="hi" />
+          <Page3 :pageNow="refPageNow" :hi="text" />
         </li>
       </ul>
     </div>
@@ -31,54 +36,56 @@
 </template>
 
 <script>
-import { isPc } from "../util/tools";
+import { ref, inject, watch, onMounted, onBeforeUnmount } from "vue";
 import IScroll from "iscroll";
-import Page1 from "./homePages/Page1.vue";
-import Page2 from "./homePages/Page2.vue";
-import Page3 from "./homePages/Page3.vue";
-import { mapState } from "vuex";
+import useMp3 from "@/hooks/mp3.js";
+import useHi from "@/hooks/hi";
+import Page1 from "@/components/Page1";
+import Page2 from "@/components/Page2";
+import Page3 from "@/components/Page3";
+
+let scrollDom;
+let scrolling; // 是否正在滚动中
+const mp3Dom = {
+  // mp3控制
+  canplay: false,
+  a: null,
+};
+
 export default {
-  name: "home",
-  data: function () {
-    return {
-      isPc: isPc(),
-      scrollDom: null,
-      scrolling: false, // 是否正在滚动中
-      pageNow: 0,
-      mp3Dom: {
-        // audio, 一个音轨
-        canplay: false,
-        a: null,
-      },
-    };
-  },
+  name: "Home",
   components: {
     Page1,
     Page2,
     Page3,
   },
-  computed: {
-    ...mapState({
-      play: (state) => state.page.playing,
-      hi: (state) => state.app.hi,
-    }),
-  },
-  mounted: function () {
-    /** PC端才初始化iscroll和声音 **/
-    if (this.isPc) {
-      this.initScroll();
-      this.mp3Dom.a = document.getElementById("audio1");
-      this.mp3Dom.a.volume = 0;
-    }
-  },
-  beforeDestroy: function () {
-    /** 离开前销毁iscroll实例 **/
-    this.scrollDom && this.scrollDom.destroy();
-  },
-  methods: {
-    /** 初始化页面全局滚动 **/
-    initScroll() {
-      this.scrollDom = new IScroll("#scroller", {
+  setup() {
+    const isPc = inject("isPc"); // 是否是PC端
+    const refMp3Dom = ref();
+    const {
+      onPlay,
+      onPause,
+      onCanPlay,
+      onSetPlay,
+      isPlaying,
+      init,
+      isStop,
+    } = useMp3();
+    const { text, getHiData } = useHi();
+
+    onMounted(() => {
+      init(refMp3Dom);
+      initScroll();
+    });
+
+    onBeforeUnmount(() => {
+      scrollDom && scrollDom.destroy();
+    });
+
+    // 翻页相关
+    const refPageNow = ref(0); // 当前页码
+    const initScroll = () => {
+      scrollDom = new IScroll("#scroller", {
         snap: true,
         bounceEasing: {
           style: "cubic-bezier(1,0.1,0.1,1)",
@@ -87,107 +94,72 @@ export default {
         preventDefault: true,
         disablePointer: true,
       });
-      this.scrollDom.on("scrollEnd", () => {
-        this.scrolling = false;
+      scrollDom.on("scrollEnd", () => {
+        scrolling = false;
       });
       document.body.classList.add("page0");
-    },
-    /** mp3 可以开始播放了 **/
-    onCanPlay() {
-      this.mp3Dom.canplay = true;
-      // 为了在音乐末尾和开头无缝衔接
-      this.mp3Dom.a.ontimeupdate = () => {
-        if (this.mp3Dom.a.duration - 3 < this.mp3Dom.a.currentTime) {
-          this.mp3Dom.a.currentTime = 2;
-        }
-      };
-    },
+    };
+
     /** 监听滚轮事件处理页面滚动 **/
-    onMouseWheel(e) {
-      // console.log("有在触发吗,IE", e);
+    const onMouseWheel = (e) => {
+      console.log('滚动：', e);
       const f = e.wheelDeltaY || -e.detail || e.wheelDelta;
-      if (this.scrolling) {
+      if (scrolling) {
         return;
       }
 
-      if (f < 0 && this.pageNow < 2) {
+      if (f < 0 && refPageNow.value < 2) {
         // 向下滚动
-        this.scrolling = true;
-        this.pageNow++;
-        this.scrollDom && this.scrollDom.goToPage(1, this.pageNow, 1000);
-        // console.log("滚动：", this.scrollDom);
-      } else if (f > 0 && this.pageNow > 0) {
+        scrolling = true;
+        refPageNow.value++;
+        scrollDom && scrollDom.goToPage(1, refPageNow.value, 1000);
+      } else if (f > 0 && refPageNow.value > 0) {
         // 向上滚动
-        this.scrolling = true;
-        this.pageNow--;
-        this.scrollDom && this.scrollDom.goToPage(1, this.pageNow, 1000);
+        scrolling = true;
+        refPageNow.value--;
+        scrollDom && scrollDom.goToPage(1, refPageNow.value, 1000);
       }
-    },
+    };
+
     /** 手动点击跳转页面 **/
-    onClickScroll(p) {
-      if (this.pageNow === p) {
+    const onClickScroll = (p) => {
+      if (refPageNow.value === p) {
         return;
       }
-      this.scrolling = true;
-      this.pageNow = p;
-      this.scrollDom && this.scrollDom.goToPage(1, this.pageNow, 1000);
-    },
-    /** 音频事件，开始播放 **/
-    onMp3Play() {
-      if (this.mp3Dom.canplay) {
-        this.mp3Dom.a.play();
-        this.volumeUp();
-      }
-    },
-    /** 音频事件，暂停播放 **/
-    onMp3Pause() {
-      this.volumeDown();
-    },
-    /** 音频音量调大 **/
-    volumeUp() {
-      clearTimeout(this.volumeTimer);
-      if (this.mp3Dom.a.volume + 0.1 <= 1) {
-        this.mp3Dom.a.volume += 0.1;
-        this.volumeTimer = setTimeout(() => {
-          this.volumeUp();
-        }, 200);
-      }
-    },
-    /** 音频音量调小 **/
-    volumeDown() {
-      clearTimeout(this.volumeTimer);
-      if (this.mp3Dom.a.volume - 0.1 >= 0) {
-        this.mp3Dom.a.volume -= 0.1;
-        this.volumeTimer = setTimeout(() => {
-          this.volumeDown();
-        }, 200);
-      } else {
-        this.mp3Dom.a.pause();
-      }
-    },
-  },
-  watch: {
-    pageNow(newV) {
-      if (newV !== 0 && this.play) {
-        this.onMp3Play();
+      scrolling = true;
+      refPageNow.value = p;
+      scrollDom && scrollDom.goToPage(1, refPageNow.value, 1000);
+    };
+
+    const onPlayOrStop = (type) => {
+      onSetPlay(type);
+    };
+
+    watch(refPageNow, (newV) => {
+      if (newV !== 0 && !isStop.value) {
+        onPlay();
         document.body.classList.remove("page0");
-        if (newV === 2 && isPc) {
-          this.$store.dispatch({
-            type: "app/getHi",
-          });
-        }
       } else {
-        this.onMp3Pause();
+        onPause();
         document.body.classList.add("page0");
       }
-    },
-    play(newV) {
-      if (newV) {
-        this.onMp3Play();
-      } else {
-        this.onMp3Pause();
+      if (newV === 2 && isPc) {
+        getHiData();
       }
-    },
+    });
+
+    return {
+      isPc,
+      refPageNow,
+      mp3Dom,
+      text,
+      isPlaying,
+      onCanPlay,
+      onMouseWheel,
+      onClickScroll,
+      onPlayOrStop,
+      refMp3Dom,
+    };
   },
 };
 </script>

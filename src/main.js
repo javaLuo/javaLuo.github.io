@@ -1,24 +1,32 @@
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
+import "./registerServiceWorker";
 import router from "./router";
-import store from "./store/store";
 import {
-  Pagination,
-  Breadcrumb,
-  BreadcrumbItem,
-  Input,
-  Tooltip
-} from "element-ui";
-Vue.use(Pagination);
-Vue.use(Breadcrumb);
-Vue.use(BreadcrumbItem);
-Vue.use(Input);
-Vue.use(Tooltip);
+  ElButton,
+  ElMessage,
+  ElInput,
+  ElBreadcrumb,
+  ElBreadcrumbItem,
+  ElPagination,
+  ElTooltip,
+  ElIcon,
+} from "element-plus";
+import lang from "element-plus/lib/locale/lang/zh-cn";
+import "dayjs/locale/zh-cn";
+import locale from "element-plus/lib/locale";
 
-Vue.config.productionTip = false;
+locale.use(lang);
+const app = createApp(App);
+app.$message = ElMessage;
+app
+  .use(ElButton)
+  .use(ElInput)
+  .use(ElBreadcrumb)
+  .use(ElBreadcrumbItem)
+  .use(ElPagination)
+  .use(ElTooltip)
+  .use(ElIcon);
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount("#app");
+app.use(router);
+app.mount("#app");

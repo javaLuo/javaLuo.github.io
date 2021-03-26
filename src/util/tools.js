@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 /** 判断当前环境是否是PC端 **/
 export const isPc = () => {
   const userAgentInfo = navigator.userAgent.toLowerCase();
@@ -9,7 +7,7 @@ export const isPc = () => {
     "symbianOS",
     "windows phone",
     "ipad",
-    "ipod"
+    "ipod",
   ];
   let flag = true;
   for (let v = 0; v < Agents.length; v++) {
@@ -28,7 +26,7 @@ export const isPc = () => {
  * 简介
  * */
 export const getBlogInfo = (gitname, allofblog) => {
-  const data = allofblog.find(item => item.gitname === gitname);
+  const data = allofblog.find((item) => item.gitname === gitname);
   return data || {};
 };
 
@@ -36,8 +34,8 @@ export const getBlogInfo = (gitname, allofblog) => {
  * 比较两个日期字符串的大小，倒序
  * sort排序
  * */
-export const sortDate = data => {
-  const d = _.cloneDeep(data);
+export const sortDate = (data) => {
+  const d = [...data];
   d.sort((a, b) => {
     return Number(
       b.date.split("/").join("") - Number(a.date.split("/").join(""))

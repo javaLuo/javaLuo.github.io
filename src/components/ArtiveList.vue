@@ -20,24 +20,25 @@
 
 <script>
 /** 单个数据列表项 **/
-import { mapState } from "vuex";
+import { useRouter } from "vue-router";
 
 export default {
   name: "ArtiveList",
-  data: function() {
-    return {};
-  },
   props: {
-    thisData: Object
+    thisData: Object,
   },
+  setup(props) {
+    const router = useRouter();
 
-  methods: {
     /** 点击某篇文章保存相关数据进入详情 **/
-    onDetailChose() {
-      this.$router.push(`/detail/${this.thisData.id}`);
-    }
+    const onDetailChose = () => {
+      router.push(`/detail/${props.thisData.id}`);
+    };
+
+    return {
+      onDetailChose,
+    };
   },
-  watch: {}
 };
 </script>
 

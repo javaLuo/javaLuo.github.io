@@ -7,11 +7,11 @@
       </el-breadcrumb>
     </div>
     <ul>
-      <li class="tag-box" v-for="(item, index) in allTags" :key="`f${index}`">
+      <li class="tag-box" v-for="(item, index) in tags" :key="`f${index}`">
         <div class="tag-title">{{ item }}</div>
         <ul class="tag-list">
           <li
-            v-for="(item2, index2) in checkTags(item)"
+            v-for="(item2, index2) in onCheckTags(item)"
             @click="onLinkClick(item2.id)"
             :key="index2"
           >
@@ -20,58 +20,37 @@
         </ul>
       </li>
     </ul>
-    <MyLoading :show="!blogConfig" />
+    <MyLoading :show="!isBloged" />
   </div>
 </template>
 
 <script>
 /** 标签页 **/
-import { mapState } from "vuex";
-import { sortDate } from "../../util/tools";
-import ImgLoading from "../../assets/loading.gif";
-import MyLoading from "../../components/MyLoading";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { blogs } from "@/config";
+import MyLoading from "@/components/MyLoading";
+
 export default {
   name: "name-class",
-  data: function() {
-    return {
-      ImgLoading,
-      pageNow: 1,
-      pageSize: 12,
-      total: 0,
-      pageNowData: []
-    };
-  },
   components: {
-    MyLoading
+    MyLoading,
   },
-  computed: {
-    ...mapState({
-      blogConfig: state => state.app.blogConfig,
-      listData(state) {
-        this.total = state.app.blogConfig.length;
-        return sortDate(state.app.blogConfig);
-      },
-      allTags(state) {
-        let tags = new Set();
-        state.app.blogConfig.forEach(item => {
-          item.tags.forEach(item2 => {
-            tags.add(this.firstUpperCase(item2));
-          });
-        });
-        return Array.from(tags).sort();
+  setup() {
+    const router = useRouter();
+    const isBloged = ref(!!blogs);
+
+    let tags = new Set();
+    for (let i = 0; i < blogs.length; i++) {
+      for (let j = 0; j < blogs[i].tags.length; j++) {
+        const tag = blogs[i].tags[j];
+        tags.add(tag);
       }
-    })
-  },
-  methods: {
-    // 首字母大写
-    firstUpperCase(str) {
-      return str.toLowerCase().replace(/(^|\s)[a-z]/g, function(s) {
-        return s.toUpperCase();
-      });
-    },
+    }
+    tags = Array.from(tags).sort();
     // 筛选文章中指定tag的文章
-    checkTags(tag) {
-      return this.blogConfig.filter(item => {
+    const onCheckTags = (tag) => {
+      return blogs.filter((item) => {
         for (let i = 0; i < item.tags.length; i++) {
           if (item.tags[i].toUpperCase() === tag.toUpperCase()) {
             return true;
@@ -79,12 +58,19 @@ export default {
         }
         return false;
       });
-    },
-    // 跳转到详情
-    onLinkClick(id) {
-      this.$router.push(`/detail/${id}`);
-    }
-  }
+    };
+
+    const onLinkClick = (id) => {
+      router.push(`/detail/${id}`);
+    };
+
+    return {
+      tags,
+      isBloged,
+      onCheckTags,
+      onLinkClick,
+    };
+  },
 };
 </script>
 
@@ -119,6 +105,7 @@ export default {
     .tag-title {
       font-size: 22px;
       margin-bottom: 5px;
+      text-transform: uppercase;
     }
     .tag-list {
       display: flex;

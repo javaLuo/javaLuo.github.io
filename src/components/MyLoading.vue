@@ -6,16 +6,10 @@
 </template>
 
 <script>
-import ImgLoading from "../assets/loading.gif";
 export default {
-  data: function() {
-    return {
-      ImgLoading
-    };
-  },
   props: {
-    show: { type: Boolean, default: false }
-  }
+    show: { type: Boolean, default: false },
+  },
 };
 </script>
 <style lang="less" scoped>

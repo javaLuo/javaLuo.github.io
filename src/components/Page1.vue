@@ -6,56 +6,56 @@
       src="https://api.ixiaowai.cn/gqapi/gqapi.php"
       @load="onBackImgLoad"
     />
-    <div class="shadow all_trans1s"></div>
+    <div class="shadow all_trans1s" :class="{ show: isBackShow }"></div>
 
     <div class="info-box">
       <span class="all_trans1s title">ISLUO BLOG</span>
       <div class="all_trans1s">hide in the city</div>
       <div class="all_trans1s">no card, no phone, no ID</div>
     </div>
-    <img class="down" :src="ImgDown" @click="onDownClick" />
+    <img class="down" src="../assets/down.png" @click="onDownClick" />
   </div>
 </template>
 
 <script>
-import ImgDown from "../../assets/down.png";
+import { ref, toRefs, watch, onMounted } from "vue";
 
 export default {
   name: "page1",
-  data() {
-    return {
-      isShow: false,
-      ImgDown,
-      isBackShow: false, // 首页背景图是否加载
-    };
-  },
   props: {
     pageNow: Number,
   },
+  setup(props, context) {
+    const { pageNow } = toRefs(props);
+    const isShow = ref(false); // 是否出现
+    const isBackShow = ref(false); // 首页背景图是否加载
 
-  mounted() {
-    if (this.pageNow === 0) {
-      this.isShow = true;
-    }
-  },
-  beforeUpdate() {
-    this.isShow = this.pageNow === 0;
-  },
-  methods: {
-    // 点击了向下的按钮，跳转到下面一页
-    onDownClick() {
-      this.$emit("onDownClick", 1);
-    },
+    const onDownClick = () => {
+      context.emit("onDownClick", 1);
+    };
 
-    // 背景图加载成功时执行
-    onBackImgLoad() {
-      this.isBackShow = true;
-    },
+    const onBackImgLoad = () => {
+      isBackShow.value = true;
+    };
+
+    onMounted(() => {
+      isShow.value = pageNow.value === 0;
+    });
+
+    watch(pageNow, (newV) => {
+      isShow.value = newV === 0;
+    });
+    return {
+      isShow,
+      isBackShow,
+      onDownClick, // 点击了向下的按钮，跳转到下面一页
+      onBackImgLoad, // 背景图加载成功时执行
+    };
   },
 };
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @keyframes animate-down {
   0% {
     transform: translateY(0);
@@ -76,11 +76,8 @@ export default {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100px;
-  background-image: url(../../assets/logo-github.png);
+  background-image: url("../assets/logo-github.png");
   &.show {
-    .shadow {
-      opacity: 0.2;
-    }
     .info-box {
       & > div {
         transform: scale(1);
@@ -118,8 +115,11 @@ export default {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 1;
+    opacity: 0;
     z-index: 1;
+    &.show {
+      opacity: 0.2;
+    }
   }
   .info-box {
     flex: auto;

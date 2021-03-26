@@ -4,6 +4,17 @@
   </div>
 </template>
 
+<script>
+import { provide } from "vue";
+import { isPc } from "@/util/tools.js";
+
+export default {
+  setup() {
+    provide("isPc", isPc());
+  },
+};
+</script>
+
 <style lang="less">
 * {
   -webkit-overflow-scrolling: touch;
@@ -30,7 +41,7 @@ body {
 }
 div {
   position: relative;
-} /* 全部都是相对定位 */
+}
 
 img,
 span {

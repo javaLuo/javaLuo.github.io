@@ -35,55 +35,27 @@
 
 <script>
 /** 文章列表页 **/
-import { mapState } from "vuex";
 import MyLoading from "@/components/MyLoading";
-import { share } from "@/config";
+import usePages from "@/hooks/pages";
+
 export default {
   name: "share",
-  data() {
-    return {
-      pageNow: 1,
-      pageSize: 5,
-      total: 0,
-      pageNowData: [],
-    };
-  },
   components: {
     MyLoading,
   },
-  mounted() {
-    const temp = this.listData;
-    for (let i = 0; temp[i]; i++) {
-      setTimeout(() => this.pageNowData.push(temp[i]), (i + 1) * 100);
-    }
-  },
-  computed: {
-    ...mapState({
-      listData(state) {
-        this.total = share.length;
-        return share.filter(
-          (item, index) =>
-            index >= (this.pageNow - 1) * this.pageSize &&
-            index < this.pageNow * this.pageSize
-        );
-      },
-    }),
-  },
-  watch: {
-    listData(newV) {
-      this.pageNowData = [];
-      document.getElementById("bodyBox").scrollTop = 0;
-      const temp = newV;
-      for (let i = 0; temp[i]; i++) {
-        setTimeout(() => this.pageNowData.push(temp[i]), i * 100);
-      }
-    },
-  },
-  methods: {
-    /** 页码改变时触发 **/
-    onPageChange(v) {
-      this.pageNow = v;
-    },
+  setup() {
+    const { pageNow, pageSize, total, pageNowData, onPageChange } = usePages(
+      4,
+      5
+    );
+
+    return {
+      pageNow,
+      pageSize,
+      total,
+      pageNowData,
+      onPageChange,
+    };
   },
 };
 </script>

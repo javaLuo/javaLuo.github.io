@@ -9,7 +9,7 @@ import { client_id, client_secret } from "../config";
  * @param no 是否不添加client_id这些，一言API不需要
  * @returns {AxiosPromise}
  */
-const server = function(
+const server = function (
   url,
   params = null,
   method = "GET",
@@ -23,10 +23,10 @@ const server = function(
     method,
     data: params,
     headers: {
-      "Content-Type": "text/plain; charset=utf-8"
+      "Content-Type": "text/plain; charset=utf-8",
       // Authorization: `token ${gitToken}`
     },
-    responseType: "json"
+    responseType: "json",
   };
   if (type) {
     delete req.responseType;

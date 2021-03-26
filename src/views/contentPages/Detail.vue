@@ -20,11 +20,8 @@
       class="the-body markdown-body editormd-html-preview"
     ></div>
     <div class="the-end">
-      <img :src="ImgFeather" />
-      <div>
-        --
-        <span>End</span>--
-      </div>
+      <img src="@/assets/feather.png" />
+      <div>--<span>End</span>--</div>
     </div>
     <div id="gitalk-box" class="gitalk-box"></div>
   </div>
@@ -32,112 +29,126 @@
 
 <script>
 /** 文章的详情页 **/
-import { mapState } from "vuex";
-import "gitalk/dist/gitalk.css";
-import { masterName, issueName, client_id, client_secret } from "../../config";
-import ShowDown from "showdown";
+import {
+  computed,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  watch,
+  nextTick,
+} from "vue";
+import { useRoute } from "vue-router";
+
 import Gitalk from "gitalk";
-import ImgFeather from "../../assets/feather.png";
+import "gitalk/dist/gitalk.css";
+import { masterName, issueName, client_id, client_secret } from "@/config";
+import { blogs } from "@/config";
+import ShowDown from "showdown";
 
 const converter = new ShowDown.Converter({ tables: true });
+
 export default {
   name: "name-detail",
-  data() {
-    return {
-      sourceData: null,
-      ImgFeather,
-      htmlData: "",
-    };
-  },
-  mounted() {
-    this.$refs.pageDetail.scrollTo(0, 0);
-    this.getData(this.$route.params.id);
-    this.initGitTalk(); // 初始化评论
-  },
-  beforeDestroy() {
-    document.title = "Luo's Blog";
-  },
-  watch: {
-    sourceData(newV) {
-      this.htmlData = converter.makeHtml(newV);
-      this.$nextTick(() => {
-        // color-brewer
-        const allCodesDom = document.querySelectorAll("pre code");
-        Array.from(allCodesDom).forEach((item) => {
-          window.hljs.highlightBlock(item);
-        });
-      });
-    },
-    blogNow: {
-      handler(newV) {
-        document.title = `${newV.name} | Luo's Blog`;
-      },
-      immediate: true,
-    },
-  },
-  computed: {
-    ...mapState({
-      blogNow(state) {
-        return (
-          state.app.blogConfig.find((item) => {
-            return item.id === this.$route.params.id;
-          }) || {}
-        );
-      },
-      breadType() {
-        switch (this.blogNow.type) {
-          case 1:
-            return { title: "文章列表", url: "/live" };
-          case 2:
-            return { title: "个人作品", url: "/works" };
-          case 3:
-            return { title: "日志列表", url: "/article" };
-          default:
-            return { title: "文章列表", url: "/live " };
-        }
-      },
-    }),
-  },
-  methods: {
-    /** 通过标题向github请求文章详细内容 **/
-    getData(id) {
+  setup(props, context) {
+    const route = useRoute();
+
+    onMounted(() => {
+      pageDetail.value.scrollTo(0, 0);
+      getData(route.params.id);
+      initGitTalk(); // 初始化评论
+    });
+
+    onBeforeUnmount(() => {
+      document.title = "Logic's Blog";
+    });
+
+    /** 正文数据相关 */
+    const pageDetail = ref(null);
+    const sourceData = ref(null);
+    const htmlData = ref("");
+
+    const getData = (id) => {
       if (!id) {
         return null;
       }
       if (window.blogs && window.blogs[id]) {
-        this.sourceData = window.blogs[id].replace(/\\`/g, "`");
+        sourceData.value = window.blogs[id].replace(/\\`/g, "`");
         return;
       }
       const dom = document.createElement("script");
       dom.type = "text/javascript";
       dom.src = `blogs/${id}.js`;
       dom.onload = () => {
-        this.sourceData = window.blogs[id].replace(/\\`/g, "`");
+        sourceData.value = window.blogs[id].replace(/\\`/g, "`");
       };
       dom.onerror = () => {
-        this.$message.error("文章加载失败，请刷新页面");
+        context.$message.error("文章加载失败，请刷新页面");
       };
       document.body.appendChild(dom);
-    },
-    /** 初始化评论 **/
-    initGitTalk() {
-      if (!this.$route.params.id) {
+    };
+
+    // 当前博客的基础信息，标题/时间 等
+    const blogNow = computed(
+      () => blogs.find((item) => item.id === route.params.id) || {}
+    );
+    const breadType = computed(() => {
+      switch (blogNow.value.type) {
+        case 1:
+          return { title: "文章列表", url: "/live" };
+        case 2:
+          return { title: "个人作品", url: "/works" };
+        case 3:
+          return { title: "日志列表", url: "/article" };
+        default:
+          return { title: "文章列表", url: "/live" };
+      }
+    });
+    watch(
+      blogNow,
+      (newV) => {
+        document.title = `${newV.name} | Logic's Blog`;
+      },
+      {
+        immediate: true,
+      }
+    );
+
+    watch(sourceData, (newV) => {
+      htmlData.value = converter.makeHtml(newV);
+      nextTick(() => {
+        const allCodesDom = document.querySelectorAll("pre code");
+        Array.from(allCodesDom).forEach((item) => {
+          window.hljs.highlightBlock(item);
+        });
+      });
+    });
+
+    /** 初始化评论 */
+    const initGitTalk = () => {
+      if (!route.params.id) {
         return;
       }
 
       const gitalk = new Gitalk({
         clientID: client_id, // github授权ID
         clientSecret: client_secret, // github授权证明
-        id: this.$route.params.id, // 文章唯一标识
+        id: route.params.id, // 文章唯一标识
         owner: masterName, // 评论存储项目的所有者github名称
         repo: issueName, // 评论存储项目
         admin: [masterName], // 拥有写权利的github名称，即可以新建issue的帐号
-        title: `${document.title} ${this.$route.params.id}`, // 新建的issue的标题
+        title: `${document.title} ${route.params.id}`, // 新建的issue的标题
         distractionFreeMode: false, // 是否开启全屏遮罩效果
       });
 
       gitalk.render("gitalk-box");
-    },
+    };
+
+    return {
+      blogNow,
+      breadType,
+      htmlData,
+      pageDetail,
+    };
   },
 };
 </script>

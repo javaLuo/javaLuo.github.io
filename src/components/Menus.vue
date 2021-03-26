@@ -6,147 +6,150 @@
         <i v-if="!menuOpen" class="el-icon-more"></i>
         <i v-if="menuOpen" class="el-icon-more-outline"></i>
       </div>
-      <span>Luo's Blog</span>
+      <span>Logic's Blog</span>
     </div>
     <div class="menu-body">
-      <transition name="fade">
-        <div v-show="menuOpen" class="menu-body-box" @click="onMenuClose">
-          <transition name="leftmove">
+      <div
+        :class="`menu-body-box ${menuOpen ? 'show' : ''}`"
+        @click="onMenuClose"
+      >
+        <div class="back-img-box" @click.stop></div>
+        <CanvasBack v-if="isPc" :isPlaying="isPlaying"></CanvasBack>
+        <div class="info-box" @click.stop>
+          <div class="photo-box">
+            <img class="photo" src="@/assets/pic.jpg" />
             <div
-              v-show="menuOpen"
-              :class="`back-img-box ${isPc ? 'pc' : 'mobile'}`"
-              @click.stop
+              v-if="isPc"
+              class="playing"
+              :class="{ stop: !isPlaying }"
             ></div>
-          </transition>
-          <CanvasBack v-if="isPc"></CanvasBack>
-          <transition name="leftmove">
-            <div v-show="menuOpen" class="info-box" @click.stop>
-              <div class="photo-box">
-                <img class="photo" :src="ImgPic" />
-                <div v-if="isPc" class="playing" :class="{ stop: !play }"></div>
-                <div v-if="isPc" class="play-btn" @click="playOrStop">
-                  <div class="line" :class="{ play }"></div>
-                </div>
-              </div>
-              <div class="name">Logic</div>
-              <div class="func">
-                躲过了黑夜的那只鸟
-                <br />最后也消失在漆黑里
-              </div>
-              <ul class="link">
-                <li @click="onLinkClick('/')" @touchend="onLinkClick('/')">
-                  <div>{{ allLength }}</div>
-                  <div>全部</div>
-                </li>
-                <li
-                  @click="onLinkClick('/live')"
-                  @touchend="onLinkClick('/live')"
-                >
-                  <div>{{ liveLength }}</div>
-                  <div>笔记</div>
-                </li>
-                <li
-                  @click="onLinkClick('/works')"
-                  @touchend="onLinkClick('/works')"
-                >
-                  <div>{{ workLength }}</div>
-                  <div>作品</div>
-                </li>
-                <li
-                  @click="onLinkClick('/article')"
-                  @touchend="onLinkClick('/article')"
-                >
-                  <div>{{ articleLength }}</div>
-                  <div>日志</div>
-                </li>
-              </ul>
-              <div class="tips">
-                <span
-                  @click="onLinkClick('/about')"
-                  @touchend="onLinkClick('/about')"
-                  >about</span
-                >
-                <div class="line"></div>
-                <span
-                  @click="onLinkClick('/tags')"
-                  @touchend="onLinkClick('/tags')"
-                  >tags</span
-                >
-                <div class="line"></div>
-                <span
-                  @click="onLinkClick('/share')"
-                  @touchend="onLinkClick('/share')"
-                  >share</span
-                >
-              </div>
+            <div v-if="isPc" class="play-btn" @click="onPlayOrStop">
+              <div class="line" :class="{ play: isPlaying }"></div>
             </div>
-          </transition>
-          <img v-if="isPc" class="down" :src="ImgDown" @click="onDownClick" />
+          </div>
+          <div class="name">Logic</div>
+          <div class="func">
+            躲过了黑夜的那只鸟
+            <br />最后也消失在漆黑里
+          </div>
+          <ul class="link">
+            <li @click="onLinkClick('/')" @touchend="onLinkClick('/')">
+              <div>{{ allLength }}</div>
+              <div>全部</div>
+            </li>
+            <li @click="onLinkClick('/live')" @touchend="onLinkClick('/live')">
+              <div>{{ liveLength }}</div>
+              <div>笔记</div>
+            </li>
+            <li
+              @click="onLinkClick('/works')"
+              @touchend="onLinkClick('/works')"
+            >
+              <div>{{ workLength }}</div>
+              <div>作品</div>
+            </li>
+            <li
+              @click="onLinkClick('/article')"
+              @touchend="onLinkClick('/article')"
+            >
+              <div>{{ articleLength }}</div>
+              <div>日志</div>
+            </li>
+          </ul>
+          <div class="tips">
+            <span
+              @click="onLinkClick('/about')"
+              @touchend="onLinkClick('/about')"
+              >about</span
+            >
+            <div class="line"></div>
+            <span @click="onLinkClick('/tags')" @touchend="onLinkClick('/tags')"
+              >tags</span
+            >
+            <div class="line"></div>
+            <span
+              @click="onLinkClick('/share')"
+              @touchend="onLinkClick('/share')"
+              >share</span
+            >
+          </div>
         </div>
-      </transition>
+        <img
+          v-if="isPc"
+          class="down"
+          src="@/assets/down.png"
+          @click="onDownClick"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import ImgPic from "../assets/pic.jpg";
+import { inject, ref } from "vue";
+import { useRouter } from "vue-router";
 import CanvasBack from "./CanvasBack.vue";
-import { mapState } from "vuex";
-import { isPc } from "../util/tools";
-import ImgDown from "../assets/down.png";
+import { blogs } from "@/config";
 
 export default {
   name: "Menus",
-  data: function() {
+  components: {
+    CanvasBack,
+  },
+  props: {
+    isPlaying: Boolean,
+  },
+  setup(props, context) {
+    const router = useRouter();
+    const isPc = inject("isPc");
+    const menuOpen = ref(isPc); // 菜单是否展开
+
+    const liveLength = blogs.filter((item) => item.type === 1).length;
+    const workLength = blogs.filter((item) => item.type === 2).length;
+    const articleLength = blogs.filter((item) => item.type === 3).length;
+    const allLength = blogs.length;
+
+    const onPlayOrStop = () => {
+      context.emit("onPlayOrStop", !props.isPlaying);
+    };
+
+    const onLinkClick = (url) => {
+      router.push(url);
+      // 移动端，自动关闭Menu
+      if (!isPc) {
+        menuOpen.value = false;
+      }
+    };
+
+    const onMenuTrigger = () => {
+      menuOpen.value = !menuOpen.value;
+    };
+
+    const onMenuClose = () => {
+      // 只有移动端才能关闭
+      if (!isPc) {
+        menuOpen.value = false;
+      }
+    };
+
+    const onDownClick = () => {
+      context.emit("onClickScroll");
+    };
+
     return {
-      ImgPic,
-      isPc: isPc(),
-      menuOpen: isPc(), // 菜单是否展开
-      ImgDown
+      isPc,
+      menuOpen,
+      liveLength,
+      workLength,
+      articleLength,
+      allLength,
+      onPlayOrStop,
+      onLinkClick,
+      onMenuTrigger,
+      onMenuClose,
+      onDownClick,
     };
   },
-  methods: {
-    playOrStop() {
-      this.$store.dispatch({
-        type: "page/setPlaying",
-        params: { playing: !this.play }
-      });
-    },
-    onLinkClick(url) {
-      this.$router.push(url);
-      if (!this.isPc) {
-        // 移动端，自动关闭Menu
-        this.menuOpen = false;
-      }
-    },
-    onMenuTrigger() {
-      this.menuOpen = !this.menuOpen;
-    },
-    onMenuClose() {
-      if (!this.isPc) {
-        // 只有移动端才能关闭
-        this.menuOpen = false;
-      }
-    },
-    onDownClick() {
-      this.$emit("onClickScroll");
-    }
-  },
-  components: {
-    CanvasBack
-  },
-  computed: {
-    ...mapState({
-      play: state => state.page.playing,
-      liveLength: state =>
-        state.app.blogConfig.filter(item => item.type === 1).length,
-      workLength: state =>
-        state.app.blogConfig.filter(item => item.type === 2).length,
-      articleLength: state =>
-        state.app.blogConfig.filter(item => item.type === 3).length,
-      allLength: state => state.app.blogConfig.length
-    })
-  }
 };
 </script>
 
@@ -167,60 +170,6 @@ export default {
   100% {
     transform: translateY(8px);
   }
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.leftmove-enter-active,
-.leftmove-leave-active {
-  transition: all 0.4s;
-}
-.leftmove-enter,
-.leftmove-leave-to {
-  transform: translateX(-90vw);
-}
-
-.leftmove0-enter-active,
-.leftmove0-leave-active {
-  transition: all 0.8s;
-}
-.leftmove0-enter,
-.leftmove0-leave-to {
-  transform: translateY(-30vw);
-}
-
-.leftmove1-enter-active,
-.leftmove1-leave-active {
-  transition: all 20s;
-}
-.leftmove1-enter,
-.leftmove1-leave-to {
-  transform: translateY(-40vw);
-}
-
-.leftmove2-enter-active,
-.leftmove2-leave-active {
-  transition: all 30s;
-}
-.leftmove2-enter,
-.leftmove2-leave-to {
-  transform: translateY(-50vw);
-}
-
-.leftmove3-enter-active,
-.leftmove3-leave-active {
-  transition: all 40s;
-}
-.leftmove3-enter,
-.leftmove3-leave-to {
-  transform: translateY(-60vw);
 }
 
 .menus {
@@ -263,6 +212,20 @@ export default {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 256ms;
+      backdrop-filter: blur(4px);
+      &.show {
+        opacity: 1;
+        pointer-events: auto;
+        .info-box {
+          transform: translateX(0);
+        }
+        .back-img-box {
+          transform: translateX(0);
+        }
+      }
       .down {
         position: absolute;
         bottom: 8px;
@@ -282,18 +245,15 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #333;
-      background-size: cover;
       background-position: top center;
-      &.pc {
-        background-image: url(../assets/menu.jpg);
-      }
-      &.mobile {
-        background-image: url(../assets/menu_mobile.jpg);
-      }
+      background-image: url(../assets/menu.jpg);
+      background-size: cover;
+      transform: translateX(-100px);
+      transition: transform 256ms;
     }
     .info-box {
       width: 100%;
+      height: 100%;
       color: #fff;
       box-sizing: border-box;
       letter-spacing: 1px;
@@ -303,6 +263,8 @@ export default {
       padding-bottom: 24px;
       overflow-y: auto;
       overflow-x: hidden;
+      transform: translateX(-100px);
+      transition: transform 256ms;
       .photo-box {
         position: relative;
         display: block;
@@ -482,7 +444,7 @@ export default {
       height: calc(~"100vh - 45px") !important;
       .back-img-box {
         width: 80%;
-        box-shadow: 3px 0 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 3px 0 12px rgba(0, 0, 0, 0.2);
       }
       .info-box {
         width: 80%;

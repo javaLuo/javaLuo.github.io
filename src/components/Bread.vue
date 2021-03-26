@@ -9,14 +9,8 @@
 /** 文章列表页 **/
 export default {
   name: "bread",
-  data: function () {
-    return {};
-  },
   props: {
     breadData: String,
   },
-  components: {},
-  mounted() {},
-  computed: {},
 };
 </script>

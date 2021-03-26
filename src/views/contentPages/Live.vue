@@ -15,7 +15,11 @@
       ></el-input>
     </div>
     <transition-group name="list" tag="ul" class="live">
-      <ArtiveList v-for="v in pageNowData" :thisData="v" :key="v.name"></ArtiveList>
+      <ArtiveList
+        v-for="v in pageNowData"
+        :thisData="v"
+        :key="v.name"
+      ></ArtiveList>
     </transition-group>
     <MyLoading :show="!pageNowData.length" />
     <div class="pagin">
@@ -32,79 +36,35 @@
 
 <script>
 /** 笔记列表页 **/
-import { mapState } from "vuex";
-import ArtiveList from "../../components/ArtiveList.vue";
-import { sortDate } from "../../util/tools";
-import MyLoading from "../../components/MyLoading";
+import ArtiveList from "@/components/ArtiveList.vue";
+import MyLoading from "@/components/MyLoading";
+import usePages from "@/hooks/pages";
+
 export default {
   name: "name-live",
-  data: function() {
-    return {
-      pageNow: 1,
-      pageSize: 10,
-      total: 0,
-      pageNowData: [],
-      searchValue: ""
-    };
-  },
   components: {
     ArtiveList,
-    MyLoading
+    MyLoading,
   },
-  computed: {
-    ...mapState({
-      blogConfig: state => state.app.blogConfig
-    }),
-    searchData() {
-      let res = this.blogConfig.filter(item => item.type === 1);
-      if (this.searchValue) {
-        res = res.filter(item => {
-          return item.name
-            .toLowerCase()
-            .includes(this.searchValue.toLowerCase());
-        });
-      }
-      return res;
-    },
-    listData() {
-      return sortDate(this.searchData).filter(
-        (item, index) =>
-          index >= (this.pageNow - 1) * this.pageSize &&
-          index < this.pageNow * this.pageSize
-      );
-    }
+  setup() {
+    const {
+      pageNow,
+      pageSize,
+      total,
+      searchValue,
+      pageNowData,
+      onPageChange,
+    } = usePages(1);
+
+    return {
+      pageNow,
+      pageSize,
+      total,
+      searchValue,
+      pageNowData,
+      onPageChange,
+    };
   },
-  watch: {
-    searchValue(newV) {
-      this.pageNow = 1;
-    },
-    searchData: {
-      handler(newV) {
-        this.total = newV.length;
-      },
-      immediate: true
-    },
-    listData: {
-      handler(newV) {
-        this.pageNowData = [];
-        const dom = document.getElementById("bodyBox");
-        if (dom) {
-          dom.scrollTop = 0;
-        }
-        const temp = newV;
-        for (let i = 0; temp[i]; i++) {
-          setTimeout(() => this.pageNowData.push(temp[i]), i * 80);
-        }
-      },
-      immediate: true
-    }
-  },
-  methods: {
-    /** 页码改变时触发 **/
-    onPageChange(v) {
-      this.pageNow = v;
-    }
-  }
 };
 </script>
 
@@ -112,7 +72,7 @@ export default {
 .list-enter-active {
   transition: all 500ms;
 }
-.list-enter,
+.list-enter-from,
 .list-leave-to {
   opacity: 0;
   transform: translateX(10px);
@@ -152,7 +112,7 @@ export default {
     .search-input {
       margin-left: 20px;
       width: 200px;
-      /deep/.el-input__inner {
+      :deep(.el-input__inner) {
         background-color: transparent;
         border: none;
         border-bottom: solid 1px #ccc;
