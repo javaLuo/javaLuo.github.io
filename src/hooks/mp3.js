@@ -50,6 +50,7 @@ export default function useMp3() {
     clearTimeout(volumeTimer);
     if (volume.value + 0.1 <= 1) {
       volume.value += 0.1;
+      mp3.value.volume = volume.value;
       volumeTimer = setTimeout(() => {
         volumeUp();
       }, 200);
@@ -61,6 +62,7 @@ export default function useMp3() {
     clearTimeout(volumeTimer);
     if (volume.value - 0.1 >= 0) {
       volume.value -= 0.1;
+      mp3.value.volume = volume.value;
       volumeTimer = setTimeout(() => {
         volumeDown();
       }, 200);

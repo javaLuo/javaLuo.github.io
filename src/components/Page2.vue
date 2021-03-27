@@ -5,7 +5,7 @@
       @onClickScroll="onClickScroll"
       @onPlayOrStop="onPlayOrStop"
     />
-    <div id="bodyBox" class="body-box" @mousewheel.stop @DOMMouseScroll.stop>
+    <div id="bodyBox" class="body-box" @wheel.stop>
       <router-view></router-view>
     </div>
   </div>

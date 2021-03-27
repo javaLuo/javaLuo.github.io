@@ -1,10 +1,5 @@
 <template>
-  <div
-    id="home"
-    class="home"
-    @mousewheel="onMouseWheel"
-    @DOMMouseScroll="onMouseWheel"
-  >
+  <div id="home" class="home" @wheel="onMouseWheel">
     <audio
       v-if="isPc"
       class="audio"
@@ -102,8 +97,8 @@ export default {
 
     /** 监听滚轮事件处理页面滚动 **/
     const onMouseWheel = (e) => {
-      console.log('滚动：', e);
-      const f = e.wheelDeltaY || -e.detail || e.wheelDelta;
+      console.log("e", e);
+      const f = e.wheelDeltaY || -e.deltaY || e.wheelDelta;
       if (scrolling) {
         return;
       }
