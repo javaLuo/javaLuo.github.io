@@ -9,6 +9,7 @@ export default function usePages(type, pSize = 10) {
   const searchValue = ref(""); // 筛选框的值
   const pageNowData = ref([]); // 最后真正展示出来的数据
   let blogsData; // 1笔记，2作品，3日志, 4分享
+  let timer = [];
   if (type === 4) {
     blogsData = share;
   } else {
@@ -19,12 +20,12 @@ export default function usePages(type, pSize = 10) {
   const searchData = computed(() => {
     let res = [...blogsData];
     if (searchValue.value) {
+      const v = searchValue.value.toLowerCase();
       res = res.filter((item) => {
-        return item.name
-          .toLowerCase()
-          .includes(searchValue.value.toLowerCase());
+        return item.name.toLowerCase().includes(v);
       });
     }
+    console.log("searchData:", res);
     return res;
   });
 
@@ -37,6 +38,7 @@ export default function usePages(type, pSize = 10) {
           index < pageNow.value * pageSize.value
       );
     }
+
     return sortDate(searchData.value).filter(
       (item, index) =>
         index >= (pageNow.value - 1) * pageSize.value &&
@@ -59,6 +61,10 @@ export default function usePages(type, pSize = 10) {
   watch(
     listData,
     (newV) => {
+      for (let i = 0; i < timer.length; i++) {
+        clearTimeout(timer[i]);
+      }
+      timer.length = 0;
       pageNowData.value = [];
       const dom = document.getElementById("bodyBox");
       if (dom) {
@@ -66,7 +72,11 @@ export default function usePages(type, pSize = 10) {
       }
 
       for (let i = 0; newV[i]; i++) {
-        setTimeout(() => pageNowData.value.push(newV[i]), i * 80);
+        timer.push(
+          setTimeout(() => {
+            pageNowData.value.push(newV[i]);
+          }, i * 80)
+        );
       }
     },
     {
