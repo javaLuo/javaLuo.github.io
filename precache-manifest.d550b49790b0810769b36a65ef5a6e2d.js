@@ -16,6 +16,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/algorithm.js"
   },
   {
+    "revision": "6efe2fcf45fae044f810c771757ac47b",
+    "url": "/blogs/alipay.md"
+  },
+  {
     "revision": "48fac4e2db994a7caeb97e16c183ba68",
     "url": "/blogs/along.js"
   },
@@ -796,7 +800,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "7a67ee92f10aa3c6b4c41f1493214ff2",
+    "revision": "2cdb83de54e34842cf24f8515f8a942c",
     "url": "/index.html"
   },
   {
