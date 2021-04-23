@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CNAME"
   },
   {
-    "revision": "5b44ea496868ff1e15c201bb000547bd",
+    "revision": "35c92cb72dd177edabe3a6be1c7a5ed5",
     "url": "/blogs/abouttime.js"
   },
   {
@@ -232,8 +232,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.2c120479.css"
   },
   {
-    "revision": "08fa7141f7e8d21d4cdd",
-    "url": "/css/app.7953ddb7.css"
+    "revision": "52fe2430450e2dfb6a75",
+    "url": "/css/app.84cf606a.css"
   },
   {
     "revision": "a5272579d073cf20074f",
@@ -800,7 +800,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "2cdb83de54e34842cf24f8515f8a942c",
+    "revision": "0c784cf482354299ebc1c803eb1ada40",
     "url": "/index.html"
   },
   {
@@ -808,8 +808,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.bd5702ec.js"
   },
   {
-    "revision": "08fa7141f7e8d21d4cdd",
-    "url": "/js/app.f9930f90.js"
+    "revision": "52fe2430450e2dfb6a75",
+    "url": "/js/app.a46cffd1.js"
   },
   {
     "revision": "a5272579d073cf20074f",

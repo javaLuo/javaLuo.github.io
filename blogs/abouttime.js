@@ -1,7 +1,5 @@
 (function () {
-  if (!window.blogs) {
-    window.blogs = {};
-  }
+  window.blogs = window.blogs || {};
   window.blogs.abouttime = `
 ### 时间标准
 
