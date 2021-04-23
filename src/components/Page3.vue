@@ -55,6 +55,9 @@
         <a href="http://lsy.dulv.net" target="_blank" rel="noopener"
           >平平无奇深情段子手无霜</a
         >
+        <a href="http://www.sci-fifans.net/" target="_blank" rel="noopener"
+          >sci-fifans 社区</a
+        >
       </li>
     </ul>
 
