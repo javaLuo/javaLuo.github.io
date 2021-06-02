@@ -440,7 +440,7 @@ export const blogs = [
     tags: ["js", "three.js"],
   },
   {
-    id: "three_animate",
+    id: "three_anime",
     name: "Three.js 关键帧动画相关",
     info: "动画的实现方式",
     type: 1,

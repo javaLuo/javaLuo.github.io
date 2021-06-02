@@ -2,7 +2,7 @@
   if (!window.blogs) {
     window.blogs = {};
   }
-  window.blogs.three_animate = `
+  window.blogs.three_anime = `
 ### 首先加载模型
 \`\`\`js
 const loader = new THREE.GLTFLoader();
