@@ -196,6 +196,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/three_fire.js"
   },
   {
+    "revision": "7dc0e7b0e588ffa7701811053d7a9a4f",
+    "url": "/blogs/threeanimate.js"
+  },
+  {
     "revision": "ab67e05ed9d66e424cde2026c1a98ce6",
     "url": "/blogs/tradingview.js"
   },
@@ -232,7 +236,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.2c120479.css"
   },
   {
-    "revision": "52fe2430450e2dfb6a75",
+    "revision": "13a749af63f998ef3511",
     "url": "/css/app.84cf606a.css"
   },
   {
@@ -800,7 +804,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "0c784cf482354299ebc1c803eb1ada40",
+    "revision": "2e73334fb34d2ebe58a207686e45f9d5",
     "url": "/index.html"
   },
   {
@@ -808,8 +812,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.bd5702ec.js"
   },
   {
-    "revision": "52fe2430450e2dfb6a75",
-    "url": "/js/app.a46cffd1.js"
+    "revision": "13a749af63f998ef3511",
+    "url": "/js/app.f8a0ccac.js"
   },
   {
     "revision": "a5272579d073cf20074f",
