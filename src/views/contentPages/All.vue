@@ -46,14 +46,8 @@ export default {
     MyLoading,
   },
   setup() {
-    const {
-      pageNow,
-      pageSize,
-      total,
-      searchValue,
-      pageNowData,
-      onPageChange,
-    } = usePages();
+    const { pageNow, pageSize, total, searchValue, pageNowData, onPageChange } =
+      usePages();
 
     return {
       pageNow,

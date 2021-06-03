@@ -57,15 +57,8 @@ export default {
   setup() {
     const isPc = inject("isPc"); // 是否是PC端
     const refMp3Dom = ref();
-    const {
-      onPlay,
-      onPause,
-      onCanPlay,
-      onSetPlay,
-      isPlaying,
-      init,
-      isStop,
-    } = useMp3();
+    const { onPlay, onPause, onCanPlay, onSetPlay, isPlaying, init, isStop } =
+      useMp3();
     const { text, getHiData } = useHi();
 
     onMounted(() => {
