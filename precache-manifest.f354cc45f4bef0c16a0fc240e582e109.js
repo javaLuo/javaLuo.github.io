@@ -192,12 +192,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/three_1.js"
   },
   {
-    "revision": "8c268fca1768787c88c2fa3544c842c1",
-    "url": "/blogs/three_fire.js"
+    "revision": "cc6e2e272de89b2c3b8db9bdca11f965",
+    "url": "/blogs/three_anime.js"
   },
   {
-    "revision": "7dc0e7b0e588ffa7701811053d7a9a4f",
-    "url": "/blogs/threeanimate.js"
+    "revision": "8c268fca1768787c88c2fa3544c842c1",
+    "url": "/blogs/three_fire.js"
   },
   {
     "revision": "ab67e05ed9d66e424cde2026c1a98ce6",
@@ -232,48 +232,48 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/wxstudy.js"
   },
   {
-    "revision": "31b46ca417c5cffc7de1",
+    "revision": "af0de44d7fc5560b7fae",
     "url": "/css/about.2c120479.css"
   },
   {
-    "revision": "13a749af63f998ef3511",
-    "url": "/css/app.84cf606a.css"
+    "revision": "f81bcc143bdfcccc7806",
+    "url": "/css/app.d85c070e.css"
   },
   {
-    "revision": "a5272579d073cf20074f",
-    "url": "/css/article.fe8a3448.css"
+    "revision": "ea98edeae8f2b46ec87b",
+    "url": "/css/article.b39dab25.css"
   },
   {
-    "revision": "6d973d4a4597a75448e4",
-    "url": "/css/chunk-vendors.66130722.css"
+    "revision": "9aa9915f222f74900743",
+    "url": "/css/chunk-vendors.1837c262.css"
   },
   {
-    "revision": "952a0e35bc2f6e643b22",
+    "revision": "f64f69c5e74707b52ab4",
     "url": "/css/detail.b10f7b91.css"
   },
   {
-    "revision": "1b2a9902f3b391884777",
-    "url": "/css/live.48067252.css"
+    "revision": "2e9b1d17279180f3205e",
+    "url": "/css/live.f540d34e.css"
   },
   {
-    "revision": "6e254cfe801c978433c1",
+    "revision": "03c28d6b884f313ca88b",
     "url": "/css/share.ffbba3c8.css"
   },
   {
-    "revision": "856839e56110d97d88a9",
+    "revision": "cd3c1cf25288e8018cd2",
     "url": "/css/tags.2e3e2921.css"
   },
   {
-    "revision": "25440d71c845c4ef98ac",
-    "url": "/css/works.fac527f7.css"
+    "revision": "1101d1c84bb7b8e79a15",
+    "url": "/css/works.4fde6e6c.css"
   },
   {
-    "revision": "535877f50039c0cb49a6196a5b7517cd",
-    "url": "/fonts/element-icons.535877f5.woff"
+    "revision": "abe71f7d608d43b56d9b2aef78d7ae99",
+    "url": "/fonts/element-icons.abe71f7d.ttf"
   },
   {
-    "revision": "732389ded34cb9c52dd88271f1345af9",
-    "url": "/fonts/element-icons.732389de.ttf"
+    "revision": "d9491be2c5109fca0fa40d0c59e2e3b9",
+    "url": "/fonts/element-icons.d9491be2.woff"
   },
   {
     "revision": "48bdac9e661610d60226500211b99142",
@@ -804,44 +804,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "2e73334fb34d2ebe58a207686e45f9d5",
+    "revision": "abe6db977a224a00aa2fbb2d910ee948",
     "url": "/index.html"
   },
   {
-    "revision": "31b46ca417c5cffc7de1",
-    "url": "/js/about.bd5702ec.js"
+    "revision": "af0de44d7fc5560b7fae",
+    "url": "/js/about.d8087a2a.js"
   },
   {
-    "revision": "13a749af63f998ef3511",
-    "url": "/js/app.f8a0ccac.js"
+    "revision": "f81bcc143bdfcccc7806",
+    "url": "/js/app.ee1347d4.js"
   },
   {
-    "revision": "a5272579d073cf20074f",
-    "url": "/js/article.04aecef2.js"
+    "revision": "ea98edeae8f2b46ec87b",
+    "url": "/js/article.13e16bd5.js"
   },
   {
-    "revision": "6d973d4a4597a75448e4",
-    "url": "/js/chunk-vendors.3bcbace7.js"
+    "revision": "9aa9915f222f74900743",
+    "url": "/js/chunk-vendors.8b6fc8b4.js"
   },
   {
-    "revision": "952a0e35bc2f6e643b22",
-    "url": "/js/detail.a7b651bf.js"
+    "revision": "f64f69c5e74707b52ab4",
+    "url": "/js/detail.73889a3e.js"
   },
   {
-    "revision": "1b2a9902f3b391884777",
-    "url": "/js/live.0205fb44.js"
+    "revision": "2e9b1d17279180f3205e",
+    "url": "/js/live.e452f060.js"
   },
   {
-    "revision": "6e254cfe801c978433c1",
-    "url": "/js/share.dc7dfedf.js"
+    "revision": "03c28d6b884f313ca88b",
+    "url": "/js/share.f68fda80.js"
   },
   {
-    "revision": "856839e56110d97d88a9",
-    "url": "/js/tags.1cb0cb60.js"
+    "revision": "cd3c1cf25288e8018cd2",
+    "url": "/js/tags.9a1415be.js"
   },
   {
-    "revision": "25440d71c845c4ef98ac",
-    "url": "/js/works.a6c588d8.js"
+    "revision": "1101d1c84bb7b8e79a15",
+    "url": "/js/works.b759110f.js"
   },
   {
     "revision": "2f94dd14e4fc3ea6540c633fd568f036",
