@@ -44,7 +44,6 @@ import "gitalk/dist/gitalk.css";
 import { masterName, issueName, client_id, client_secret } from "@/config";
 import { blogs } from "@/config";
 import ShowDown from "showdown";
-
 const converter = new ShowDown.Converter({ tables: true });
 
 export default {

@@ -425,7 +425,7 @@ export const blogs = [
   },
   {
     id: "iconfont",
-    name: "支付宝小程序/手淘小程序 使用 阿里巴巴矢量图标库iconfont的方法",
+    name: "支付宝小程序/手淘小程序 使用阿里巴巴矢量图标库iconfont的方法",
     info: "亲测有效。这篇文章是转载的，记录一下，免得哪天找不到了",
     type: 1,
     date: "2021/01/29",
@@ -446,6 +446,14 @@ export const blogs = [
     type: 1,
     date: "2021/06/02",
     tags: ["js", "three.js"],
+  },
+  {
+    id: "alipay",
+    name: "支付宝小程序开发隐藏知识点",
+    info: "my.ap.navigateToAlipayPage官方文档上没写的一些使用技巧",
+    type: 1,
+    date: "2021/08/29",
+    tags: ["js", "小程序"],
   },
 ];
 

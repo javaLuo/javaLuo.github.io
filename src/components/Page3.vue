@@ -103,9 +103,9 @@
           <img src="@/assets/logo-github.png" />
         </a>
       </div>
-      <div>Vue3.0 全家桶框架支持</div>
+      <div>Vue3.0 全家桶框架构建</div>
       <div>GitHub Pages, V3API获取文章和评论</div>
-      <div>感谢开源世界的恩惠</div>
+      <div>感谢开源世界的支持</div>
     </div>
     <div class="last">
       © 2014–{{ new Date().getFullYear() }}
