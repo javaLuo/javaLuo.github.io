@@ -58,5 +58,14 @@ path: "https://render.alipay.com/p/s/i/?scheme=alipays%3A%2F%2Fplatformapi%2Fsta
 ## 其他注意知识点
 
 1. 写在外面的模块变量，可能不会及时被重置；因为当关闭小程序时，小程序的进程仍然在运行，那些变量的值一直存在，当再次进入时，那些变量没有重置为初始值。<br/>
+
+2. 关闭支付宝小程序
+\`\`\`js
+my.call("exitApp",  {
+  closeActionType: 'exitSelf'
+},  (results) => {
+  console.log("exitSelf result:" + result.status);
+});
+\`\`\`
 `;
 })();
