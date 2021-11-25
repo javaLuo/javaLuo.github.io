@@ -63,7 +63,7 @@ export default {
 
 <style scoped lang="less">
 .list-enter-active {
-  transition: all 500ms;
+  transition: all 400ms;
 }
 .list-enter-from,
 .list-leave-to {
