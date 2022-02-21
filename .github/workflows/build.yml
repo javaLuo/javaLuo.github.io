@@ -22,9 +22,9 @@ jobs:
           yarn install
           yarn run build
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4.2.3
         with:
-          ACCESS_TOKEN: ${{ secrets.access_token_key }}
-          BRANCH: master
-          FOLDER: dist
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          branch: master
+          folder: dist
           CLEAN: true
