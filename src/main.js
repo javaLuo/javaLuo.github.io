@@ -12,11 +12,7 @@ import {
   ElTooltip,
   ElIcon,
 } from "element-plus";
-import lang from "element-plus/lib/locale/lang/zh-cn";
-import "dayjs/locale/zh-cn";
-import locale from "element-plus/lib/locale";
 
-locale.use(lang);
 const app = createApp(App);
 app.$message = ElMessage;
 app

@@ -1,16 +1,26 @@
 <template>
-  <div id="app" class="boss">
-    <router-view />
-  </div>
+  <ElConfigProvider :locale="locale">
+    <div id="app" class="boss">
+      <router-view />
+    </div>
+  </ElConfigProvider>
 </template>
 
 <script>
+import { ElConfigProvider } from "element-plus";
+import zhCn from "element-plus/lib/locale/lang/zh-cn";
 import { provide } from "vue";
 import { isPc } from "@/util/tools.js";
 
 export default {
+  components: {
+    ElConfigProvider,
+  },
   setup() {
     provide("isPc", isPc());
+    return {
+      locale: zhCn,
+    };
   },
 };
 </script>
