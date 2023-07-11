@@ -3,7 +3,7 @@
     <img
       class="backImg"
       :class="{ show: isBackShow }"
-      src="https://api.ixiaowai.cn/gqapi/gqapi.php"
+      src="https://api.cyrilstudio.top/bing/image.php"
       @load="onBackImgLoad"
     />
     <div class="shadow all_trans1s" :class="{ show: isBackShow }"></div>
@@ -19,6 +19,7 @@
 
 <script>
 import { ref, toRefs, watch, onMounted } from "vue";
+// import useBing from '../hooks/useBing';
 
 export default {
   name: "page1",
@@ -29,6 +30,7 @@ export default {
     const { pageNow } = toRefs(props);
     const isShow = ref(false); // 是否出现
     const isBackShow = ref(false); // 首页背景图是否加载
+    // const {url, getBingData} = useBing();
 
     const onDownClick = () => {
       context.emit("onDownClick", 1);
@@ -40,6 +42,7 @@ export default {
 
     onMounted(() => {
       isShow.value = pageNow.value === 0;
+      // getBingData();
     });
 
     watch(pageNow, (newV) => {
@@ -50,6 +53,7 @@ export default {
       isBackShow,
       onDownClick, // 点击了向下的按钮，跳转到下面一页
       onBackImgLoad, // 背景图加载成功时执行
+      // url,
     };
   },
 };
