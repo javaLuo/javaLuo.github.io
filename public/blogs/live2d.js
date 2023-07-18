@@ -55,7 +55,8 @@ pnpm add pixi-live2d-display
         }
     
         beforeUnmount(){
-            model?.destroy(); // 销毁
+            model?.destroy();
+            app?.destroy();
         }
     }
 </script>

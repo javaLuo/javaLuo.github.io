@@ -1,5 +1,5 @@
 <template>
-  <ElConfigProvider :locale="zhCn">
+  <ElConfigProvider>
     <div id="app" class="boss">
       <RouterView />
       {{ store.test }}
@@ -10,14 +10,15 @@
 <script setup>
 import { provide } from "vue";
 import { ElConfigProvider } from "element-plus";
-import zhCn from "element-plus/lib/locale/lang/zh-cn";
-import { RouterView } from 'vue-router';
+// import zhCn from "element-plus/lib/locale/lang/zh-cn";
+import { RouterView } from "vue-router";
 import { isPc } from "@/utils/tools";
-import useStore from '@/store'
+import useStore from "@/store";
+
+// const locale = ref(zhCn);
 
 const store = useStore();
 provide("isPc", isPc());
-
 </script>
 
 <style lang="less" scoped>
