@@ -20,7 +20,6 @@ export const getBingImg = async () => {
   try {
     const url = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1';
     const msg = await server(url, null, "GET", false, true);
-    console.log('返回了什么：', msg);
     if (msg.status === 200 || msg.status === 304) {
       return msg.data;
     }

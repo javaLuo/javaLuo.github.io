@@ -455,6 +455,14 @@ export const blogs = [
     date: "2021/08/29",
     tags: ["js", "小程序"],
   },
+  {
+    id: "live2d",
+    name: "Vue项目中加载live2d",
+    info: "live2d资源运行在vue项目中的操作方法",
+    type: 1,
+    date: "2023/07/18",
+    tags: ["js", "html"],
+  },
 ];
 
 export const share = [
