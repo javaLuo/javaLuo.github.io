@@ -112,6 +112,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/isluo.js"
   },
   {
+    "revision": "f23bb3adb882977089322ef7e9e4b6b2",
+    "url": "/blogs/live2d.js"
+  },
+  {
     "revision": "a670a84e534f1684f746da1c2aec7694",
     "url": "/blogs/lockscreen.js"
   },
@@ -236,7 +240,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/about.2c120479.css"
   },
   {
-    "revision": "51b6c83f7cfced739217",
+    "revision": "a798179829da027dabb5",
     "url": "/css/app.38c5793e.css"
   },
   {
@@ -804,7 +808,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/weima2.734fea31.png"
   },
   {
-    "revision": "984c99d6f3dff414a8469b69ebbbe154",
+    "revision": "92e39df543743c6d7be2b9c27ca93c83",
     "url": "/index.html"
   },
   {
@@ -812,8 +816,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.41f199c1.js"
   },
   {
-    "revision": "51b6c83f7cfced739217",
-    "url": "/js/app.59cf563b.js"
+    "revision": "a798179829da027dabb5",
+    "url": "/js/app.ae8edfde.js"
   },
   {
     "revision": "8a837a08590a47f52fb9",
