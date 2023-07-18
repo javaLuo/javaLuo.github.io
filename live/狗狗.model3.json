@@ -1,0 +1,49 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "狗狗.moc3",
+		"Textures": [
+			"狗狗.8192/texture_00.png"
+		],
+		"Physics": "狗狗.physics3.json",
+		"DisplayInfo": "狗狗.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "默认",
+				"File": "默认.exp3.json"
+			},
+			{
+				"Name": "吐舌",
+				"File": "吐舌.exp3.json"
+			},
+			{
+				"Name": "开心",
+				"File": "开心.exp3.json"
+			},
+			{
+				"Name": "忧伤",
+				"File": "忧伤.exp3.json"
+			},
+			{
+				"Name": "忧伤输入框",
+				"File": "忧伤输入框.exp3.json"
+			},
+			{
+				"Name": "愤怒",
+				"File": "愤怒.exp3.json"
+			}
+		]
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	]
+}
