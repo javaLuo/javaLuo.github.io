@@ -24,6 +24,8 @@
       <div>--<span>End</span>--</div>
     </div>
     <div id="gitalk-box" class="gitalk-box"></div>
+
+    <Live2d v-if="blogNow.id === 'live2d'" />
   </div>
 </template>
 
@@ -44,10 +46,15 @@ import "gitalk/dist/gitalk.css";
 import { masterName, issueName, client_id, client_secret } from "@/config";
 import { blogs } from "@/config";
 import ShowDown from "showdown";
+import Live2d from '@/components/Live2d';
+
 const converter = new ShowDown.Converter({ tables: true });
 
 export default {
   name: "name-detail",
+  components:{
+    Live2d
+  },
   setup(props, context) {
     const route = useRoute();
 

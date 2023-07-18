@@ -1,0 +1,71 @@
+<template>
+    <div class="box">
+        <canvas class="live-canvas" ref="liveCanvas" />
+        <div class="control">
+            <button @click="expression('默认')">默认</button>
+            <button @click="expression('开心')">开心</button>
+            <button @click="expression('忧伤')">忧伤</button>
+            <button @click="expression('愤怒')">愤怒</button>
+            <button @click="expression('吐舌')">吐舌</button>
+        </div>
+    </div>
+</template>
+
+<script>
+import * as PIXI from 'pixi.js';
+import { Live2DModel } from 'pixi-live2d-display/dist/cubism4';
+window.PIXI = PIXI;
+
+let app;
+let model;
+
+export default {
+    data(){
+        return {
+     
+        }
+    },
+    async mounted(){
+        console.log('this.$refs.liveCanvas', this.$refs.liveCanvas);
+        app = new PIXI.Application({
+            view: this.$refs.liveCanvas,
+            autoStart: true,
+            backgroundAlpha: 0,
+        });
+
+        // model = await Live2DModel.from('./live/狗狗.model3.json');
+        model = await Live2DModel.from('https://cdn.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/haru/haru_greeter_t03.model3.json');
+
+        console.log('为什么没有啊', model);
+        app.stage.addChild(model);
+
+        model.scale.set(0.2);
+    },
+    beforeUnmount(){
+        model?.destroy();
+        app?.destroy();
+    },
+
+    methods:{
+        expression(type){
+             model.expression(type);
+        }
+    }
+}
+</script>
+
+<style lang="less" scoped>
+.box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .live-canvas{
+        width: 300px;
+        height: 300px;
+        background-color: #f00;
+    }
+}
+
+</style>

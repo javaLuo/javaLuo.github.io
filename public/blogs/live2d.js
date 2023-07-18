@@ -9,8 +9,8 @@
 下载解压后将\`CubismSdkForWeb-4/Core/live2dcubismcore.min.js\`此文件复制到项目中，并在index.html中引用，这是live2d SDK的本体。
 
 ### 2. 需要安装两个库：
-\`\`\`node
-pnpm add pixi.js
+\`\`\`javaScript
+pnpm add pixi.js@6.x // 需要6.x, 太高了不行，因为下面那个库目前只支持到6.x
 pnpm add pixi-live2d-display
 \`\`\`
 
