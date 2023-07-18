@@ -4,7 +4,7 @@
   }
   window.blogs.live2d = `
 ### 1. 去官网下载SDK for web
-![live2d](https://www.live2d.com/zh-CHS/download/cubism-sdk/)
+[live2d](https://www.live2d.com/zh-CHS/download/cubism-sdk/)
 
 下载解压后将\`CubismSdkForWeb-4/Core/live2dcubismcore.min.js\`此文件复制到项目中，并在index.html中引用，这是live2d SDK的本体。
 
@@ -15,7 +15,7 @@ pnpm add pixi-live2d-display
 \`\`\`
 
 这个库\`pixi-live2d-display\`支持了live2d最新4.x的版本
-![pixi-live2d-display](https://github.com/guansss/pixi-live2d-display)
+[pixi-live2d-display](https://github.com/guansss/pixi-live2d-display)
 
 ### 3. 准备好live2d资源
 

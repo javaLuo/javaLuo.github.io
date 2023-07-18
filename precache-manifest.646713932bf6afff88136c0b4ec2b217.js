@@ -112,7 +112,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blogs/isluo.js"
   },
   {
-    "revision": "f23bb3adb882977089322ef7e9e4b6b2",
+    "revision": "2b38cf5bdf5f87213489340aa2f04505",
     "url": "/blogs/live2d.js"
   },
   {
