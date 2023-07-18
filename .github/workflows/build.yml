@@ -19,7 +19,7 @@ jobs:
       - name: Install and Build
         run: |
           npm install pnpm -g
-          pnpm install
+          pnpm install -no-frozen-lockfile
           pnpm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
