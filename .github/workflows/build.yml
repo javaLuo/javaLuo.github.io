@@ -18,9 +18,9 @@ jobs:
           node-version: 10.x
       - name: Install and Build
         run: |
-          npm install yarn -g
-          yarn install
-          yarn run build
+          npm install pnpm -g
+          pnpm install
+          pnpm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
