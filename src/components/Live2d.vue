@@ -1,6 +1,7 @@
 <template>
     <div class="box">
-        <canvas class="live-canvas" ref="liveCanvas" />
+        <hr/>
+        <canvas id="live-canvas" class="live-canvas" ref="liveCanvas" />
         <div class="control">
             <button @click="expression('默认')">默认</button>
             <button @click="expression('开心')">开心</button>
@@ -8,12 +9,13 @@
             <button @click="expression('愤怒')">愤怒</button>
             <button @click="expression('吐舌')">吐舌</button>
         </div>
+        <hr/>
     </div>
 </template>
 
 <script>
 import * as PIXI from 'pixi.js';
-import { Live2DModel } from 'pixi-live2d-display/dist/cubism4';
+import { Live2DModel } from 'pixi-live2d-display/cubism4';
 window.PIXI = PIXI;
 
 let app;
@@ -33,13 +35,12 @@ export default {
             backgroundAlpha: 0,
         });
 
-        // model = await Live2DModel.from('./live/狗狗.model3.json');
-        model = await Live2DModel.from('https://cdn.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/haru/haru_greeter_t03.model3.json');
+        model = await Live2DModel.from('./live/狗狗.model3.json');
+        // model = await Live2DModel.from('https://cdn.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/haru/haru_greeter_t03.model3.json');
 
-        console.log('为什么没有啊', model);
         app.stage.addChild(model);
 
-        model.scale.set(0.2);
+        model.scale.set(0.17);
     },
     beforeUnmount(){
         model?.destroy();
@@ -64,7 +65,7 @@ export default {
     .live-canvas{
         width: 300px;
         height: 300px;
-        background-color: #f00;
+        background-color: #ccc;
     }
 }
 

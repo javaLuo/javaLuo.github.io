@@ -14,6 +14,7 @@
       <div class="title">{{ blogNow.name }}</div>
       <div class="date">{{ blogNow.date }}</div>
     </div>
+    <Live2d v-if="blogNow.id === 'live2d'"/>
     <div
       ref="theBody"
       v-html="htmlData"
@@ -24,8 +25,6 @@
       <div>--<span>End</span>--</div>
     </div>
     <div id="gitalk-box" class="gitalk-box"></div>
-
-    <Live2d v-if="blogNow.id === 'live2d'" />
   </div>
 </template>
 
@@ -46,7 +45,7 @@ import "gitalk/dist/gitalk.css";
 import { masterName, issueName, client_id, client_secret } from "@/config";
 import { blogs } from "@/config";
 import ShowDown from "showdown";
-import Live2d from '@/components/Live2d';
+import Live2d from '@/components/Live2d.vue';
 
 const converter = new ShowDown.Converter({ tables: true });
 

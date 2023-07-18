@@ -29,7 +29,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { blogs } from "@/config";
-import MyLoading from "@/components/MyLoading";
+import MyLoading from "@/components/MyLoading.vue";
 
 export default {
   name: "name-class",

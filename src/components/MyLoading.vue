@@ -5,13 +5,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    show: { type: Boolean, default: false },
-  },
-};
+<script setup>
+const props = defineProps({
+  show: { type: Boolean, default: false },
+})
 </script>
+
 <style lang="less" scoped>
 .my-loading {
   position: absolute;

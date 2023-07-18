@@ -35,7 +35,7 @@
 
 <script>
 /** 文章列表页 **/
-import MyLoading from "@/components/MyLoading";
+import MyLoading from "@/components/MyLoading.vue";
 import usePages from "@/hooks/pages";
 
 export default {

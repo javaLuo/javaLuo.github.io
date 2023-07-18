@@ -1,5 +1,5 @@
 import { computed, ref, watch } from "vue";
-import { sortDate } from "@/util/tools";
+import { sortDate } from "@/utils/tools";
 import { blogs, share } from "@/config";
 
 export default function usePages(type, pSize = 10) {

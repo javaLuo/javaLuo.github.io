@@ -1,31 +1,26 @@
 <template>
-  <ElConfigProvider :locale="locale">
+  <ElConfigProvider :locale="zhCn">
     <div id="app" class="boss">
-      <router-view />
+      <RouterView />
+      {{ store.test }}
     </div>
   </ElConfigProvider>
 </template>
 
-<script>
+<script setup>
+import { provide } from "vue";
 import { ElConfigProvider } from "element-plus";
 import zhCn from "element-plus/lib/locale/lang/zh-cn";
-import { provide } from "vue";
-import { isPc } from "@/util/tools.js";
+import { RouterView } from 'vue-router';
+import { isPc } from "@/utils/tools";
+import useStore from '@/store'
 
-export default {
-  components: {
-    ElConfigProvider,
-  },
-  setup() {
-    provide("isPc", isPc());
-    return {
-      locale: zhCn,
-    };
-  },
-};
+const store = useStore();
+provide("isPc", isPc());
+
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 * {
   -webkit-overflow-scrolling: touch;
 }

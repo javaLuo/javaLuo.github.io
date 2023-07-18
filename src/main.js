@@ -1,7 +1,9 @@
 import { createApp } from "vue";
-import App from "./App.vue";
-import "./registerServiceWorker";
+import { createPinia } from "pinia";
 import router from "./router";
+import App from "./App.vue";
+import '@/styles/global.less';
+
 import {
   ElButton,
   ElMessage,
@@ -16,6 +18,7 @@ import {
 const app = createApp(App);
 app.$message = ElMessage;
 app
+  .use(createPinia())
   .use(ElButton)
   .use(ElInput)
   .use(ElBreadcrumb)

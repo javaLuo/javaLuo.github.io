@@ -6,13 +6,7 @@
         <el-breadcrumbItem to="/all">博客列表</el-breadcrumbItem>
         <el-breadcrumbItem>日志列表</el-breadcrumbItem>
       </el-breadcrumb>
-      <el-input
-        class="search-input"
-        size="mini"
-        placeholder="搜索"
-        prefix-icon="el-icon-search"
-        v-model="searchValue"
-      ></el-input>
+      <Search v-model="searchValue"/>
     </div>
     <transition-group name="list" tag="ul" class="live">
       <ArtiveList
@@ -36,8 +30,10 @@
 
 <script>
 /** 文章列表页 **/
-import ArtiveList from "@/components/ArtiveList";
-import MyLoading from "@/components/MyLoading";
+import ArtiveList from "@/components/ArtiveList.vue";
+import Search from "@/components/Search.vue";
+import MyLoading from "@/components/MyLoading.vue";
+
 import usePages from "@/hooks/pages";
 
 export default {
@@ -102,15 +98,6 @@ export default {
       margin-right: 8px;
       margin-left: -5px;
       color: #0acb79;
-    }
-    .search-input {
-      margin-left: 20px;
-      width: 200px;
-      :deep(.el-input__inner) {
-        background-color: transparent;
-        border: none;
-        border-bottom: solid 1px #ccc;
-      }
     }
   }
 }
