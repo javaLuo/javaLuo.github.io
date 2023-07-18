@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.664a109caae07a753e551110685195a7.js"
+  "/precache-manifest.74cbee74c3927779969ce46ce283dfbc.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "luoblog"});
