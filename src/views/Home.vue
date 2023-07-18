@@ -90,7 +90,7 @@ export default {
 
     /** 监听滚轮事件处理页面滚动 **/
     const onMouseWheel = (e) => {
-      console.log("e", e);
+      // console.log("e", e);
       const f = e.wheelDeltaY || -e.deltaY || e.wheelDelta;
       if (scrolling) {
         return;

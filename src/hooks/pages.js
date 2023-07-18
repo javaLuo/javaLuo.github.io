@@ -25,7 +25,7 @@ export default function usePages(type, pSize = 10) {
         return item.name.toLowerCase().includes(v);
       });
     }
-    console.log("searchData:", res);
+    // console.log("searchData:", res);
     return res;
   });
 
