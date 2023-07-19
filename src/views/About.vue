@@ -17,7 +17,7 @@
     </div>
     <div class="info-box link">
       <div class="title">Logic</div>
-      <div>前端开发工程师 目前就职于上海</div>
+      <div>前端视觉艺术家 目前就职于上海</div>
       <div>
         GitHub:
         <a href="https://github.com/javaLuo" target="_blank" rel="noopener me"
@@ -33,11 +33,11 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  name: "about",
-};
+
+<script setup name="About">
+
 </script>
+
 <style lang="less">
 .page-about {
   .bread {

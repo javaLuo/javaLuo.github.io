@@ -6,9 +6,9 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  show: { type: Boolean, default: false },
-})
+  defineProps({
+    show: { type: Boolean, default: false },
+  })
 </script>
 
 <style lang="less" scoped>

@@ -17,45 +17,23 @@
   </div>
 </template>
 
-<script>
-import { ref, toRefs, watch, onMounted } from "vue";
-// import useBing from '../hooks/useBing';
+<script setup name="Page1">
+import { ref, computed } from "vue";
 
-export default {
-  name: "page1",
-  props: {
-    pageNow: Number,
-  },
-  setup(props, context) {
-    const { pageNow } = toRefs(props);
-    const isShow = ref(false); // 是否出现
-    const isBackShow = ref(false); // 首页背景图是否加载
-    // const {url, getBingData} = useBing();
+const emit = defineEmits(['onDownClick']);
+const props = defineProps({
+  pageNow: Number,
+});
 
-    const onDownClick = () => {
-      context.emit("onDownClick", 1);
-    };
+const isBackShow = ref(false); // 首页背景图是否加载
+const isShow = computed(()=> props.pageNow === 0);
 
-    const onBackImgLoad = () => {
-      isBackShow.value = true;
-    };
+const onDownClick = () => {
+  emit("onDownClick", 1);
+};
 
-    onMounted(() => {
-      isShow.value = pageNow.value === 0;
-      // getBingData();
-    });
-
-    watch(pageNow, (newV) => {
-      isShow.value = newV === 0;
-    });
-    return {
-      isShow,
-      isBackShow,
-      onDownClick, // 点击了向下的按钮，跳转到下面一页
-      onBackImgLoad, // 背景图加载成功时执行
-      // url,
-    };
-  },
+const onBackImgLoad = () => {
+  isBackShow.value = true;
 };
 </script>
 

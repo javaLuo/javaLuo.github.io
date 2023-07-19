@@ -19,12 +19,11 @@ const props = defineProps({
 
 const v = ref('');
 
-watch('searchValue', (newV)=>{
+watch(() => props.searchValue, (newV)=>{
     v.value = newV;
 })
 
 function onInput(str){
-    console.log('waht:', str);
     emit('update:modelValue', str);
 }
 </script>

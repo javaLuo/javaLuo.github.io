@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <hr/>
-        <canvas id="live-canvas" class="live-canvas" ref="liveCanvas" />
+        <canvas class="live-canvas" ref="liveCanvas" />
         <div class="control">
             <button @click="expression('默认')">默认</button>
             <button @click="expression('开心')">开心</button>
@@ -13,24 +13,19 @@
     </div>
 </template>
 
-<script>
-import * as PIXI from 'pixi.js';
-import { Live2DModel } from 'pixi-live2d-display/cubism4';
-window.PIXI = PIXI;
+<script setup name="Live2d">
+    import {ref, onMounted, onBeforeUnmount} from 'vue';
+    import * as PIXI from 'pixi.js';
+    import { Live2DModel } from 'pixi-live2d-display/cubism4';
+    window.PIXI = PIXI;
 
-let app;
-let model;
+    let app;
+    let model;
+    const liveCanvas = ref(null);
 
-export default {
-    data(){
-        return {
-     
-        }
-    },
-    async mounted(){
-        console.log('this.$refs.liveCanvas', this.$refs.liveCanvas);
+    onMounted(async ()=>{
         app = new PIXI.Application({
-            view: this.$refs.liveCanvas,
+            view: liveCanvas.value,
             autoStart: true,
             backgroundAlpha: 0,
         });
@@ -41,18 +36,16 @@ export default {
         app.stage.addChild(model);
 
         model.scale.set(0.17);
-    },
-    beforeUnmount(){
+    });
+
+    onBeforeUnmount(()=>{
         model?.destroy();
         app?.destroy();
-    },
+    });
 
-    methods:{
-        expression(type){
-             model.expression(type);
-        }
+    function expression(type){
+        model.expression(type);
     }
-}
 </script>
 
 <style lang="less" scoped>
