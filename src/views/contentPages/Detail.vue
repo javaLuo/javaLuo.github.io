@@ -173,15 +173,15 @@ export default {
   }
   .markdown-body {
     pre {
-      font-size: 100% !important;
-      word-break: break-all;
-      word-wrap: break-word;
-      white-space: pre-wrap;
-      code {
-        word-break: break-all;
-        word-wrap: break-word;
-        white-space: pre-wrap;
-      }
+      font-size: 14px;
+      // word-break: break-all;
+      // word-wrap: break-word;
+      // white-space: pre-wrap;
+      // code {
+      //   word-break: break-all;
+      //   word-wrap: break-word;
+      //   white-space: pre-wrap;
+      // }
     }
   }
   .info {

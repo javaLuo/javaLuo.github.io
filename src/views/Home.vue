@@ -41,11 +41,11 @@ import Page3 from "@/components/Page3.vue";
 
 let scrollDom;
 let scrolling; // 是否正在滚动中
-const mp3Dom = {
-  // mp3控制
-  canplay: false,
-  a: null,
-};
+// const mp3Dom = {
+//   // mp3控制
+//   canplay: false,
+//   a: null,
+// };
 
 const isPc = inject("isPc"); // 是否是PC端
 const refMp3Dom = ref();

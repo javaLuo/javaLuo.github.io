@@ -33,31 +33,12 @@
   </div>
 </template>
 
-<script>
+<script setup name="share">
 /** 文章列表页 **/
 import MyLoading from "@/components/MyLoading.vue";
 import usePages from "@/hooks/pages";
 
-export default {
-  name: "share",
-  components: {
-    MyLoading,
-  },
-  setup() {
-    const { pageNow, pageSize, total, pageNowData, onPageChange } = usePages(
-      4,
-      5
-    );
-
-    return {
-      pageNow,
-      pageSize,
-      total,
-      pageNowData,
-      onPageChange,
-    };
-  },
-};
+const { pageNow, pageSize, total, pageNowData, onPageChange } = usePages(4, 5);
 </script>
 
 <style scoped lang="less">

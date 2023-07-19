@@ -49,12 +49,9 @@
         <a href="https://www.microanswer.cn" target="_blank" rel="noopener"
           >Microanswer</a
         >
-        <a href="https://blog.itnote.me" target="_blank" rel="noopener"
+        <!-- <a href="https://blog.itnote.me" target="_blank" rel="noopener"
           >Mt.r 先生</a
-        >
-        <a href="http://lsy.dulv.net" target="_blank" rel="noopener"
-          >平平无奇深情段子手无霜</a
-        >
+        > -->
         <a href="http://www.sci-fifans.net/" target="_blank" rel="noopener"
           >sci-fifans 社区</a
         >
@@ -103,9 +100,9 @@
           <img src="@/assets/logo-github.png" />
         </a>
       </div>
-      <div>Vue3.0 全家桶框架构建</div>
+      <div>Vue3.x 全家桶框架构建</div>
       <div>GitHub Pages, V3API获取文章和评论</div>
-      <div>感谢开源世界的支持</div>
+      <div>开源世界技术支持</div>
     </div>
     <div class="last">
       © 2014–{{ new Date().getFullYear() }}
@@ -117,13 +114,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "page3",
-  props: {
-    hi: Object,
-  },
-};
+<script setup name="Page3">
+defineProps({
+  hi: Object
+})
 </script>
 
 <style scoped lang="less">

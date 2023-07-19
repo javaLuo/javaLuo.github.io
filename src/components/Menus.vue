@@ -85,72 +85,112 @@
   </div>
 </template>
 
-<script>
+<script setup name="Menus">
 import { inject, ref } from "vue";
 import { useRouter } from "vue-router";
-import CanvasBack from "./CanvasBack.vue";
 import { blogs } from "@/config";
 
-export default {
-  name: "Menus",
-  components: {
-    CanvasBack,
-  },
-  props: {
-    isPlaying: Boolean,
-  },
-  setup(props, context) {
-    const router = useRouter();
-    const isPc = inject("isPc");
-    const menuOpen = ref(isPc); // 菜单是否展开
+import CanvasBack from "./CanvasBack.vue";
+const emit = defineEmits(['onPlayOrStop']);
 
-    const liveLength = blogs.filter((item) => item.type === 1).length;
-    const workLength = blogs.filter((item) => item.type === 2).length;
-    const articleLength = blogs.filter((item) => item.type === 3).length;
-    const allLength = blogs.length;
+const props = defineProps({
+  isPlaying: Boolean,
+});
 
-    const onPlayOrStop = () => {
-      context.emit("onPlayOrStop", !props.isPlaying);
-    };
+const router = useRouter();
+const isPc = inject("isPc");
+const menuOpen = ref(isPc); // 菜单是否展开
 
-    const onLinkClick = (url) => {
-      router.push(url);
-      // 移动端，自动关闭Menu
-      if (!isPc) {
-        menuOpen.value = false;
-      }
-    };
+const liveLength = blogs.filter((item) => item.type === 1).length;
+const workLength = blogs.filter((item) => item.type === 2).length;
+const articleLength = blogs.filter((item) => item.type === 3).length;
+const allLength = blogs.length;
 
-    const onMenuTrigger = () => {
-      menuOpen.value = !menuOpen.value;
-    };
+const onPlayOrStop = () => emit("onPlayOrStop", !props.isPlaying);;
 
-    const onMenuClose = () => {
-      // 只有移动端才能关闭
-      if (!isPc) {
-        menuOpen.value = false;
-      }
-    };
-
-    const onDownClick = () => {
-      context.emit("onClickScroll");
-    };
-
-    return {
-      isPc,
-      menuOpen,
-      liveLength,
-      workLength,
-      articleLength,
-      allLength,
-      onPlayOrStop,
-      onLinkClick,
-      onMenuTrigger,
-      onMenuClose,
-      onDownClick,
-    };
-  },
+const onLinkClick = (url) => {
+  router.push(url);
+  // 移动端，自动关闭Menu
+  if (!isPc) {
+    menuOpen.value = false;
+  }
 };
+
+const onMenuTrigger = () => {
+  menuOpen.value = !menuOpen.value;
+};
+
+const onMenuClose = () => {
+  // 只有移动端才能关闭
+  if (!isPc) {
+    menuOpen.value = false;
+  }
+};
+
+const onDownClick = () => emit("onClickScroll");;
+
+// export default {
+//   name: "Menus",
+//   components: {
+//     CanvasBack,
+//   },
+//   props: {
+//     isPlaying: Boolean,
+//   },
+
+  
+//   setup(props, context) {
+//     const router = useRouter();
+//     const isPc = inject("isPc");
+//     const menuOpen = ref(isPc); // 菜单是否展开
+
+//     const liveLength = blogs.filter((item) => item.type === 1).length;
+//     const workLength = blogs.filter((item) => item.type === 2).length;
+//     const articleLength = blogs.filter((item) => item.type === 3).length;
+//     const allLength = blogs.length;
+
+//     const onPlayOrStop = () => {
+//       context.emit("onPlayOrStop", !props.isPlaying);
+//     };
+
+//     const onLinkClick = (url) => {
+//       router.push(url);
+//       // 移动端，自动关闭Menu
+//       if (!isPc) {
+//         menuOpen.value = false;
+//       }
+//     };
+
+//     const onMenuTrigger = () => {
+//       menuOpen.value = !menuOpen.value;
+//     };
+
+//     const onMenuClose = () => {
+//       // 只有移动端才能关闭
+//       if (!isPc) {
+//         menuOpen.value = false;
+//       }
+//     };
+
+//     const onDownClick = () => {
+//       context.emit("onClickScroll");
+//     };
+
+//     return {
+//       isPc,
+//       menuOpen,
+//       liveLength,
+//       workLength,
+//       articleLength,
+//       allLength,
+//       onPlayOrStop,
+//       onLinkClick,
+//       onMenuTrigger,
+//       onMenuClose,
+//       onDownClick,
+//     };
+//   },
+// };
 </script>
 
 <style scoped lang="less">

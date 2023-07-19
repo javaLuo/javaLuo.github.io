@@ -18,28 +18,20 @@
   </li>
 </template>
 
-<script>
-/** 单个数据列表项 **/
+<script setup name="ArtiveList">
 import { useRouter } from "vue-router";
 
-export default {
-  name: "ArtiveList",
-  props: {
-    thisData: Object,
-  },
-  setup(props) {
-    const router = useRouter();
+const props = defineProps({
+  thisData: {type: Object}
+});
 
-    /** 点击某篇文章保存相关数据进入详情 **/
-    const onDetailChose = () => {
-      router.push(`/detail/${props.thisData.id}`);
-    };
+const router = useRouter();
 
-    return {
-      onDetailChose,
-    };
-  },
+/** 点击某篇文章保存相关数据进入详情 **/
+const onDetailChose = () => {
+  router.push(`/detail/${props.thisData.id}`);
 };
+
 </script>
 
 <style scoped lang="less">

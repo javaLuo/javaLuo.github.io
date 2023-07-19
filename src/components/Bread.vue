@@ -5,12 +5,8 @@
   </div>
 </template>
 
-<script>
-/** 文章列表页 **/
-export default {
-  name: "bread",
-  props: {
-    breadData: String,
-  },
-};
+<script setup name="bread">
+  defineProps({
+    breadData: {type: String}
+  });
 </script>

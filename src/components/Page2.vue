@@ -11,37 +11,24 @@
   </div>
 </template>
 
-<script>
+<script setup name="Page2">
 import { computed } from "vue";
 import Menus from "@/components/Menus.vue";
+const emit = defineEmits(['onDownClick', 'onPlayOrStop']);
+const props = defineProps({
+  isPc: Boolean,
+  isPlaying: Boolean,
+  pageNow: Number,
+});
 
-export default {
-  name: "page2",
-  props: {
-    isPc: Boolean,
-    isPlaying: Boolean,
-    pageNow: Number,
-  },
-  components: {
-    Menus,
-  },
-  setup(props, context) {
-    const isShow = computed(() => props.pageNow === 1);
+const isShow = computed(() => props.pageNow === 1);
 
-    const onClickScroll = () => {
-      context.emit("onDownClick", props.pageNow === 2 ? 1 : 2);
-    };
+const onClickScroll = () => {
+  emit("onDownClick", props.pageNow === 2 ? 1 : 2);
+};
 
-    const onPlayOrStop = (type) => {
-      context.emit("onPlayOrStop", type);
-    };
-
-    return {
-      isShow,
-      onClickScroll,
-      onPlayOrStop,
-    };
-  },
+const onPlayOrStop = (type) => {
+  emit("onPlayOrStop", type);
 };
 </script>
 
