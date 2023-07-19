@@ -468,14 +468,14 @@ export const blogs = [
 export const share = [
   {
     title: "DAN DAN 心魅かれてく",
-    url: "//player.bilibili.com/player.html?aid=20028312&cid=32674930&page=1&high_quality=1",
+    url: "//player.bilibili.com/player.html?aid=20028312&cid=32674930&page=1&high_quality=1&autoplay=0",
   },
   {
     title: "【微小微】Apink - My My",
-    url: "//player.bilibili.com/player.html?aid=2573814&cid=4020549&page=1&high_quality=1",
+    url: "//player.bilibili.com/player.html?aid=2573814&cid=4020549&page=1&high_quality=1&autoplay=0",
   },
   {
     title: "Sofia - She Taught Me How to Yodel",
-    url: "//player.bilibili.com/player.html?aid=626401766&bvid=BV1Mt4y1X718&cid=213794602&page=1&high_quality=1",
+    url: "//player.bilibili.com/player.html?aid=626401766&bvid=BV1Mt4y1X718&cid=213794602&page=1&high_quality=1&autoplay=0",
   },
 ];
