@@ -463,6 +463,14 @@ export const blogs = [
     date: "2023/07/18",
     tags: ["js", "html"],
   },
+  {
+    id: "scrollani",
+    name: "scroll-timeline和view-timeline动画",
+    info: "滚动条控制动画执行和视口控制动画执行",
+    type: 1,
+    date: "2023/08/01",
+    tags: ["css"],
+  },
 ];
 
 export const share = [
