@@ -1,6 +1,6 @@
 <template>
   <li class="artive-list">
-    <div class="title" @click="onDetailChose">{{ thisData.name }}</div>
+    <div class="title"  ref="title" @click="onDetailChose" :id="thisData.id">{{ thisData.name }}</div>
     <div class="time">{{ thisData.date }}</div>
     <div v-if="thisData.pic" class="pic">
       <img :src="thisData.pic" />
@@ -19,22 +19,29 @@
 </template>
 
 <script setup name="ArtiveList">
+import {ref} from 'vue';
 import { useRouter } from "vue-router";
 
 const props = defineProps({
   thisData: {type: Object}
 });
 
+const title = ref(null);
 const router = useRouter();
 
 /** 点击某篇文章保存相关数据进入详情 **/
 const onDetailChose = () => {
-  router.push(`/detail/${props.thisData.id}`);
+  title.value.style.viewTransitionName = 'title';
+  const vt = document.startViewTransition(()=>{
+    title.value.style.viewTransitionName = '';
+    router.push(`/detail/${props.thisData.id}`);
+  });
 };
 
 </script>
 
 <style scoped lang="less">
+
 .artive-list {
   width: 100%;
   box-sizing: border-box;

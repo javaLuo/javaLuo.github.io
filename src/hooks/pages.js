@@ -61,23 +61,24 @@ export default function usePages(type, pSize = 10) {
   watch(
     listData,
     (newV) => {
-      for (let i = 0; i < timer.length; i++) {
-        clearTimeout(timer[i]);
-      }
-      timer.length = 0;
-      pageNowData.value = [];
-      const dom = document.getElementById("bodyBox");
-      if (dom) {
-        dom.scrollTop = 0;
-      }
+      pageNowData.value = newV;
+      // for (let i = 0; i < timer.length; i++) {
+      //   clearTimeout(timer[i]);
+      // }
+      // timer.length = 0;
+      // pageNowData.value = [];
+      // const dom = document.getElementById("bodyBox");
+      // if (dom) {
+      //   dom.scrollTop = 0;
+      // }
 
-      for (let i = 0; newV[i]; i++) {
-        timer.push(
-          setTimeout(() => {
-            pageNowData.value.push(newV[i]);
-          }, i * 80)
-        );
-      }
+      // for (let i = 0; newV[i]; i++) {
+      //   timer.push(
+      //     setTimeout(() => {
+      //       pageNowData.value.push(newV[i]);
+      //     }, i * 80)
+      //   );
+      // }
     },
     {
       immediate: true,

@@ -189,6 +189,7 @@ export default {
     .title {
       font-size: 32px;
       letter-spacing: 1px;
+      view-transition-name: title;
     }
     .date {
       margin-top: 8px;

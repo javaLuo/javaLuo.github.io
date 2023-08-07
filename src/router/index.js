@@ -56,4 +56,38 @@ const router = createRouter({
   ],
 });
 
+router.beforeEach((to, from, next)=>{
+  console.log('路由变化：', to, from, next);
+
+  // 从detail页跳
+  if(from.name === 'detail'){
+    const id = from.params.id;
+    console.log('id', id);
+    const vt = document.startViewTransition(async ()=>{
+      next();
+
+      await new Promise((res, rej)=>{
+        setTimeout(()=>{
+          const dom = document.getElementById(id);
+          console.log('dom', dom);
+          if(dom){
+            dom.style.viewTransitionName = 'title';
+          }
+          res();
+        }, 100);
+      });
+
+    });
+    vt.finished.finally(()=>{
+      const dom = document.getElementById(id);
+      if(dom){
+        dom.style.viewTransitionName = '';
+      }
+    });
+    // next();
+  }else{
+    next();
+  }
+});
+
 export default router;
