@@ -74,7 +74,7 @@ router.beforeEach((to, from, next)=>{
             dom.style.viewTransitionName = 'title';
           }
           res();
-        }, 100);
+        }, 64);
       });
 
     });

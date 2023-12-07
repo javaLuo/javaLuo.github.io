@@ -189,7 +189,6 @@ export default {
     .title {
       font-size: 32px;
       letter-spacing: 1px;
-      view-transition-name: title;
     }
     .date {
       margin-top: 8px;
@@ -233,6 +232,7 @@ export default {
     display: flex;
     align-items: center;
     padding-bottom: 16px;
+    view-transition-name: bread;
     i {
       margin-right: 8px;
       margin-left: -5px;

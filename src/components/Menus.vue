@@ -222,6 +222,7 @@ const onDownClick = () => emit("onClickScroll");;
   box-sizing: border-box;
   z-index: 2;
   view-transition-name: menus;
+
   .head {
     position: absolute;
     top: 0;

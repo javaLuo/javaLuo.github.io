@@ -22,6 +22,7 @@
 import {ref} from 'vue';
 import { useRouter } from "vue-router";
 
+const emit = defineEmits(['goDetail']);
 const props = defineProps({
   thisData: {type: Object}
 });
@@ -31,11 +32,7 @@ const router = useRouter();
 
 /** 点击某篇文章保存相关数据进入详情 **/
 const onDetailChose = () => {
-  title.value.style.viewTransitionName = 'title';
-  const vt = document.startViewTransition(()=>{
-    title.value.style.viewTransitionName = '';
-    router.push(`/detail/${props.thisData.id}`);
-  });
+  emit('goDetail', props.thisData.id);
 };
 
 </script>

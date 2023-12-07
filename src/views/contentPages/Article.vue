@@ -1,6 +1,6 @@
 <template>
   <div class="live-box">
-    <div class="bread">
+    <div class="bread" ref="bread">
       <i class="el-icon-location"></i>
       <el-breadcrumb>
         <el-breadcrumbItem to="/all">博客列表</el-breadcrumbItem>
@@ -13,6 +13,7 @@
         v-for="v in pageNowData"
         :thisData="v"
         :key="v.name"
+        @goDetail="goDetail"
       ></ArtiveList>
     </transition-group>
     <MyLoading :show="!pageNowData.length" />
@@ -28,34 +29,33 @@
   </div>
 </template>
 
-<script>
-/** 文章列表页 **/
+<script setup name="name-article">
+import { ref } from "vue";
+
 import ArtiveList from "@/components/ArtiveList.vue";
 import Search from "@/components/Search.vue";
 import MyLoading from "@/components/MyLoading.vue";
-
 import usePages from "@/hooks/pages";
 
-export default {
-  name: "name-article",
-  components: {
-    ArtiveList,
-    MyLoading,
-  },
-  setup() {
-    const { pageNow, pageSize, total, searchValue, pageNowData, onPageChange } =
-      usePages(3);
+import { useRouter } from "vue-router";
 
-    return {
-      pageNow,
-      pageSize,
-      total,
-      searchValue,
-      pageNowData,
-      onPageChange,
-    };
-  },
-};
+const bread = ref(null);
+const { pageNow, pageSize, total, searchValue, pageNowData, onPageChange } = usePages(3);
+const router = useRouter();
+
+const goDetail = (id) => {
+  if(!document.startViewTransition){
+    router.push(`/detail/${id}`);
+    return;
+  }
+
+  bread.value.style.viewTransitionName = 'bread';
+  document.startViewTransition(()=>{
+    bread.value.style.viewTransitionName = '';
+    router.push(`/detail/${id}`);
+  });
+}
+
 </script>
 
 <style scoped lang="less">
