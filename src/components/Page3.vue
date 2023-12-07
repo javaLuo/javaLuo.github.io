@@ -49,11 +49,11 @@
         <a href="https://www.microanswer.cn" target="_blank" rel="noopener"
           >Microanswer</a
         >
-        <!-- <a href="https://blog.itnote.me" target="_blank" rel="noopener"
-          >Mt.r 先生</a
-        > -->
         <a href="http://www.sci-fifans.net/" target="_blank" rel="noopener"
           >sci-fifans 社区</a
+        >
+        <a href="http://www.sci-fifans.net/" target="_blank" rel="noopener"
+          ><img src="https://avatars.githubusercontent.com/u/137391282" />魔王の博客</a
         >
       </li>
     </ul>
@@ -175,6 +175,15 @@ defineProps({
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+   
+    img{
+      height: 24px;
+      margin-right: 4px;
+    }
+    &>a{
+      display: flex;
+      align-items: center;
+    }
   }
   .friend-box {
     & > a {
