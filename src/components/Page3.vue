@@ -52,7 +52,7 @@
         <a href="http://www.sci-fifans.net/" target="_blank" rel="noopener"
           >sci-fifans 社区</a
         >
-        <a href="http://www.sci-fifans.net/" target="_blank" rel="noopener"
+        <a href="https://blog.loli.wang/" target="_blank" rel="noopener"
           ><img src="https://avatars.githubusercontent.com/u/137391282" />魔王の博客</a
         >
       </li>
